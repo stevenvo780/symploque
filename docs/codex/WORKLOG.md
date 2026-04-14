@@ -49,3 +49,18 @@
   - Confirmed each message includes institutional context, segment-specific pain, and a small CTA.
 - Notes:
   - The next scale step is to prepare a second batch for Uniandes, UPB, and EAFIT.
+
+
+## 2026-04-14 13:34
+
+- Goal: Resume the outreach work from the clean `symploque` worktree and expand the ready-to-send batch.
+- Actions:
+  - Re-checked `git status` in `/mnt/c/Users/USUARIO/Documents/symploque` and confirmed the branch was clean at `850a0a2`.
+  - Read `docs/codex/NEXT_ACTIONS.md`, `docs/codex/WORKLOG.md`, the ranked CSV, the first batch, and the institution hooks in `02-mensajeria/mensajes-y-copy.md`.
+  - Created `04-reportes/lote-2-mensajes-listos-eafit-upb-uniandes.md` with the `A2` email leads for `EAFIT`, `UPB`, and `Uniandes`.
+  - Updated `NEXT_ACTIONS.md` so the immediate queue reflects that the second batch now exists and the next drafting step moves to the remaining `B1` / residual leads.
+- Verification:
+  - Confirmed the new batch only includes the targeted institutions and email-preferred leads.
+  - Confirmed each message follows the segmented playbook and uses institution-specific hooks for literature, communication, periodismo, docencia, and posgrado.
+- Notes:
+  - The next operational step is execution: manual review, send, and CRM-style logging back into the CSV maestro.

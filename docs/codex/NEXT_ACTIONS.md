@@ -3,11 +3,12 @@
 ## Now
 
 - [ ] Revisar y enviar la tanda inicial de `04-reportes/top-15-mensajes-listos.md`.
+- [ ] Revisar y enviar la segunda tanda de `04-reportes/lote-2-mensajes-listos-eafit-upb-uniandes.md`.
 - [ ] Registrar en el CSV maestro fecha de envio, respuesta y siguiente accion para cada lead contactado.
 
 ## Next
 
-- [ ] Generar una segunda tanda para Uniandes, UPB y EAFIT con hooks mas finos por programa y docencia.
+- [ ] Generar una tercera tanda para profesorado `B1` de Uniandes y remanentes email de Javeriana / UNAL Medellin.
 - [ ] Decidir si conviene crear un archivo de outreach listo para usar por lote, separado del playbook base.
 - [ ] Decidir si conviene persistir aprobaciones repo-specific para analisis de CSV y reportes.
 
