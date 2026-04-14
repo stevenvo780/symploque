@@ -89,7 +89,7 @@ Objetivo:
 
 ## Segmentacion maestra
 
-La segmentacion detallada y ranqueada esta en `05-segmentacion-clientes-ranqueada.md`, pero el orden estrategico resumido es este:
+La segmentacion detallada y ranqueada esta en `segmentacion-clientes-ranqueada.md`, pero el orden estrategico resumido es este:
 
 | Rank | Segmento | Probabilidad | Motivo |
 |---|---|---|---|
