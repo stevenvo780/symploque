@@ -2,9 +2,9 @@
 
 ## Now
 
-- [ ] Revisar y enviar la tanda inicial de `04-reportes/top-15-mensajes-listos.md`.
-- [ ] Revisar y enviar la segunda tanda de `04-reportes/lote-2-mensajes-listos-eafit-upb-uniandes.md`.
-- [ ] Registrar en el CSV maestro fecha de envio, respuesta y siguiente accion para cada lead contactado.
+- [ ] Monitorear respuestas de `04-reportes/top-15-mensajes-listos.md` y `04-reportes/lote-2-mensajes-listos-eafit-upb-uniandes.md`.
+- [ ] Hacer seguimiento a los no respondidos a partir del `2026-04-21`.
+- [ ] Registrar nuevas respuestas y cambios de estado en el CSV maestro.
 
 ## Next
 
