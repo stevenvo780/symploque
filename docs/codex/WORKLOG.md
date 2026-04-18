@@ -70,7 +70,7 @@
 
 - Goal: Execute the first two outreach waves and leave the repo aligned with the real commercial state.
 - Actions:
-  - Checked the connected Gmail account and verified `stevenvallejo780@gmail.com` was the sender in this session.
+  - Checked the connected Gmail account and verified `tyraeljacob@gmail.com` was the sender in this session.
   - Searched `in:sent` for both batches and confirmed there were no recent duplicates for the targeted recipients.
   - Sent the `Top 15` batch plus the `EAFIT / UPB / Uniandes` batch by email, covering 29 recipients with `canal_preferido = email`.
   - Updated `03-datos/leads-agora-maestro.csv` and `03-datos/leads-agora-top-50-hoy.csv` so the contacted rows now reflect `estado = contactado`, `fecha_ultimo_contacto = 2026-04-14`, `respuesta = sin respuesta`, `proxima_accion = hacer seguimiento si no responde`, and `fecha_proxima_accion = 2026-04-21`.
