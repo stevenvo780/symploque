@@ -191,3 +191,17 @@
   - Confirmed the core docs now point to the live public URLs.
 - Notes:
   - The Elenxos public HTML still references the old Agora domain in `sameAs`; that mismatch lives on the website itself, not in this repo, and should be corrected separately.
+
+## 2026-04-20 3
+
+- Goal: Prepare and execute the apology-email incident response for the wrongly sent outreach list.
+- Actions:
+  - Resolved the user-provided shorthand list against `03-datos/leads-agora-maestro.csv` and recovered 29 exact recipient emails.
+  - Created `03-datos/operacion-email/disculpa-error-pendientes.csv` as a dedicated incident queue, including duplicate-count notes where the user marked repeated bad sends.
+  - Created `06-operacion-email/lote-disculpa-error-2026-04-20.md` with a strict apology-only message that does not re-pitch the product.
+  - Added `06-operacion-email/enviar_lote_disculpa.py` so the batch can be previewed or sent once Mail API credentials are available in the environment.
+- Verification:
+  - Confirmed all 29 shorthand tokens map to real emails in the master CSV.
+  - Confirmed the current shell environment does not have `MAIL_API_BASE_URL`, `MAIL_API_KEY`, `MAIL_FROM_EMAIL`, or `MAIL_FROM_PASSWORD` loaded.
+- Notes:
+  - The batch is ready, but the actual send is blocked until the corporate Mail API credentials are loaded or explicitly provided for this session.
