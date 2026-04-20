@@ -38,7 +38,7 @@ Eso obliga a que el repo haga la misma separacion:
 
 ## Punto de entrada actual
 
-1. [06-operacion-email/plan-transicion-remitente-y-sitios-publicos.md](../06-operacion-email/plan-transicion-remitente-y-sitios-publicos.md)
+1. [00-central/plan-transicion-remitente-y-sitios-publicos.md](./plan-transicion-remitente-y-sitios-publicos.md)
 2. [email.md](../email.md)
 3. [03-datos/README.md](../03-datos/README.md)
 4. [05-redes-sociales/README.md](../05-redes-sociales/README.md)
@@ -56,7 +56,7 @@ Eso obliga a que el repo haga la misma separacion:
 ## Que cambia desde hoy
 
 - el remitente personal pasa a ser un antecedente, no el canal objetivo
-- la nueva verdad operativa para correo sale desde `06-operacion-email/`
+- la nueva verdad operativa para correo sale desde `02-mensajeria/`
 - la nueva organizacion de datos sale desde `03-datos/operacion-email/`
 - el bootstrap inicial de la base nueva ya sale desde `scripts/bootstrap_operacion_email.py`
 - no se deben guardar secretos reales en markdown ni CSV

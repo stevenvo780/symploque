@@ -7,7 +7,7 @@ Fecha de actualizacion: 2026-04-11
 Si solo vas a abrir tres archivos, abre estos:
 
 1. [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
-2. [mensajes-y-copy.md](../02-mensajeria/mensajes-y-copy.md)
+2. [02-mensajeria/02-primer-contacto-estandar.md](../02-mensajeria/02-primer-contacto-estandar.md)
 3. [reporte-proceso-expansion-contactos.md](../04-reportes/reporte-proceso-expansion-contactos.md)
 
 ## Estado actual
@@ -31,7 +31,11 @@ Si solo vas a abrir tres archivos, abre estos:
   - [ideas-expansion-base-datos.md](../01-estrategia/ideas-expansion-base-datos.md)
   - [playbook-busqueda-autonoma-clientes.md](../01-estrategia/playbook-busqueda-autonoma-clientes.md)
 - `02-mensajeria/`
-  - [mensajes-y-copy.md](../02-mensajeria/mensajes-y-copy.md)
+  - [01-disculpa-repetidos.md](../02-mensajeria/01-disculpa-repetidos.md)
+  - [02-primer-contacto-estandar.md](../02-mensajeria/02-primer-contacto-estandar.md)
+  - [03-primer-contacto-semilleros.md](../02-mensajeria/03-primer-contacto-semilleros.md)
+  - [04-primer-contacto-directores.md](../02-mensajeria/04-primer-contacto-directores.md)
+  - [05-seguimiento-corto.md](../02-mensajeria/05-seguimiento-corto.md)
 - `03-datos/`
   - [canales-publicos-contacto.md](../03-datos/canales-publicos-contacto.md)
   - [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
@@ -58,7 +62,7 @@ Si el trabajo empieza hoy:
 
 1. abrir [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
 2. filtrar `priority_rank` 1 a 40
-3. usar [mensajes-y-copy.md](../02-mensajeria/mensajes-y-copy.md)
+3. usar [02-primer-contacto-estandar.md](../02-mensajeria/02-primer-contacto-estandar.md)
 4. registrar `estado`, `respuesta`, `fecha_ultimo_contacto` y `proxima_accion` en el mismo CSV maestro
 
 ## Lectura estrategica
