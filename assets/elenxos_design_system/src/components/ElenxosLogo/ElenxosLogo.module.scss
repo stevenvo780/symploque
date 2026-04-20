@@ -13,12 +13,20 @@
   }
 
   // Color variants
-  &--cream {
-    .elx-logo__hex  { stroke: #f0e6d3; opacity: 0.4; }
-    .elx-logo__tri  { stroke: #f0e6d3; opacity: 0.6; }
-    .elx-logo__net  { stroke: #f0e6d3; opacity: 0.8; }
-    .elx-logo__node-center { fill: #f0e6d3; }
-    .elx-logo__node { fill: #f0e6d3; opacity: 0.9; }
+  &--forest {
+    .elx-logo__hex  { stroke: $color-forest-deep; opacity: 0.4; }
+    .elx-logo__tri  { stroke: $color-forest-deep; opacity: 0.6; }
+    .elx-logo__net  { stroke: $color-forest-deep; opacity: 0.8; }
+    .elx-logo__node-center { fill: $color-forest-deep; }
+    .elx-logo__node { fill: $color-forest-deep; opacity: 0.9; }
+  }
+
+  &--ash {
+    .elx-logo__hex  { stroke: $color-ash; opacity: 0.4; }
+    .elx-logo__tri  { stroke: $color-ash; opacity: 0.6; }
+    .elx-logo__net  { stroke: $color-ash; opacity: 0.8; }
+    .elx-logo__node-center { fill: $color-ash; }
+    .elx-logo__node { fill: $color-ash; opacity: 0.9; }
   }
 
   &--kodama {

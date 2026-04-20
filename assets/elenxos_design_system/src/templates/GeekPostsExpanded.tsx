@@ -52,7 +52,7 @@ export const P01_Socrates = () => (
       <QuoteCard
         quote="Solo sé que no sé nada."
         author="Sócrates"
-        fontSize={34}
+        fontSize={44}
       />
       <DialecticFlow thesis="Ignorancia" antithesis="Pregunta" synthesis="Sabiduría" color="kodama" />
     </div>
@@ -71,9 +71,9 @@ export const P02_Wittgenstein = () => (
       <QuoteCard
         quote="Los límites de mi lenguaje son los límites de mi mundo."
         author="Ludwig Wittgenstein"
-        fontSize={30}
+        fontSize={38}
       />
-      <FormulaDisplay formula="P ∧ ¬P → ⊥" label="Principio de no contradicción" size="md" color="white" />
+      <FormulaDisplay formula="P ∧ ¬P → ⊥" label="Principio de no contradicción" size="lg" color="white" />
     </div>
   </SocialCanvas>
 );
@@ -88,10 +88,10 @@ export const P03_Heidegger = () => (
     <BrandMark position="center-bottom" fontSize={12} tagline="Serie: Aletheia" />
     <div style={abs({ padding: '90px 70px', gap: 30 })}>
       <CinematicText text="ἀλήθεια" level="h1" color="kodama" delayStep={0.15} style={{ fontSize: 72, fontStyle: 'italic' }} />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', lineHeight: 1.8, maxWidth: '80%' }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', lineHeight: 1.8, maxWidth: '80%' }}>
         El desocultamiento del Ser. La verdad no como correspondencia sino como revelación.
       </Text>
-      <Text size="xs" color="muted" style={{ letterSpacing: 6 }}>MARTIN HEIDEGGER</Text>
+      <Text size="md" color="muted" style={{ letterSpacing: 6 }}>MARTIN HEIDEGGER</Text>
     </div>
   </SocialCanvas>
 );
@@ -108,10 +108,10 @@ export const P04_Deleuze = () => (
     <BrandMark position="top-left" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 16 })}>
       <CinematicText text="RIZOMA" level="h1" color="kodama" delayStep={0.12} style={{ fontSize: 80, letterSpacing: 12 }} />
-      <Text size="md" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7 }}>
+      <Text size="xl" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7 }}>
         No hay estructura, solo multiplicidades. No hay raíz, solo conexiones.
       </Text>
-      <Text size="xs" color="muted" style={{ letterSpacing: 4 }}>DELEUZE & GUATTARI</Text>
+      <Text size="md" color="muted" style={{ letterSpacing: 4 }}>DELEUZE & GUATTARI</Text>
     </div>
   </SocialCanvas>
 );
@@ -129,7 +129,7 @@ export const P05_Nietzsche = () => (
       <QuoteCard
         quote="Y si un día o una noche un demonio te siguiera... ¿te arrojarías al suelo y maldecirías, o le responderías: 'eres un dios'?"
         author="Friedrich Nietzsche"
-        fontSize={26}
+        fontSize={34}
       />
     </div>
   </SocialCanvas>
@@ -139,17 +139,17 @@ export const P05_Nietzsche = () => (
 export const P06_Foucault = () => (
   <SocialCanvas format="post" scale={0.38}>
     <div style={{ position: 'absolute', inset: 0, background: '#080808' }} />
-    <MatrixRain columns={20} charset="binary" color="kodama" speed={2} />
+    <MatrixRain columns={12} charset="binary" color="kodama" speed={2} />
     <GridPattern variant="perspective" gap={30} />
     <FrameOverlay variant="corners" />
     <BrandMark position="top-right" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 20 })}>
-      <GlitchText text="VIGILAR" level="h1" intensity="heavy" color="mask" />
-      <Text size="lg" color="muted" style={{ letterSpacing: 8 }}>Y CASTIGAR</Text>
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '80%', lineHeight: 1.7, marginTop: 20 }}>
+      <GlitchText text="VIGILAR" level="h1" intensity="medium" color="mask" />
+      <Text size="xl" color="muted" style={{ letterSpacing: 8 }}>Y CASTIGAR</Text>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '80%', lineHeight: 1.7, marginTop: 20 }}>
         El poder no se posee, se ejerce. La vigilancia como tecnología del saber.
       </Text>
-      <Text size="xs" color="muted" style={{ letterSpacing: 4 }}>MICHEL FOUCAULT</Text>
+      <Text size="md" color="muted" style={{ letterSpacing: 4 }}>MICHEL FOUCAULT</Text>
     </div>
   </SocialCanvas>
 );
@@ -166,8 +166,8 @@ export const P07_Fibonacci = () => (
     <FrameOverlay variant="double" />
     <BrandMark position="bottom-left" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 16, justifyContent: 'flex-end', paddingBottom: 140 })}>
-      <FormulaDisplay formula="φ = (1 + √5) / 2" label="Número áureo" size="lg" color="gold" />
-      <Text size="xs" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>Serie: Belleza Matemática</Text>
+      <FormulaDisplay formula="φ = (1 + √5) / 2" label="Número áureo" size="xl" color="gold" />
+      <Text size="md" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>Serie: Belleza Matemática</Text>
     </div>
   </SocialCanvas>
 );
@@ -181,12 +181,12 @@ export const P08_Godel = () => (
     <ScanLines />
     <BrandMark position="bottom-right" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 20 })}>
-      <GlitchText text="INCOMPLETITUD" level="h2" intensity="medium" color="mask" />
-      <FormulaDisplay formula="∃G : F ⊬ G ∧ F ⊬ ¬G" label="Primer teorema de Gödel" size="md" color="mask" />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7, marginTop: 10 }}>
+      <GlitchText text="INCOMPLETITUD" level="h2" intensity="subtle" color="mask" />
+      <FormulaDisplay formula="∃G : F ⊬ G ∧ F ⊬ ¬G" label="Primer teorema de Gödel" size="lg" color="mask" />
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7, marginTop: 10 }}>
         Todo sistema formal suficientemente expresivo contiene proposiciones verdaderas que no puede demostrar.
       </Text>
-      <Text size="xs" color="muted" style={{ letterSpacing: 4 }}>KURT GÖDEL, 1931</Text>
+      <Text size="md" color="muted" style={{ letterSpacing: 4 }}>KURT GÖDEL, 1931</Text>
     </div>
   </SocialCanvas>
 );
@@ -201,7 +201,7 @@ export const P09_Euler = () => (
     <BrandMark position="center-bottom" fontSize={12} />
     <div style={abs({ padding: '80px', gap: 30 })}>
       <FormulaDisplay formula="e^(iπ) + 1 = 0" label="Identidad de Euler" size="xl" color="kodama" />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '80%', lineHeight: 1.7 }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '80%', lineHeight: 1.7 }}>
         Cinco constantes fundamentales. Una sola ecuación. La fórmula más bella de las matemáticas.
       </Text>
     </div>
@@ -217,10 +217,10 @@ export const P10_Penrose = () => (
     <BrandMark position="bottom-right" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 20 })}>
       <CinematicText text="APERIÓDICO" level="h1" delayStep={0.1} style={{ fontSize: 68, letterSpacing: 8 }} />
-      <Text size="md" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7 }}>
+      <Text size="xl" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7 }}>
         Orden sin repetición. Patrones que cubren el plano infinito sin jamás repetirse.
       </Text>
-      <Text size="xs" color="muted" style={{ letterSpacing: 4 }}>ROGER PENROSE</Text>
+      <Text size="md" color="muted" style={{ letterSpacing: 4 }}>ROGER PENROSE</Text>
     </div>
   </SocialCanvas>
 );
@@ -237,7 +237,7 @@ export const P11_Cantor = () => (
     <div style={abs({ padding: '80px', gap: 20 })}>
       <IconSymbol symbol="∞" size={180} color="kodama" style={{ opacity: 0.8 }} />
       <FormulaDisplay formula="ℵ₀ < ℵ₁ < ℵ₂ < ..." label="Jerarquía de cardinales" size="lg" color="kodama" />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7 }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7 }}>
         Hay infinitos más grandes que otros. El paraíso que Cantor creó para nosotros.
       </Text>
     </div>
@@ -248,17 +248,17 @@ export const P11_Cantor = () => (
 export const P12_Turing = () => (
   <SocialCanvas format="post" scale={0.38}>
     <div style={{ position: 'absolute', inset: 0, background: '#040804' }} />
-    <MatrixRain columns={18} charset="binary" color="kodama" speed={1} />
+    <MatrixRain columns={10} charset="binary" color="kodama" speed={1} />
     <GridPattern variant="lines" gap={50} />
     <FrameOverlay variant="corners" />
     <BrandMark position="top-left" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 20 })}>
       <FormulaDisplay formula="λf.(λx.f(x x))(λx.f(x x))" label="Combinador Y" size="lg" color="kodama" />
       <CinematicText text="COMPUTABLE" level="h2" color="kodama" delayStep={0.08} style={{ fontSize: 56, letterSpacing: 6 }} />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '80%' }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '80%' }}>
         ¿Puede una máquina pensar? La pregunta que fundó la era digital.
       </Text>
-      <Text size="xs" color="muted" style={{ letterSpacing: 4 }}>ALAN TURING, 1936</Text>
+      <Text size="md" color="muted" style={{ letterSpacing: 4 }}>ALAN TURING, 1936</Text>
     </div>
   </SocialCanvas>
 );
@@ -275,7 +275,7 @@ export const P13_ProofVisual = () => (
     <FrameOverlay variant="minimal" />
     <BrandMark position="bottom-right" fontSize={11} />
     <div style={abs({ padding: '80px 60px', gap: 20, alignItems: 'flex-start' })}>
-      <Text size="xs" color="kodama" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>Demostración Formal</Text>
+      <Text size="md" color="kodama" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>Demostración Formal</Text>
       <ProofChain
         color="kodama"
         steps={[
@@ -315,8 +315,8 @@ export const P15_SetTheory = () => (
     <FrameOverlay variant="double" />
     <BrandMark position="top-right" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 20 })}>
-      <FormulaDisplay formula="∀𝒳 [∅ ∉ 𝒳 → ∃f: 𝒳 → ⋃𝒳]" label="Axioma de Elección" size="md" color="mask" />
-      <Text size="md" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7 }}>
+      <FormulaDisplay formula="∀𝒳 [∅ ∉ 𝒳 → ∃f: 𝒳 → ⋃𝒳]" label="Axioma de Elección" size="lg" color="mask" />
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', lineHeight: 1.7 }}>
         De cada colección de conjuntos no vacíos, podemos elegir exactamente un elemento. ¿Obvio? Depende de a quién preguntes.
       </Text>
     </div>
@@ -339,7 +339,7 @@ export const P16_Entropia = () => (
     <div style={abs({ padding: '80px', gap: 20 })}>
       <FormulaDisplay formula="S = k_B ln Ω" label="Entropía de Boltzmann" size="lg" color="mask" />
       <CinematicText text="ENTROPÍA" level="h2" color="mask" delayStep={0.1} style={{ fontSize: 56 }} />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '85%' }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '85%' }}>
         El desorden crece. Solo el pensamiento riguroso puede revertirlo localmente.
       </Text>
     </div>
@@ -373,9 +373,9 @@ export const P18_Caos = () => (
     <FrameOverlay variant="corners" />
     <BrandMark position="top-left" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 20 })}>
-      <FormulaDisplay formula="dx/dt = σ(y − x)" label="Atractor de Lorenz" size="md" color="gold" />
+      <FormulaDisplay formula="dx/dt = σ(y − x)" label="Atractor de Lorenz" size="lg" color="gold" />
       <CinematicText text="CAOS" level="h1" color="mask" delayStep={0.15} style={{ fontSize: 90, letterSpacing: 16 }} />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '85%' }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '85%' }}>
         Determinismo sensible a condiciones iniciales. El orden oculto en el desorden.
       </Text>
     </div>
@@ -396,7 +396,7 @@ export const P19_LogoHero = () => (
     <div style={abs({ padding: '80px', gap: 30 })}>
       <ElenxosLogo size={200} color="kodama" animated glow />
       <CinematicText text="ELENXOS" level="h1" color="kodama" delayStep={0.15} style={{ fontSize: 72, letterSpacing: 20 }} />
-      <Text size="sm" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>
+      <Text size="md" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>
         Sistemas complejos · Software académico
       </Text>
     </div>
@@ -429,7 +429,7 @@ export const P20_Launch = () => (
 export const P21_MatrixPure = () => (
   <SocialCanvas format="post" scale={0.38}>
     <div style={{ position: 'absolute', inset: 0, background: '#020402' }} />
-    <MatrixRain columns={25} charset="kanji" color="kodama" speed={2} />
+    <MatrixRain columns={15} charset="kanji" color="kodama" speed={2} />
     <GlowOrb color="kodama" size={300} x="50%" y="50%" blur={100} opacity={0.08} />
     <FrameOverlay variant="minimal" />
     <BrandMark position="center-bottom" fontSize={14} tagline="Despierta" />
@@ -455,10 +455,10 @@ export const P22_DialecticVisual = () => (
         synthesis="Devenir"
         color="kodama"
       />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', marginTop: 10 }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '85%', marginTop: 10 }}>
         La superación dialéctica: negar, conservar y elevar en un solo movimiento.
       </Text>
-      <Text size="xs" color="muted" style={{ letterSpacing: 4 }}>G.W.F. HEGEL</Text>
+      <Text size="md" color="muted" style={{ letterSpacing: 4 }}>G.W.F. HEGEL</Text>
     </div>
   </SocialCanvas>
 );
@@ -473,7 +473,7 @@ export const P23_FibNature = () => (
     <BrandMark position="top-right" fontSize={11} />
     <div style={abs({ padding: '80px', justifyContent: 'flex-end', paddingBottom: 120, gap: 16 })}>
       <CinematicText text="1, 1, 2, 3, 5, 8, 13, 21..." level="h3" color="kodama" delayStep={0.04} style={{ fontSize: 32, fontFamily: 'JetBrains Mono, monospace' }} />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '85%' }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '85%' }}>
         La secuencia que la naturaleza usa como plano arquitectónico.
       </Text>
     </div>
@@ -492,7 +492,7 @@ export const P24_PenroseDeep = () => (
       <QuoteCard
         quote="La mente no es algorítmica. La conciencia requiere algo más que computación."
         author="Roger Penrose"
-        fontSize={28}
+        fontSize={42}
       />
     </div>
   </SocialCanvas>
@@ -511,7 +511,7 @@ export const P25_Spinoza = () => (
       <QuoteCard
         quote="Deus sive Natura — Dios, es decir, la Naturaleza."
         author="Baruch Spinoza"
-        fontSize={32}
+        fontSize={42}
       />
       <ProofChain
         color="gold"
@@ -534,7 +534,7 @@ export const P26_Dashboard = () => (
     <FrameOverlay variant="corners" />
     <BrandMark position="top-left" fontSize={11} />
     <div style={abs({ padding: '60px', gap: 30 })}>
-      <Text size="xs" color="kodama" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>Elenxos Analytics Q4</Text>
+      <Text size="md" color="kodama" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>Elenxos Analytics Q4</Text>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 30, width: '100%' }}>
         <StatsDisplay stats={[{ value: '2.4M', label: 'Nodos procesados' }]} fontSize={56} />
         <StatsDisplay stats={[{ value: '847', label: 'Instituciones' }]} fontSize={56} delay={0.3} />

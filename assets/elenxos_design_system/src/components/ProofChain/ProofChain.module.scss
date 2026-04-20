@@ -5,16 +5,16 @@
 .elx-proof {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 12px;
   z-index: 5;
   position: relative;
 
   &__step {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 8px 16px;
-    border-radius: 6px;
+    gap: 16px;
+    padding: 16px 24px;
+    border-radius: 8px;
     background: rgba(#000, 0.2);
     backdrop-filter: blur(4px);
     position: relative;
@@ -22,24 +22,24 @@
 
   &__symbol {
     font-family: $font-mono;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: $font-weight-bold;
-    min-width: 28px;
+    min-width: 48px;
     text-align: center;
   }
 
   &__text {
     font-family: $font-sans;
-    font-size: $font-size-sm;
+    font-size: 26px;
     line-height: 1.4;
   }
 
   &__connector {
     position: absolute;
-    left: 22px;
-    bottom: -8px;
+    left: 30px;
+    bottom: -14px;
     width: 2px;
-    height: 8px;
+    height: 14px;
     z-index: 1;
   }
 

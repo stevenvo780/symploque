@@ -64,7 +64,7 @@ export const B05_FibBanner = () => (
       <div style={{ flex: 1 }} />
       <div style={{ flex: 1.5, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 8 }}>
         <FormulaDisplay formula="φ = 1.618033..." label="Proporción divina" size="lg" color="gold" />
-        <Text size="xs" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase', textAlign: 'center' }}>
+        <Text size="md" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase', textAlign: 'center' }}>
           La matemática oculta en la belleza
         </Text>
       </div>
@@ -81,8 +81,8 @@ export const B06_GlitchBanner = () => (
     <FrameOverlay variant="mask" />
     <BrandMark position="bottom-right" fontSize={12} />
     <div style={abs({ padding: '0 100px', textAlign: 'center', gap: 8 })}>
-      <GlitchText text="SISTEMA COMPROMETIDO" level="h2" intensity="heavy" color="mask" />
-      <Text size="sm" color="muted" style={{ letterSpacing: 6 }}>
+      <GlitchText text="SISTEMA COMPROMETIDO" level="h2" intensity="subtle" color="mask" />
+      <Text size="md" color="muted" style={{ letterSpacing: 6 }}>
         Actualización epistémica en progreso...
       </Text>
     </div>
@@ -99,7 +99,7 @@ export const B07_HexNetwork = () => (
     <BrandMark position="bottom-left" fontSize={12} />
     <div style={abs({ padding: '0 120px', textAlign: 'center', gap: 8 })}>
       <CinematicText text="Red de Conocimiento" level="h2" color="kodama" delayStep={0.06} style={{ fontSize: 48 }} />
-      <Text size="xs" color="muted" style={{ letterSpacing: 8, textTransform: 'uppercase' }}>
+      <Text size="md" color="muted" style={{ letterSpacing: 8, textTransform: 'uppercase' }}>
         847 instituciones · 23 países · 2.4M nodos epistémicos
       </Text>
     </div>
@@ -116,7 +116,7 @@ export const B08_PenroseBanner = () => (
     <BrandMark position="bottom-right" fontSize={12} />
     <div style={abs({ padding: '0 140px', textAlign: 'center', gap: 4 })}>
       <CinematicText text="ORDEN APERIÓDICO" level="h2" delayStep={0.08} style={{ fontSize: 44, letterSpacing: 8 }} />
-      <Text size="xs" color="kodama" style={{ letterSpacing: 6 }}>Estructura sin repetición</Text>
+      <Text size="md" color="kodama" style={{ letterSpacing: 6 }}>Estructura sin repetición</Text>
     </div>
   </SocialCanvas>
 );
@@ -131,7 +131,7 @@ export const B09_DialecticBanner = () => (
     <BrandMark position="bottom-left" fontSize={12} />
     <div style={abs({ padding: '0 80px', gap: 16 })}>
       <DialecticFlow thesis="Problema" antithesis="Crítica" synthesis="Solución" color="kodama" />
-      <Text size="xs" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>
+      <Text size="md" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase' }}>
         El método Elenxos: pensamiento dialéctico aplicado
       </Text>
     </div>
@@ -222,7 +222,7 @@ export const R04_FibReel = () => (
 export const R05_MatrixReel = () => (
   <SocialCanvas format="reel" scale={0.28}>
     <div style={{ position: 'absolute', inset: 0, background: '#020402' }} />
-    <MatrixRain columns={16} charset="kanji" color="kodama" speed={2} />
+    <MatrixRain columns={10} charset="kanji" color="kodama" speed={2} />
     <FrameOverlay variant="minimal" />
     <BrandMark position="center-bottom" fontSize={14} />
     <div style={abs({ padding: '120px 70px', gap: 60 })}>
@@ -247,7 +247,7 @@ export const R06_ProofReel = () => (
     <FrameOverlay variant="corners" />
     <BrandMark position="bottom-left" fontSize={12} tagline="Serie: Lógica" />
     <div style={abs({ padding: '120px 50px', gap: 20, alignItems: 'flex-start' })}>
-      <Text size="xs" color="kodama" style={{ letterSpacing: 6, textTransform: 'uppercase', alignSelf: 'center' }}>Demostración Formal</Text>
+      <Text size="md" color="kodama" style={{ letterSpacing: 6, textTransform: 'uppercase', alignSelf: 'center' }}>Demostración Formal</Text>
       <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
         <ProofChain
           color="kodama"
@@ -276,12 +276,12 @@ export const R07_DialecticReel = () => (
     <div style={abs({ padding: '120px 60px', gap: 30 })}>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', gap: 16 }}>
         <CinematicText text="TESIS" level="h1" color="mask" delayStep={0.15} style={{ fontSize: 72 }} />
-        <Text size="md" color="secondary">La academia es suficiente</Text>
+        <Text size="lg" color="secondary">La academia es suficiente</Text>
       </div>
       <div style={{ width: '60%', height: 1, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)', alignSelf: 'center' }} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', gap: 16 }}>
         <CinematicText text="ANTÍTESIS" level="h1" color="kodama" delayStep={0.1} baseDelay={2} style={{ fontSize: 72 }} />
-        <Text size="md" color="secondary">La academia necesita reinventarse</Text>
+        <Text size="lg" color="secondary">La academia necesita reinventarse</Text>
       </div>
       <div style={{ width: '60%', height: 1, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)', alignSelf: 'center' }} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', gap: 16 }}>
@@ -296,7 +296,7 @@ export const R07_DialecticReel = () => (
 export const R08_QuantumReel = () => (
   <SocialCanvas format="reel" scale={0.28}>
     <div style={{ position: 'absolute', inset: 0, background: '#060B10' }} />
-    <QuantumParticle count={30} color="mixed" entangled />
+    <QuantumParticle count={18} color="mixed" entangled />
     <GlowOrb color="kodama" size={300} x="40%" y="30%" blur={80} opacity={0.15} />
     <GlowOrb color="mask" size={300} x="60%" y="70%" blur={80} opacity={0.1} />
     <FrameOverlay variant="corners" />
@@ -308,7 +308,7 @@ export const R08_QuantumReel = () => (
         <CinematicText text="crear." level="h1" color="kodama" delayStep={0.15} baseDelay={2} style={{ fontSize: 80 }} />
       </div>
       <div style={{ flex: 0.6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <FormulaDisplay formula="|ψ⟩ → |0⟩ ∨ |1⟩" label="Colapso de función de onda" size="md" color="kodama" />
+        <FormulaDisplay formula="|ψ⟩ → |0⟩ ∨ |1⟩" label="Colapso de función de onda" size="lg" color="kodama" />
       </div>
       <div style={{ flex: 0.5 }} />
     </div>
@@ -331,7 +331,7 @@ export const R09_NietzscheReel = () => (
         <CinematicText text="¿Vivirías" level="h2" color="muted" delayStep={0.08} baseDelay={1} style={{ fontSize: 56 }} />
         <CinematicText text="esta vida" level="h2" delayStep={0.08} baseDelay={2} style={{ fontSize: 56 }} />
         <CinematicText text="una vez más?" level="h2" color="mask" delayStep={0.08} baseDelay={3} style={{ fontSize: 64 }} />
-        <Text size="sm" color="muted" style={{ marginTop: 20, letterSpacing: 4 }}>ETERNO RETORNO</Text>
+        <Text size="lg" color="muted" style={{ marginTop: 20, letterSpacing: 4 }}>ETERNO RETORNO</Text>
       </div>
       <div style={{ flex: 0.3 }} />
     </div>
@@ -342,9 +342,9 @@ export const R09_NietzscheReel = () => (
 export const R10_ChaosReel = () => (
   <SocialCanvas format="reel" scale={0.28}>
     <div style={{ position: 'absolute', inset: 0, background: '#080808' }} />
-    <TopologyMorph count={10} size={60} color="mixed" />
+    <TopologyMorph count={6} size={60} color="mixed" />
     <GradientWave speed={15} />
-    <QuantumParticle count={15} color="mixed" />
+    <QuantumParticle count={10} color="mixed" />
     <FrameOverlay variant="corners" />
     <BrandMark position="bottom-left" fontSize={12} />
     <div style={abs({ padding: '120px 60px', gap: 30 })}>
@@ -357,7 +357,7 @@ export const R10_ChaosReel = () => (
         <CinematicText text="ORDEN" level="hero" color="kodama" delayStep={0.2} baseDelay={3} style={{ fontSize: 120, letterSpacing: 12 }} />
       </div>
       <div style={{ flex: 0.5, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <FormulaDisplay formula="dx/dt = σ(y−x)" label="Lorenz" size="md" color="gold" />
+        <FormulaDisplay formula="dx/dt = σ(y−x)" label="Lorenz" size="lg" color="gold" />
       </div>
     </div>
   </SocialCanvas>
@@ -379,7 +379,7 @@ export const R11_SpinozaReel = () => (
         <CinematicText text="Deus" level="h1" color="kodama" delayStep={0.15} baseDelay={0.5} style={{ fontSize: 72, fontStyle: 'italic' }} />
         <CinematicText text="sive" level="h2" color="muted" delayStep={0.1} baseDelay={1.5} style={{ fontSize: 42, letterSpacing: 8 }} />
         <CinematicText text="Natura" level="h1" color="kodama" delayStep={0.15} baseDelay={2.5} style={{ fontSize: 72, fontStyle: 'italic' }} />
-        <Text size="sm" color="muted" style={{ marginTop: 30, letterSpacing: 4 }}>SPINOZA · ÉTICA</Text>
+        <Text size="lg" color="muted" style={{ marginTop: 30, letterSpacing: 4 }}>SPINOZA · ÉTICA</Text>
       </div>
       <div style={{ flex: 0.3 }} />
     </div>

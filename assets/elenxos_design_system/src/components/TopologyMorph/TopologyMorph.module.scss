@@ -11,8 +11,8 @@
     position: absolute;
     transform: translate(-50%, -50%);
     border: 1.5px solid;
-    animation: elx-topology-morph 6s ease-in-out infinite, elx-float-slow 8s ease-in-out infinite;
-    opacity: 0.3;
+    animation: elx-topology-morph 12s ease-in-out infinite, elx-float-slow 12s ease-in-out infinite;
+    opacity: 0.15;
   }
 
   &--kodama &__shape {

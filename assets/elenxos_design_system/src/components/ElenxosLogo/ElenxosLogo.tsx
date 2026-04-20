@@ -3,7 +3,7 @@ import styles from './ElenxosLogo.module.scss';
 
 export interface ElenxosLogoProps {
   size?: number;
-  color?: 'kodama' | 'cream' | 'white' | 'mask';
+  color?: 'kodama' | 'forest' | 'ash' | 'white' | 'mask';
   animated?: boolean;
   glow?: boolean;
   className?: string;
@@ -11,7 +11,7 @@ export interface ElenxosLogoProps {
 }
 
 export const ElenxosLogo: React.FC<ElenxosLogoProps> = ({
-  size = 80, color = 'cream', animated = true, glow = false, className = '', style = {},
+  size = 80, color = 'kodama', animated = true, glow = false, className = '', style = {},
 }) => {
   const classes = [
     styles['elx-logo'], styles[`elx-logo--${color}`],

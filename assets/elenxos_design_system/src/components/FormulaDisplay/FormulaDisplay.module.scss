@@ -24,7 +24,7 @@
 
   &__label {
     font-family: $font-sans;
-    font-size: $font-size-xs;
+    font-size: 22px;
     font-weight: $font-weight-semibold;
     letter-spacing: $letter-spacing-wider;
     text-transform: uppercase;
@@ -32,10 +32,10 @@
   }
 
   // Sizes
-  &--sm &__text { font-size: 14px; padding: 8px 14px; }
-  &--md &__text { font-size: 20px; padding: 12px 20px; }
-  &--lg &__text { font-size: 32px; padding: 16px 28px; }
-  &--xl &__text { font-size: 52px; padding: 24px 36px; }
+  &--sm &__text { font-size: 24px; padding: 10px 18px; }
+  &--md &__text { font-size: 36px; padding: 16px 28px; }
+  &--lg &__text { font-size: 52px; padding: 20px 36px; }
+  &--xl &__text { font-size: 72px; padding: 28px 44px; }
 
   // Colors
   &--kodama {

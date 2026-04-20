@@ -24,12 +24,12 @@
 
   &__before {
     clip-path: inset(0 0 65% 0);
-    animation: elx-godel-glitch 5s infinite;
+    animation: elx-godel-glitch 10s infinite;
   }
 
   &__after {
     clip-path: inset(65% 0 0 0);
-    animation: elx-godel-glitch 5s infinite reverse;
+    animation: elx-godel-glitch 10s infinite reverse;
   }
 
   // Sizes
@@ -39,9 +39,9 @@
   &--display { .elx-glitch__main, .elx-glitch__before, .elx-glitch__after { font-size: 120px; } }
 
   // Intensity
-  &--subtle &__before, &--subtle &__after { opacity: 0.3; }
-  &--medium &__before, &--medium &__after { opacity: 0.5; }
-  &--heavy  &__before, &--heavy &__after  { opacity: 0.8; }
+  &--subtle &__before, &--subtle &__after { opacity: 0.15; }
+  &--medium &__before, &--medium &__after { opacity: 0.3; }
+  &--heavy  &__before, &--heavy &__after  { opacity: 0.45; }
 
   // Colors
   &--kodama {

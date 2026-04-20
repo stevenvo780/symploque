@@ -49,6 +49,18 @@ const TEMPLATES: TemplateInfo[] = [
   { id: 'reel_original',      format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
   { id: 'reel_manifiesto',    format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
   { id: 'reel_simbolo',       format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
+  // Hybrid: AI image + React components
+  { id: 'hybrid_arbol_tesis',      format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_problema',         format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_respuesta',        format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_diferenciador',    format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_madurez',          format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_reel_manifiesto',  format: 'reel',   width: 1080, height: 1920, category: 'hybrid' },
+  { id: 'hybrid_story_teaser',     format: 'reel',   width: 1080, height: 1920, category: 'hybrid' },
+  { id: 'hybrid_banner_linkedin',  format: 'banner', width: 1500, height: 500,  category: 'hybrid' },
+  { id: 'hybrid_banner_og',        format: 'banner', width: 1500, height: 500,  category: 'hybrid' },
+  { id: 'hybrid_banner_x',         format: 'banner', width: 1500, height: 500,  category: 'hybrid' },
+  { id: 'hybrid_banner_yt',        format: 'banner', width: 1500, height: 500,  category: 'hybrid' },
 ];
 
 // ── Args ─────────────────────────────────────────────────────
@@ -157,29 +169,37 @@ async function main() {
         const renderUrl = `${baseUrl}/render.html?template=${tmpl.id}`;
         await page.goto(renderUrl, { waitUntil: 'networkidle' });
 
-        // Debug: dump page content if element not found quickly
-        const quickCheck = await page.$(`[data-template-id="${tmpl.id}"]`);
-        if (!quickCheck) {
-          const html = await page.content();
-          const bodyMatch = html.match(/<body[^>]*>([\s\S]{0,2000})/);
-          console.error(`  [DEBUG] Body: ${bodyMatch?.[1] || 'empty'}`);
-          // Try to extract vite error overlay message
-          const errorOverlay = await page.$('vite-error-overlay');
-          if (errorOverlay) {
-            const overlayText = await page.evaluate(() => {
-              const el = document.querySelector('vite-error-overlay');
-              return el?.shadowRoot?.textContent || el?.textContent || 'no text';
-            });
-            console.error(`  [VITE ERROR] ${overlayText?.substring(0, 1000)}`);
-          }
-        }
-
-        // Wait for the template element to appear
+        // Wait for the template element to mount
         const selector = `[data-template-id="${tmpl.id}"]`;
-        await page.waitForSelector(selector, { timeout: 10_000 });
+        await page.waitForSelector(selector, { timeout: 15_000 });
 
-        // Small delay for CSS animations to settle
-        await page.waitForTimeout(500);
+        // Wait for ALL finite (non-infinite) CSS animations to complete.
+        // This uses the Web Animations API to detect every running animation
+        // and waits for those with finite iterations to reach their end state.
+        await page.evaluate(() => {
+          return new Promise<void>((resolve) => {
+            const check = () => {
+              const anims = document.getAnimations();
+              const finite = anims.filter(a => {
+                const effect = a.effect as KeyframeEffect;
+                if (!effect?.getComputedTiming) return false;
+                const t = effect.getComputedTiming();
+                return t.iterations !== Infinity;
+              });
+              if (finite.length === 0) {
+                resolve();
+                return;
+              }
+              Promise.all(finite.map(a => a.finished.catch(() => {})))
+                .then(() => resolve());
+            };
+            // Give React a tick to mount and start animations
+            requestAnimationFrame(() => requestAnimationFrame(check));
+          });
+        });
+
+        // Extra settle time for any CSS transitions triggered after animations
+        await page.waitForTimeout(300);
 
         // Screenshot just the template element at exact dimensions
         const element = await page.$(selector);

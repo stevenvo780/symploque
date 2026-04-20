@@ -10,8 +10,8 @@
   &__particle {
     position: absolute;
     border-radius: 50%;
-    animation: elx-quantum-flicker 3s ease-in-out infinite,
-               elx-float-slow 6s ease-in-out infinite;
+    animation: elx-float-slow 8s ease-in-out infinite;
+    opacity: 0.7;
   }
 
   &__entangle-line {
