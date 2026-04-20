@@ -162,3 +162,32 @@
   - Confirmed the board preserves the discrepancy note: the prompt asked for `41`, but the CSV yields `33`, and lead `33` is `telefono`, not `whatsapp`.
 - Notes:
   - The next step is execution discipline: send the `16` first-touch emails first, then use the short recontact track for the `17` already contacted leads and update the maestro after each interaction.
+
+## 2026-04-20
+
+- Goal: Reorganize the repo for the next outbound phase: corporate sender, declaration emails, and landing-gated launch.
+- Actions:
+  - Audited `email.md` and detected that it exposed operational secrets directly in markdown, then rewrote it to use environment variables and a safer operational checklist.
+  - Added `00-central/estado-actual-y-transicion.md` as the new high-level entrypoint for the repo's current phase.
+  - Added `06-operacion-email/` with a transition plan covering historical personal sends, declaration emails, landing gating, and the first corporate launch wave.
+  - Added `03-datos/README.md` plus `03-datos/operacion-email/` with a new master CSV schema and import queues for sent-email reconciliation and declaration tracking.
+  - Updated `README.md`, `docs/codex/NEXT_ACTIONS.md`, `docs/codex/PROJECT_CONTEXT.md`, and `docs/codex/PROTOCOL.md` so the repo now reflects the transition state instead of only the historical Agora outreach phase.
+- Verification:
+  - Confirmed the new docs reference each other coherently and that the repo now has a clear current entrypoint.
+  - Confirmed `email.md` no longer keeps plaintext secrets in the repository copy.
+- Notes:
+  - The next blocking input is the real list of emails already sent from the personal account, plus confirmation of the final launch domain.
+
+## 2026-04-20 2
+
+- Goal: Align the repository with the live public websites after `www.elenxos.com` and `agora.elenxos.com` went live.
+- Actions:
+  - Fetched the live public HTML for `https://www.elenxos.com/` and confirmed the new corporate framing around advanced academic software, axiomatic rigor, methodological standardization, and epistemic ecosystems.
+  - Fetched the live Agora root, docs, and manifest from `https://agora.elenxos.com/`, confirming the product is now published under the Elenxos domain and that the manifest describes Agora as an offline-first collaborative education platform.
+  - Replaced old `agora.humanizar.cloud` links across the repo with `agora.elenxos.com`.
+  - Updated the central repo docs, email-operation docs, and social-media strategy so they no longer treat the domain or landing as pending and now reflect the live Elenxos/Agora split.
+- Verification:
+  - Confirmed there are no remaining repo references to `agora.humanizar.cloud` or the old `alenxos.com` typo.
+  - Confirmed the core docs now point to the live public URLs.
+- Notes:
+  - The Elenxos public HTML still references the old Agora domain in `sameAs`; that mismatch lives on the website itself, not in this repo, and should be corrected separately.

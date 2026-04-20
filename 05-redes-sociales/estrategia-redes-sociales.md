@@ -15,46 +15,49 @@ Las redes no deben operar como un canal separado del sistema comercial. Deben al
 - conversaciones entrantes,
 - y soporte al outreach.
 
-## Base publica actual de Agora
+## Base publica actual de Agora y Elenxos
 
-La estrategia de redes debe partir de lo que Agora ya dice hoy en su sitio y documentacion publica, no de una version vieja del relato.
+La estrategia de redes debe partir de lo que Agora y Elenxos ya dicen hoy en sus sitios y documentacion publica, no de una version vieja del relato.
 
 Anclajes publicos vigentes:
 
-- `El nuevo estandar para investigacion rigurosa`
-- `Plataforma de investigacion cooperativa`
-- `Lógica formal ejecutable · Markdown académico · Terminales cloud`
-- `Markdown + ST + colaboración en la nube`
-- `Escribe con libertad, verifica con rigor`
+- `Elenxos` se presenta como `software académico avanzado`
+- `Elenxos` habla de `rigor axiomático`, `estandarización metodológica` y `ecosistemas epistémicos`
+- `Agora` se presenta como `plataforma de educación cooperativa`
+- el manifest público de Agora lo describe como producto `offline-first`
+- la capa más concreta de Agora vive en su documentación y módulos visibles
 
 Pruebas publicas actuales que dan credibilidad:
 
-- landing publica con pricing
+- `www.elenxos.com` ya está en línea como capa corporativa
+- `agora.elenxos.com` ya está en línea como producto
 - `Manual Maestro Ágora` v `3.1.1`
-- `Manual ST` v `3.1.1`
-- paquete npm `@stevenvo780/st-lang`
-- docs publicas y repositorio visible
+- la documentación pública de Agora ya expone módulos concretos como `Editor Semántico`, `Terminal Multi-sesión`, `Tableros Kanban`, `Hojas de Cálculo`, `Agora AI Chat`, `Linter Académico`, `Formalizador LLM`, `Navegador Semántico`, `Centro ST` y `PWA & Offline`
 
 Esto cambia la estrategia de marca de forma importante:
 
-- Agora ya no debe comunicarse como herramienta academica generica
-- Agora debe entrar como plataforma para investigacion rigurosa
-- la parte tecnica no debe esconderse, sino traducirse mejor
+- `Elenxos` ya ocupa el plano más abstracto y fundacional
+- `Agora` debe ocupar el plano operativo y demostrable
+- la parte tecnica no debe esconderse, pero debe bajar desde sistema a caso de uso
 
 ## Tension de marca a resolver
 
-El sitio actual es fuerte en diferenciacion, pero puede sonar demasiado tecnico si no se traduce.
+La tension actual ya no es solo tecnica. Ahora hay una doble capa publica:
+
+- `Elenxos` suena más institucional, filosófico y ambicioso
+- `Agora` suena más utilitario, cooperativo y operativo
 
 La tarea de redes es resolver esa tension:
 
-- conservar la tesis fuerte de rigor
+- conservar la tesis fuerte de rigor y metodo
 - sin perder cercania
-- y sin abandonar al publico academico no tecnico
+- y sin abandonar al publico academico no tecnico ni desdibujar la relacion entre marca y producto
 
 Regla:
 
-- en landing y contenido de autoridad: hablar con mas ambicion y precision
-- en redes y outreach: traducir el valor tecnico a problemas reales de investigacion, escritura y colaboracion
+- en `Elenxos`: hablar con mas ambicion, tesis y arquitectura intelectual
+- en `Agora`: hablar con mas casos, flujos y prueba de producto
+- en redes y outreach: traducir ambas capas a problemas reales de investigacion, escritura y colaboracion
 
 ## Principios
 

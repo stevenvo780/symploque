@@ -133,7 +133,7 @@ Reglas obligatorias:
 - siempre incluir:
   - que somos un grupo de estudiantes emprendedores
   - que buscamos fortalecer el sector academico
-  - el link `https://agora.humanizar.cloud`
+  - el link `https://agora.elenxos.com`
 
 Objetivo:
 
@@ -155,12 +155,12 @@ Reglas obligatorias:
 - maximo `300` caracteres
 - tono de pedido de feedback, no de pitch
 - incluir el contexto de estudiantes emprendedores
-- incluir `https://agora.humanizar.cloud`
+- incluir `https://agora.elenxos.com`
 
 Plantilla base:
 
 ```text
-Hola, {{contact_name}}. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma: https://agora.humanizar.cloud
+Hola, {{contact_name}}. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma: https://agora.elenxos.com
 ```
 
 ## Estrategia 3. Navegacion de bot institucional
@@ -181,7 +181,7 @@ Objetivo:
 Plantilla base:
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. ¿Nos podrian compartir el correo o extension del coordinador o director que lleva {{proceso_academico}} en {{institution}}? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. ¿Nos podrian compartir el correo o extension del coordinador o director que lleva {{proceso_academico}} en {{institution}}? https://agora.elenxos.com
 ```
 
 ## Selector rapido por estrategia
@@ -272,7 +272,7 @@ Hola, {{saludo}}. Vi {{referencia_real}} en {{institution}} y pense que Agora po
 
 {{quienes_somos}} y {{anclaje_academico}}.
 
-Lo estamos mostrando a equipos que hoy tienen {{dolor_concreto}} repartido entre varias herramientas. Agora ayuda a reunir {{bloque_de_valor}} en un mismo workspace. https://agora.humanizar.cloud
+Lo estamos mostrando a equipos que hoy tienen {{dolor_concreto}} repartido entre varias herramientas. Agora ayuda a reunir {{bloque_de_valor}} en un mismo workspace. https://agora.elenxos.com
 
 Si le hace sentido, le comparto un ejemplo armado para {{caso_de_uso}} y miramos en 15 minutos si vale la pena probar un piloto.
 ```
@@ -300,7 +300,7 @@ Asunto: idea rapida para {{proceso_academico}}
 
 Hola, {{contact_name}}.
 
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar {{proceso_academico}} en {{institution}} sin tanta dispersion. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar {{proceso_academico}} en {{institution}} sin tanta dispersion. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
@@ -309,7 +309,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve 
 ```text
 Hola, {{contact_name}}. Vi {{role_or_unit}} en {{institution}}.
 
-Somos estudiantes emprendiendo con Agora y nos interesa fortalecer procesos academicos. Le escribo porque estamos mostrando la herramienta a programas y coordinaciones que necesitan ordenar materiales, borradores, evidencias y seguimiento en un mismo espacio. https://agora.humanizar.cloud
+Somos estudiantes emprendiendo con Agora y nos interesa fortalecer procesos academicos. Le escribo porque estamos mostrando la herramienta a programas y coordinaciones que necesitan ordenar materiales, borradores, evidencias y seguimiento en un mismo espacio. https://agora.elenxos.com
 
 Creo que podria servirles en {{proceso_academico}}. Si quiere, le mando un ejemplo concreto y vemos rapido si vale la pena un piloto.
 ```
@@ -342,7 +342,7 @@ Asunto: feedback rapido sobre esto
 
 Hola, {{contact_name}}.
 
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para {{curso_o_linea}} o {{role_or_unit}} en {{institution}}. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para {{curso_o_linea}} o {{role_or_unit}} en {{institution}}. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -351,7 +351,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 ```text
 Hola, {{contact_name}}. Vi su trabajo en {{role_or_unit}} en {{institution}}.
 
-Somos estudiantes emprendiendo con Agora y la estamos mostrando a profesores e investigadores que trabajan con lecturas, borradores y seguimiento de estudiantes o equipos. La idea es tener todo eso en un mismo workspace, con menos dispersion. https://agora.humanizar.cloud
+Somos estudiantes emprendiendo con Agora y la estamos mostrando a profesores e investigadores que trabajan con lecturas, borradores y seguimiento de estudiantes o equipos. La idea es tener todo eso en un mismo workspace, con menos dispersion. https://agora.elenxos.com
 
 Si le sirve, le comparto un ejemplo rapido aplicado a {{curso_o_linea}} o a un proyecto de investigacion.
 ```
@@ -383,7 +383,7 @@ Asunto: idea rapida para el semillero
 
 Hola, {{contact_name}}.
 
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creemos que Agora podria servirles para ordenar lecturas, borradores y tareas del semillero. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creemos que Agora podria servirles para ordenar lecturas, borradores y tareas del semillero. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido y le comparto un ejemplo.
 ```
 
@@ -392,7 +392,7 @@ Si le ve sentido, me basta un feedback rapido y le comparto un ejemplo.
 ```text
 Hola, {{contact_name}}. Vi {{role_or_unit}} en {{institution}}.
 
-Somos estudiantes emprendiendo con Agora. Creo que puede servirles para ordenar lecturas, borradores, tareas y materiales del semillero en un mismo espacio, sin depender de varias herramientas. https://agora.humanizar.cloud
+Somos estudiantes emprendiendo con Agora. Creo que puede servirles para ordenar lecturas, borradores, tareas y materiales del semillero en un mismo espacio, sin depender de varias herramientas. https://agora.elenxos.com
 
 Si le hace sentido, le mando un ejemplo de workspace para semilleros y lo revisamos rapido.
 ```
@@ -414,7 +414,7 @@ Si le hace sentido, le mando un ejemplo de workspace para semilleros y lo revisa
 ```text
 Hola, {{contact_name}}.
 
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en {{institution}}. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en {{institution}}. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me indiquen quien lleva este frente.
 ```
 
@@ -429,7 +429,7 @@ Si le ve sentido, me basta un feedback rapido o que me indiquen quien lleva este
 ```text
 Hola, {{contact_name}}.
 
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y flujo editorial en {{institution}}. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y flujo editorial en {{institution}}. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirijan con quien lleve ese proceso.
 ```
 
@@ -482,7 +482,7 @@ Evitar en primer contacto:
 ```text
 Hola, {{contact_name}}. Le escribo de nuevo por si el mensaje anterior se perdio.
 
-Somos un equipo de estudiantes emprendiendo con Agora y nos interesa validarla con casos reales que fortalezcan trabajo academico. Creo que puede servir especialmente para {{dolor_concreto}} en {{institution}}. https://agora.humanizar.cloud
+Somos un equipo de estudiantes emprendiendo con Agora y nos interesa validarla con casos reales que fortalezcan trabajo academico. Creo que puede servir especialmente para {{dolor_concreto}} en {{institution}}. https://agora.elenxos.com
 
 Si quiere, le comparto un ejemplo ya armado y vemos rapido si tendria sentido probarlo.
 ```
@@ -492,7 +492,7 @@ Si quiere, le comparto un ejemplo ya armado y vemos rapido si tendria sentido pr
 ```text
 Hola, {{contact_name}}.
 
-Le escribo de nuevo porque somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho saber si Agora podria tener sentido para {{role_or_unit}} en {{institution}}. https://agora.humanizar.cloud
+Le escribo de nuevo porque somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho saber si Agora podria tener sentido para {{role_or_unit}} en {{institution}}. https://agora.elenxos.com
 Si no le corresponde, me basta con que me diga con quien deberia hablar.
 ```
 
@@ -501,7 +501,7 @@ Si no le corresponde, me basta con que me diga con quien deberia hablar.
 ```text
 Hola, {{contact_name}}. Retomo este mensaje porque sigo viendo que en {{institution}} hay un caso claro para ordenar {{proceso_academico}} sin depender de archivos y mensajes dispersos.
 
-Lo estamos construyendo desde una preocupacion muy cercana al sector academico y por eso queria insistir con un ejemplo adaptado a {{role_or_unit}}. https://agora.humanizar.cloud
+Lo estamos construyendo desde una preocupacion muy cercana al sector academico y por eso queria insistir con un ejemplo adaptado a {{role_or_unit}}. https://agora.elenxos.com
 
 Si quiere, le dejo ese ejemplo.
 ```
@@ -515,7 +515,7 @@ Hola, {{contact_name}}.
 
 Le escribo de nuevo con un poco mas de contexto porque el mensaje anterior pudo sonar demasiado directo. Somos un equipo de estudiantes que esta emprendiendo con Agora y nos interesa que la herramienta crezca ayudando a fortalecer procesos academicos reales.
 
-Por eso pense en {{role_or_unit}} en {{institution}}: ahi hay un caso claro para ordenar {{bloque_de_valor}} sin repartir todo entre varias herramientas. https://agora.humanizar.cloud
+Por eso pense en {{role_or_unit}} en {{institution}}: ahi hay un caso claro para ordenar {{bloque_de_valor}} sin repartir todo entre varias herramientas. https://agora.elenxos.com
 
 Si le sirve, le comparto un ejemplo muy concreto y usted me dice si tiene sentido o no para su contexto.
 ```

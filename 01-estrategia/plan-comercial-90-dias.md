@@ -264,9 +264,9 @@ Cada cliente inicial debe convertirse en:
 
 ## Fuentes verificadas el 2026-04-11
 
-- Agora landing publica: https://agora.humanizar.cloud/
-- Agora documentacion publica: https://agora.humanizar.cloud/docs
-- Agora manifest: https://agora.humanizar.cloud/manifest.json
+- Agora landing publica: https://agora.elenxos.com/
+- Agora documentacion publica: https://agora.elenxos.com/docs
+- Agora manifest: https://agora.elenxos.com/manifest.json
 - UdeA Licenciatura en Literatura y Lengua Castellana: https://www.udea.edu.co/wps/portal/udea/web/inicio/unidades-academicas/educacion/oferta-pregrado/licenciatura-literatura-lengua-castellana/
 - UdeA Facultad de Comunicaciones y Filologia: https://www.udea.edu.co/wps/portal/udea/web/inicio/unidades-academicas/comunicaciones/
 - EAFIT Escuela de Artes y Humanidades: https://www.eafit.edu.co/artesyhumanidades

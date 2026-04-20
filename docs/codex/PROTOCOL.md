@@ -24,4 +24,4 @@ Pause only for:
 ## Bootstrap Metadata
 
 - Created: 2026-04-13 14:15
-- Repo root: `/home/stev/symploque`
+- Repo root: `/home/stev/Documentos/symploque`

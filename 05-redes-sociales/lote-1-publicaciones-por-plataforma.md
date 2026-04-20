@@ -3,7 +3,7 @@
 Fecha de preparacion: 2026-04-19
 Base usada:
 
-- landing actual de `https://agora.humanizar.cloud/`
+- landing actual de `https://agora.elenxos.com/`
 - `Manual Maestro Ágora` v `3.1.1`
 - `Manual ST` v `3.1.1`
 
@@ -60,7 +60,7 @@ La tesis es simple:
 
 Si una disciplina exige precision, sus herramientas tambien deberian hacerlo.
 
-`https://agora.humanizar.cloud/`
+`https://agora.elenxos.com/`
 
 **Asset sugerido**
 
@@ -172,7 +172,7 @@ Verifica con rigor.
 
 **Slide 5**
 
-`https://agora.humanizar.cloud/`
+`https://agora.elenxos.com/`
 
 ### Reel 1. Que es Agora
 
@@ -230,7 +230,7 @@ Quiere ser un mejor entorno para investigacion rigurosa:
 - terminales cloud
 - colaboracion en tiempo real
 
-`https://agora.humanizar.cloud/`
+`https://agora.elenxos.com/`
 
 ### Post 2
 
@@ -341,7 +341,7 @@ La landing actual ya muestra bien el nucleo:
 - colaboracion
 
 Si quieren ver la version publica:
-`https://agora.humanizar.cloud/`
+`https://agora.elenxos.com/`
 
 ### Mensaje 2. Invitacion a feedback
 

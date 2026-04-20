@@ -34,7 +34,7 @@ Este lote deja:
 - siempre incluir:
   - que somos un grupo de estudiantes emprendedores
   - que buscamos fortalecer el sector academico
-  - el link `https://agora.humanizar.cloud`
+  - el link `https://agora.elenxos.com`
 
 ## Correos listos
 
@@ -54,7 +54,7 @@ Este lote deja:
 
 ```text
 Hola, equipo de Centro de Escritura Javeriana.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
@@ -72,7 +72,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve 
 
 ```text
 Hola, equipo de Semillero Decolonizando el Lenguaje.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creemos que Agora podria servir para ordenar lecturas, borradores y tareas del semillero. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creemos que Agora podria servir para ordenar lecturas, borradores y tareas del semillero. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido y le comparto un ejemplo.
 ```
 
@@ -90,7 +90,7 @@ Si le ve sentido, me basta un feedback rapido y le comparto un ejemplo.
 
 ```text
 Hola, equipo de Semillero Lenguajes Discursos y Practicas Educativas.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creemos que Agora podria servir para ordenar lecturas, borradores y tareas del semillero. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creemos que Agora podria servir para ordenar lecturas, borradores y tareas del semillero. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido y le comparto un ejemplo.
 ```
 
@@ -108,7 +108,7 @@ Si le ve sentido, me basta un feedback rapido y le comparto un ejemplo.
 
 ```text
 Hola, equipo de Catedra UNESCO de Comunicacion.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir cuando una red o catedra necesita ordenar materiales, escritura y trabajo compartido. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir cuando una red o catedra necesita ordenar materiales, escritura y trabajo compartido. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indiquen con quien deberia hablar.
 ```
 
@@ -126,7 +126,7 @@ Si no le corresponde directamente, me basta con que me indiquen con quien deberi
 
 ```text
 Hola, Andrea Torres.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
@@ -144,7 +144,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve 
 
 ```text
 Hola, Diana Moreno.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
@@ -164,7 +164,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve 
 
 ```text
 Hola, equipo de Escuela de Idiomas UIS.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar escritura, logica, archivos y trabajo compartido en la Escuela de Idiomas UIS. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar escritura, logica, archivos y trabajo compartido en la Escuela de Idiomas UIS. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indiquen con quien deberia hablar.
 ```
 
@@ -182,7 +182,7 @@ Si no le corresponde directamente, me basta con que me indiquen con quien deberi
 
 ```text
 Hola, Milton Leonardo Pena.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para trabajo de investigacion, lecturas y verificacion compartida. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para trabajo de investigacion, lecturas y verificacion compartida. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -202,7 +202,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, equipo de Comunicacion Social y Periodismo.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para mostrar un flujo mas riguroso de escritura, trabajo colaborativo e investigacion en UPB. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para mostrar un flujo mas riguroso de escritura, trabajo colaborativo e investigacion en UPB. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirijan con quien lleve este frente.
 ```
 
@@ -220,7 +220,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirijan con quien lleve
 
 ```text
 Hola, Niny Johanna Villada Castro.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para coordinar materiales, borradores y trabajo academico en UPB. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para coordinar materiales, borradores y trabajo academico en UPB. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
@@ -238,7 +238,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve 
 
 ```text
 Hola, Erika Jaillier Castrillon.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para investigacion aplicada, borradores y trabajo con equipos pequenos. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para investigacion aplicada, borradores y trabajo con equipos pequenos. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -256,7 +256,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Juan Fernando Munoz Uribe.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir cuando una red o catedra necesita ordenar materiales, escritura y trabajo compartido. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir cuando una red o catedra necesita ordenar materiales, escritura y trabajo compartido. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -274,7 +274,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Lida Ximena Tabares Higuita.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -292,7 +292,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Harold Jimmy Salinas Arboleda.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -310,7 +310,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Luis Jorge Orcasitas Pacheco.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -328,7 +328,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Luis Fernando Gutierrez Cano.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -346,7 +346,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Claudia Patricia Sanchez Aguiar.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -364,7 +364,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Edwin Alexander Amaya Vera.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en UPB. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -384,7 +384,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Nicolas Vaughan Caro.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede tener sentido para lectura, escritura y verificacion formal en Humanidades de Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede tener sentido para lectura, escritura y verificacion formal en Humanidades de Uniandes. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
@@ -402,7 +402,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve 
 
 ```text
 Hola, Ana Filipa Prata.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para trabajo de posgrado, seminarios y proyectos de investigacion. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para trabajo de posgrado, seminarios y proyectos de investigacion. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -420,7 +420,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Carolina Alzate.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -438,7 +438,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, David Solodkow.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -456,7 +456,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Maria Mercedes Andrade.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -474,7 +474,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Mario Barrero.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -492,7 +492,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Gemma Bernado.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para trabajo de posgrado, seminarios y proyectos de investigacion. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para trabajo de posgrado, seminarios y proyectos de investigacion. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -510,7 +510,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Myriam Diaz.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -528,7 +528,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Camilo Hernandez.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -546,7 +546,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Andrea Lozano Vasquez.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -564,7 +564,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Claudia Montilla.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -582,7 +582,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Jeronimo Pizarro.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -600,7 +600,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Hugo Hernan Ramirez.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -618,7 +618,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Santiago Restrepo Ramirez.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -636,7 +636,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, equipo de Departamento de Literatura.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para coordinar materiales, borradores y trabajo academico en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para coordinar materiales, borradores y trabajo academico en Uniandes. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirijan con quien lleve este frente.
 ```
 
@@ -661,7 +661,7 @@ La nota de conexion debe mantenerse debajo de `300` caracteres.
 **Nota de conexion**
 
 ```text
-Hola, Nicolas. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola, Nicolas. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ## 2. Ana Filipa Prata
@@ -672,7 +672,7 @@ Hola, Nicolas. Soy parte de un grupo de estudiantes emprendedores que busca fort
 **Nota de conexion**
 
 ```text
-Hola, Ana Filipa. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola, Ana Filipa. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ## 3. Gemma Bernado
@@ -683,7 +683,7 @@ Hola, Ana Filipa. Soy parte de un grupo de estudiantes emprendedores que busca f
 **Nota de conexion**
 
 ```text
-Hola, Gemma. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola, Gemma. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ## 4. Escuela de Idiomas UIS
@@ -694,7 +694,7 @@ Hola, Gemma. Soy parte de un grupo de estudiantes emprendedores que busca fortal
 **Nota de conexion**
 
 ```text
-Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ## 5. Comunicacion Social y Periodismo UPB
@@ -705,7 +705,7 @@ Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el
 **Nota de conexion**
 
 ```text
-Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ## 6. Catedra UNESCO de Comunicacion
@@ -716,7 +716,7 @@ Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el
 **Nota de conexion**
 
 ```text
-Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ## Script de recepcion o bot institucional
@@ -738,7 +738,7 @@ El objetivo es:
 **Script**
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Estamos intentando mostrar la plataforma al Pregrado en Literatura. ¿Nos podrian compartir el correo o la extension de la coordinacion o direccion del programa? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Estamos intentando mostrar la plataforma al Pregrado en Literatura. ¿Nos podrian compartir el correo o la extension de la coordinacion o direccion del programa? https://agora.elenxos.com
 ```
 
 ## Lead 19 - EAFIT - Escuela de Artes y Humanidades - WhatsApp institucional
@@ -748,7 +748,7 @@ Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector
 **Script**
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Queremos ubicar a la persona que lleve Literatura o un frente cercano en la Escuela de Artes y Humanidades. ¿Nos podrian compartir su correo o extension? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Queremos ubicar a la persona que lleve Literatura o un frente cercano en la Escuela de Artes y Humanidades. ¿Nos podrian compartir su correo o extension? https://agora.elenxos.com
 ```
 
 ## Lead 22 - UPB - Comunicacion Social y Periodismo - WhatsApp institucional
@@ -758,7 +758,7 @@ Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector
 **Script**
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Estamos tratando de ubicar a la coordinacion o direccion de Comunicacion Social y Periodismo. ¿Nos podrian compartir el correo o la extension del contacto correcto? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Estamos tratando de ubicar a la coordinacion o direccion de Comunicacion Social y Periodismo. ¿Nos podrian compartir el correo o la extension del contacto correcto? https://agora.elenxos.com
 ```
 
 ## Lead 33 - Javeriana - Catedra UNESCO de Comunicacion - telefono directo
@@ -769,7 +769,7 @@ Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector
 **Script**
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Queremos ubicar a la persona que coordina la Catedra UNESCO de Comunicacion. ¿Nos podrian compartir su correo o extension directa? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Queremos ubicar a la persona que coordina la Catedra UNESCO de Comunicacion. ¿Nos podrian compartir su correo o extension directa? https://agora.elenxos.com
 ```
 
 ## Uso sugerido

@@ -45,7 +45,7 @@ Ademas:
 
 ```text
 Hola, equipo de Catedra UNESCO de Comunicacion.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir cuando una red o catedra necesita ordenar materiales, escritura y trabajo compartido. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir cuando una red o catedra necesita ordenar materiales, escritura y trabajo compartido. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indiquen con quien deberia hablar.
 ```
 
@@ -64,7 +64,7 @@ Si no le corresponde directamente, me basta con que me indiquen con quien deberi
 
 ```text
 Hola, Carolina Alzate.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -83,7 +83,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, David Solodkow.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -102,7 +102,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Maria Mercedes Andrade.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -121,7 +121,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Mario Barrero.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -140,7 +140,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Gemma Bernado.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para trabajo de posgrado, seminarios y proyectos de investigacion. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para trabajo de posgrado, seminarios y proyectos de investigacion. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -159,7 +159,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Myriam Diaz.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -178,7 +178,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Camilo Hernandez.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -197,7 +197,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Andrea Lozano Vasquez.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -216,7 +216,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Claudia Montilla.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -235,7 +235,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Jeronimo Pizarro.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -254,7 +254,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Hugo Hernan Ramirez.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -273,7 +273,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, Santiago Restrepo Ramirez.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para cursos, seminarios o acompanamiento de escritura en Uniandes. https://agora.elenxos.com
 Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
@@ -292,7 +292,7 @@ Si no le corresponde directamente, me basta con que me indique con quien deberia
 
 ```text
 Hola, equipo de Departamento de Literatura.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para coordinar materiales, borradores y trabajo academico en Uniandes. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para coordinar materiales, borradores y trabajo academico en Uniandes. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirijan con quien lleve este frente.
 ```
 
@@ -311,7 +311,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirijan con quien lleve
 
 ```text
 Hola, Andrea Torres.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
@@ -330,7 +330,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve 
 
 ```text
 Hola, Diana Moreno.
-Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.humanizar.cloud
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en Javeriana. https://agora.elenxos.com
 Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
@@ -351,7 +351,7 @@ Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve 
 
 ```text
 Hola, equipo de Centro de Escritura Javeriana.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para escritura y seguimiento de borradores. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para escritura y seguimiento de borradores. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -370,7 +370,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, equipo de Semillero Decolonizando el Lenguaje.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para ordenar lecturas, borradores y tareas del semillero. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para ordenar lecturas, borradores y tareas del semillero. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -389,7 +389,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, equipo de Semillero Lenguajes Discursos y Practicas Educativas.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para ordenar lecturas, borradores y tareas del semillero. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para ordenar lecturas, borradores y tareas del semillero. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -408,7 +408,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, equipo de Escuela de Idiomas UIS.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para trabajo compartido en idiomas. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para trabajo compartido en idiomas. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -427,7 +427,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Milton Leonardo Pena.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para investigacion, lecturas y verificacion compartida. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para investigacion, lecturas y verificacion compartida. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -446,7 +446,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, equipo de Comunicacion Social y Periodismo.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para coordinar materiales y trabajo academico en comunicacion. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para coordinar materiales y trabajo academico en comunicacion. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -465,7 +465,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Niny Johanna Villada Castro.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para coordinar materiales y trabajo academico en comunicacion. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para coordinar materiales y trabajo academico en comunicacion. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -484,7 +484,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Erika Jaillier Castrillon.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -503,7 +503,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Juan Fernando Munoz Uribe.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -522,7 +522,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Lida Ximena Tabares Higuita.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -541,7 +541,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Harold Jimmy Salinas Arboleda.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -560,7 +560,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Luis Jorge Orcasitas Pacheco.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -579,7 +579,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Luis Fernando Gutierrez Cano.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -598,7 +598,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Claudia Patricia Sanchez Aguiar.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -617,7 +617,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Edwin Alexander Amaya Vera.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para cursos, seminarios o investigacion aplicada. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -636,7 +636,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Nicolas Vaughan Caro.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para lectura, escritura y verificacion formal en Humanidades. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para lectura, escritura y verificacion formal en Humanidades. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -655,7 +655,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 
 ```text
 Hola, Ana Filipa Prata.
-Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para posgrado, seminarios y proyectos de investigacion. https://agora.humanizar.cloud
+Le escribo una sola vez mas por si se me paso el correo anterior. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico y creo que esto puede servir para posgrado, seminarios y proyectos de investigacion. https://agora.elenxos.com
 Si no le corresponde, me basta con que me redirija al contacto correcto o me diga si no aplica.
 ```
 
@@ -671,7 +671,7 @@ Si no le corresponde, me basta con que me redirija al contacto correcto o me dig
 **Nota de conexion final**
 
 ```text
-Hola, Nicolas. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola, Nicolas. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ### Ana Filipa Prata
@@ -682,7 +682,7 @@ Hola, Nicolas. Soy parte de un grupo de estudiantes emprendedores que busca fort
 **Nota de conexion final**
 
 ```text
-Hola, Ana Filipa. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola, Ana Filipa. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ### Gemma Bernado
@@ -693,7 +693,7 @@ Hola, Ana Filipa. Soy parte de un grupo de estudiantes emprendedores que busca f
 **Nota de conexion final**
 
 ```text
-Hola, Gemma. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola, Gemma. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ## Prioridad 2. Unidades institucionales sin nombre propio
@@ -706,7 +706,7 @@ Hola, Gemma. Soy parte de un grupo de estudiantes emprendedores que busca fortal
 **Nota de conexion final**
 
 ```text
-Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ### Escuela de Idiomas UIS
@@ -717,7 +717,7 @@ Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el
 **Nota de conexion final**
 
 ```text
-Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ### Catedra UNESCO de Comunicacion
@@ -728,7 +728,7 @@ Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el
 **Nota de conexion final**
 
 ```text
-Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.humanizar.cloud
+Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma de investigacion rigurosa: https://agora.elenxos.com
 ```
 
 ## Recepcion institucional consolidada
@@ -744,7 +744,7 @@ Hola. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el
 **Script exacto**
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Estamos tratando de ubicar a la coordinacion o direccion de Comunicacion Social y Periodismo. ¿Nos podrian compartir el correo o la extension del contacto correcto? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Estamos tratando de ubicar a la coordinacion o direccion de Comunicacion Social y Periodismo. ¿Nos podrian compartir el correo o la extension del contacto correcto? https://agora.elenxos.com
 ```
 
 ### Lead 33
@@ -759,7 +759,7 @@ Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector
 **Script exacto**
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Queremos ubicar a la persona que coordina la Catedra UNESCO de Comunicacion. ¿Nos podrian compartir su correo o extension directa? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Queremos ubicar a la persona que coordina la Catedra UNESCO de Comunicacion. ¿Nos podrian compartir su correo o extension directa? https://agora.elenxos.com
 ```
 
 ### Lead 18
@@ -773,7 +773,7 @@ Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector
 **Script exacto**
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Estamos intentando mostrar la plataforma al Pregrado en Literatura. ¿Nos podrian compartir el correo o la extension de la coordinacion o direccion del programa? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Estamos intentando mostrar la plataforma al Pregrado en Literatura. ¿Nos podrian compartir el correo o la extension de la coordinacion o direccion del programa? https://agora.elenxos.com
 ```
 
 ### Lead 19
@@ -787,7 +787,7 @@ Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector
 **Script exacto**
 
 ```text
-Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Queremos ubicar a la persona que lleve Literatura o un frente cercano en la Escuela de Artes y Humanidades. ¿Nos podrian compartir su correo o extension? https://agora.humanizar.cloud
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Queremos ubicar a la persona que lleve Literatura o un frente cercano en la Escuela de Artes y Humanidades. ¿Nos podrian compartir su correo o extension? https://agora.elenxos.com
 ```
 
 ## Checklist de actualizacion del maestro

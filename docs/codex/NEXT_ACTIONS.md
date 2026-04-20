@@ -2,29 +2,28 @@
 
 ## Now
 
-- [ ] Ejecutar hoy la `primera ola inmediata` sobre los `16` leads `pendiente` usando `04-reportes/ejecucion-lote-3-y-seguimiento.md`.
-- [ ] Dejar lista y usar la tanda de `recontacto corto` para los `17` leads `contactado` del mismo filtro.
-- [ ] Priorizar LinkedIn para cargos de arrastre, empezando por `Nicolas Vaughan Caro`, `Ana Filipa Prata` y `Gemma Bernado`.
-- [ ] Hablar con los canales institucionales `22`, `33`, `18` y `19` para capturar correo directo, extension y nombre del decisor humano.
-- [ ] Registrar cada resultado en el CSV maestro y mover el sistema a monitoreo y seguimiento, no a redaccion adicional.
+- [ ] Recibir la lista de correos ya enviados desde `stevenvallejo780@gmail.com`.
+- [ ] Importar esa lista en `03-datos/operacion-email/correos-enviados-importar.csv`.
+- [ ] Poblar `03-datos/operacion-email/contactos-maestro-operativo.csv` con los contactos ya impactados.
+- [ ] Clasificar quienes requieren correo de `declaracion` y poblar `03-datos/operacion-email/declaracion-pendientes.csv`.
+- [ ] Elegir el CTA por campaña: `https://www.elenxos.com/` para empresa o `https://agora.elenxos.com/` para producto.
 
 ## Next
 
-- [ ] Monitorear respuestas de la primera ola y decidir si el `recontacto corto` sale el mismo dia o en la siguiente ventana de seguimiento.
-- [ ] Evaluar si el formato `email estilo WhatsApp` supera al correo mas largo en tasa de respuesta.
-- [ ] Generar la siguiente tanda solo despues de capturar aprendizaje real de esta ejecucion.
-- [ ] Convertir `05-redes-sociales/lote-1-publicaciones-por-plataforma.md` en piezas visuales reales.
-- [ ] Ejecutar `05-redes-sociales/calendario-semana-1-redes.md` y registrar reacciones del mercado.
-- [ ] Evaluar si el mensaje `investigacion rigurosa` abre mejor que el mensaje mas general de colaboracion academica.
-- [ ] Decidir si conviene crear un archivo de outreach listo para usar por lote, separado del playbook base.
-- [ ] Decidir si conviene persistir aprobaciones repo-specific para analisis de CSV y reportes.
+- [ ] Definir la version final del correo de `declaracion`: correccion de remitente, presentacion de marca o ambas.
+- [ ] Probar el flujo de envio corporativo usando `email.md` con variables de entorno, nunca con secretos versionados.
+- [ ] Preparar el primer lote corporativo sobre URLs ya publicas y despues de pasar el checklist de deduplicacion y CTA.
+- [ ] Definir si el remitente principal sera `ventas@elenxos.com`, `media@elenxos.com` o `admin@elenxos.com`.
+- [ ] Corregir en la web publica de `https://www.elenxos.com/` la referencia `sameAs` que todavia apunta al dominio antiguo de Agora.
 
 ## Later
 
-- [ ] Formalizar un ciclo operativo por oleadas: seleccion, outreach, seguimiento y actualizacion del maestro.
-- [ ] Expandir el protocolo si se automatiza enriquecimiento de leads o scoring adicional.
+- [ ] Unificar el historico de `Agora` y la nueva operacion email en una sola base si el usuario confirma esa migracion.
+- [ ] Crear plantillas finales por tipo de declaracion y por segmento de contacto.
+- [ ] Automatizar importacion, deduplicacion y logging de envios sobre la base maestra nueva.
 
 ## Open Questions
 
-- [ ] Que transformaciones del CSV maestro se consideran seguras para automatizar sin confirmacion?
-- [ ] Conviene guardar mensajes listos por lead dentro del CSV, en un markdown por lote, o en ambos?
+- [ ] Que contactos ya impactados no deben recibir `declaracion` por riesgo de sobrecontacto?
+- [ ] En que casos conviene mandar al sitio corporativo y en cuales directo a `Agora`?
+- [ ] La narrativa comercial va a entrar primero por `Elenxos` o por `Agora` segun segmento?

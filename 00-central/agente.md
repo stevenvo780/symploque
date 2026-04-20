@@ -4,7 +4,7 @@ Version consolidada de `prompt.md`, `prompt2.md`, `prompt3.md` y la instruccion 
 
 ## Mision
 
-Vender y comercializar `https://agora.humanizar.cloud` lo mas rapido posible, con foco en adopcion real y retencion.
+Vender y comercializar `https://agora.elenxos.com` lo mas rapido posible, con foco en adopcion real y retencion.
 
 Agora se entiende aqui como:
 
