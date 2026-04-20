@@ -20,10 +20,10 @@ export const Lote1_Estandar = () => (
     <GridPattern variant="dots" gap={40} />
     <GlowOrb color="kodama" size={500} x="50%" y="50%" blur={120} opacity={0.2} />
     <FrameOverlay variant="minimal" />
-    <BrandMark position="bottom-right" fontSize={14} tagline="agora.elenxos.com" />
+    <BrandMark position="bottom-right" fontSize={22} tagline="agora.elenxos.com" />
     
     <div style={abs({ padding: '80px', textAlign: 'center' })}>
-      <Text size="xs" color="kodama" style={{ letterSpacing: 8, textTransform: 'uppercase', marginBottom: 40 }}>
+      <Text size="xs" color="kodama" style={{ fontSize: 24, letterSpacing: 8, textTransform: 'uppercase', marginBottom: 40 }}>
         Investigación Académica
       </Text>
       <CinematicText text="El nuevo" level="h1" delayStep={0.06} style={{ fontSize: 90 }} />
@@ -41,7 +41,7 @@ export const Lote1_Flujo = () => (
     <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, #070F0A 0%, #0F2519 100%)' }} />
     <GridPattern variant="lines" gap={60} />
     <FrameOverlay variant="double" />
-    <BrandMark position="bottom-left" fontSize={12} tagline="Flujo de Trabajo" />
+    <BrandMark position="bottom-left" fontSize={20} tagline="Flujo de Trabajo" />
     
     <div style={abs({ padding: '100px', alignItems: 'flex-start' })}>
       <CinematicText text="De la idea" level="h2" color="muted" style={{ fontSize: 48, marginBottom: 10 }} />
@@ -68,8 +68,8 @@ const Step = ({ number, text, subtext, delay }: { number: string, text: string, 
       {number}
     </div>
     <div style={{ flex: 1 }}>
-      <Text size="xl" weight="semibold" style={{ color: '#fff' }}>{text}</Text>
-      <Text size="sm" color="secondary" style={{ marginTop: 8 }}>{subtext}</Text>
+      <Text size="xl" weight="semibold" style={{ color: '#fff', fontSize: 32 }}>{text}</Text>
+      <Text size="sm" color="secondary" style={{ fontSize: 24, marginTop: 8 }}>{subtext}</Text>
     </div>
   </div>
 );

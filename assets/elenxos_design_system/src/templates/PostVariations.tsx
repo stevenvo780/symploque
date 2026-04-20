@@ -28,7 +28,7 @@ export const V1_Micelio = () => (
     <LogicMesh density={120} />
     <GlowOrb color="kodama" size={300} x="50%" y="50%" blur={100} opacity={0.15} />
     <FrameOverlay variant="minimal" />
-    <BrandMark position="center-bottom" fontSize={18} tagline="La red del conocimiento" />
+    <BrandMark position="center-bottom" fontSize={22} tagline="La red del conocimiento" />
   </SocialCanvas>
 );
 
@@ -39,7 +39,7 @@ export const V2_CitaRoja = () => (
     <GlowOrb color="mask" size={500} x="50%" y="40%" blur={120} opacity={0.25} />
     <FrameOverlay variant="mask" />
     <ScanLines />
-    <BrandMark position="bottom-right" fontSize={11} />
+    <BrandMark position="bottom-right" fontSize={20} />
     <div style={abs({ padding: '100px 80px' })}>
       <QuoteCard
         quote="Destruir un paradigma no es violencia. Es higiene epistémica."
@@ -57,9 +57,9 @@ export const V3_Perspectiva = () => (
     <GridPattern variant="perspective" gap={25} />
     <GlowOrb color="kodama" size={400} x="50%" y="65%" blur={100} opacity={0.2} />
     <FrameOverlay variant="corners" />
-    <BrandMark position="top-left" fontSize={12} />
+    <BrandMark position="top-left" fontSize={20} />
     <div style={abs({ padding: '80px', gap: 40 })}>
-      <Text size="xs" color="muted" style={{ letterSpacing: 8, textTransform: 'uppercase' }}>Infraestructura Académica</Text>
+      <Text size="xs" color="muted" style={{ fontSize: 22, letterSpacing: 8, textTransform: 'uppercase' }}>Infraestructura Académica</Text>
       <CinematicText text="El futuro" level="h1" delayStep={0.08} style={{ fontSize: 80 }} />
       <CinematicText text="ya tiene" level="h1" delayStep={0.08} baseDelay={0.8} style={{ fontSize: 80 }} />
       <CinematicText text="estructura." level="h1" color="kodama" delayStep={0.08} baseDelay={1.5} style={{ fontSize: 80 }} />
@@ -74,16 +74,16 @@ export const V4_Glass = () => (
     <KodamaParticles count={40} relative />
     <GlowOrb color="forest" size={400} x="30%" y="30%" blur={80} opacity={0.3} />
     <GlowOrb color="kodama" size={300} x="70%" y="70%" blur={90} opacity={0.2} delay={3} />
-    <BrandMark position="bottom-left" fontSize={11} />
+    <BrandMark position="bottom-left" fontSize={20} />
     <div style={abs({ padding: '80px' })}>
       <div style={{
         background: 'rgba(15, 37, 25, 0.6)', backdropFilter: 'blur(20px)',
         border: '1px solid rgba(163,228,215,0.15)', borderRadius: 16, padding: '60px 50px',
         textAlign: 'center', maxWidth: '85%',
       }}>
-        <Badge variant="kodama" dot pulse style={{ marginBottom: 30 }}>Nuevo Release</Badge>
+        <Badge variant="kodama" dot pulse style={{ marginBottom: 30, fontSize: 22, padding: '10px 28px' }}>Nuevo Release</Badge>
         <CinematicText text="Lexis v3" level="h2" color="kodama" delayStep={0.1} style={{ fontSize: 64, marginBottom: 16 }} />
-        <Text size="md" color="secondary" style={{ lineHeight: 1.7 }}>
+        <Text size="md" color="secondary" style={{ fontSize: 26, lineHeight: 1.7 }}>
           Motor de traducción fenomenológica. 3x más rápido. 100% más preciso.
         </Text>
       </div>
@@ -97,11 +97,11 @@ export const V5_Simbolo = () => (
     <div style={{ position: 'absolute', inset: 0, background: '#060B08' }} />
     <GlowOrb color="kodama" size={500} x="50%" y="45%" blur={150} opacity={0.12} />
     <FrameOverlay variant="double" />
-    <BrandMark position="bottom-right" fontSize={11} />
+    <BrandMark position="bottom-right" fontSize={20} />
     <div style={abs({ padding: '80px' })}>
       <IconSymbol symbol="Ψ" size={280} color="kodama" style={{ marginBottom: 30, opacity: 0.9 }} />
       <CinematicText text="Psique" level="h2" delayStep={0.12} baseDelay={0.5} style={{ fontSize: 52, letterSpacing: 8 }} />
-      <Text size="sm" color="muted" style={{ marginTop: 16, letterSpacing: 4, textTransform: 'uppercase' }}>
+      <Text size="sm" color="muted" style={{ fontSize: 24, marginTop: 16, letterSpacing: 4, textTransform: 'uppercase' }}>
         La mente como sistema complejo
       </Text>
     </div>
@@ -114,10 +114,10 @@ export const V6_DatosSplit = () => (
     <div style={{ position: 'absolute', inset: 0, background: '#080E0B' }} />
     <GridPattern variant="lines" gap={60} />
     <FrameOverlay variant="corners" />
-    <BrandMark position="top-right" fontSize={11} />
+    <BrandMark position="top-right" fontSize={20} />
     <div style={abs({ flexDirection: 'row', padding: 0 })}>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '80px 60px', borderRight: '1px solid rgba(163,228,215,0.1)' }}>
-        <Text size="xs" color="kodama" style={{ letterSpacing: 6, textTransform: 'uppercase', marginBottom: 20 }}>Impacto 2026</Text>
+        <Text size="xs" color="kodama" style={{ fontSize: 22, letterSpacing: 6, textTransform: 'uppercase', marginBottom: 20 }}>Impacto 2026</Text>
         <CinematicText text="En números" level="h3" delayStep={0.08} style={{ fontSize: 48 }} />
       </div>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '60px', gap: 40 }}>
@@ -136,7 +136,7 @@ export const V7_Pregunta = () => (
     <GradientWave speed={30} />
     <GlowOrb color="warm" size={400} x="50%" y="50%" blur={100} opacity={0.15} />
     <FrameOverlay variant="minimal" />
-    <BrandMark position="bottom-left" fontSize={11} tagline="elenxos.com" />
+    <BrandMark position="bottom-left" fontSize={20} tagline="elenxos.com" />
     <div style={abs({ padding: '100px 80px', textAlign: 'center' })}>
       <CinematicText text="¿Qué pasaría" level="h2" delayStep={0.06} style={{ fontSize: 58 }} />
       <CinematicText text="si la academia" level="h2" color="muted" delayStep={0.06} baseDelay={0.8} style={{ fontSize: 58 }} />
@@ -153,7 +153,7 @@ export const V8_Proximamente = () => (
     <GlowOrb color="kodama" size={200} x="50%" y="50%" blur={60} opacity={0.08} speed={20} />
     <ScanLines heavy />
     <FrameOverlay variant="double" />
-    <BrandMark position="center-bottom" fontSize={14} tagline="Algo se aproxima" />
+    <BrandMark position="center-bottom" fontSize={22} tagline="Algo se aproxima" />
     <div style={abs({ padding: '100px' })}>
       <CinematicText text="2027" level="hero" color="kodama" delayStep={0.3} style={{ fontSize: 180, letterSpacing: 20, opacity: 0.7 }} />
     </div>
