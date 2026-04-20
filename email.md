@@ -149,6 +149,43 @@ const data = await resp.json();
 console.log(data);
 ```
 
+## Recomendación Narrativa y Firma
+
+Para que la transición de remitente personal a corporativo sea exitosa, cada correo enviado debe reforzar la autoridad de **Elenxos** y la utilidad de **Agora**.
+
+### Firma Corporativa Recomendada (HTML)
+
+Se recomienda incluir esta firma en el campo `html` de la API para construir credibilidad en cada contacto:
+
+```html
+<div style="font-family: sans-serif; color: #333; line-height: 1.5;">
+  <p>Saludos,</p>
+  <p><strong>Equipo Elenxos</strong></p>
+  <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;" />
+  <p style="font-size: 14px; margin: 0;">
+    <strong>Elenxos</strong> | <em>Software Académico Avanzado</em>
+  </p>
+  <p style="font-size: 12px; margin: 5px 0;">
+    <a href="https://www.elenxos.com/" style="color: #007bff; text-decoration: none;">www.elenxos.com</a> | 
+    <a href="https://agora.elenxos.com/" style="color: #007bff; text-decoration: none;">agora.elenxos.com</a>
+  </p>
+  <p style="font-size: 12px; color: #777;">
+    Agora: Escribe con libertad, verifica con rigor.
+  </p>
+  <p style="font-size: 12px; margin-top: 10px;">
+    Siguenos: 
+    <a href="https://www.linkedin.com/company/elenxos" style="color: #007bff;">LinkedIn</a> | 
+    <a href="https://www.instagram.com/agora.elenxos" style="color: #007bff;">Instagram</a>
+  </p>
+</div>
+```
+
+### Transición de Remitente
+
+Si el contacto ya ha recibido correos desde la cuenta personal de Steven, se recomienda incluir esta nota al inicio o final del cuerpo:
+
+> "Estamos profesionalizando nuestras comunicaciones. A partir de ahora, este será el canal oficial de **Elenxos** para coordinar demos y pilotos de **Agora**."
+
 ## Notas operativas
 
 - SMTP relay: `148.230.88.162:587` con `STARTTLS`

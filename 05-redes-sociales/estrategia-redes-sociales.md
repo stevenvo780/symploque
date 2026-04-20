@@ -34,11 +34,12 @@ Pruebas publicas actuales que dan credibilidad:
 - `Manual Maestro Ágora` v `3.1.1`
 - la documentación pública de Agora ya expone módulos concretos como `Editor Semántico`, `Terminal Multi-sesión`, `Tableros Kanban`, `Hojas de Cálculo`, `Agora AI Chat`, `Linter Académico`, `Formalizador LLM`, `Navegador Semántico`, `Centro ST` y `PWA & Offline`
 
-Esto cambia la estrategia de marca de forma importante:
+## Arquitectura de Marca (Elenxos vs Agora)
 
-- `Elenxos` ya ocupa el plano más abstracto y fundacional
-- `Agora` debe ocupar el plano operativo y demostrable
-- la parte tecnica no debe esconderse, pero debe bajar desde sistema a caso de uso
+Para una ejecución robusta, dividimos la presencia en dos capas según [Guía de Estilo y Marca](./guia-estilo-y-marca-redes.md):
+
+1. **Capa Elenxos (Autoridad):** Hablar con mas ambicion, tesis y arquitectura intelectual. Ideal para LinkedIn y hilos de X.
+2. **Capa Agora (Operatividad):** Hablar con mas casos, flujos y prueba de producto. Ideal para Instagram, YouTube y el dia a dia en X.
 
 ## Tension de marca a resolver
 
@@ -52,6 +53,28 @@ La tarea de redes es resolver esa tension:
 - conservar la tesis fuerte de rigor y metodo
 - sin perder cercania
 - y sin abandonar al publico academico no tecnico ni desdibujar la relacion entre marca y producto
+
+## Elementos para Establecer la Marca (Lo que falta)
+
+Para que Agora deje de ser un proyecto y pase a ser una marca establecida, necesitamos:
+
+### 1. Kit de Prensa / Media Kit
+Centralizar en una carpeta: logos (SVG), paleta de colores oficial, screenshots de alta calidad y fotos del equipo/fundador. Esto facilita alianzas y menciones en prensa académica.
+
+### 2. Glosario de Términos Propios
+Definir piezas editoriales que expliquen conceptos clave: `ST`, `Markdown Académico`, `Rigor Axiomático`. Si nosotros no los definimos en redes, el público los ignorará o los malinterpretará.
+
+### 3. Estrategia de Engagement Activo
+No basta con postear. Se requiere un protocolo de interacción:
+- Comentar en publicaciones de revistas académicas y universidades aliadas.
+- Responder cada duda técnica o filosófica en menos de 12 horas.
+- Seguir y conversar con perfiles del ICP (Docentes, Investigadores) sin venderles, solo aportando valor.
+
+### 4. Prueba Social "Caso Verificado"
+Crear una plantilla visual para testimonios de pilotos reales. La marca se establece cuando otros hablan de ella.
+
+### 5. Sincronización con Outreach
+Los correos enviados desde el remitente corporativo (ver [06-operacion-email](../06-operacion-email/README.md)) deben incluir enlaces a las redes sociales para cerrar el ciclo de credibilidad.
 
 Regla:
 
