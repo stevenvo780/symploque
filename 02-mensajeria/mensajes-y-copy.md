@@ -9,6 +9,7 @@ Este archivo ya no funciona como una lista suelta de mensajes. Ahora es un siste
 - necesidad principal
 - canal
 - estrategia de captacion
+- posicionamiento relacional
 
 La regla es simple: no mandar un mensaje genericamente correcto. Mandar un mensaje que parezca escrito para `{{institution}}`, para `{{role_or_unit}}` y para el momento comercial del lead.
 
@@ -40,6 +41,9 @@ Estas no siempre salen literales del CSV. Se construyen rapido para que la plant
 - `{{bloque_de_valor}}`: lecturas, borradores, evidencias, tareas, materiales o comentarios segun el caso.
 - `{{caso_de_uso}}`: demo o ejemplo que se va a prometer.
 - `{{caso_de_uso_programa}}`: piloto aplicado a cohorte, programa, practicas o trabajo de grado.
+- `{{quienes_somos}}`: bloque corto de identidad. Base recomendada: `somos un equipo de estudiantes que esta emprendiendo con Agora`.
+- `{{anclaje_academico}}`: por que escribimos desde afinidad con el sector. Base recomendada: `nos interesa crecer fortaleciendo procesos de escritura, investigacion y coordinacion academica`.
+- `{{prueba_de_cercania}}`: frase que muestre que no hablamos como vendedor externo. Ejemplo: `lo estamos construyendo desde problemas que tambien vemos en la vida academica`.
 
 ## Regla de saludo
 
@@ -58,18 +62,127 @@ Cada mensaje debe tocar al menos 4 capas:
 
 Si falta una de esas 4 capas, el mensaje sigue demasiado generico.
 
+## Regla de posicionamiento
+
+La baja respuesta no se corrige solo con mas personalizacion institucional. Tambien hay que dejar claro desde el primer contacto:
+
+1. quienes somos
+2. desde donde escribimos
+3. por que nos importa el sector academico
+
+El marco recomendado para Agora en esta etapa es:
+
+- iniciativa nacida desde estudiantes o perfiles cercanos a la academia
+- interes genuino en fortalecer procesos academicos, no solo vender software
+- tono de conversacion y validacion, no de proveedor distante
+
+Evitar:
+
+- sonar como empresa grande o impersonal
+- esconder que estamos emprendiendo
+- vender primero "plataforma" y despues relacion
+
+## Bloques de identidad reutilizables
+
+Usar uno por mensaje. No meter todos.
+
+- `{{quienes_somos}} y estamos construyendo Agora porque vemos que muchas cosas de escritura, investigacion y coordinacion academica siguen demasiado dispersas.`
+- `{{quienes_somos}} y nos interesa que esta herramienta crezca ayudando a fortalecer el trabajo academico, no solo como software sino como soporte real para procesos de estudio, escritura e investigacion.`
+- `Estamos emprendiendo con Agora desde una preocupacion muy concreta: que en muchos equipos academicos lecturas, borradores, comentarios y evidencias siguen viviendo en demasiados lugares al tiempo.`
+- `No les escribimos desde una logica comercial generica. {{anclaje_academico}} y por eso queremos validar el producto con casos reales del sector.`
+
 ## Como armar un mensaje en 2 minutos
 
 1. tomar una fila del CSV
 2. elegir la estrategia de captacion
 3. elegir el bloque por universidad
 4. elegir la plantilla por tipo de contacto
-5. insertar una necesidad concreta
-6. cerrar con un CTA pequeno: demo corta, ejemplo adaptado o piloto
+5. elegir un bloque de identidad
+6. insertar una necesidad concreta
+7. cerrar con un CTA pequeno: demo corta, ejemplo adaptado o piloto
 
 Formula base:
 
-`apertura institucional + dolor especifico + encaje de Agora + CTA pequeno`
+`apertura institucional + quienes somos + dolor especifico + encaje de Agora + CTA pequeno`
+
+## Regla de canal para esta etapa
+
+La restriccion actual es clara:
+
+- no contamos con WhatsApp personales publicos para la base actual
+- solo hay unos pocos canales institucionales
+- y la friccion de venta sube cuando el mensaje suena corporativo
+
+Por eso el orden operativo cambia asi:
+
+1. `email estilo WhatsApp`
+2. `LinkedIn B2B`
+3. `navegacion de bot institucional`
+
+## Estrategia 1. Email estilo WhatsApp
+
+Es el canal principal.
+
+Reglas obligatorias:
+
+- asunto corto y en minusculas
+- 3 lineas utiles, no bloques largos
+- sin HTML
+- sin logos
+- sin firma pesada
+- siempre incluir:
+  - que somos un grupo de estudiantes emprendedores
+  - que buscamos fortalecer el sector academico
+  - el link `https://agora.humanizar.cloud`
+
+Objetivo:
+
+- abrir una conversacion
+- pedir feedback rapido
+- o lograr redireccionamiento al contacto correcto
+
+## Estrategia 2. LinkedIn B2B
+
+Usarla para:
+
+- directores
+- coordinadores
+- representantes de maestria o doctorado
+- y referentes de unidad con poder de arrastre
+
+Reglas obligatorias:
+
+- maximo `300` caracteres
+- tono de pedido de feedback, no de pitch
+- incluir el contexto de estudiantes emprendedores
+- incluir `https://agora.humanizar.cloud`
+
+Plantilla base:
+
+```text
+Hola, {{contact_name}}. Soy parte de un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. Me serviria mucho su feedback rapido sobre esta plataforma: https://agora.humanizar.cloud
+```
+
+## Estrategia 3. Navegacion de bot institucional
+
+Usarla solo con:
+
+- WhatsApp institucionales
+- recepciones
+- lineas de admisiones
+- o telefonos generales
+
+Objetivo:
+
+- no vender al bot
+- no explicar de mas
+- conseguir correo o extension del decisor humano
+
+Plantilla base:
+
+```text
+Hola. Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico con Agora. ¿Nos podrian compartir el correo o extension del coordinador o director que lleva {{proceso_academico}} en {{institution}}? https://agora.humanizar.cloud
+```
 
 ## Selector rapido por estrategia
 
@@ -144,11 +257,11 @@ Usar solo uno por mensaje. La idea es sonar especifico, no recargado.
 
 ### Pitch de 20 segundos
 
-Agora es un workspace para investigar, escribir y coordinar conocimiento en equipo. Sirve para reunir lecturas, borradores, evidencias, tareas y archivos en un mismo lugar.
+Somos un equipo de estudiantes que esta emprendiendo con Agora para ayudar a investigar, escribir y coordinar conocimiento en equipo. La herramienta sirve para reunir lecturas, borradores, evidencias, tareas y archivos en un mismo lugar.
 
 ### Pitch de 60 segundos
 
-Agora sirve para grupos y unidades academicas que trabajan con lectura, escritura, investigacion o produccion editorial. En vez de repartir el trabajo entre Drive, WhatsApp, documentos sueltos y cadenas de correos, permite centralizar materiales, borradores, comentarios, tareas y seguimiento dentro de un mismo workspace. Tiene mejor encaje en semilleros, programas, centros de escritura, revistas, grupos de investigacion y docentes con lineas activas.
+Somos un equipo de estudiantes que esta emprendiendo con Agora con la idea de crecer fortaleciendo procesos reales del sector academico. La herramienta sirve para grupos y unidades que trabajan con lectura, escritura, investigacion o produccion editorial. En vez de repartir el trabajo entre Drive, WhatsApp, documentos sueltos y cadenas de correos, permite centralizar materiales, borradores, comentarios, tareas y seguimiento dentro de un mismo workspace. Tiene mejor encaje en semilleros, programas, centros de escritura, revistas, grupos de investigacion y docentes con lineas activas.
 
 ## Plantilla madre
 
@@ -157,7 +270,9 @@ Usar esta base antes de bajar a cada segmento:
 ```text
 Hola, {{saludo}}. Vi {{referencia_real}} en {{institution}} y pense que Agora podria tener encaje ahi.
 
-Lo estamos mostrando a equipos que hoy tienen {{dolor_concreto}} repartido entre varias herramientas. Agora ayuda a reunir {{bloque_de_valor}} en un mismo workspace.
+{{quienes_somos}} y {{anclaje_academico}}.
+
+Lo estamos mostrando a equipos que hoy tienen {{dolor_concreto}} repartido entre varias herramientas. Agora ayuda a reunir {{bloque_de_valor}} en un mismo workspace. https://agora.humanizar.cloud
 
 Si le hace sentido, le comparto un ejemplo armado para {{caso_de_uso}} y miramos en 15 minutos si vale la pena probar un piloto.
 ```
@@ -178,18 +293,15 @@ Si le hace sentido, le comparto un ejemplo armado para {{caso_de_uso}} y miramos
 - borradores y evidencias desperdigadas
 - coordinacion entre personas y momentos del proceso
 
-#### Version email
+#### Version email estilo WhatsApp
 
 ```text
-Asunto: idea para ordenar {{proceso_academico}} en {{institution}}
+Asunto: idea rapida para {{proceso_academico}}
 
 Hola, {{contact_name}}.
 
-Vi {{role_or_unit}} en {{institution}} y pense que Agora podria tener buen encaje ahi. Estamos mostrando la herramienta a programas y coordinaciones donde lecturas, materiales, borradores, evidencias y seguimiento suelen quedar repartidos entre varias herramientas.
-
-Agora permite reunir ese trabajo en un mismo workspace y puede servir especialmente en {{proceso_academico}}, donde importa tener materiales, tareas y avance visibles sin depender de carpetas y mensajes sueltos.
-
-Si le interesa, le comparto un ejemplo ya armado para {{caso_de_uso_programa}} y vemos en una llamada corta si tendria sentido un piloto pequeno.
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar {{proceso_academico}} en {{institution}} sin tanta dispersion. https://agora.humanizar.cloud
+Si le ve sentido, me basta un feedback rapido o que me redirija con quien lleve este frente.
 ```
 
 #### Version WhatsApp
@@ -197,7 +309,7 @@ Si le interesa, le comparto un ejemplo ya armado para {{caso_de_uso_programa}} y
 ```text
 Hola, {{contact_name}}. Vi {{role_or_unit}} en {{institution}}.
 
-Le escribo porque estamos mostrando Agora a programas y coordinaciones que necesitan ordenar materiales, borradores, evidencias y seguimiento en un mismo espacio.
+Somos estudiantes emprendiendo con Agora y nos interesa fortalecer procesos academicos. Le escribo porque estamos mostrando la herramienta a programas y coordinaciones que necesitan ordenar materiales, borradores, evidencias y seguimiento en un mismo espacio. https://agora.humanizar.cloud
 
 Creo que podria servirles en {{proceso_academico}}. Si quiere, le mando un ejemplo concreto y vemos rapido si vale la pena un piloto.
 ```
@@ -223,18 +335,15 @@ Creo que podria servirles en {{proceso_academico}}. Si quiere, le mando un ejemp
 - dificultad para seguir avances de estudiantes o auxiliares
 - trabajo de investigacion y escritura repartido en demasiados canales
 
-#### Version email
+#### Version email estilo WhatsApp
 
 ```text
-Asunto: un flujo mas simple para {{curso_o_linea}} en {{institution}}
+Asunto: feedback rapido sobre esto
 
 Hola, {{contact_name}}.
 
-Vi su trabajo en {{role_or_unit}} en {{institution}} y quise escribirle porque Agora puede encajar bien en contextos donde se mezclan lectura, escritura, acompanamiento y coordinacion.
-
-La herramienta ayuda a reunir lecturas, borradores, evidencias, tareas y archivos en un mismo workspace. Para profesores y grupos de investigacion esto suele ser util cuando hay que seguir avances, comentar textos y mantener contexto sin repartir todo entre carpetas, correos y chats.
-
-Si le interesa, le comparto un caso de uso pensado para {{curso_o_linea}} o para un semillero asociado, y vemos si un piloto corto tiene sentido.
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho su feedback sobre Agora para {{curso_o_linea}} o {{role_or_unit}} en {{institution}}. https://agora.humanizar.cloud
+Si no le corresponde directamente, me basta con que me indique con quien deberia hablar.
 ```
 
 #### Version WhatsApp
@@ -242,7 +351,7 @@ Si le interesa, le comparto un caso de uso pensado para {{curso_o_linea}} o para
 ```text
 Hola, {{contact_name}}. Vi su trabajo en {{role_or_unit}} en {{institution}}.
 
-Estamos mostrando Agora a profesores e investigadores que trabajan con lecturas, borradores y seguimiento de estudiantes o equipos. La idea es tener todo eso en un mismo workspace, con menos dispersion.
+Somos estudiantes emprendiendo con Agora y la estamos mostrando a profesores e investigadores que trabajan con lecturas, borradores y seguimiento de estudiantes o equipos. La idea es tener todo eso en un mismo workspace, con menos dispersion. https://agora.humanizar.cloud
 
 Si le sirve, le comparto un ejemplo rapido aplicado a {{curso_o_linea}} o a un proyecto de investigacion.
 ```
@@ -267,18 +376,15 @@ Si le sirve, le comparto un ejemplo rapido aplicado a {{curso_o_linea}} o a un p
 - tareas y acuerdos en chats sueltos
 - dificultad para sostener continuidad entre reuniones
 
-#### Version email
+#### Version email estilo WhatsApp
 
 ```text
-Asunto: piloto para organizar el trabajo de {{contact_name}}
+Asunto: idea rapida para el semillero
 
 Hola, {{contact_name}}.
 
-Vi el trabajo de {{role_or_unit}} en {{institution}} y pense que Agora podria servirles bastante. Estamos mostrando la herramienta a semilleros y grupos que necesitan reunir lecturas, borradores, evidencias, tareas y archivos en un mismo espacio.
-
-La idea es que el equipo no pierda contexto entre reuniones y pueda trabajar sobre materiales reales, no sobre carpetas y mensajes sueltos.
-
-Si quiere, le comparto un workspace piloto pensado para semilleros y vemos en una llamada corta si les ahorra trabajo.
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creemos que Agora podria servirles para ordenar lecturas, borradores y tareas del semillero. https://agora.humanizar.cloud
+Si le ve sentido, me basta un feedback rapido y le comparto un ejemplo.
 ```
 
 #### Version WhatsApp
@@ -286,7 +392,7 @@ Si quiere, le comparto un workspace piloto pensado para semilleros y vemos en un
 ```text
 Hola, {{contact_name}}. Vi {{role_or_unit}} en {{institution}}.
 
-Creo que Agora puede servirles para ordenar lecturas, borradores, tareas y materiales del semillero en un mismo espacio, sin depender de varias herramientas.
+Somos estudiantes emprendiendo con Agora. Creo que puede servirles para ordenar lecturas, borradores, tareas y materiales del semillero en un mismo espacio, sin depender de varias herramientas. https://agora.humanizar.cloud
 
 Si le hace sentido, le mando un ejemplo de workspace para semilleros y lo revisamos rapido.
 ```
@@ -303,14 +409,13 @@ Si le hace sentido, le mando un ejemplo de workspace para semilleros y lo revisa
 
 - `segment` como centro de escritura, tutoria, lengua materna
 
-#### Version base
+#### Version email estilo WhatsApp
 
 ```text
 Hola, {{contact_name}}.
 
-Vi {{role_or_unit}} en {{institution}} y pense que Agora puede encajar bien en procesos de acompanamiento de escritura. La herramienta ayuda a centralizar borradores, comentarios, evidencias, tareas y seguimiento en un mismo workspace.
-
-Si quiere, le comparto un ejemplo aplicado a tutorias o talleres y vemos si tiene sentido para su equipo.
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y seguimiento de escritura en {{institution}}. https://agora.humanizar.cloud
+Si le ve sentido, me basta un feedback rapido o que me indiquen quien lleva este frente.
 ```
 
 ### 5. Revistas, medios y flujos editoriales
@@ -319,14 +424,13 @@ Si quiere, le comparto un ejemplo aplicado a tutorias o talleres y vemos si tien
 
 - `segment` relacionado con revista, medio, editorial, comunicacion
 
-#### Version base
+#### Version email estilo WhatsApp
 
 ```text
 Hola, {{contact_name}}.
 
-Vi {{role_or_unit}} en {{institution}} y pense en escribirle porque Agora puede servir mucho cuando hay borradores, calendario editorial, archivos, comentarios y tareas repartidos en varias herramientas.
-
-Si quiere, le muestro un flujo simple para revista o medio universitario y le comparto un workspace de prueba.
+Somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y creo que Agora puede servir para ordenar borradores, comentarios y flujo editorial en {{institution}}. https://agora.humanizar.cloud
+Si le ve sentido, me basta un feedback rapido o que me redirijan con quien lleve ese proceso.
 ```
 
 ## Bloques de dolor listos para insertar
@@ -378,7 +482,18 @@ Evitar en primer contacto:
 ```text
 Hola, {{contact_name}}. Le escribo de nuevo por si el mensaje anterior se perdio.
 
-Creo que Agora puede servir especialmente para {{dolor_concreto}} en {{institution}}. Si quiere, le comparto un ejemplo ya armado y vemos rapido si tendria sentido probarlo.
+Somos un equipo de estudiantes emprendiendo con Agora y nos interesa validarla con casos reales que fortalezcan trabajo academico. Creo que puede servir especialmente para {{dolor_concreto}} en {{institution}}. https://agora.humanizar.cloud
+
+Si quiere, le comparto un ejemplo ya armado y vemos rapido si tendria sentido probarlo.
+```
+
+### Seguimiento corto estilo WhatsApp
+
+```text
+Hola, {{contact_name}}.
+
+Le escribo de nuevo porque somos un grupo de estudiantes emprendedores que busca fortalecer el sector academico, y me serviria mucho saber si Agora podria tener sentido para {{role_or_unit}} en {{institution}}. https://agora.humanizar.cloud
+Si no le corresponde, me basta con que me diga con quien deberia hablar.
 ```
 
 ### Seguimiento con anclaje institucional
@@ -386,7 +501,23 @@ Creo que Agora puede servir especialmente para {{dolor_concreto}} en {{instituti
 ```text
 Hola, {{contact_name}}. Retomo este mensaje porque sigo viendo que en {{institution}} hay un caso claro para ordenar {{proceso_academico}} sin depender de archivos y mensajes dispersos.
 
-Si quiere, le dejo un ejemplo adaptado a {{role_or_unit}}.
+Lo estamos construyendo desde una preocupacion muy cercana al sector academico y por eso queria insistir con un ejemplo adaptado a {{role_or_unit}}. https://agora.humanizar.cloud
+
+Si quiere, le dejo ese ejemplo.
+```
+
+### Seguimiento con reposicionamiento humano
+
+Usarlo cuando el primer correo sono demasiado frio o demasiado vendedor.
+
+```text
+Hola, {{contact_name}}.
+
+Le escribo de nuevo con un poco mas de contexto porque el mensaje anterior pudo sonar demasiado directo. Somos un equipo de estudiantes que esta emprendiendo con Agora y nos interesa que la herramienta crezca ayudando a fortalecer procesos academicos reales.
+
+Por eso pense en {{role_or_unit}} en {{institution}}: ahi hay un caso claro para ordenar {{bloque_de_valor}} sin repartir todo entre varias herramientas. https://agora.humanizar.cloud
+
+Si le sirve, le comparto un ejemplo muy concreto y usted me dice si tiene sentido o no para su contexto.
 ```
 
 ### Cierre despues de conversacion positiva
@@ -466,5 +597,7 @@ En el primer impacto comercial hablar mas de:
 - coordinacion
 - evidencias
 - conocimiento
+- cercania con la academia
+- origen estudiante o emprendedor cuando sume confianza
 
 Hablar menos de infraestructura tecnica. El primer mensaje vende claridad de uso, no sofisticacion interna.

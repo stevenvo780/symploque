@@ -37,6 +37,14 @@ Si solo vas a abrir tres archivos, abre estos:
   - [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
 - `04-reportes/`
   - [reporte-proceso-expansion-contactos.md](../04-reportes/reporte-proceso-expansion-contactos.md)
+- `05-redes-sociales/`
+  - [resumen-vision-board-marketing-maven.md](../05-redes-sociales/resumen-vision-board-marketing-maven.md)
+  - [que-rescatar-y-que-descartar-del-vision-board.md](../05-redes-sociales/que-rescatar-y-que-descartar-del-vision-board.md)
+  - [narrativa-futura-alineada-agora.md](../05-redes-sociales/narrativa-futura-alineada-agora.md)
+  - [estrategia-redes-sociales.md](../05-redes-sociales/estrategia-redes-sociales.md)
+  - [manifiesto-corto-agora.md](../05-redes-sociales/manifiesto-corto-agora.md)
+  - [lote-1-publicaciones-por-plataforma.md](../05-redes-sociales/lote-1-publicaciones-por-plataforma.md)
+  - [calendario-semana-1-redes.md](../05-redes-sociales/calendario-semana-1-redes.md)
 
 ## Documento rector
 
@@ -67,6 +75,7 @@ La prioridad comercial no es trabajar los 300 leads al tiempo. Lo eficiente es o
 - enriquecer el score de cierre
 - generar outreach por cluster
 - separar copy para coordinaciones, semilleros, centros de escritura, docentes, revistas y medios
+- convertir aprendizajes de marca en una estrategia de redes y comunidad
 
 ## Nota sobre prompt4
 

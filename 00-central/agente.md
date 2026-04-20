@@ -78,6 +78,7 @@ Priorizar especialmente:
 9. Playbook de busqueda autonoma de clientes
 10. Reportes de proceso y decisiones metodologicas
 11. Documento central que concentre el sistema
+12. Estrategia de redes sociales, credibilidad y comunidad
 
 ## Restricciones de calidad
 
@@ -120,6 +121,14 @@ El sistema documental central queda asi:
   - `leads-agora-maestro.csv`
 - `04-reportes/`
   - `reporte-proceso-expansion-contactos.md`
+- `05-redes-sociales/`
+  - `resumen-vision-board-marketing-maven.md`
+  - `que-rescatar-y-que-descartar-del-vision-board.md`
+  - `narrativa-futura-alineada-agora.md`
+  - `estrategia-redes-sociales.md`
+  - `manifiesto-corto-agora.md`
+  - `lote-1-publicaciones-por-plataforma.md`
+  - `calendario-semana-1-redes.md`
 
 El CSV operativo unico es `03-datos/leads-agora-maestro.csv`.
 
