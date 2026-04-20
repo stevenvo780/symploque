@@ -26,6 +26,14 @@ import {
   B1_Minimal, B2_Denso, B3_Conferencia,
   R1_Manifiesto, R2_Simbolo,
 } from './templates/MoreVariations';
+import {
+  P02_Wittgenstein, P04_Deleuze, P05_Nietzsche, P12_Turing,
+  P13_ProofVisual, P18_Caos, P19_LogoHero, P23_FibNature, P26_Dashboard,
+} from './templates/GeekPostsExpanded';
+import {
+  B06_GlitchBanner, B09_DialecticBanner, B10_ProofBanner, B11_QuantumBanner,
+  R05_MatrixReel, R06_ProofReel, R07_DialecticReel, R08_QuantumReel, R10_ChaosReel,
+} from './templates/GeekBannersReelsExpanded';
 import { Lote1_Estandar, Lote1_Flujo } from './templates/Lote1Variations';
 import {
   H1_ArbolTesis, H2_Problema, H3_Respuesta, H4_Diferenciador, H5_Madurez,
@@ -69,13 +77,31 @@ const COMPONENT_MAP: Record<string, React.FC> = {
   post_proximamente:  V8_Proximamente,
   lote1_estandar:     Lote1_Estandar,
   lote1_flujo:        Lote1_Flujo,
+  post_geek_wittgenstein: P02_Wittgenstein,
+  post_geek_nietzsche:    P05_Nietzsche,
+  post_geek_proof:        P13_ProofVisual,
+  post_geek_caos:         P18_Caos,
+  post_geek_dashboard:    P26_Dashboard,
+  post_geek_rizoma:       P04_Deleuze,
+  post_geek_fib_nature:   P23_FibNature,
+  post_geek_logo_hero:    P19_LogoHero,
+  post_geek_turing:       P12_Turing,
   banner_original:    SocialBannerExample,
   banner_minimal:     B1_Minimal,
   banner_denso:       B2_Denso,
   banner_conferencia: B3_Conferencia,
+  banner_geek_glitch:    B06_GlitchBanner,
+  banner_geek_dialectic: B09_DialecticBanner,
+  banner_geek_proof:     B10_ProofBanner,
+  banner_geek_quantum:   B11_QuantumBanner,
   reel_original:      SocialReelExample,
   reel_manifiesto:    R1_Manifiesto,
   reel_simbolo:       R2_Simbolo,
+  reel_geek_matrix:     R05_MatrixReel,
+  reel_geek_proof:      R06_ProofReel,
+  reel_geek_dialectic:  R07_DialecticReel,
+  reel_geek_quantum:    R08_QuantumReel,
+  reel_geek_chaos:      R10_ChaosReel,
   // Hybrid
   hybrid_arbol_tesis:      H1_ArbolTesis,
   hybrid_problema:         H2_Problema,

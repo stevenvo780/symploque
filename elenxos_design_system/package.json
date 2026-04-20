@@ -32,6 +32,8 @@
     "preview": "vite preview",
     "render": "tsx scripts/render-images.ts",
     "render:all": "tsx scripts/render-images.ts --all",
+    "render:video": "tsx scripts/render-video.ts",
+    "render:video:all": "tsx scripts/render-video.ts --all",
     "campaign": "tsx scripts/generate-campaign.ts",
     "campaign:dolor": "tsx scripts/generate-campaign.ts --narrativa dolor",
     "campaign:solucion": "tsx scripts/generate-campaign.ts --narrativa solucion",

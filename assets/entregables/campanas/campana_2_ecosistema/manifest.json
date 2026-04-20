@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-04-20T21:10:00.628Z",
+  "titulo": "Campaña 2 — Ecosistema",
+  "narrativa": "ecosistema",
+  "target": "Directores de semilleros, comunidades académicas y alianzas institucionales.",
+  "objetivo": "Presentar a Agora como plataforma cooperativa y ecosistema de investigación a escala.",
+  "totalItems": 10,
+  "counts": {
+    "con_ia": 5,
+    "sin_ia": 5
+  },
+  "notes": {
+    "flyer": "El sistema no tiene layout flyer dedicado; se usa el layout post 1080×1080 como flyer operativo.",
+    "video": "Reels y stories se exportaron también como MP4 de 8s."
+  },
+  "items": [
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_post_semillero",
+      "description": "Post de semillero / comunidad.",
+      "png": "sin_ia/publicaciones/publicacion__n3_l5_post_semillero.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_post_cooperar",
+      "description": "Flyer cuadrado de investigación cooperativa.",
+      "png": "sin_ia/flyers/flyer__n3_l5_post_cooperar.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_reel_vision",
+      "description": "Reel de visión de ecosistema.",
+      "png": "sin_ia/reels/reel__n3_l5_reel_vision.png",
+      "mp4": "sin_ia/reels/reel__n3_l5_reel_vision.mp4"
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_story_unete",
+      "description": "Story de invitación / comunidad.",
+      "png": "sin_ia/stories/story__n3_l5_story_unete.png",
+      "mp4": "sin_ia/stories/story__n3_l5_story_unete.mp4"
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_banner_ecosistema",
+      "description": "Banner de ecosistema.",
+      "png": "sin_ia/banners/banner__n3_l5_banner_ecosistema.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "hybrid_arbol_tesis",
+      "description": "Post AI de conocimiento conectado.",
+      "png": "con_ia/publicaciones/publicacion__hybrid_arbol_tesis.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_respuesta",
+      "description": "Flyer AI de síntesis / respuesta.",
+      "png": "con_ia/flyers/flyer__hybrid_respuesta.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "description": "Reel AI para visión narrativa.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto.png",
+      "mp4": "con_ia/reels/reel__hybrid_reel_manifiesto.mp4"
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "description": "Story AI de onboarding.",
+      "png": "con_ia/stories/story__hybrid_story_teaser.png",
+      "mp4": "con_ia/stories/story__hybrid_story_teaser.mp4"
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_og",
+      "description": "Banner AI para portada y sharing.",
+      "png": "con_ia/banners/banner__hybrid_banner_og.png",
+      "mp4": null
+    }
+  ]
+}

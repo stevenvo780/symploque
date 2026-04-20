@@ -162,7 +162,9 @@ async function main() {
         await page.evaluate(async () => {
           // Give React a tick to mount and let animations start.
           await new Promise<void>((resolve) => {
-            requestAnimationFrame(() => requestAnimationFrame(resolve));
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => resolve());
+            });
           });
 
           const finiteAnimations = document.getAnimations().filter((animation) => {

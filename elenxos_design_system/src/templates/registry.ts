@@ -68,17 +68,35 @@ const STANDALONE: TemplateInfo[] = [
   post('post_proximamente',  'instagram'),
   post('lote1_estandar',     'instagram'),
   post('lote1_flujo',        'instagram'),
+  post('post_geek_wittgenstein', 'instagram'),
+  post('post_geek_nietzsche',    'instagram'),
+  post('post_geek_proof',        'instagram'),
+  post('post_geek_caos',         'instagram'),
+  post('post_geek_dashboard',    'instagram'),
+  post('post_geek_rizoma',       'instagram'),
+  post('post_geek_fib_nature',   'instagram'),
+  post('post_geek_logo_hero',    'instagram'),
+  post('post_geek_turing',       'instagram'),
 
   // Banners
   banner('banner_original',    'linkedin'),
   banner('banner_minimal',     'linkedin'),
   banner('banner_denso',       'linkedin'),
   banner('banner_conferencia', 'linkedin'),
+  banner('banner_geek_glitch',    'linkedin'),
+  banner('banner_geek_dialectic', 'linkedin'),
+  banner('banner_geek_proof',     'linkedin'),
+  banner('banner_geek_quantum',   'linkedin'),
 
   // Reels
   reel('reel_original',    'instagram'),
   reel('reel_manifiesto',  'instagram'),
   reel('reel_simbolo',     'instagram'),
+  reel('reel_geek_matrix',     'instagram'),
+  reel('reel_geek_proof',      'instagram'),
+  reel('reel_geek_dialectic',  'instagram'),
+  reel('reel_geek_quantum',    'instagram'),
+  reel('reel_geek_chaos',      'instagram'),
 ];
 
 // ══════════════════════════════════════════════════════════════

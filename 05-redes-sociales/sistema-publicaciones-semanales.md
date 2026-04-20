@@ -1,5 +1,7 @@
 # Sistema de Publicaciones Semanales — Elenxos / Agora
 
+> Nota operativa: este documento define el arco narrativo y los prompts conceptuales. La ejecucion semanal real vive en `../03-operacion-redes/`, y los IDs renderizables del design system viven en `../elenxos_design_system/src/templates/registry.ts`.
+
 ## Pipeline de producción
 
 ```
