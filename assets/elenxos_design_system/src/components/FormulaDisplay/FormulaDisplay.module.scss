@@ -57,10 +57,6 @@
 
   // Animation
   &--animated &__text {
-    animation: elx-aletheia-reveal 1.5s ease both, elx-cursor-blink 1s step-end infinite 1.5s;
-    &::after {
-      content: '▎';
-      animation: elx-cursor-blink 1s step-end infinite;
-    }
+    animation: elx-synapse-fire 8s ease-in-out infinite;
   }
 }

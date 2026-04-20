@@ -12,7 +12,7 @@ export interface FormulaDisplayProps {
 }
 
 export const FormulaDisplay: React.FC<FormulaDisplayProps> = ({
-  formula, label, size = 'md', color = 'kodama', animated = true, className = '', style = {},
+  formula, label, size = 'md', color = 'kodama', animated = false, className = '', style = {},
 }) => {
   const classes = [
     styles['elx-formula'],

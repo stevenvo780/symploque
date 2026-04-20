@@ -17,9 +17,10 @@
 
 import { execSync, spawn, type ChildProcess } from 'child_process';
 import { existsSync, mkdirSync } from 'fs';
-import { resolve, join } from 'path';
+import { resolve, join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const ROOT = resolve(import.meta.dirname, '..');
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 // ── Template registry (mirror of RenderPage.tsx) ─────────────
 interface TemplateInfo {
@@ -71,7 +72,7 @@ function parseArgs() {
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--template' && args[i + 1]) {
-      templateFilter = args[i + 1].split(',').map(s => s.trim());
+      templateFilter = args[i + 1].split(',').map((s: string) => s.trim());
       i++;
     } else if (args[i] === '--output' && args[i + 1]) {
       outputDir = resolve(args[i + 1]);
@@ -171,31 +172,51 @@ async function main() {
 
         // Wait for the template element to mount
         const selector = `[data-template-id="${tmpl.id}"]`;
-        await page.waitForSelector(selector, { timeout: 15_000 });
+        try {
+          await page.waitForSelector(selector, { timeout: 15_000 });
+        } catch (waitErr) {
+          const idsOnPage = await page.$$eval('[data-template-id]', (nodes) =>
+            nodes.map((n) => n.getAttribute('data-template-id') || ''),
+          );
+          console.error(`  [DEBUG] IDs en página: ${idsOnPage.join(', ') || '(none)'}`);
+
+          const viteOverlayText = await page.evaluate(() => {
+            const overlay = document.querySelector('vite-error-overlay');
+            if (!overlay) return '';
+            return (
+              (overlay.shadowRoot?.textContent || overlay.textContent || '').trim().slice(0, 1200)
+            );
+          });
+          if (viteOverlayText) {
+            console.error(`  [VITE ERROR] ${viteOverlayText}`);
+          }
+
+          throw waitErr;
+        }
 
         // Wait for ALL finite (non-infinite) CSS animations to complete.
         // This uses the Web Animations API to detect every running animation
         // and waits for those with finite iterations to reach their end state.
-        await page.evaluate(() => {
-          return new Promise<void>((resolve) => {
-            const check = () => {
-              const anims = document.getAnimations();
-              const finite = anims.filter(a => {
-                const effect = a.effect as KeyframeEffect;
-                if (!effect?.getComputedTiming) return false;
-                const t = effect.getComputedTiming();
-                return t.iterations !== Infinity;
-              });
-              if (finite.length === 0) {
-                resolve();
-                return;
-              }
-              Promise.all(finite.map(a => a.finished.catch(() => {})))
-                .then(() => resolve());
-            };
-            // Give React a tick to mount and start animations
-            requestAnimationFrame(() => requestAnimationFrame(check));
+        await page.evaluate(async () => {
+          // Give React a tick to mount and let animations start.
+          await new Promise<void>((resolve) => {
+            requestAnimationFrame(() => requestAnimationFrame(resolve));
           });
+
+          const finiteAnimations = document.getAnimations().filter((animation) => {
+            const effect = animation.effect as KeyframeEffect | null;
+            if (!effect?.getComputedTiming) return false;
+            const timing = effect.getComputedTiming();
+            return timing.iterations !== Infinity;
+          });
+
+          if (finiteAnimations.length === 0) return;
+
+          // Wait for finite animations, but don't hang forever.
+          await Promise.race([
+            Promise.allSettled(finiteAnimations.map((animation) => animation.finished)),
+            new Promise((resolve) => setTimeout(resolve, 12_000)),
+          ]);
         });
 
         // Extra settle time for any CSS transitions triggered after animations

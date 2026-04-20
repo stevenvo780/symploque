@@ -129,7 +129,7 @@ export const P05_Nietzsche = () => (
       <QuoteCard
         quote="Y si un día o una noche un demonio te siguiera... ¿te arrojarías al suelo y maldecirías, o le responderías: 'eres un dios'?"
         author="Friedrich Nietzsche"
-        fontSize={34}
+        fontSize={42}
       />
     </div>
   </SocialCanvas>
@@ -299,7 +299,7 @@ export const P14_Venn = () => (
     <div style={abs({ padding: '80px', gap: 20 })}>
       <CinematicText text="∩" level="hero" color="kodama" delayStep={0.3} style={{ fontSize: 200, opacity: 0.6 }} />
       <CinematicText text="Intersecciones" level="h2" delayStep={0.08} style={{ fontSize: 48 }} />
-      <Text size="sm" color="secondary" style={{ textAlign: 'center', maxWidth: '85%' }}>
+      <Text size="lg" color="secondary" style={{ textAlign: 'center', maxWidth: '85%' }}>
         Donde la filosofía, las matemáticas y la tecnología convergen.
       </Text>
     </div>
@@ -331,7 +331,7 @@ export const P15_SetTheory = () => (
 export const P16_Entropia = () => (
   <SocialCanvas format="post" scale={0.38}>
     <div style={{ position: 'absolute', inset: 0, background: '#050505' }} />
-    <QuantumParticle count={20} color="mixed" entangled />
+    <QuantumParticle count={12} color="mixed" entangled />
     <GlowOrb color="mask" size={500} x="50%" y="50%" blur={150} opacity={0.1} />
     <ScanLines />
     <FrameOverlay variant="mask" />
@@ -350,7 +350,7 @@ export const P16_Entropia = () => (
 export const P17_Cuantica = () => (
   <SocialCanvas format="post" scale={0.38}>
     <div style={{ position: 'absolute', inset: 0, background: '#060B10' }} />
-    <QuantumParticle count={25} color="kodama" entangled />
+    <QuantumParticle count={14} color="kodama" entangled />
     <GlowOrb color="kodama" size={300} x="40%" y="40%" blur={80} opacity={0.15} />
     <GlowOrb color="mask" size={200} x="60%" y="60%" blur={70} opacity={0.1} />
     <FrameOverlay variant="corners" />
@@ -369,7 +369,7 @@ export const P18_Caos = () => (
   <SocialCanvas format="post" scale={0.38}>
     <div style={{ position: 'absolute', inset: 0, background: '#080808' }} />
     <GradientWave speed={20} />
-    <TopologyMorph count={8} size={50} color="mixed" />
+    <TopologyMorph count={5} size={50} color="mixed" />
     <FrameOverlay variant="corners" />
     <BrandMark position="top-left" fontSize={11} />
     <div style={abs({ padding: '80px', gap: 20 })}>

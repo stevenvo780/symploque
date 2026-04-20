@@ -41,7 +41,7 @@ const abs = (extra: React.CSSProperties = {}): React.CSSProperties => ({
 export const B04_MatrixBanner = () => (
   <SocialCanvas format="banner" scale={0.6}>
     <div style={{ position: 'absolute', inset: 0, background: '#020402' }} />
-    <MatrixRain columns={30} charset="greek" color="kodama" speed={1.5} />
+    <MatrixRain columns={18} charset="greek" color="kodama" speed={1.5} />
     <GlowOrb color="kodama" size={400} x="50%" y="50%" blur={120} opacity={0.1} />
     <FrameOverlay variant="minimal" />
     <BrandMark position="bottom-right" fontSize={12} />
@@ -296,7 +296,7 @@ export const R07_DialecticReel = () => (
 export const R08_QuantumReel = () => (
   <SocialCanvas format="reel" scale={0.28}>
     <div style={{ position: 'absolute', inset: 0, background: '#060B10' }} />
-    <QuantumParticle count={18} color="mixed" entangled />
+    <QuantumParticle count={12} color="mixed" entangled />
     <GlowOrb color="kodama" size={300} x="40%" y="30%" blur={80} opacity={0.15} />
     <GlowOrb color="mask" size={300} x="60%" y="70%" blur={80} opacity={0.1} />
     <FrameOverlay variant="corners" />
