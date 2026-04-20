@@ -54,27 +54,22 @@ La tarea de redes es resolver esa tension:
 - sin perder cercania
 - y sin abandonar al publico academico no tecnico ni desdibujar la relacion entre marca y producto
 
-## Elementos para Establecer la Marca (Lo que falta)
+## Elementos para Establecer la Marca
 
-Para que Agora deje de ser un proyecto y pase a ser una marca establecida, necesitamos:
+El detalle operativo ya no vive repetido aqui. El checklist canonico queda repartido asi:
 
-### 1. Kit de Prensa / Media Kit
-Centralizar en una carpeta: logos (SVG), paleta de colores oficial, screenshots de alta calidad y fotos del equipo/fundador. Esto facilita alianzas y menciones en prensa académica.
+- media kit e inventario real: [media-kit-estructura.md](./media-kit-estructura.md) y [../assets/README.md](../assets/README.md)
+- engagement: [protocolo-de-interaccion.md](./protocolo-de-interaccion.md)
+- sincronizacion con outreach: [../06-operacion-email/README.md](../06-operacion-email/README.md) y [../email.md](../email.md)
+- glosario editorial: [glosario-de-marca.md](./glosario-de-marca.md)
 
-### 2. Glosario de Términos Propios
-Definir piezas editoriales que expliquen conceptos clave: `ST`, `Markdown Académico`, `Rigor Axiomático`. Si nosotros no los definimos en redes, el público los ignorará o los malinterpretará.
+Resumen ejecutivo de lo que sigue faltando para que la marca se sienta establecida:
 
-### 3. Estrategia de Engagement Activo
-No basta con postear. Se requiere un protocolo de interacción:
-- Comentar en publicaciones de revistas académicas y universidades aliadas.
-- Responder cada duda técnica o filosófica en menos de 12 horas.
-- Seguir y conversar con perfiles del ICP (Docentes, Investigadores) sin venderles, solo aportando valor.
-
-### 4. Prueba Social "Caso Verificado"
-Crear una plantilla visual para testimonios de pilotos reales. La marca se establece cuando otros hablan de ella.
-
-### 5. Sincronización con Outreach
-Los correos enviados desde el remitente corporativo (ver [06-operacion-email](../06-operacion-email/README.md)) deben incluir enlaces a las redes sociales para cerrar el ciclo de credibilidad.
+- media kit exportable
+- screenshots reales del producto
+- plantilla de caso verificado
+- ejecucion constante de engagement
+- cierre entre contenido, firma de correo y CTA
 
 Regla:
 

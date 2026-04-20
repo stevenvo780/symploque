@@ -1,0 +1,15 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-aura-bg {
+  position: absolute;
+  inset: -20%; // Extra size to allow for breathing/zoom
+  background: radial-gradient(circle at center, rgba($color-kodama-dim, 0.2) 0%, $color-forest-deep 60%);
+  z-index: 0;
+  pointer-events: none;
+  animation: elx-aura-breathe 8s ease-in-out infinite alternate;
+
+  &--zoom {
+    animation: elx-cinematic-zoom 20s linear infinite alternate, elx-aura-breathe 8s ease-in-out infinite alternate;
+  }
+}

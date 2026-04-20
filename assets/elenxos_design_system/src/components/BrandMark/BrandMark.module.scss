@@ -1,0 +1,42 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../tokens/spacing' as *;
+@use '../../animations/animations';
+
+.elx-brand {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  animation: elx-fade-in 1.5s ease 0.5s both;
+
+  &__name {
+    font-family: $font-sans;
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-widest;
+    text-transform: uppercase;
+    color: $color-text-primary;
+  }
+
+  &__tagline {
+    font-family: $font-sans;
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    letter-spacing: $letter-spacing-wide;
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $color-kodama;
+    box-shadow: 0 0 8px rgba($color-kodama, 0.6);
+  }
+
+  &--bottom-left  { bottom: 30px; left: 40px; }
+  &--bottom-right { bottom: 30px; right: 40px; }
+  &--top-left     { top: 30px; left: 40px; }
+  &--top-right    { top: 30px; right: 40px; }
+  &--center-bottom { bottom: 60px; left: 50%; transform: translateX(-50%); }
+}

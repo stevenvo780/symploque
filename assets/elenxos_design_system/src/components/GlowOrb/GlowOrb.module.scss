@@ -1,0 +1,32 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(var(--blur, 60px));
+  opacity: var(--opacity, 0.4);
+  animation: elx-float-complex var(--speed, 12s) ease-in-out infinite;
+  mix-blend-mode: screen;
+
+  &--kodama {
+    background: radial-gradient(circle, $color-kodama-bright 0%, $color-kodama 30%, transparent 70%);
+  }
+
+  &--mask {
+    background: radial-gradient(circle, $color-mask-light 0%, $color-mask-deep 30%, transparent 70%);
+  }
+
+  &--forest {
+    background: radial-gradient(circle, $color-forest-light 0%, $color-forest-mid 30%, transparent 70%);
+  }
+
+  &--white {
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 30%, transparent 70%);
+  }
+
+  &--warm {
+    background: radial-gradient(circle, #D4A373 0%, #8B6914 30%, transparent 70%);
+  }
+}

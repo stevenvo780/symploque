@@ -1,0 +1,40 @@
+@use '../../tokens/colors' as *;
+
+.elx-grid-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  &--dots {
+    background-image: radial-gradient(circle, rgba($color-kodama, 0.15) 1px, transparent 1px);
+    background-size: var(--gap, 40px) var(--gap, 40px);
+  }
+
+  &--lines {
+    background-image:
+      linear-gradient(rgba($color-kodama, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($color-kodama, 0.06) 1px, transparent 1px);
+    background-size: var(--gap, 60px) var(--gap, 60px);
+  }
+
+  &--cross {
+    background-image:
+      radial-gradient(circle, rgba($color-kodama, 0.2) 1px, transparent 1px);
+    background-size: var(--gap, 80px) var(--gap, 80px);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+  }
+
+  &--perspective {
+    background-image:
+      linear-gradient(rgba($color-kodama, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($color-kodama, 0.05) 1px, transparent 1px);
+    background-size: var(--gap, 40px) var(--gap, 40px);
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: bottom center;
+    opacity: 0.5;
+    mask-image: linear-gradient(to top, black 0%, transparent 80%);
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 80%);
+  }
+}

@@ -1,0 +1,12 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-cinematic-text {
+  display: inline-block;
+  
+  &__char {
+    display: inline-block;
+    opacity: 0;
+    animation: elx-letter-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+}

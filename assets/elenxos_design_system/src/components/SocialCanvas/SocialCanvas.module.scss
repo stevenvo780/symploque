@@ -1,0 +1,45 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/spacing' as *;
+@use '../../tokens/mixins' as *;
+
+.elx-social-canvas {
+  position: relative;
+  overflow: hidden;
+  background: $color-forest-deep;
+  box-shadow: $shadow-xl;
+  border: 1px solid rgba($color-ash, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Escalamiento base para que quepa en la pantalla del usuario
+  // mientras mantiene el aspect ratio y resolución original.
+  transform-origin: top center;
+
+  &__content {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; // Para que sea puramente decorativo/exportable
+  }
+
+  // ── Formatos ───────────────────────────────────────────────
+  &--post {
+    width: 1080px;
+    height: 1080px;
+    aspect-ratio: 1 / 1;
+  }
+
+  &--reel {
+    width: 1080px;
+    height: 1920px;
+    aspect-ratio: 9 / 16;
+  }
+
+  &--banner {
+    width: 1500px;
+    height: 500px;
+    aspect-ratio: 3 / 1;
+  }
+}

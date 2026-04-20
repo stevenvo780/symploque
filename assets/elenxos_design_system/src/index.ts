@@ -39,5 +39,17 @@ export type { DividerProps } from './components/Divider/Divider';
 export { KodamaParticles } from './components/KodamaParticles/KodamaParticles';
 export type { KodamaParticlesProps } from './components/KodamaParticles/KodamaParticles';
 
+export { SocialCanvas } from './components/SocialCanvas/SocialCanvas';
+export type { SocialCanvasProps } from './components/SocialCanvas/SocialCanvas';
+
+export { CinematicText } from './components/CinematicText/CinematicText';
+export type { CinematicTextProps } from './components/CinematicText/CinematicText';
+
+export { AuraBackground } from './components/AuraBackground/AuraBackground';
+export type { AuraBackgroundProps } from './components/AuraBackground/AuraBackground';
+
+export { LogicMesh } from './components/LogicMesh/LogicMesh';
+export type { LogicMeshProps } from './components/LogicMesh/LogicMesh';
+
 // ── Design Tokens (JS) ──────────────────────────────────────
 export { tokens } from './utils/tokens';

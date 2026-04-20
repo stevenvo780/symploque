@@ -1,0 +1,19 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../animations/animations';
+
+.elx-icon-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-serif;
+  color: $color-kodama;
+  user-select: none;
+  animation: elx-float-slow 8s ease-in-out infinite;
+
+  &--kodama { color: $color-kodama; text-shadow: 0 0 20px rgba($color-kodama, 0.5); }
+  &--mask   { color: $color-mask-light; text-shadow: 0 0 20px rgba($color-mask, 0.5); }
+  &--muted  { color: $color-text-muted; text-shadow: none; }
+  &--white  { color: $color-text-primary; text-shadow: 0 0 12px rgba(255,255,255,0.3); }
+  &--warm   { color: #D4A373; text-shadow: 0 0 20px rgba(212, 163, 115, 0.4); }
+}

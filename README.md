@@ -1,38 +1,56 @@
 # symploque
 
-Workspace operativo para outreach comercial, documentacion de marca y preparacion de envios automatizados.
+Workspace operativo para arrancar `Elenxos` y `Agora` con una capa minima pero seria de:
 
-Hoy el repo conserva dos capas:
+- datos comerciales
+- mensajeria reusable
+- marca y media kit
+- salida de correo corporativo
+- trazabilidad documental
+
+Este repo conserva dos capas:
 
 - historico documental y comercial de `Agora`
-- nueva fase operativa bajo `Elenxos`, con sitio corporativo y producto ya publicados
+- fase activa bajo `Elenxos`, con producto y sitio ya publicados
+
+## Entrada canonica
+
+Si solo vas a abrir cinco archivos, abre estos en este orden:
+
+1. [00-central/estado-actual-y-transicion.md](00-central/estado-actual-y-transicion.md)
+2. [docs/codex/NEXT_ACTIONS.md](docs/codex/NEXT_ACTIONS.md)
+3. [03-datos/README.md](03-datos/README.md)
+4. [05-redes-sociales/README.md](05-redes-sociales/README.md)
+5. [email.md](email.md)
 
 ## Estructura
 
-- `00-central/`: brief rector y mapa operativo del sistema
-- `01-estrategia/`: planes, playbooks y automatizaciones propuestas
-- `02-mensajeria/`: sistema modular de copy comercial
-- `03-datos/`: historico de contactos y nueva capa operativa de correo
-- `04-reportes/`: lotes listos para ejecucion y reportes metodologicos
-- `05-redes-sociales/`: narrativa de marca, manifiesto y plan por plataforma
-- `06-operacion-email/`: transicion de remitente, declaracion y salida sobre sitios publicos vivos
-- `docs/codex/`: contexto, protocolo, worklog y cola operativa
+- `00-central/`: contexto rector, foco actual y criterio de operacion
+- `01-estrategia/`: planes y playbooks heredados
+- `02-mensajeria/`: copy comercial reusable por segmento
+- `03-datos/`: historico, bootstrap y nueva base operativa de outreach
+- `04-reportes/`: ejecucion historica y reportes metodologicos
+- `05-redes-sociales/`: documentos canonicos de redes, manifiesto y media kit
+- `06-operacion-email/`: gating de remitente, declaracion y lanzamiento corporativo
+- `assets/`: sistema visual, renders exploratorios e inventario de media kit
+- `scripts/`: automatizaciones locales de soporte
+- `docs/codex/`: contexto persistente, protocolo y cola de trabajo
 
-## Punto de entrada recomendado
+## Estado operativo actual
 
-1. Abrir [00-central/estado-actual-y-transicion.md](00-central/estado-actual-y-transicion.md)
-2. Revisar [docs/codex/NEXT_ACTIONS.md](docs/codex/NEXT_ACTIONS.md)
-3. Revisar [03-datos/README.md](03-datos/README.md)
-4. Revisar [email.md](email.md)
+- Sitios publicos verificados: `https://www.elenxos.com/` y `https://agora.elenxos.com/`
+- La prioridad no es enviar mas; es cerrar `datos + remitente + CTA + firma + marca`
+- La API de correo existe y responde; el cuello de botella real es reconciliacion y gating
+- La narrativa de marca ya existe; el faltante principal era volverla operable y menos redundante
+- La nueva base de outreach se puede bootstrapear desde el historico con `scripts/bootstrap_operacion_email.py`
 
-## Estado actual
+## Reglas del repo
 
-- El historial de outreach y marca de `Agora` se conserva como referencia.
-- Los sitios publicos verificados hoy son `https://www.elenxos.com/` y `https://agora.elenxos.com/`.
-- La fase activa es reconciliar correos ya enviados desde remitente personal y preparar la siguiente ola desde remitente corporativo.
-- `email.md` ya documenta la API de envio corporativo, pero ahora queda saneada para trabajar con variables de entorno.
-- La documentacion ya debe alinearse con la capa de marca `Elenxos` y con `Agora` como producto vivo dentro de ese ecosistema.
+- No tratar docs historicos como si fueran la fase activa sin marcar contexto.
+- No guardar secretos en markdown, CSV ni scripts.
+- No lanzar correo corporativo sin pasar por `03-datos/operacion-email/` y `06-operacion-email/`.
+- No abrir nuevas piezas de marca sin revisar antes `assets/README.md` y `05-redes-sociales/README.md`.
 
 ## Nota
 
-Este repo no es una app tradicional. La verificacion principal hoy es documental y operativa: consistencia entre plan, copy, CSV, URLs publicas y remitente.
+Este repo no es una app tradicional. La verificacion principal es operativa: consistencia entre mensajes, CSV, URLs publicas, firma, brand system y cola de ejecucion.

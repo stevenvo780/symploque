@@ -76,10 +76,13 @@ Cada post debe tener un objetivo de conversión claro en el archivo de copy:
 
 ## 6. Lo que falta para establecer la marca (Checklist)
 
-Para que la marca se sienta "establecida", necesitamos producir estos activos que hoy no tenemos:
+Este checklist ya no se mantiene aqui para evitar duplicacion.
 
-- [ ] **Press Kit / Media Kit:** Una carpeta con logos (SVG), paleta de colores oficial, fotos del equipo y screenshots de alta calidad para aliados.
-- [ ] **Plantilla de "Caso Verificado":** Un diseño estándar para mostrar testimonios o resultados de pilotos.
-- [ ] **Glosario Agora:** Un post o serie que defina qué es "ST", "Markdown Académico" y "Contexto" según nosotros.
-- [ ] **Estrategia de Engagement Activo:** No solo publicar, sino comentar en perfiles de universidades (UdeA, UPB, Uniandes) y revistas académicas para ganar visibilidad.
-- [ ] **Firma de Correo Alineada:** Que los correos de outreach (Lote 06) tengan un link a las redes sociales.
+La referencia canonica ahora es:
+
+- media kit y faltantes reales: [media-kit-estructura.md](./media-kit-estructura.md)
+- inventario de assets existentes: [../assets/README.md](../assets/README.md)
+- engagement: [protocolo-de-interaccion.md](./protocolo-de-interaccion.md)
+- firma y outreach: [../email.md](../email.md)
+
+Si una pieza o tarea no cabe en alguno de esos cuatro frentes, probablemente no es una prioridad de arranque.

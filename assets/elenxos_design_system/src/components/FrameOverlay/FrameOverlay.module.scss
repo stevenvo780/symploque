@@ -1,0 +1,82 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../tokens/spacing' as *;
+
+.elx-frame-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+
+  &--minimal {
+    border: 1px solid rgba($color-kodama, 0.15);
+    margin: 40px;
+  }
+
+  &--corners {
+    margin: 30px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-color: rgba($color-kodama, 0.4);
+      border-style: solid;
+    }
+    &::before {
+      top: 0; left: 0;
+      border-width: 2px 0 0 2px;
+    }
+    &::after {
+      bottom: 0; right: 0;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  // Extra corners via child spans
+  &--corners &__corner-tr,
+  &--corners &__corner-bl {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-color: rgba($color-kodama, 0.4);
+    border-style: solid;
+  }
+  &--corners &__corner-tr {
+    top: 0; right: 0;
+    border-width: 2px 2px 0 0;
+  }
+  &--corners &__corner-bl {
+    bottom: 0; left: 0;
+    border-width: 0 0 2px 2px;
+  }
+
+  &--double {
+    margin: 24px;
+    border: 1px solid rgba($color-kodama, 0.1);
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba($color-kodama, 0.08);
+    }
+  }
+
+  &--mask {
+    margin: 30px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-color: rgba($color-mask, 0.4);
+      border-style: solid;
+    }
+    &::before { top: 0; left: 0; border-width: 2px 0 0 2px; }
+    &::after  { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+  }
+
+  &--vignette {
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.6) 100%);
+  }
+}

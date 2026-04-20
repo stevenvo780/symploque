@@ -25,14 +25,32 @@ Archivos canonicos:
 - `correos-enviados-importar.csv`: lista cruda de correos ya enviados desde remitente personal
 - `declaracion-pendientes.csv`: cola de contactos que deben recibir correo de declaracion
 
+## Bootstrap disponible
+
+Para no arrancar desde cero cada vez, existe:
+
+- `scripts/bootstrap_operacion_email.py`
+
+Ese script toma `leads-agora-maestro.csv` y genera una primera capa operativa provisional:
+
+- todos los contactos entran a `contactos-maestro-operativo.csv`
+- los `contactado` pasan a una cola provisional de enviados historicos
+- los `contactado` tambien entran a una cola provisional de `declaracion`
+
+Importante:
+
+- el bootstrap no reemplaza la verificacion contra la bandeja real
+- no inventa respuestas, asuntos ni fechas externas al historico
+- sirve para dejar la operacion arrancada y trazable
+
 ## Flujo recomendado
 
-1. importar la lista real de enviados a `correos-enviados-importar.csv`
-2. deduplicar y cruzar con el historico
-3. poblar `contactos-maestro-operativo.csv`
-4. marcar quienes requieren `declaracion`
-5. poblar `declaracion-pendientes.csv`
-6. no lanzar la nueva ola comercial hasta que la landing este aprobada
+1. correr `python3 scripts/bootstrap_operacion_email.py`
+2. importar o contrastar la lista real de enviados en `correos-enviados-importar.csv`
+3. deduplicar y cruzar con el historico
+4. validar quienes realmente requieren `declaracion`
+5. revisar `contactos-maestro-operativo.csv`
+6. no lanzar la nueva ola comercial hasta cerrar CTA, remitente y firma
 
 ## Regla de seguridad
 

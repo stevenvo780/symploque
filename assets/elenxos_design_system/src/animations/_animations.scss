@@ -205,3 +205,48 @@
     border-color: rgba(163, 228, 215, 0.6);
   }
 }
+
+// ── Cinematic Animations (Social Media Canvas) ────────────────
+@keyframes elx-cinematic-zoom {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}
+
+@keyframes elx-letter-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes elx-float-complex {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-12px) translateX(8px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(4px) translateX(12px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(16px) translateX(-4px) rotate(0.5deg);
+  }
+}
+
+@keyframes elx-aura-breathe {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
