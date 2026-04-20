@@ -18,8 +18,8 @@ from pathlib import Path
 
 
 REPO_DIR = Path(__file__).resolve().parents[1]
-LEGACY_MASTER = REPO_DIR / "03-datos" / "leads-agora-maestro.csv"
-OPERACION_DIR = REPO_DIR / "03-datos" / "operacion-email"
+LEGACY_MASTER = REPO_DIR / "05-datos-y-reportes" / "leads-agora-maestro.csv"
+OPERACION_DIR = REPO_DIR / "05-datos-y-reportes" / "operacion-email"
 MASTER_OPERATIVO = OPERACION_DIR / "contactos-maestro-operativo.csv"
 ENVIADOS_IMPORTAR = OPERACION_DIR / "correos-enviados-importar.csv"
 DECLARACION_PENDIENTES = OPERACION_DIR / "declaracion-pendientes.csv"

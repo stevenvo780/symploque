@@ -36,12 +36,10 @@ Eso obliga a que el repo haga la misma separacion:
 - narrativa de empresa en clave `Elenxos`
 - oferta, demos, docs y outreach del producto en clave `Agora`
 
-## Punto de entrada actual
-
 1. [00-central/plan-transicion-remitente-y-sitios-publicos.md](./plan-transicion-remitente-y-sitios-publicos.md)
-2. [email.md](../email.md)
-3. [03-datos/README.md](../03-datos/README.md)
-4. [05-redes-sociales/README.md](../05-redes-sociales/README.md)
+2. [email.md](../04-mensajeria-email/email.md)
+3. [05-datos-y-reportes/operacion-email](../05-datos-y-reportes/operacion-email)
+4. [03-operacion-redes/estrategia-redes-sociales.md](../03-operacion-redes/estrategia-redes-sociales.md)
 5. [assets/README.md](../assets/README.md)
 6. [docs/codex/NEXT_ACTIONS.md](../docs/codex/NEXT_ACTIONS.md)
 
@@ -55,9 +53,8 @@ Eso obliga a que el repo haga la misma separacion:
 
 ## Que cambia desde hoy
 
-- el remitente personal pasa a ser un antecedente, no el canal objetivo
-- la nueva verdad operativa para correo sale desde `02-mensajeria/`
-- la nueva organizacion de datos sale desde `03-datos/operacion-email/`
+- la nueva verdad operativa para correo sale desde `04-mensajeria-email/`
+- la nueva organizacion de datos sale desde `05-datos-y-reportes/operacion-email/`
 - el bootstrap inicial de la base nueva ya sale desde `scripts/bootstrap_operacion_email.py`
 - no se deben guardar secretos reales en markdown ni CSV
 

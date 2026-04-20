@@ -21,9 +21,12 @@ import {
   B1_Minimal, B2_Denso, B3_Conferencia,
   R1_Manifiesto, R2_Simbolo,
 } from './templates/MoreVariations';
+import { Lote1_Estandar, Lote1_Flujo } from './templates/Lote1Variations';
 import {
-  Lote1_Estandar, Lote1_Flujo
-} from './templates/Lote1Variations';
+  H1_ArbolTesis, H2_Problema, H3_Respuesta, H4_Diferenciador, H5_Madurez,
+  H6_ReelManifiesto, H7_StoryTeaser,
+  H8_BannerLinkedin, H9_BannerOG, H10_BannerX, H11_BannerYT,
+} from './templates/HybridVariations';
 
 // ── Registry ─────────────────────────────────────────────────
 export interface TemplateEntry {
@@ -59,6 +62,22 @@ export const TEMPLATE_REGISTRY: TemplateEntry[] = [
   { id: 'reel_original',     component: SocialReelExample, format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
   { id: 'reel_manifiesto',   component: R1_Manifiesto,     format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
   { id: 'reel_simbolo',      component: R2_Simbolo,        format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
+
+  // ── Hybrid: AI image + React components ────────────────────
+  // Posts 1080×1080
+  { id: 'hybrid_arbol_tesis',    component: H1_ArbolTesis,     format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_problema',       component: H2_Problema,       format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_respuesta',      component: H3_Respuesta,      format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_diferenciador',  component: H4_Diferenciador,  format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  { id: 'hybrid_madurez',        component: H5_Madurez,        format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
+  // Reels 1080×1920
+  { id: 'hybrid_reel_manifiesto', component: H6_ReelManifiesto, format: 'reel',  width: 1080, height: 1920, category: 'hybrid' },
+  { id: 'hybrid_story_teaser',    component: H7_StoryTeaser,    format: 'reel',  width: 1080, height: 1920, category: 'hybrid' },
+  // Banners 1500×500
+  { id: 'hybrid_banner_linkedin', component: H8_BannerLinkedin, format: 'banner', width: 1500, height: 500, category: 'hybrid' },
+  { id: 'hybrid_banner_og',       component: H9_BannerOG,       format: 'banner', width: 1500, height: 500, category: 'hybrid' },
+  { id: 'hybrid_banner_x',        component: H10_BannerX,       format: 'banner', width: 1500, height: 500, category: 'hybrid' },
+  { id: 'hybrid_banner_yt',       component: H11_BannerYT,      format: 'banner', width: 1500, height: 500, category: 'hybrid' },
 ];
 
 // ── Render wrapper: scale=1, exact pixel size ────────────────

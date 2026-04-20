@@ -6,9 +6,9 @@ Fecha de actualizacion: 2026-04-11
 
 Si solo vas a abrir tres archivos, abre estos:
 
-1. [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
-2. [02-mensajeria/02-primer-contacto-estandar.md](../02-mensajeria/02-primer-contacto-estandar.md)
-3. [reporte-proceso-expansion-contactos.md](../04-reportes/reporte-proceso-expansion-contactos.md)
+1. [leads-agora-maestro.csv](../05-datos-y-reportes/leads-agora-maestro.csv)
+2. [04-mensajeria-email/02-primer-contacto-estandar.md](../04-mensajeria-email/02-primer-contacto-estandar.md)
+3. [reporte-proceso-expansion-contactos.md](../05-datos-y-reportes/reporte-proceso-expansion-contactos.md)
 
 ## Estado actual
 
@@ -23,32 +23,32 @@ Si solo vas a abrir tres archivos, abre estos:
 - `00-central/`
   - [agente.md](./agente.md)
   - [central-operativo-agora.md](./central-operativo-agora.md)
-- `01-estrategia/`
-  - [plan-comercial-90-dias.md](../01-estrategia/plan-comercial-90-dias.md)
-  - [ejecucion-semana-1.md](../01-estrategia/ejecucion-semana-1.md)
-  - [segmentacion-clientes-ranqueada.md](../01-estrategia/segmentacion-clientes-ranqueada.md)
-  - [automatizaciones-agente-captacion.md](../01-estrategia/automatizaciones-agente-captacion.md)
-  - [ideas-expansion-base-datos.md](../01-estrategia/ideas-expansion-base-datos.md)
-  - [playbook-busqueda-autonoma-clientes.md](../01-estrategia/playbook-busqueda-autonoma-clientes.md)
-- `02-mensajeria/`
-  - [01-disculpa-repetidos.md](../02-mensajeria/01-disculpa-repetidos.md)
-  - [02-primer-contacto-estandar.md](../02-mensajeria/02-primer-contacto-estandar.md)
-  - [03-primer-contacto-semilleros.md](../02-mensajeria/03-primer-contacto-semilleros.md)
-  - [04-primer-contacto-directores.md](../02-mensajeria/04-primer-contacto-directores.md)
-  - [05-seguimiento-corto.md](../02-mensajeria/05-seguimiento-corto.md)
-- `03-datos/`
-  - [canales-publicos-contacto.md](../03-datos/canales-publicos-contacto.md)
-  - [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
-- `04-reportes/`
-  - [reporte-proceso-expansion-contactos.md](../04-reportes/reporte-proceso-expansion-contactos.md)
-- `05-redes-sociales/`
-  - [resumen-vision-board-marketing-maven.md](../05-redes-sociales/resumen-vision-board-marketing-maven.md)
-  - [que-rescatar-y-que-descartar-del-vision-board.md](../05-redes-sociales/que-rescatar-y-que-descartar-del-vision-board.md)
-  - [narrativa-futura-alineada-agora.md](../05-redes-sociales/narrativa-futura-alineada-agora.md)
-  - [estrategia-redes-sociales.md](../05-redes-sociales/estrategia-redes-sociales.md)
-  - [manifiesto-corto-agora.md](../05-redes-sociales/manifiesto-corto-agora.md)
-  - [lote-1-publicaciones-por-plataforma.md](../05-redes-sociales/lote-1-publicaciones-por-plataforma.md)
-  - [calendario-semana-1-redes.md](../05-redes-sociales/calendario-semana-1-redes.md)
+- `01-estrategia-comercial/`
+  - [plan-comercial-90-dias.md](../01-estrategia-comercial/plan-comercial-90-dias.md)
+  - [ejecucion-semana-1.md](../01-estrategia-comercial/ejecucion-semana-1.md)
+  - [segmentacion-clientes-ranqueada.md](../01-estrategia-comercial/segmentacion-clientes-ranqueada.md)
+  - [automatizaciones-agente-captacion.md](../01-estrategia-comercial/automatizaciones-agente-captacion.md)
+  - [ideas-expansion-base-datos.md](../01-estrategia-comercial/ideas-expansion-base-datos.md)
+  - [playbook-busqueda-autonoma-clientes.md](../01-estrategia-comercial/playbook-busqueda-autonoma-clientes.md)
+- `04-mensajeria-email/`
+  - [01-disculpa-repetidos.md](../04-mensajeria-email/01-disculpa-repetidos.md)
+  - [02-primer-contacto-estandar.md](../04-mensajeria-email/02-primer-contacto-estandar.md)
+  - [03-primer-contacto-semilleros.md](../04-mensajeria-email/03-primer-contacto-semilleros.md)
+  - [04-primer-contacto-directores.md](../04-mensajeria-email/04-primer-contacto-directores.md)
+  - [05-seguimiento-corto.md](../04-mensajeria-email/05-seguimiento-corto.md)
+- `05-datos-y-reportes/`
+  - [canales-publicos-contacto.md](../05-datos-y-reportes/canales-publicos-contacto.md)
+  - [leads-agora-maestro.csv](../05-datos-y-reportes/leads-agora-maestro.csv)
+- `05-datos-y-reportes/`
+  - [reporte-proceso-expansion-contactos.md](../05-datos-y-reportes/reporte-proceso-expansion-contactos.md)
+- `03-operacion-redes/`
+  - [resumen-vision-board-marketing-maven.md](../03-operacion-redes/resumen-vision-board-marketing-maven.md)
+  - [que-rescatar-y-que-descartar-del-vision-board.md](../03-operacion-redes/que-rescatar-y-que-descartar-del-vision-board.md)
+  - [narrativa-futura-alineada-agora.md](../03-operacion-redes/narrativa-futura-alineada-agora.md)
+  - [estrategia-redes-sociales.md](../03-operacion-redes/estrategia-redes-sociales.md)
+  - [manifiesto-corto-agora.md](../03-operacion-redes/manifiesto-corto-agora.md)
+  - [lote-1-publicaciones-por-plataforma.md](../03-operacion-redes/lote-1-publicaciones-por-plataforma.md)
+  - [calendario-semana-1-redes.md](../03-operacion-redes/calendario-semana-1-redes.md)
 
 ## Documento rector
 
@@ -60,9 +60,9 @@ Si solo vas a abrir tres archivos, abre estos:
 
 Si el trabajo empieza hoy:
 
-1. abrir [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
+1. abrir [leads-agora-maestro.csv](../05-datos-y-reportes/leads-agora-maestro.csv)
 2. filtrar `priority_rank` 1 a 40
-3. usar [02-primer-contacto-estandar.md](../02-mensajeria/02-primer-contacto-estandar.md)
+3. usar [02-primer-contacto-estandar.md](../04-mensajeria-email/02-primer-contacto-estandar.md)
 4. registrar `estado`, `respuesta`, `fecha_ultimo_contacto` y `proxima_accion` en el mismo CSV maestro
 
 ## Lectura estrategica
@@ -89,7 +89,7 @@ La prioridad comercial no es trabajar los 300 leads al tiempo. Lo eficiente es o
 
 Se genero un corte operativo inmediato para no trabajar el maestro completo al mismo tiempo:
 
-- [leads-agora-top-50-hoy.csv](../03-datos/leads-agora-top-50-hoy.csv)
-- [top-50-listos-para-atacar-hoy.md](../04-reportes/top-50-listos-para-atacar-hoy.md)
+- [leads-agora-top-50-hoy.csv](../05-datos-y-reportes/leads-agora-top-50-hoy.csv)
+- [top-50-listos-para-atacar-hoy.md](../05-datos-y-reportes/top-50-listos-para-atacar-hoy.md)
 
 Este corte contiene los `priority_rank` `1-50` y deja una primera tanda lista para outreach.

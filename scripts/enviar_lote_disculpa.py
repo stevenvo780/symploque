@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib import error, parse, request
 
 
-CSV_PATH = Path("03-datos/operacion-email/disculpa-error-pendientes.csv")
+CSV_PATH = Path("05-datos-y-reportes/operacion-email/disculpa-error-pendientes.csv")
 
 
 def build_body(contact_name: str, body_variant: str, duplicate_count: int) -> str:
@@ -21,11 +21,12 @@ def build_body(contact_name: str, body_variant: str, duplicate_count: int) -> st
 
     return (
         f"{saludo}\n\n"
-        f"Le escribimos desde Elenxos para ofrecer una disculpa por {mensaje_prev}.\n\n"
-        "Por favor ignore ese mensaje. No requiere ninguna accion de su parte.\n\n"
-        "Lamentamos la confusion y agradecemos su comprension.\n\n"
-        "Saludos,\n"
-        "Equipo Elenxos\n"
+        f"Le escribimos desde Elenxos para ofrecer una sincera disculpa por {mensaje_prev} durante la migración de nuestro sistema.\n\n"
+        "Por favor ignore ese mensaje. No requiere ninguna acción de su parte.\n\n"
+        "Lamentamos la confusión y agradecemos profundamente su comprensión.\n\n"
+        "Saludos,\n\n"
+        "Jacob Agudelo & Steven Vallejo\n"
+        "Fundadores, Elenxos\n"
         "www.elenxos.com\n"
     )
 
