@@ -24,12 +24,12 @@ export const Lote1_Estandar = () => (
     
     <div style={abs({ padding: '80px', textAlign: 'center' })}>
       <Text size="xs" color="kodama" style={{ fontSize: 24, letterSpacing: 8, textTransform: 'uppercase', marginBottom: 40 }}>
-        Investigación Académica
+        Para semilleros y equipos académicos
       </Text>
-      <CinematicText text="El nuevo" level="h1" delayStep={0.06} style={{ fontSize: 90 }} />
-      <CinematicText text="estándar para" level="h1" color="muted" delayStep={0.06} baseDelay={0.8} style={{ fontSize: 90 }} />
-      <CinematicText text="investigación" level="h1" delayStep={0.06} baseDelay={1.6} style={{ fontSize: 90 }} />
-      <CinematicText text="rigurosa." level="h1" color="kodama" delayStep={0.06} baseDelay={2.4} style={{ fontSize: 90 }} />
+      <CinematicText text="Escribe con" level="h1" delayStep={0.06} style={{ fontSize: 90 }} />
+      <CinematicText text="libertad." level="h1" color="muted" delayStep={0.06} baseDelay={0.8} style={{ fontSize: 90 }} />
+      <CinematicText text="Verifica" level="h1" delayStep={0.06} baseDelay={1.6} style={{ fontSize: 90 }} />
+      <CinematicText text="con rigor." level="h1" color="kodama" delayStep={0.06} baseDelay={2.4} style={{ fontSize: 90 }} />
       <div style={{ width: 80, height: 2, background: 'linear-gradient(90deg, transparent, rgba(163,228,215,0.8), transparent)', margin: '60px auto 0' }} />
     </div>
   </SocialCanvas>

@@ -28,7 +28,7 @@ export const V1_Micelio = () => (
     <LogicMesh density={120} />
     <GlowOrb color="kodama" size={300} x="50%" y="50%" blur={100} opacity={0.15} />
     <FrameOverlay variant="minimal" />
-    <BrandMark position="center-bottom" fontSize={22} tagline="La red del conocimiento" />
+    <BrandMark position="center-bottom" fontSize={22} tagline="Plataforma de investigación cooperativa" />
   </SocialCanvas>
 );
 
@@ -42,8 +42,8 @@ export const V2_CitaRoja = () => (
     <BrandMark position="bottom-right" fontSize={20} />
     <div style={abs({ padding: '100px 80px' })}>
       <QuoteCard
-        quote="Destruir un paradigma no es violencia. Es higiene epistémica."
-        author="Manifiesto Elenxos"
+        quote="El problema no es que investigues mal. Es que tus herramientas no se hablan entre sí."
+        author="Manifiesto Agora"
         fontSize={36}
       />
     </div>
@@ -59,10 +59,10 @@ export const V3_Perspectiva = () => (
     <FrameOverlay variant="corners" />
     <BrandMark position="top-left" fontSize={20} />
     <div style={abs({ padding: '80px', gap: 40 })}>
-      <Text size="xs" color="muted" style={{ fontSize: 22, letterSpacing: 8, textTransform: 'uppercase' }}>Infraestructura Académica</Text>
-      <CinematicText text="El futuro" level="h1" delayStep={0.08} style={{ fontSize: 80 }} />
-      <CinematicText text="ya tiene" level="h1" delayStep={0.08} baseDelay={0.8} style={{ fontSize: 80 }} />
-      <CinematicText text="estructura." level="h1" color="kodama" delayStep={0.08} baseDelay={1.5} style={{ fontSize: 80 }} />
+      <Text size="xs" color="muted" style={{ fontSize: 22, letterSpacing: 8, textTransform: 'uppercase' }}>Investigación Cooperativa</Text>
+      <CinematicText text="Escribe." level="h1" delayStep={0.08} style={{ fontSize: 80 }} />
+      <CinematicText text="Formaliza." level="h1" delayStep={0.08} baseDelay={0.8} style={{ fontSize: 80 }} />
+      <CinematicText text="Verifica." level="h1" color="kodama" delayStep={0.08} baseDelay={1.5} style={{ fontSize: 80 }} />
     </div>
   </SocialCanvas>
 );
@@ -81,10 +81,10 @@ export const V4_Glass = () => (
         border: '1px solid rgba(163,228,215,0.15)', borderRadius: 16, padding: '60px 50px',
         textAlign: 'center', maxWidth: '85%',
       }}>
-        <Badge variant="kodama" dot pulse style={{ marginBottom: 30, fontSize: 22, padding: '10px 28px' }}>Nuevo Release</Badge>
-        <CinematicText text="Lexis v3" level="h2" color="kodama" delayStep={0.1} style={{ fontSize: 64, marginBottom: 16 }} />
+        <Badge variant="kodama" dot pulse style={{ marginBottom: 30, fontSize: 22, padding: '10px 28px' }}>Agora</Badge>
+        <CinematicText text="Un solo flujo." level="h2" color="kodama" delayStep={0.1} style={{ fontSize: 64, marginBottom: 16 }} />
         <Text size="md" color="secondary" style={{ fontSize: 26, lineHeight: 1.7 }}>
-          Motor de traducción fenomenológica. 3x más rápido. 100% más preciso.
+          Markdown académico + lógica formal + verificación + colaboración. Todo en el navegador.
         </Text>
       </div>
     </div>
@@ -102,7 +102,7 @@ export const V5_Simbolo = () => (
       <IconSymbol symbol="Ψ" size={280} color="kodama" style={{ marginBottom: 30, opacity: 0.9 }} />
       <CinematicText text="Psique" level="h2" delayStep={0.12} baseDelay={0.5} style={{ fontSize: 52, letterSpacing: 8 }} />
       <Text size="sm" color="muted" style={{ fontSize: 24, marginTop: 16, letterSpacing: 4, textTransform: 'uppercase' }}>
-        La mente como sistema complejo
+        Del pensamiento al argumento verificado
       </Text>
     </div>
   </SocialCanvas>
@@ -117,13 +117,13 @@ export const V6_DatosSplit = () => (
     <BrandMark position="top-right" fontSize={20} />
     <div style={abs({ flexDirection: 'row', padding: 0 })}>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '80px 60px', borderRight: '1px solid rgba(163,228,215,0.1)' }}>
-        <Text size="xs" color="kodama" style={{ fontSize: 22, letterSpacing: 6, textTransform: 'uppercase', marginBottom: 20 }}>Impacto 2026</Text>
+        <Text size="xs" color="kodama" style={{ fontSize: 22, letterSpacing: 6, textTransform: 'uppercase', marginBottom: 20 }}>Tu semillero en Agora</Text>
         <CinematicText text="En números" level="h3" delayStep={0.08} style={{ fontSize: 48 }} />
       </div>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '60px', gap: 40 }}>
-        <StatsDisplay stats={[{ value: '340', label: 'Papers' }]} fontSize={72} />
-        <StatsDisplay stats={[{ value: '12', label: 'Países' }]} fontSize={72} delay={0.5} />
-        <StatsDisplay stats={[{ value: '98%', label: 'Precisión' }]} fontSize={72} delay={1} />
+        <StatsDisplay stats={[{ value: '1', label: 'Flujo' }]} fontSize={72} />
+        <StatsDisplay stats={[{ value: '∞', label: 'Contexto' }]} fontSize={72} delay={0.5} />
+        <StatsDisplay stats={[{ value: '0', label: 'Dispersión' }]} fontSize={72} delay={1} />
       </div>
     </div>
   </SocialCanvas>
@@ -138,9 +138,9 @@ export const V7_Pregunta = () => (
     <FrameOverlay variant="minimal" />
     <BrandMark position="bottom-left" fontSize={20} tagline="elenxos.com" />
     <div style={abs({ padding: '100px 80px', textAlign: 'center' })}>
-      <CinematicText text="¿Qué pasaría" level="h2" delayStep={0.06} style={{ fontSize: 58 }} />
-      <CinematicText text="si la academia" level="h2" color="muted" delayStep={0.06} baseDelay={0.8} style={{ fontSize: 58 }} />
-      <CinematicText text="pensara en serio?" level="h2" color="kodama" delayStep={0.06} baseDelay={1.6} style={{ fontSize: 58 }} />
+      <CinematicText text="¿Cuántas veces" level="h2" delayStep={0.06} style={{ fontSize: 58 }} />
+      <CinematicText text="reescribiste lo que" level="h2" color="muted" delayStep={0.06} baseDelay={0.8} style={{ fontSize: 58 }} />
+      <CinematicText text="ya habías escrito?" level="h2" color="kodama" delayStep={0.06} baseDelay={1.6} style={{ fontSize: 58 }} />
       <div style={{ width: 60, height: 2, background: 'linear-gradient(90deg, transparent, rgba(163,228,215,0.5), transparent)', margin: '40px auto 0' }} />
     </div>
   </SocialCanvas>
@@ -153,7 +153,7 @@ export const V8_Proximamente = () => (
     <GlowOrb color="kodama" size={200} x="50%" y="50%" blur={60} opacity={0.08} speed={20} />
     <ScanLines heavy />
     <FrameOverlay variant="double" />
-    <BrandMark position="center-bottom" fontSize={22} tagline="Algo se aproxima" />
+    <BrandMark position="center-bottom" fontSize={22} tagline="Pronto en tu universidad" />
     <div style={abs({ padding: '100px' })}>
       <CinematicText text="2027" level="hero" color="kodama" delayStep={0.3} style={{ fontSize: 180, letterSpacing: 20, opacity: 0.7 }} />
     </div>

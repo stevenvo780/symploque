@@ -53,10 +53,10 @@ export const H1_ArbolTesis = () => (
     <FrameOverlay variant="minimal" />
     <BrandMark position="bottom-right" fontSize={22} />
     <div style={abs({ padding: '100px 80px', justifyContent: 'flex-end', paddingBottom: 140 })}>
-      <CinematicText text="El conocimiento" level="h2" delayStep={0.06} style={{ fontSize: 62 }} />
-      <CinematicText text="tiene raíces." level="h2" color="kodama" delayStep={0.08} baseDelay={0.9} style={{ fontSize: 62 }} />
+      <CinematicText text="Tu tesis no" level="h2" delayStep={0.06} style={{ fontSize: 62 }} />
+      <CinematicText text="se perdió." level="h2" color="kodama" delayStep={0.08} baseDelay={0.9} style={{ fontSize: 62 }} />
       <Text size="md" color="muted" style={{ marginTop: 24, fontSize: 24, letterSpacing: 3, textTransform: 'uppercase' }}>
-        Traducción académica con profundidad
+        Se dispersó entre 14 archivos y 3 herramientas
       </Text>
     </div>
   </SocialCanvas>
@@ -74,11 +74,11 @@ export const H2_Problema = () => (
     <FrameOverlay variant="mask" />
     <BrandMark position="bottom-left" fontSize={20} />
     <div style={abs({ padding: '100px 80px', textAlign: 'center' })}>
-      <Badge variant="mask" style={{ marginBottom: 30, fontSize: 22, padding: '10px 28px' }}>El problema</Badge>
-      <CinematicText text="El 73% del" level="h2" delayStep={0.06} style={{ fontSize: 58 }} />
-      <CinematicText text="conocimiento" level="h2" delayStep={0.06} baseDelay={0.7} style={{ fontSize: 58 }} />
-      <CinematicText text="se pierde" level="h2" color="kodama" delayStep={0.08} baseDelay={1.3} style={{ fontSize: 58 }} />
-      <CinematicText text="en la traducción." level="h2" color="kodama" delayStep={0.06} baseDelay={1.9} style={{ fontSize: 58 }} />
+      <Badge variant="mask" style={{ marginBottom: 30, fontSize: 22, padding: '10px 28px' }}>El problema real</Badge>
+      <CinematicText text="3 carpetas." level="h2" delayStep={0.06} style={{ fontSize: 58 }} />
+      <CinematicText text="7 versiones." level="h2" delayStep={0.06} baseDelay={0.7} style={{ fontSize: 58 }} />
+      <CinematicText text="0 contexto." level="h2" color="kodama" delayStep={0.08} baseDelay={1.3} style={{ fontSize: 58 }} />
+      <CinematicText text="Eso no es investigar." level="h2" color="kodama" delayStep={0.06} baseDelay={1.9} style={{ fontSize: 58 }} />
     </div>
   </SocialCanvas>
 );
@@ -95,9 +95,9 @@ export const H3_Respuesta = () => (
     <BrandMark position="center-bottom" fontSize={22} tagline="elenxos.com" />
     <div style={abs({ padding: '100px 70px', textAlign: 'center' })}>
       <IconSymbol symbol="φ" size={120} color="kodama" style={{ marginBottom: 30, opacity: 0.8 }} />
-      <CinematicText text="Nosotros no" level="h2" delayStep={0.07} style={{ fontSize: 56 }} />
-      <CinematicText text="traducimos." level="h2" delayStep={0.07} baseDelay={0.8} style={{ fontSize: 56 }} />
-      <CinematicText text="Transmutamos." level="h1" color="kodama" delayStep={0.1} baseDelay={1.6} style={{ fontSize: 72 }} />
+      <CinematicText text="Menos" level="h2" delayStep={0.07} style={{ fontSize: 56 }} />
+      <CinematicText text="dispersión." level="h2" delayStep={0.07} baseDelay={0.8} style={{ fontSize: 56 }} />
+      <CinematicText text="Más contexto." level="h1" color="kodama" delayStep={0.1} baseDelay={1.6} style={{ fontSize: 72 }} />
     </div>
   </SocialCanvas>
 );
@@ -114,10 +114,10 @@ export const H4_Diferenciador = () => (
     <BrandMark position="top-left" fontSize={20} />
     <div style={abs({ padding: '90px 70px', gap: 20 })}>
       <Text size="sm" color="kodama" style={{ fontSize: 24, letterSpacing: 6, textTransform: 'uppercase' }}>Lo que nos distingue</Text>
-      <CinematicText text="No es solo" level="h2" delayStep={0.07} style={{ fontSize: 58 }} />
-      <CinematicText text="lenguaje." level="h2" delayStep={0.07} baseDelay={0.7} style={{ fontSize: 58 }} />
-      <CinematicText text="Es epistemología" level="h2" color="kodama" delayStep={0.06} baseDelay={1.3} style={{ fontSize: 58 }} />
-      <CinematicText text="aplicada." level="h2" color="kodama" delayStep={0.1} baseDelay={2.0} style={{ fontSize: 58 }} />
+      <CinematicText text="No organizamos" level="h2" delayStep={0.07} style={{ fontSize: 58 }} />
+      <CinematicText text="archivos." level="h2" delayStep={0.07} baseDelay={0.7} style={{ fontSize: 58 }} />
+      <CinematicText text="Organizamos" level="h2" color="kodama" delayStep={0.06} baseDelay={1.3} style={{ fontSize: 58 }} />
+      <CinematicText text="pensamiento." level="h2" color="kodama" delayStep={0.1} baseDelay={2.0} style={{ fontSize: 58 }} />
     </div>
   </SocialCanvas>
 );
@@ -133,12 +133,12 @@ export const H5_Madurez = () => (
     <FrameOverlay variant="minimal" />
     <BrandMark position="bottom-right" fontSize={20} tagline="elenxos.com" />
     <div style={abs({ padding: '80px', justifyContent: 'flex-start', paddingTop: 120 })}>
-      <Badge variant="kodama" dot style={{ marginBottom: 24, fontSize: 22, padding: '10px 28px' }}>Investigación</Badge>
-      <CinematicText text="Tu tesis merece" level="h2" delayStep={0.06} style={{ fontSize: 54 }} />
-      <CinematicText text="madurez" level="h1" color="kodama" delayStep={0.1} baseDelay={0.9} style={{ fontSize: 78 }} />
-      <CinematicText text="epistémica." level="h1" color="kodama" delayStep={0.1} baseDelay={1.6} style={{ fontSize: 78 }} />
+      <Badge variant="kodama" dot style={{ marginBottom: 24, fontSize: 22, padding: '10px 28px' }}>Para tu semillero</Badge>
+      <CinematicText text="Escribe con" level="h2" delayStep={0.06} style={{ fontSize: 54 }} />
+      <CinematicText text="libertad." level="h1" color="kodama" delayStep={0.1} baseDelay={0.9} style={{ fontSize: 78 }} />
+      <CinematicText text="Verifica" level="h1" color="kodama" delayStep={0.1} baseDelay={1.6} style={{ fontSize: 78 }} />
       <Text size="md" color="muted" style={{ marginTop: 30, fontSize: 26, maxWidth: '80%', textAlign: 'center', lineHeight: 1.7 }}>
-        Transformamos documentos académicos en obras de rigor intelectual.
+        con rigor. Colabora sin fricción. Todo en un solo lugar.
       </Text>
     </div>
   </SocialCanvas>
@@ -158,15 +158,15 @@ export const H6_ReelManifiesto = () => (
     <GlowOrb color="kodama" size={400} x="50%" y="30%" blur={120} opacity={0.12} />
     <KodamaParticles count={25} relative />
     <FrameOverlay variant="minimal" />
-    <BrandMark position="center-bottom" fontSize={24} tagline="Ágora Digital del Pensamiento" />
+    <BrandMark position="center-bottom" fontSize={24} tagline="Plataforma de investigación cooperativa" />
     <div style={abs({ padding: '120px 70px', justifyContent: 'flex-end', paddingBottom: 220 })}>
-      <CinematicText text="No somos" level="h2" delayStep={0.08} style={{ fontSize: 58 }} />
-      <CinematicText text="una agencia." level="h2" delayStep={0.08} baseDelay={0.8} style={{ fontSize: 58 }} />
+      <CinematicText text="La academia" level="h2" delayStep={0.08} style={{ fontSize: 58 }} />
+      <CinematicText text="no necesita" level="h2" delayStep={0.08} baseDelay={0.8} style={{ fontSize: 58 }} />
       <div style={{ height: 40 }} />
-      <CinematicText text="Somos el" level="h2" delayStep={0.08} baseDelay={1.8} style={{ fontSize: 58 }} />
-      <CinematicText text="puente entre" level="h2" color="kodama" delayStep={0.06} baseDelay={2.5} style={{ fontSize: 58 }} />
-      <CinematicText text="el pensamiento" level="h2" color="kodama" delayStep={0.06} baseDelay={3.2} style={{ fontSize: 58 }} />
-      <CinematicText text="y el mundo." level="h1" color="kodama" delayStep={0.1} baseDelay={4.0} style={{ fontSize: 72 }} />
+      <CinematicText text="más papers." level="h2" delayStep={0.08} baseDelay={1.8} style={{ fontSize: 58 }} />
+      <CinematicText text="Necesita mejores" level="h2" color="kodama" delayStep={0.06} baseDelay={2.5} style={{ fontSize: 58 }} />
+      <CinematicText text="herramientas" level="h2" color="kodama" delayStep={0.06} baseDelay={3.2} style={{ fontSize: 58 }} />
+      <CinematicText text="para pensar." level="h1" color="kodama" delayStep={0.1} baseDelay={4.0} style={{ fontSize: 72 }} />
     </div>
   </SocialCanvas>
 );
@@ -183,11 +183,11 @@ export const H7_StoryTeaser = () => (
     <BrandMark position="top-left" fontSize={22} />
     <div style={abs({ padding: '120px 70px', justifyContent: 'center' })}>
       <IconSymbol symbol="Ξ" size={180} color="kodama" style={{ marginBottom: 50, opacity: 0.7 }} />
-      <CinematicText text="¿Listo para" level="h2" delayStep={0.07} style={{ fontSize: 62 }} />
-      <CinematicText text="pensar" level="h1" color="kodama" delayStep={0.12} baseDelay={0.9} style={{ fontSize: 86 }} />
-      <CinematicText text="diferente?" level="h1" color="kodama" delayStep={0.1} baseDelay={1.6} style={{ fontSize: 86 }} />
+      <CinematicText text="¿10 minutos" level="h2" delayStep={0.07} style={{ fontSize: 62 }} />
+      <CinematicText text="para cambiar" level="h1" color="kodama" delayStep={0.12} baseDelay={0.9} style={{ fontSize: 86 }} />
+      <CinematicText text="cómo investigas?" level="h1" color="kodama" delayStep={0.1} baseDelay={1.6} style={{ fontSize: 86 }} />
       <div style={{ marginTop: 60, padding: '20px 56px', border: '1px solid rgba(163,228,215,0.4)', borderRadius: 8 }}>
-        <Text size="lg" color="kodama" style={{ fontSize: 30, letterSpacing: 4, textTransform: 'uppercase' }}>Desliza ↑</Text>
+        <Text size="lg" color="kodama" style={{ fontSize: 30, letterSpacing: 4, textTransform: 'uppercase' }}>Agenda una demo</Text>
       </div>
     </div>
   </SocialCanvas>
@@ -211,7 +211,7 @@ export const H8_BannerLinkedin = () => (
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <CinematicText text="ELENXOS" level="h2" color="kodama" delayStep={0.1} style={{ fontSize: 72, letterSpacing: 12 }} />
         <Text size="lg" color="muted" style={{ fontSize: 28, letterSpacing: 6 }}>
-          Ágora Digital del Pensamiento
+          Menos dispersión. Más contexto.
         </Text>
       </div>
     </div>
@@ -229,7 +229,7 @@ export const H9_BannerOG = () => (
     <FrameOverlay variant="corners" />
     <BrandMark position="center-bottom" fontSize={18} tagline="elenxos.com" />
     <div style={abs({ padding: '0 120px', textAlign: 'center' })}>
-      <CinematicText text="Traducción. Rigor. Impacto." level="h3" color="kodama" delayStep={0.05} style={{ fontSize: 52, letterSpacing: 3 }} />
+      <CinematicText text="Escribe. Formaliza. Verifica." level="h3" color="kodama" delayStep={0.05} style={{ fontSize: 52, letterSpacing: 3 }} />
     </div>
   </SocialCanvas>
 );
@@ -246,8 +246,8 @@ export const H10_BannerX = () => (
     <BrandMark position="top-left" fontSize={18} />
     <div style={abs({ flexDirection: 'row', padding: '0 80px', justifyContent: 'space-between', alignItems: 'center' })}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14, maxWidth: '55%' }}>
-        <CinematicText text="Pensamiento" level="h3" delayStep={0.06} style={{ fontSize: 48 }} />
-        <CinematicText text="sin fronteras." level="h3" color="kodama" delayStep={0.08} baseDelay={0.7} style={{ fontSize: 48 }} />
+        <CinematicText text="Investigación" level="h3" delayStep={0.06} style={{ fontSize: 48 }} />
+        <CinematicText text="sin dispersión." level="h3" color="kodama" delayStep={0.08} baseDelay={0.7} style={{ fontSize: 48 }} />
       </div>
       <IconSymbol symbol="∞" size={140} color="kodama" style={{ opacity: 0.4 }} />
     </div>
@@ -266,8 +266,8 @@ export const H11_BannerYT = () => (
     <BrandMark position="bottom-left" fontSize={18} />
     <div style={abs({ padding: '0 100px', alignItems: 'flex-start' })}>
       <Badge variant="mask" style={{ marginBottom: 20, fontSize: 22, padding: '10px 28px' }}>YouTube</Badge>
-      <CinematicText text="El canal de la" level="h3" delayStep={0.05} style={{ fontSize: 46 }} />
-      <CinematicText text="resistencia intelectual." level="h3" color="kodama" delayStep={0.05} baseDelay={0.7} style={{ fontSize: 46 }} />
+      <CinematicText text="Donde el rigor" level="h3" delayStep={0.05} style={{ fontSize: 46 }} />
+      <CinematicText text="tiene su propio canal." level="h3" color="kodama" delayStep={0.05} baseDelay={0.7} style={{ fontSize: 46 }} />
     </div>
   </SocialCanvas>
 );

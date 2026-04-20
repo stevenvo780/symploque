@@ -28,7 +28,7 @@ export const B1_Minimal = () => (
     <div style={abs({ padding: '0 140px', textAlign: 'center', gap: 8 })}>
       <CinematicText text="ELENXOS" level="h1" color="kodama" delayStep={0.12} style={{ fontSize: 72, letterSpacing: 30 }} />
       <Text size="xs" color="muted" style={{ fontSize: 24, letterSpacing: 10, textTransform: 'uppercase' }}>
-        Canon metodológico para la academia global
+        Plataforma de investigación cooperativa
       </Text>
     </div>
   </SocialCanvas>
@@ -46,8 +46,8 @@ export const B2_Denso = () => (
     <IconSymbol symbol="implies" size={50} color="muted" x="88%" y="65%" delay={2} />
     <BrandMark position="bottom-left" fontSize={18} />
     <div style={abs({ padding: '0 120px', textAlign: 'center' })}>
-      <CinematicText text="Donde el rigor" level="h2" delayStep={0.05} style={{ fontSize: 52 }} />
-      <CinematicText text="se encuentra con la intuición." level="h2" color="kodama" delayStep={0.04} baseDelay={0.8} style={{ fontSize: 52 }} />
+      <CinematicText text="Donde la escritura" level="h2" delayStep={0.05} style={{ fontSize: 52 }} />
+      <CinematicText text="y la investigación conservan su hilo." level="h2" color="kodama" delayStep={0.04} baseDelay={0.8} style={{ fontSize: 52 }} />
     </div>
   </SocialCanvas>
 );
@@ -71,7 +71,7 @@ export const B3_Conferencia = () => (
           { value: '3', label: 'Días' },
           { value: '50+', label: 'Charlas' },
           { value: '15', label: 'Países' },
-        ]} fontSize={40} delay={1} />
+        ]} fontSize={56} delay={1} />
       </div>
     </div>
   </SocialCanvas>
@@ -88,14 +88,14 @@ export const R1_Manifiesto = () => (
     <BrandMark position="center-bottom" fontSize={22} />
     <div style={abs({ padding: '120px 70px', gap: 60 })}>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', gap: 20 }}>
-        <CinematicText text="La academia" level="h2" color="muted" delayStep={0.08} style={{ fontSize: 60 }} />
-        <CinematicText text="no necesita" level="h2" delayStep={0.08} baseDelay={1} style={{ fontSize: 60 }} />
-        <CinematicText text="más papers." level="h2" color="mask" delayStep={0.08} baseDelay={2} style={{ fontSize: 60, color: '#E04848' }} />
+        <CinematicText text="Tu tesis vive" level="h2" color="muted" delayStep={0.08} style={{ fontSize: 60 }} />
+        <CinematicText text="en 14 archivos" level="h2" delayStep={0.08} baseDelay={1} style={{ fontSize: 60 }} />
+        <CinematicText text="y 3 herramientas." level="h2" color="mask" delayStep={0.08} baseDelay={2} style={{ fontSize: 60, color: '#E04848' }} />
       </div>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', gap: 20 }}>
-        <CinematicText text="Necesita" level="h2" color="muted" delayStep={0.08} baseDelay={3.5} style={{ fontSize: 60 }} />
-        <CinematicText text="mejores" level="h2" delayStep={0.08} baseDelay={4.2} style={{ fontSize: 60 }} />
-        <CinematicText text="preguntas." level="h2" color="kodama" delayStep={0.1} baseDelay={5} style={{ fontSize: 80 }} />
+        <CinematicText text="Merece" level="h2" color="muted" delayStep={0.08} baseDelay={3.5} style={{ fontSize: 60 }} />
+        <CinematicText text="un solo" level="h2" delayStep={0.08} baseDelay={4.2} style={{ fontSize: 60 }} />
+        <CinematicText text="flujo." level="h2" color="kodama" delayStep={0.1} baseDelay={5} style={{ fontSize: 80 }} />
       </div>
       <div style={{ flex: 0.3 }} />
     </div>
@@ -115,10 +115,10 @@ export const R2_Simbolo = () => (
         <IconSymbol symbol="∀" size={300} color="kodama" style={{ opacity: 0.8 }} />
       </div>
       <div style={{ flex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 16, justifyContent: 'center' }}>
-        <CinematicText text="Para todo x" level="h2" color="kodama" delayStep={0.08} baseDelay={0.5} style={{ fontSize: 56 }} />
+        <CinematicText text="∀x" level="h2" color="kodama" delayStep={0.08} baseDelay={0.5} style={{ fontSize: 56 }} />
         <Text size="md" color="secondary" style={{ fontSize: 26, lineHeight: 1.8, maxWidth: '90%', margin: '0 auto' }}>
-          El cuantificador universal. La promesa de que una proposición aplica sin excepción.
-          En Elenxos, construimos herramientas que aspiran a eso.
+          Si piensas con rigor, mereces herramientas a su altura.
+          Agora reúne escritura, lógica y colaboración en un solo lugar.
         </Text>
       </div>
       <div style={{ flex: 0.5 }} />
