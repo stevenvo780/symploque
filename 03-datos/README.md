@@ -24,6 +24,7 @@ Archivos canonicos:
 - `contactos-maestro-operativo.csv`: base maestra para la nueva fase
 - `correos-enviados-importar.csv`: lista cruda de correos ya enviados desde remitente personal
 - `declaracion-pendientes.csv`: cola de contactos que deben recibir correo de declaracion
+- `disculpa-error-pendientes.csv`: cola dedicada para incidentes de correos mal enviados
 
 ## Flujo recomendado
 

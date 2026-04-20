@@ -10,6 +10,8 @@ Esta carpeta concentra la fase nueva del repo:
 ## Documentos clave
 
 - `plan-transicion-remitente-y-sitios-publicos.md`: secuencia operativa completa
+- `lote-disculpa-error-2026-04-20.md`: copy y reglas del lote de disculpa
+- `enviar_lote_disculpa.py`: script de preview y envio para la cola de disculpa
 
 ## Regla
 
