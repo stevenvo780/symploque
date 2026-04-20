@@ -13,6 +13,8 @@ export interface HeadingProps {
   glow?: boolean;
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
+  [key: string]: unknown;
 }
 
 export const Heading: React.FC<HeadingProps> = ({
@@ -21,6 +23,8 @@ export const Heading: React.FC<HeadingProps> = ({
   glow = false,
   children,
   className = '',
+  style,
+  ...rest
 }) => {
   const Tag = headingTagMap[level];
   const classes = [
@@ -33,17 +37,19 @@ export const Heading: React.FC<HeadingProps> = ({
     .filter(Boolean)
     .join(' ');
 
-  return <Tag className={classes}>{children}</Tag>;
+  return <Tag className={classes} style={style} {...rest}>{children}</Tag>;
 };
 
 // ── Text ─────────────────────────────────────────────────────
 export interface TextProps {
-  size?: 'xs' | 'sm' | 'base' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl';
   weight?: 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
   color?: 'primary' | 'secondary' | 'muted' | 'kodama' | 'mask';
   as?: 'p' | 'span' | 'div';
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
+  [key: string]: unknown;
 }
 
 export const Text: React.FC<TextProps> = ({
@@ -53,6 +59,8 @@ export const Text: React.FC<TextProps> = ({
   as: Tag = 'p',
   children,
   className = '',
+  style,
+  ...rest
 }) => {
   const classes = [
     styles['elx-text'],
@@ -64,19 +72,17 @@ export const Text: React.FC<TextProps> = ({
     .filter(Boolean)
     .join(' ');
 
-  return <Tag className={classes}>{children}</Tag>;
+  return <Tag className={classes} style={style} {...rest}>{children}</Tag>;
 };
 
 // ── Label ────────────────────────────────────────────────────
-export const Label: React.FC<{ children: React.ReactNode; className?: string }> = ({
-  children,
-  className = '',
-}) => <span className={`${styles['elx-label']} ${className}`}>{children}</span>;
+export const Label: React.FC<{ children: React.ReactNode; className?: string; style?: React.CSSProperties }> = ({
+  children, className = '', style,
+}) => <span className={`${styles['elx-label']} ${className}`} style={style}>{children}</span>;
 
 // ── Code ─────────────────────────────────────────────────────
 export const Code: React.FC<{ children: React.ReactNode; className?: string }> = ({
-  children,
-  className = '',
+  children, className = '',
 }) => <code className={`${styles['elx-code']} ${className}`}>{children}</code>;
 
 export default Heading;

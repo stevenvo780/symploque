@@ -8,6 +8,7 @@ export interface BadgeProps {
   pulse?: boolean;
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const Badge: React.FC<BadgeProps> = ({
@@ -17,6 +18,7 @@ export const Badge: React.FC<BadgeProps> = ({
   pulse = false,
   children,
   className = '',
+  style,
 }) => {
   const classes = [
     styles['elx-badge'],
@@ -28,7 +30,7 @@ export const Badge: React.FC<BadgeProps> = ({
     .join(' ');
 
   return (
-    <span className={classes}>
+    <span className={classes} style={style}>
       {dot && (
         <span
           className={`${styles['elx-badge__dot']} ${pulse ? styles['elx-badge__dot--pulse'] : ''}`}
