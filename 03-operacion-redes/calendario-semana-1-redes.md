@@ -15,6 +15,7 @@ Publicar la primera semana con una secuencia clara:
 ### LinkedIn
 
 - Publicacion 1 del lote: tesis de marca
+- asset recomendado: `lote1_estandar`
 
 ### X
 
@@ -31,6 +32,7 @@ Publicar la primera semana con una secuencia clara:
 ### Instagram
 
 - Carrusel 1: el problema
+- portada recomendada: `lote1_estandar`
 
 ### X
 
@@ -45,10 +47,12 @@ Publicar la primera semana con una secuencia clara:
 ### LinkedIn
 
 - Publicacion 2: diferenciador real
+- asset recomendado: `lote1_flujo`
 
 ### Instagram
 
 - Reel 1: que es Agora
+- asset recomendado: `reel_manifiesto`
 
 ### X
 
@@ -78,10 +82,12 @@ Publicar la primera semana con una secuencia clara:
 ### LinkedIn
 
 - Publicacion 3: prueba de madurez
+- asset recomendado: collage manual con screenshots reales
 
 ### Instagram
 
 - Carrusel 2: flujo de Agora
+- portada recomendada: `lote1_flujo`
 
 ### X
 

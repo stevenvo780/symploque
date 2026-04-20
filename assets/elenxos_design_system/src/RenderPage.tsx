@@ -143,6 +143,17 @@ const RenderPage: React.FC = () => {
           margin: 0,
         }}
       >
+        <style>{`
+          #render-root *,
+          #render-root *::before,
+          #render-root *::after {
+            animation-delay: 0s !important;
+            animation-duration: 0.001s !important;
+            animation-iteration-count: 1 !important;
+            animation-fill-mode: forwards !important;
+            transition: none !important;
+          }
+        `}</style>
         {templates.map((entry) => (
           <FullSizeTemplate key={entry.id} entry={entry} />
         ))}

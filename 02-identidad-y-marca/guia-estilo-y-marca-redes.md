@@ -6,15 +6,21 @@ Esta guía sirve para alinear la creación de contenido visual y escrito, asegur
 
 ### Capa A: Elenxos (La Autoridad)
 - **Rol:** Marca corporativa, filosófica e intelectual.
-- **Visual:** Minimalista, tipografía seria, mucho espacio en blanco, colores sobrios (Negro, Blanco, Gris Oxford, acento en Azul Profundo).
+- **Visual:** Bosque oscuro, geometría lógica, textura de sistema y contraste alto. Fondo `#0F2519`, acento `#A3E4D7`, apoyo `#C73030`, neutros `#3A3F41` y `#1E2224`.
 - **Tono:** Académico de alto nivel, visionario, riguroso.
 - **Uso:** LinkedIn principalmente, X para hilos profundos.
 
 ### Capa B: Agora (La Herramienta)
 - **Rol:** Producto operativo, cooperativo y humano.
-- **Visual:** Más dinámico, capturas de pantalla reales (software), tipografía legible pero moderna, colores con más energía (Verde Menta, Azul Eléctrico o acentos que denoten "tecnología activa").
+- **Visual:** Hereda la misma paleta y tipografía de Elenxos, pero con más screenshots de producto, layouts pedagógicos y foco en flujo operativo. Agora no abre una paleta paralela.
 - **Tono:** Cercano, útil, pedagógico, "de estudiante a estudiante/investigador".
 - **Uso:** Instagram, YouTube, X (día a día), LinkedIn (casos de uso).
+
+### Fuente canónica
+
+- Manual visual y conceptual: [../assets/basic/manual_de_marca.md](../assets/basic/manual_de_marca.md)
+- Tokens oficiales: [../assets/elenxos_design_system/src/tokens/_colors.scss](../assets/elenxos_design_system/src/tokens/_colors.scss)
+- Inventario usable hoy: [../assets/README.md](../assets/README.md)
 
 ---
 
@@ -23,14 +29,15 @@ Esta guía sirve para alinear la creación de contenido visual y escrito, asegur
 Para la persona que crea las imágenes, seguir estas reglas:
 
 ### Tipografías Sugeridas
-- **Titulares:** Una Serif con peso (ej. Playfair Display, Lora) para denotar "Academia/Libros".
-- **Cuerpo:** Una Sans Serif limpia (ej. Inter, Roboto, Montserrat) para denotar "Software/Modernidad".
+- **Titulares:** `Playfair Display` para autoridad, tesis y piezas de manifiesto.
+- **Cuerpo:** `Inter` para interfaz, captions, módulos y textos pedagógicos.
 
 ### Elementos Gráficos Recurrentes
 1. **El "Code-Snippet" Académico:** Bloques que parecen código pero contienen texto en Markdown o lógica ST.
 2. **La Flecha de Flujo:** `Escribe → Formaliza → Verifica → Colabora`. Siempre usar esta secuencia visualmente.
 3. **Screenshots con Foco:** No poner la pantalla completa de Agora. Hacer zoom en módulos específicos (Editor, Terminal, Tableros).
-4. **Texturas:** Usar sutilmente texturas de papel, libros o interfaces de terminal retro-modernas.
+4. **Texturas:** Usar rejillas, nodos, patrones geométricos o interfaces de terminal retro-modernas; no volver a un look blanco-genérico de SaaS.
+5. **Identidad compartida:** Si una pieza es de Agora, debe seguir oliendo a Elenxos; cambia el foco del mensaje, no el sistema base.
 
 ---
 

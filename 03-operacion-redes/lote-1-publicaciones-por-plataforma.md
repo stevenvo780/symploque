@@ -64,12 +64,8 @@ Si una disciplina exige precision, sus herramientas tambien deberian hacerlo.
 
 **Asset sugerido**
 
-- carrusel con 5 slides:
-  - problema
-  - fractura actual
-  - que une Agora
-  - frase central
-  - CTA a landing
+- portada automatizable con `lote1_estandar`
+- si se arma carrusel completo, usar `lote1_flujo` como slide de proceso y completar con screenshots reales de producto
 
 ### Publicacion 2. Diferenciador real
 
@@ -106,11 +102,8 @@ Y esa frase no deberia leerse como slogan vacio, sino como criterio de producto.
 
 **Asset sugerido**
 
-- imagen simple o carrusel con el flujo:
-  - escribir
-  - formalizar
-  - verificar
-  - colaborar/publicar
+- template `lote1_flujo`
+- variante opcional para X o teaser: `banner_minimal`
 
 ### Publicacion 3. Prueba de madurez
 
@@ -139,11 +132,16 @@ Si vamos a hablar de rigor, hay que poder enseñarlo.
 
 **Asset sugerido**
 
-- screenshot del manual + screenshot de la landing + screenshot de ejemplo `.st`
+- collage manual con screenshot de la landing + manual + ejemplo `.st`
+- esta pieza no queda totalmente automatizada hasta capturar pantallas reales del producto
 
 ## Instagram
 
 ### Carrusel 1. El problema
+
+**Asset base sugerido**
+
+- portada con `lote1_estandar`
 
 **Slide 1**
 
@@ -176,6 +174,10 @@ Verifica con rigor.
 
 ### Reel 1. Que es Agora
 
+**Asset base sugerido**
+
+- template `reel_manifiesto`
+
 **Guion**
 
 Si investigas, escribes o trabajas argumentos complejos, probablemente ya conoces este problema:
@@ -193,6 +195,10 @@ La idea no es escribir menos.
 La idea es poder verificar mejor.
 
 ### Carrusel 2. Flujo de Agora
+
+**Asset base sugerido**
+
+- template `lote1_flujo`
 
 **Slide 1**
 
