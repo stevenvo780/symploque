@@ -1,0 +1,143 @@
+═══════════════════════════════════════════════════
+  PROMPTS DE IA — Para generar fondos de cada pieza
+  Usar en: Midjourney, DALL-E 3, Leonardo, Ideogram
+  Resoluciones: Post 1080×1080 / Story-Reel 1080×1920
+═══════════════════════════════════════════════════
+
+NOTA: Estos prompts generan el FONDO de cada pieza.
+Luego se combinan con el template React (design system)
+que ya está renderizado en la carpeta correspondiente.
+
+
+━━━ SEMANA 1 · CERCANÍA: "¿Te suena esto?" ━━━━━
+
+01. [Post 1080×1080] s1_dolor_archivos → feed/01.png
+Escritorio académico oscuro con papeles y pantallas dispersas, estilo cinematográfico, tonos verdes oscuros y negro, iluminación dramática lateral
+
+02. [Post 1080×1080] s1_antes_despues → feed/02.png
+Split visual: lado izquierdo caótico (carpetas, notas, cables), lado derecho ordenado (interfaz limpia, árbol lógico), tonos verde bosque
+
+03. [Reel 1080×1920] s1_reel_pregunta → reels/01.png
+Túnel de documentos flotantes desenfocados, partículas verdes, profundidad cinematográfica, movimiento sutil
+
+04. [Story 1080×1920] s1_story_encuesta → stories/01.png
+Fondo abstracto oscuro con un solo punto de luz verde, minimalista
+
+
+━━━ SEMANA 2 · CERCANÍA: "No estás solo" ━━━━━━━
+
+05. [Post 1080×1080] s2_dato_perdida → feed/03.png
+Red de nodos desconectándose, fragmentos de texto flotando en la oscuridad, tonos fríos con acentos verdes
+
+06. [Post 1080×1080] s2_semillero_real → feed/04.png
+Grupo de siluetas trabajando en una mesa iluminada por pantallas, atmósfera colaborativa oscura, humo sutil verde
+
+07. [Reel 1080×1920] s2_reel_testimonio → reels/02.png
+Close-up de manos sobre teclado con luz cálida lateral, fondo oscuro con bokeh verde
+
+08. [Story 1080×1920] s2_story_etiqueta → stories/02.png
+Captura estilizada de múltiples pestañas de navegador, efecto glitch sutil
+
+
+━━━ SEMANA 3 · UTILIDAD: "Así se ve la solución" ━
+
+09. [Post 1080×1080] s3_flujo_completo → feed/05.png
+Diagrama de flujo luminoso con 4 nodos conectados por líneas verdes brillantes sobre fondo negro, estilo blueprint
+
+10. [Post 1080×1080] s3_editor_real → feed/06.png
+Interfaz de editor con código lógico y texto académico lado a lado, glow verde en los bordes, fondo oscuro premium
+
+11. [Reel 1080×1920] s3_reel_demo → reels/03.png
+Secuencia de pantallas de interfaz en perspectiva 3D, transiciones suaves, partículas kodama
+
+12. [Story 1080×1920] s3_story_cta → stories/03.png
+Reloj minimalista con manecillas en verde kodama, fondo oscuro, clean
+
+
+━━━ SEMANA 4 · UTILIDAD: "Casos de uso reales" ━━
+
+13. [Post 1080×1080] s4_caso_semillero → feed/07.png
+Espacio de coworking académico futurista, pantallas con diagramas lógicos, luz verde ambient, colaboración
+
+14. [Post 1080×1080] s4_caso_tesis → feed/08.png
+Árbol de conocimiento digital creciendo desde un libro abierto, raíces de luz, copa con nodos lógicos
+
+15. [Reel 1080×1920] s4_reel_antes_despues → (SIN IMAGEN — renderizar)
+Transición dramática: izquierda caos digital en rojo, derecha orden en verde, split screen cinematográfico
+
+16. [Story 1080×1920] s4_story_poll → (SIN IMAGEN — renderizar)
+Fondo con logos tenues de las herramientas actuales, gradiente oscuro
+
+
+━━━ SEMANA 5 · RIGOR: "No es solo tecnología" ━━━
+
+17. [Post 1080×1080] s5_epistemologia → feed/09.png
+Cerebro abstracto formado por redes lógicas, sinapsis verdes brillantes, fondo abismal oscuro
+
+18. [Post 1080×1080] s5_verificacion → feed/10.png
+Tabla de verdad luminosa flotando en el espacio, variables en verde kodama, resultado highlighted
+
+19. [Reel 1080×1920] s5_reel_manifiesto → reels/04.png
+Puente arquitectónico suspendido sobre un abismo, niebla verde, luz al final, cinematográfico
+
+20. [Story 1080×1920] s5_story_cita → stories/04.png
+Texto sobre fondo texturizado oscuro, fuente serif grande, acento rojo dramático
+
+
+━━━ SEMANA 6 · RIGOR: "La comunidad intelectual" ━
+
+21. [Post 1080×1080] s6_logica_accesible → feed/11.png
+Símbolo ∀ monumental en luz verde, perspectiva desde abajo, escala épica, partículas
+
+22. [Post 1080×1080] s6_reto_argumento → feed/12.png
+Pizarra digital con fragmento de formalización lógica, tiza verde luminosa, fondo slate
+
+23. [Reel 1080×1920] s6_reel_simbolos → (SIN IMAGEN — renderizar)
+Animación de símbolo ∀ rotando lentamente, partículas orbitando, profundidad de campo
+
+24. [Story 1080×1920] s6_story_quiz → (SIN IMAGEN — renderizar)
+Fondo con los 4 símbolos lógicos en grande, glow diferente para cada uno
+
+
+━━━ SEMANA 7 · ECOSISTEMA: "El futuro ya tiene estructura" ━
+
+25. [Post 1080×1080] s7_vision_futuro → feed/13.png
+Ciudad futurista construida sobre raíces de árbol, bioluminiscencia verde, arquitectura orgánica-digital
+
+26. [Post 1080×1080] s7_roadmap → feed/14.png
+Línea de tiempo visual con hitos luminosos, cada nodo un icono (editor, lógica, agente, red), progresión horizontal
+
+27. [Reel 1080×1920] s7_reel_2027 → reels/05.png
+Número 2027 emergiendo de la niebla verde, revelación lenta, partículas ascendentes, épico
+
+28. [Story 1080×1920] s7_story_waitlist → stories/05.png
+Puerta entreabierta con luz verde intensa saliendo, misterioso, invitante
+
+
+━━━ SEMANA 8 · ECOSISTEMA: "Únete" ━━━━━━━━━━━━━
+
+29. [Post 1080×1080] s8_invitacion → feed/15.png
+Portal luminoso verde en medio de la oscuridad, perspectiva frontal, invitante, profundidad
+
+30. [Post 1080×1080] s8_promesa → (SIN IMAGEN — renderizar)
+Workspace limpio y luminoso, interfaz flotante sobre fondo oscuro, sensación de hogar digital
+
+31. [Reel 1080×1920] s8_reel_final → (SIN IMAGEN — renderizar)
+Secuencia recapitulativa: flashes rápidos de todas las piezas anteriores, culminando en logo
+
+32. [Story 1080×1920] s8_story_final → (SIN IMAGEN — renderizar)
+Tres pasos ilustrados con iconos minimalistas, flechas verdes, fondo oscuro
+
+
+═══════════════════════════════════════════════════
+  RESUMEN
+═══════════════════════════════════════════════════
+
+✅ Con imagen lista:   25 piezas (15 posts + 5 stories + 5 reels)
+⏳ Faltan renderizar:   7 piezas (1 post + 3 stories + 3 reels)
+
+Para generar los fondos IA:
+1. Copiar el prompt de arriba
+2. Pegar en Midjourney/DALL-E con sufijo: "--ar 1:1" (posts) o "--ar 9:16" (stories/reels)
+3. Descargar la imagen generada
+4. Combinar con el template React (overlay del design system)

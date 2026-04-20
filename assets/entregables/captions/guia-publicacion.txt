@@ -1,0 +1,97 @@
+═══════════════════════════════════════════════════
+  GUÍA DE PUBLICACIÓN — INSTAGRAM
+  Agora / Elenxos · Campaña 8 semanas
+═══════════════════════════════════════════════════
+
+ESTRUCTURA DEL PAQUETE
+─────────────────────
+paquete-instagram/
+├── feed/          → 15 posts (1080×1080)
+│   ├── 01.png ... 15.png
+├── stories/       → 5 stories (1080×1920)
+│   ├── 01.png ... 05.png
+├── reels/         → 5 reels (1080×1920)
+│   ├── 01.png ... 05.png
+├── captions-feed.txt
+├── captions-stories.txt
+├── captions-reels.txt
+├── prompts-ia.txt
+└── guia-publicacion.txt  ← este archivo
+
+
+CALENDARIO DE PUBLICACIÓN
+─────────────────────────
+Publicar en este orden. 2 posts + 1 reel + 1 story por semana.
+
+SEMANA 1 · "¿Te suena esto?"
+  Lunes    → feed/01.png  (post)
+  Miércoles → feed/02.png  (post)
+  Jueves   → reels/01.png (reel)
+  Viernes  → stories/01.png (story)
+
+SEMANA 2 · "No estás solo"
+  Lunes    → feed/03.png  (post)
+  Miércoles → feed/04.png  (post)
+  Jueves   → reels/02.png (reel)
+  Viernes  → stories/02.png (story)
+
+SEMANA 3 · "Así se ve la solución"
+  Lunes    → feed/05.png  (post)
+  Miércoles → feed/06.png  (post)
+  Jueves   → reels/03.png (reel)
+  Viernes  → stories/03.png (story)
+
+SEMANA 4 · "Casos de uso reales"
+  Lunes    → feed/07.png  (post)
+  Miércoles → feed/08.png  (post)
+  [Sin reel ni story esta semana — pendientes de renderizar]
+
+SEMANA 5 · "No es solo tecnología"
+  Lunes    → feed/09.png  (post)
+  Miércoles → feed/10.png  (post)
+  Jueves   → reels/04.png (reel)
+  Viernes  → stories/04.png (story)
+
+SEMANA 6 · "La comunidad intelectual"
+  Lunes    → feed/11.png  (post)
+  Miércoles → feed/12.png  (post)
+  [Sin reel ni story esta semana — pendientes de renderizar]
+
+SEMANA 7 · "El futuro ya tiene estructura"
+  Lunes    → feed/13.png  (post)
+  Miércoles → feed/14.png  (post)
+  Jueves   → reels/05.png (reel)
+  Viernes  → stories/05.png (story)
+
+SEMANA 8 · "Únete"
+  Lunes    → feed/15.png  (post)
+  [Post 2, reel y story pendientes de renderizar]
+
+
+INSTRUCCIONES PARA SUBIR
+────────────────────────
+1. Abre el archivo de captions correspondiente (captions-feed.txt,
+   captions-stories.txt, o captions-reels.txt)
+2. Busca el número de imagen (--- 01.png ---)
+3. Copia TODO el texto debajo como caption
+4. Sube la imagen a Instagram
+5. Pega el caption
+6. Publica
+
+HORARIOS RECOMENDADOS
+  Posts:    Lunes/Miércoles 7-8am o 12-1pm
+  Reels:   Jueves 6-7pm
+  Stories:  Viernes 10am (interacción casual)
+
+HASHTAGS
+  Ya están incluidos en cada caption.
+  No agregar más de los que ya están.
+
+NOTAS
+─────
+• Las imágenes son el template del design system React (la capa visual).
+  Para la versión completa (híbrida con IA), ver prompts-ia.txt.
+• Las semanas 4, 6 y 8 tienen piezas pendientes (7 en total).
+  Se agregarán cuando estén listas.
+• El arco narrativo va de DOLOR → SOLUCIÓN → RIGOR → CONVERSIÓN.
+  NO cambiar el orden de publicación.
