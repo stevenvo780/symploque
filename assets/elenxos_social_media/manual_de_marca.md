@@ -1,46 +1,85 @@
-# Manual de Marca - Elenxos
+# Manual de Marca: Elenxos & Agora
 
-## 1. Identidad Conceptual
-**Elenxos** representa el canon metodológico unificador para la academia global. Traduce el caos fenomenológico en estructuras lógicas inexpugnables. Su enfoque combina la rigurosidad académica con una estética profunda y orgánica, fuertemente inspirada en la atmósfera mística, salvaje y ancestral de *La Princesa Mononoke* (Studio Ghibli). Esta dualidad representa la simbiosis entre la naturaleza caótica (el bosque, los datos crudos) y el orden estructural (la lógica, la metodología).
+## 1. Filosofía y Esencia: "El Canon y la Herramienta"
+Elenxos no es solo una marca; es un **canon metodológico**. Representa el puente entre el caos fenomenológico (la naturaleza cruda de los datos y el pensamiento) y la estructura lógica inexpugnable. 
 
-## 2. Paleta de Colores (Inspiración Princesa Mononoke)
-La paleta de colores evoca los densos bosques de deidades antiguas, la magia etérea y la fuerza visceral de la naturaleza frente a la industrialización (o estructuración) de los sistemas.
+**Misión Central:** 
+> "Traducimos el caos en estructuras lógicas."
 
-- **Verde Bosque Ancestral (Primario):** `#0F2519`
-  - Uso principal: Fondos principales, fondos de redes sociales, grandes áreas de color.
-  - Representa: El ecosistema profundo, la inmensidad del conocimiento sin explorar.
+**Dualidad Simbiótica:**
+- **Inspiración Visual:** La atmósfera de *La Princesa Mononoke* (Studio Ghibli). El bosque ancestral, místico y salvaje.
+- **Inspiración Intelectual:** La matemática pura, la lógica formal y el rigor académico.
 
-- **Azul Kodama / Éter Brillante (Acento Principal):** `#A3E4D7` / `#7FFFD4`
-  - Uso principal: Nodos de conexión, texto destacado, halos de luz, botones principales.
-  - Representa: La claridad lógica brillando en la oscuridad fenomenológica, espíritus del bosque, epifanías académicas.
+**La Premisa:** Investigar no es domesticar el conocimiento, es darle un lenguaje (Elenxos) y un espacio (Agora) donde el rigor no apague la creatividad, sino que la sostenga.
 
-- **Rojo Máscara / Vitalidad (Acento Secundario):** `#8B0000` / `#C73030`
-  - Uso principal: Alertas, llamadas a la acción (CTAs) de alta prioridad, acentos visuales intensos.
-  - Representa: La energía vital, el instinto salvaje, la fuerza de la naturaleza cruda.
+---
 
-- **Gris Ceniza de Hierro (Fondo Secundario):** `#3A3F41`
-  - Uso principal: Bordes, fondos de tarjetas de UI, separadores.
-  - Representa: Las estructuras construidas por la razón, el crisol del conocimiento.
+## 2. Origen y Credibilidad (La Narrativa del Tinto)
+Nacimos en el Valle de Aburrá, específicamente en la **Universidad de Antioquia**. Somos "tres parceros" (un filósofo, un biólogo y un informático) que, entre montañas y tinto, decidimos que la academia necesitaba dejar de improvisar.
 
-## 3. Tipografía
-El rigor de Elenxos se refleja en sus fuentes, combinando la tradición académica con la legibilidad moderna.
+**Nuestro Manifiesto de Acción:**
+> "No pedimos permiso. Las construimos."
 
-- **Fuente Primaria (Títulos y Headers):** `Playfair Display` (Serif)
-  - Estilo: Elegante, tradicional, imponente.
-  - Uso: Nombres de secciones, grandes titulares, filosofía principal.
+**El Problema Real:** 
+El 87% de las investigaciones académicas en Latinoamérica carecen de un marco metodológico estandarizado. Elenxos nace para resolver esto desde el sur global para el mundo.
 
-- **Fuente Secundaria (Cuerpo y UI):** `Inter` (Sans-serif)
-  - Estilo: Limpio, ultra-legible.
-  - Uso: Textos descriptivos, interfaces (Agora, Lexis), datos estructurados.
+---
 
-## 4. Estilo Fotográfico y Visual
-Las imágenes de marca y redes sociales deben fusionar la **biología mística** con las **matemáticas puras**:
-1. **Orgánico vs. Sintético:** Contraste entre texturas de bosque profundo y nodos/redes lógicas brillantes y limpias.
-2. **Luz Eterea:** Fuentes de luz que simulan bioluminiscencia (como la de los Kodama o el Dios del Bosque en su forma nocturna).
-3. **Calidad Cinematográfica:** Imágenes de altísima resolución, con profundidad de campo, simulando fotogramas de una película en 8K.
-4. **Misticismo Lógico:** Grafos o redes neuronales que se ramifican como raíces de árboles milenarios.
+## 3. Pilares Narrativos (La Escalera de Credibilidad)
+1.  **Cercanía (Desde el Barro):** Hablamos desde la UdeA. Entendemos el caos de archivos y el estrés de los semilleros porque lo vivimos.
+2.  **Utilidad (Flujos Reales):** Mostramos cómo Agora organiza el trabajo intelectual. Menos promesas, más screenshots.
+3.  **Rigor (Elenxos №7):** "No existen hechos, solo interpretaciones. Nuestra tarea es construir el marco donde cada interpretación encuentre su estructura."
+4.  **Ecosistema (Visión):** Una infraestructura donde el conocimiento es verificable, cooperativo y eterno.
 
-## 5. Tono de Voz
-- **Profundo y Reflexivo:** Como un sabio ancestral o un espíritu del bosque observando el tiempo.
-- **Rigoroso:** Lenguaje preciso, evitando el caos verbal, buscando el *canon*.
-- **Orgánico:** Usa metáforas relacionadas con la biología, el crecimiento, la naturaleza y los ecosistemas aplicadas al software y la academia.
+---
+
+## 4. Identidad Visual (Misticismo Lógico)
+
+### Definición Etimológica (Uso Visual):
+**ἔλεγχος** */é·lenk·hos/*: Del griego antiguo. Refutación, prueba, examen cruzado. El método socrático para llegar a la verdad a través del cuestionamiento sistemático.
+
+### Paleta de Colores (Bosque + Lógica)
+- **Verde Bosque Ancestral (Primario): `#0F2519`** (El ecosistema profundo).
+- **Azul Kodama (Acento Lógico): `#A3E4D7`** (La claridad lógica brillando en la oscuridad).
+- **Rojo Máscara (Vitalidad): `#8B0000`** (La energía vital, el instinto de creación).
+- **Gris Ceniza de Hierro: `#3A3F41`** (Estructuras construidas por la razón).
+
+### Tipografía
+- **Títulos (Tradición): `Playfair Display` (Serif).** Evoca libros antiguos y autoridad.
+- **Cuerpo (Modernidad): `Inter` (Sans-serif).** Evoca software de precisión y claridad.
+
+---
+
+## 5. Tono de Voz: El "Arquitecto de Bosques"
+
+Poseemos la sabiduría técnica de la ingeniería y la sensibilidad orgánica de la naturaleza.
+
+### Dimensiones del Tono:
+| Dimensión | Cómo SÍ hablamos | Cómo NO hablamos |
+| :--- | :--- | :--- |
+| **Rigor** | Axiomático, verificable. | Rígido, aburrido. |
+| **Cercanía** | Empático, de "parcero" investigador. | Corporativo frío, vendedor. |
+| **Misticismo** | Reflexivo, profundo (Bioluminiscencia). | Confuso, pseudo-espiritual. |
+| **Ambición** | Construyendo el nuevo estándar. | Arrogante, "reemplazaremos todo". |
+
+### Reglas de Oro:
+- **Engagement:** Aportamos valor. Si hablamos de citas APA, mencionamos "metadatos que automatizan el rigor".
+- **Outreach:** No vendemos software, ofrecemos un "espacio de trabajo riguroso". Objetivo: El "Salto a la Demo".
+- **Pedagogía:** Rápidos y profundos. No solo decimos "cómo", sino "por qué" lógico.
+
+---
+
+## 6. Glosario Canónico
+- **ST (Semantic Technologies):** El motor de rigor lógico.
+- **Markdown Académico:** El texto plano con superpoderes científicos.
+- **Investigación Cooperativa:** Compartir un contexto vivo, no solo archivos.
+- **Dispersión:** El enemigo. Lo que Agora viene a curar.
+
+---
+
+## 7. Arquitectura de Identidad
+- **Elenxos (La Autoridad):** Filosófica, intelectual. LinkedIn/Academia.
+- **Agora (La Herramienta):** Humana, operativa. Instagram/Día a día.
+
+---
+*Del barro nace el rigor. Desde Medellín para la academia global.*
