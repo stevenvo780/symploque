@@ -1,0 +1,93 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../tokens/spacing' as *;
+@use '../../tokens/mixins' as *;
+@use '../../animations/animations';
+
+.elx-modal {
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: $z-modal;
+    padding: $space-4;
+    animation: elx-fade-in 200ms ease-out;
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    background: $color-iron;
+    border: 1px solid rgba($color-ash, 0.3);
+    border-radius: $radius-xl;
+    box-shadow: $shadow-xl;
+    animation: elx-scale-in 350ms cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+
+    &--sm { max-width: 400px; }
+    &--md { max-width: 560px; }
+    &--lg { max-width: 760px; }
+    &--xl { max-width: 960px; }
+  }
+
+  &__glow-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $color-kodama, transparent);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $space-6 $space-6 $space-4;
+  }
+
+  &__title {
+    @include heading-serif($font-size-xl);
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: rgba($color-ash, 0.3);
+    color: $color-text-secondary;
+    border-radius: $radius-md;
+    cursor: pointer;
+    font-size: $font-size-md;
+    transition: all $transition-fast;
+
+    &:hover {
+      background: rgba($color-mask, 0.2);
+      color: $color-mask-light;
+    }
+  }
+
+  &__body {
+    padding: 0 $space-6 $space-6;
+    @include body-sans;
+    @include custom-scrollbar;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $space-3;
+    padding: $space-4 $space-6;
+    border-top: 1px solid rgba($color-ash, 0.2);
+  }
+}

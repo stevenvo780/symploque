@@ -1,0 +1,107 @@
+@use 'tokens/colors' as *;
+@use 'tokens/typography' as *;
+@use 'tokens/spacing' as *;
+
+// ═══════════════════════════════════════════════════════════════
+// ELENXOS DESIGN SYSTEM — CSS Custom Properties (Global Root)
+// Importa este archivo UNA VEZ en tu app para exponer todos
+// los design tokens como CSS custom properties.
+// ═══════════════════════════════════════════════════════════════
+
+:root {
+  // ── Colors ─────────────────────────────────────────────────
+  --elx-forest-deep:     #{$color-forest-deep};
+  --elx-forest-mid:      #{$color-forest-mid};
+  --elx-forest-light:    #{$color-forest-light};
+  --elx-kodama:          #{$color-kodama};
+  --elx-kodama-bright:   #{$color-kodama-bright};
+  --elx-kodama-dim:      #{$color-kodama-dim};
+  --elx-kodama-glow:     #{$color-kodama-glow};
+  --elx-mask-deep:       #{$color-mask-deep};
+  --elx-mask:            #{$color-mask};
+  --elx-mask-light:      #{$color-mask-light};
+  --elx-mask-glow:       #{$color-mask-glow};
+  --elx-ash:             #{$color-ash};
+  --elx-ash-light:       #{$color-ash-light};
+  --elx-ash-dark:        #{$color-ash-dark};
+  --elx-iron:            #{$color-iron};
+  --elx-text-primary:    #{$color-text-primary};
+  --elx-text-secondary:  #{$color-text-secondary};
+  --elx-text-muted:      #{$color-text-muted};
+  --elx-text-inverse:    #{$color-text-inverse};
+  --elx-success:         #{$color-success};
+  --elx-warning:         #{$color-warning};
+  --elx-error:           #{$color-mask};
+  --elx-info:            #{$color-kodama};
+
+  // ── Typography ─────────────────────────────────────────────
+  --elx-font-serif:      #{$font-serif};
+  --elx-font-sans:       #{$font-sans};
+  --elx-font-mono:       #{$font-mono};
+
+  // ── Spacing ────────────────────────────────────────────────
+  --elx-radius-sm:       #{$radius-sm};
+  --elx-radius-md:       #{$radius-md};
+  --elx-radius-lg:       #{$radius-lg};
+  --elx-radius-xl:       #{$radius-xl};
+  --elx-radius-full:     #{$radius-full};
+
+  // ── Shadows ────────────────────────────────────────────────
+  --elx-shadow-sm:       #{$shadow-sm};
+  --elx-shadow-md:       #{$shadow-md};
+  --elx-shadow-lg:       #{$shadow-lg};
+  --elx-shadow-kodama:   #{$shadow-kodama};
+  --elx-shadow-mask:     #{$shadow-mask};
+
+  // ── Transitions ────────────────────────────────────────────
+  --elx-transition-fast:     #{$transition-fast};
+  --elx-transition-normal:   #{$transition-normal};
+  --elx-transition-slow:     #{$transition-slow};
+  --elx-transition-glacial:  #{$transition-glacial};
+  --elx-transition-ethereal: #{$transition-ethereal};
+}
+
+// ── Global Reset (Minimal) ──────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: $font-sans;
+  background-color: $color-forest-deep;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba($color-kodama, 0.3);
+  color: $color-text-primary;
+}
+
+a {
+  color: $color-kodama;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-kodama-bright;
+  }
+}
+
+// ── Focus visible global ─────────────────────────────────────
+:focus-visible {
+  outline: 2px solid $color-kodama;
+  outline-offset: 2px;
+}

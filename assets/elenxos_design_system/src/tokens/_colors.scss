@@ -1,0 +1,59 @@
+// ═══════════════════════════════════════════════════════════════
+// ELENXOS DESIGN SYSTEM — Paleta de Colores
+// Inspiración: La Princesa Mononoke × Filosofía Analítica
+// ═══════════════════════════════════════════════════════════════
+
+// ── Primarios ─────────────────────────────────────────────────
+$color-forest-deep:       #0F2519;  // Verde Bosque Ancestral — fondo principal
+$color-forest-mid:        #1A3A2A;  // Verde bosque intermedio
+$color-forest-light:      #254D3A;  // Verde bosque claro (hover states)
+
+// ── Kodama (Acento principal — Cyan/Teal etéreo) ─────────────
+$color-kodama:            #A3E4D7;  // Azul Kodama — acento principal
+$color-kodama-bright:     #7FFFD4;  // Kodama brillante — hover/glow
+$color-kodama-dim:        #5FBFAA;  // Kodama atenuado — estados disabled
+$color-kodama-glow:       rgba(163, 228, 215, 0.35); // Glow suave
+
+// ── Máscara (Acento secundario — Rojo vitalidad) ─────────────
+$color-mask-deep:         #8B0000;  // Rojo máscara profundo
+$color-mask:              #C73030;  // Rojo máscara — CTAs, alertas
+$color-mask-light:        #E04848;  // Rojo máscara claro — hover
+$color-mask-glow:         rgba(199, 48, 48, 0.3);
+
+// ── Ceniza (Neutros) ─────────────────────────────────────────
+$color-ash:               #3A3F41;  // Gris ceniza — bordes, tarjetas
+$color-ash-light:         #5A6264;  // Ceniza claro
+$color-ash-dark:          #2A2E30;  // Ceniza oscuro
+$color-iron:              #1E2224;  // Hierro — fondos de tarjetas
+
+// ── Textos ───────────────────────────────────────────────────
+$color-text-primary:      #FFFFFF;
+$color-text-secondary:    #B8C4C0;
+$color-text-muted:        #7A8A85;
+$color-text-inverse:      #0F2519;
+
+// ── Semánticos ───────────────────────────────────────────────
+$color-success:           #4ADE80;
+$color-warning:           #FBBF24;
+$color-error:             $color-mask;
+$color-info:              $color-kodama;
+
+// ── Mapa exportable ──────────────────────────────────────────
+$elenxos-colors: (
+  'forest-deep':    $color-forest-deep,
+  'forest-mid':     $color-forest-mid,
+  'forest-light':   $color-forest-light,
+  'kodama':         $color-kodama,
+  'kodama-bright':  $color-kodama-bright,
+  'kodama-dim':     $color-kodama-dim,
+  'mask-deep':      $color-mask-deep,
+  'mask':           $color-mask,
+  'mask-light':     $color-mask-light,
+  'ash':            $color-ash,
+  'ash-light':      $color-ash-light,
+  'ash-dark':       $color-ash-dark,
+  'iron':           $color-iron,
+  'text-primary':   $color-text-primary,
+  'text-secondary': $color-text-secondary,
+  'text-muted':     $color-text-muted,
+);

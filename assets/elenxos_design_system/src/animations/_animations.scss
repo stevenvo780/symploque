@@ -1,0 +1,207 @@
+// ═══════════════════════════════════════════════════════════════
+// ELENXOS DESIGN SYSTEM — Animaciones
+// Inspiración: Bioluminiscencia, Kodamas, Espíritu del Bosque
+// ═══════════════════════════════════════════════════════════════
+
+// ── Fade In ──────────────────────────────────────────────────
+@keyframes elx-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes elx-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes elx-fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes elx-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes elx-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// ── Scale ────────────────────────────────────────────────────
+@keyframes elx-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes elx-scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+// ── Kodama Pulse (bioluminiscencia suave) ────────────────────
+@keyframes elx-kodama-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(163, 228, 215, 0.15),
+                0 0 24px rgba(163, 228, 215, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(163, 228, 215, 0.35),
+                0 0 48px rgba(163, 228, 215, 0.15);
+  }
+}
+
+@keyframes elx-kodama-text-glow {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(163, 228, 215, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(163, 228, 215, 0.5),
+                 0 0 32px rgba(163, 228, 215, 0.2);
+  }
+}
+
+// ── Mask Pulse (vitalidad roja) ──────────────────────────────
+@keyframes elx-mask-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(199, 48, 48, 0.15),
+                0 0 24px rgba(199, 48, 48, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(199, 48, 48, 0.35),
+                0 0 48px rgba(199, 48, 48, 0.15);
+  }
+}
+
+// ── Spinner / Loading ────────────────────────────────────────
+@keyframes elx-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes elx-orbit {
+  from { transform: rotate(0deg) translateX(12px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(12px) rotate(-360deg); }
+}
+
+// ── Float (espíritus del bosque) ─────────────────────────────
+@keyframes elx-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes elx-float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%      { transform: translateY(-6px) rotate(1deg); }
+  66%      { transform: translateY(-3px) rotate(-0.5deg); }
+}
+
+// ── Shimmer (reflejo etéreo) ─────────────────────────────────
+@keyframes elx-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// ── Slide ────────────────────────────────────────────────────
+@keyframes elx-slide-in-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes elx-slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// ── Ripple ───────────────────────────────────────────────────
+@keyframes elx-ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+// ── Particle drift (for KodamaParticles) ─────────────────────
+@keyframes elx-particle-drift {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(var(--drift-x, 30px)) scale(0.3);
+    opacity: 0;
+  }
+}
+
+// ── Breathing border ─────────────────────────────────────────
+@keyframes elx-breathe {
+  0%, 100% {
+    border-color: rgba(163, 228, 215, 0.2);
+  }
+  50% {
+    border-color: rgba(163, 228, 215, 0.6);
+  }
+}

@@ -1,0 +1,53 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/spacing' as *;
+@use '../../animations/animations';
+
+.elx-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &__ring {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgba($color-kodama, 0.15);
+    border-top-color: $color-kodama;
+    animation: elx-spin 800ms linear infinite;
+  }
+
+  &--sm .elx-spinner__ring {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+  }
+
+  &--md .elx-spinner__ring {
+    width: 28px;
+    height: 28px;
+    border-width: 3px;
+  }
+
+  &--lg .elx-spinner__ring {
+    width: 44px;
+    height: 44px;
+    border-width: 4px;
+  }
+
+  // ── Kodama variant: orbiting dots ──────────────────────────
+  &--kodama {
+    position: relative;
+
+    .elx-spinner__dot {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: $color-kodama;
+      border-radius: 50%;
+      animation: elx-orbit 1.4s linear infinite;
+
+      &:nth-child(2) { animation-delay: -0.35s; opacity: 0.8; }
+      &:nth-child(3) { animation-delay: -0.7s; opacity: 0.6; }
+      &:nth-child(4) { animation-delay: -1.05s; opacity: 0.4; }
+    }
+  }
+}

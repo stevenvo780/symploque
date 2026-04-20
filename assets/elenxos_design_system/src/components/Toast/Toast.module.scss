@@ -1,0 +1,99 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../tokens/spacing' as *;
+@use '../../animations/animations';
+
+.elx-toast {
+  position: fixed;
+  bottom: $space-6;
+  right: $space-6;
+  z-index: $z-toast;
+  display: flex;
+  align-items: flex-start;
+  gap: $space-3;
+  padding: $space-4 $space-5;
+  min-width: 320px;
+  max-width: 480px;
+  border-radius: $radius-lg;
+  background: $color-iron;
+  border: 1px solid rgba($color-ash, 0.3);
+  box-shadow: $shadow-xl;
+  animation: elx-slide-in-right 400ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  &--info {
+    border-left: 3px solid $color-kodama;
+  }
+
+  &--success {
+    border-left: 3px solid $color-success;
+  }
+
+  &--warning {
+    border-left: 3px solid $color-warning;
+  }
+
+  &--error {
+    border-left: 3px solid $color-mask;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    font-size: $font-size-md;
+    margin-top: 2px;
+  }
+
+  &--info    &__icon { color: $color-kodama; }
+  &--success &__icon { color: $color-success; }
+  &--warning &__icon { color: $color-warning; }
+  &--error   &__icon { color: $color-mask; }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    margin-bottom: $space-1;
+  }
+
+  &__message {
+    font-family: $font-sans;
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: $line-height-normal;
+  }
+
+  &__close {
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    color: $color-text-muted;
+    cursor: pointer;
+    font-size: $font-size-base;
+    padding: $space-1;
+    border-radius: $radius-sm;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-text-primary;
+    }
+  }
+
+  // ── Progress bar ───────────────────────────────────────────
+  &__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    border-radius: 0 0 $radius-lg $radius-lg;
+    transition: width linear;
+  }
+
+  &--info    &__progress { background: $color-kodama; }
+  &--success &__progress { background: $color-success; }
+  &--warning &__progress { background: $color-warning; }
+  &--error   &__progress { background: $color-mask; }
+}

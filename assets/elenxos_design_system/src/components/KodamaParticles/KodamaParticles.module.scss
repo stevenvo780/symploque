@@ -1,0 +1,51 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+
+  &--relative {
+    position: absolute;
+  }
+
+  &__particle {
+    position: absolute;
+    bottom: -10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: $color-kodama;
+    box-shadow: 0 0 6px rgba($color-kodama, 0.6),
+                0 0 20px rgba($color-kodama, 0.2);
+    animation: elx-particle-drift var(--duration, 12s) linear infinite;
+    animation-delay: var(--delay, 0s);
+    left: var(--x, 50%);
+    --drift-x: var(--dx, 30px);
+    opacity: 0;
+
+    &--dim {
+      width: 3px;
+      height: 3px;
+      background: rgba($color-kodama-dim, 0.5);
+      box-shadow: 0 0 4px rgba($color-kodama, 0.3);
+    }
+
+    &--bright {
+      width: 5px;
+      height: 5px;
+      background: $color-kodama-bright;
+      box-shadow: 0 0 10px rgba($color-kodama-bright, 0.7),
+                  0 0 30px rgba($color-kodama-bright, 0.3);
+    }
+
+    &--mask {
+      background: $color-mask;
+      box-shadow: 0 0 6px rgba($color-mask, 0.5),
+                  0 0 20px rgba($color-mask, 0.15);
+    }
+  }
+}

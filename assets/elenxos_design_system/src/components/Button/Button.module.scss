@@ -1,0 +1,168 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../tokens/spacing' as *;
+@use '../../tokens/mixins' as *;
+@use '../../animations/animations';
+
+.elx-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  font-family: $font-sans;
+  font-weight: $font-weight-semibold;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all $transition-normal;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  // ── Ripple effect ──────────────────────────────────────────
+  &__ripple {
+    position: absolute;
+    border-radius: $radius-full;
+    background: rgba($color-text-primary, 0.2);
+    animation: elx-ripple 600ms ease-out forwards;
+    pointer-events: none;
+  }
+
+  // ── Sizes ──────────────────────────────────────────────────
+  &--sm {
+    padding: $space-2 $space-4;
+    font-size: $font-size-sm;
+    border-radius: $radius-md;
+    min-height: 32px;
+  }
+
+  &--md {
+    padding: $space-3 $space-6;
+    font-size: $font-size-base;
+    border-radius: $radius-lg;
+    min-height: 40px;
+  }
+
+  &--lg {
+    padding: $space-4 $space-8;
+    font-size: $font-size-md;
+    border-radius: $radius-lg;
+    min-height: 48px;
+  }
+
+  // ── Variants ───────────────────────────────────────────────
+  &--primary {
+    background: linear-gradient(135deg, $color-kodama-dim, $color-kodama);
+    color: $color-text-inverse;
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(135deg, $color-kodama, $color-kodama-bright);
+      transform: translateY(-1px);
+      @include kodama-glow(1.2);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: $color-kodama;
+    border: 1.5px solid rgba($color-kodama, 0.4);
+
+    &:hover:not(:disabled) {
+      background: rgba($color-kodama, 0.08);
+      border-color: $color-kodama;
+      transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+  }
+
+  &--danger {
+    background: linear-gradient(135deg, $color-mask-deep, $color-mask);
+    color: $color-text-primary;
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(135deg, $color-mask, $color-mask-light);
+      transform: translateY(-1px);
+      @include mask-glow(1.2);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $color-text-secondary;
+
+    &:hover:not(:disabled) {
+      background: rgba($color-text-primary, 0.05);
+      color: $color-text-primary;
+    }
+  }
+
+  &--glow {
+    background: rgba($color-kodama, 0.12);
+    color: $color-kodama;
+    border: 1px solid rgba($color-kodama, 0.2);
+    animation: elx-kodama-pulse 3s ease-in-out infinite;
+
+    &:hover:not(:disabled) {
+      background: rgba($color-kodama, 0.2);
+      border-color: $color-kodama;
+    }
+  }
+
+  // ── Icon only ──────────────────────────────────────────────
+  &--icon-only {
+    padding: $space-2;
+    aspect-ratio: 1;
+    border-radius: $radius-full;
+  }
+
+  // ── Full width ─────────────────────────────────────────────
+  &--full {
+    width: 100%;
+  }
+
+  // ── Loading state ──────────────────────────────────────────
+  &--loading {
+    pointer-events: none;
+    .elx-btn__content {
+      opacity: 0;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba($color-text-primary, 0.3);
+    border-top-color: currentColor;
+    border-radius: $radius-full;
+    animation: elx-spin 800ms linear infinite;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    transition: opacity $transition-fast;
+  }
+}

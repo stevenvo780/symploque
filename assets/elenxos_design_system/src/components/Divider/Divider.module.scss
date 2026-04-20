@@ -1,0 +1,54 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/spacing' as *;
+
+.elx-divider {
+  border: none;
+  margin: $space-6 0;
+
+  &--solid {
+    height: 1px;
+    background: rgba($color-ash, 0.3);
+  }
+
+  &--gradient {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba($color-kodama, 0.3),
+      transparent
+    );
+  }
+
+  &--glow {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      $color-kodama,
+      transparent
+    );
+    box-shadow: 0 0 12px rgba($color-kodama, 0.2);
+  }
+
+  &--mask {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      $color-mask,
+      transparent
+    );
+    box-shadow: 0 0 12px rgba($color-mask, 0.2);
+  }
+
+  &--dashed {
+    height: 0;
+    border-top: 1px dashed rgba($color-ash, 0.4);
+  }
+
+  // ── Spacing variants ───────────────────────────────────────
+  &--sm { margin: $space-3 0; }
+  &--md { margin: $space-6 0; }
+  &--lg { margin: $space-10 0; }
+}

@@ -1,0 +1,124 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../tokens/spacing' as *;
+@use '../../tokens/mixins' as *;
+@use '../../animations/animations';
+
+.elx-card {
+  position: relative;
+  border-radius: $radius-xl;
+  overflow: hidden;
+  transition: all $transition-normal;
+
+  // ── Variants ───────────────────────────────────────────────
+  &--default {
+    background: $color-iron;
+    border: 1px solid rgba($color-ash, 0.3);
+
+    &:hover {
+      border-color: rgba($color-kodama, 0.3);
+      transform: translateY(-2px);
+      box-shadow: $shadow-lg;
+    }
+  }
+
+  &--glass {
+    @include glass(0.1);
+
+    &:hover {
+      border-color: rgba($color-kodama, 0.3);
+      transform: translateY(-2px);
+    }
+  }
+
+  &--glow {
+    background: $color-iron;
+    @include kodama-border;
+    animation: elx-kodama-pulse 4s ease-in-out infinite;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &--elevated {
+    background: $color-iron;
+    border: 1px solid rgba($color-ash, 0.2);
+    box-shadow: $shadow-lg;
+
+    &:hover {
+      box-shadow: $shadow-xl;
+      transform: translateY(-4px);
+    }
+  }
+
+  // ── Animate on mount ───────────────────────────────────────
+  &--animated {
+    animation: elx-fade-in-up 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  // ── Sizes ──────────────────────────────────────────────────
+  &--sm { padding: $space-4; }
+  &--md { padding: $space-6; }
+  &--lg { padding: $space-8; }
+
+  // ── Clickable ──────────────────────────────────────────────
+  &--clickable {
+    cursor: pointer;
+    user-select: none;
+
+    &:active {
+      transform: translateY(0) scale(0.98);
+    }
+  }
+
+  // ── Internal layout ────────────────────────────────────────
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $space-4;
+  }
+
+  &__title {
+    font-family: $font-serif;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    line-height: $line-height-tight;
+  }
+
+  &__subtitle {
+    @include label;
+    margin-top: $space-1;
+  }
+
+  &__body {
+    @include body-sans;
+  }
+
+  &__footer {
+    margin-top: $space-6;
+    padding-top: $space-4;
+    border-top: 1px solid rgba($color-ash, 0.3);
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+  }
+
+  // ── Decorative glow line at top ────────────────────────────
+  &__glow-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $color-kodama, transparent);
+    opacity: 0;
+    transition: opacity $transition-normal;
+  }
+
+  &:hover &__glow-line {
+    opacity: 1;
+  }
+}

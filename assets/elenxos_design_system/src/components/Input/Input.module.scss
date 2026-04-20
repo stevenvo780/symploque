@@ -1,0 +1,138 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../tokens/spacing' as *;
+@use '../../tokens/mixins' as *;
+
+.elx-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+
+  &__label {
+    @include label;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__field {
+    width: 100%;
+    font-family: $font-sans;
+    font-size: $font-size-base;
+    color: $color-text-primary;
+    background: $color-iron;
+    border: 1.5px solid rgba($color-ash, 0.4);
+    border-radius: $radius-lg;
+    transition: all $transition-normal;
+    @include custom-scrollbar;
+
+    &::placeholder {
+      color: $color-text-muted;
+    }
+
+    &:hover:not(:disabled):not(:focus) {
+      border-color: rgba($color-ash-light, 0.6);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-kodama;
+      box-shadow: 0 0 0 3px rgba($color-kodama, 0.12);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  // ── Sizes ──────────────────────────────────────────────────
+  &--sm .elx-input__field {
+    padding: $space-2 $space-3;
+    font-size: $font-size-sm;
+  }
+
+  &--md .elx-input__field {
+    padding: $space-3 $space-4;
+  }
+
+  &--lg .elx-input__field {
+    padding: $space-4 $space-5;
+    font-size: $font-size-md;
+  }
+
+  // ── With icon ──────────────────────────────────────────────
+  &__icon-left,
+  &__icon-right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: $color-text-muted;
+    pointer-events: none;
+    transition: color $transition-fast;
+  }
+
+  &__icon-left {
+    left: $space-3;
+  }
+
+  &__icon-right {
+    right: $space-3;
+  }
+
+  &--has-icon-left .elx-input__field {
+    padding-left: $space-10;
+  }
+
+  &--has-icon-right .elx-input__field {
+    padding-right: $space-10;
+  }
+
+  &__field:focus ~ .elx-input__icon-left,
+  &__field:focus ~ .elx-input__icon-right {
+    color: $color-kodama;
+  }
+
+  // ── States ─────────────────────────────────────────────────
+  &--error .elx-input__field {
+    border-color: $color-mask;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($color-mask, 0.12);
+    }
+  }
+
+  &--success .elx-input__field {
+    border-color: $color-success;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($color-success, 0.12);
+    }
+  }
+
+  // ── Helper text ────────────────────────────────────────────
+  &__helper {
+    font-family: $font-sans;
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+  }
+
+  &--error &__helper {
+    color: $color-mask-light;
+  }
+
+  &--success &__helper {
+    color: $color-success;
+  }
+
+  // ── Textarea variant ───────────────────────────────────────
+  &__field--textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: $line-height-normal;
+  }
+}
