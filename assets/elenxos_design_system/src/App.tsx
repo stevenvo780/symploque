@@ -14,12 +14,36 @@ import { V1_Micelio, V2_CitaRoja, V3_Perspectiva, V4_Glass, V5_Simbolo, V6_Datos
 import { B1_Minimal, B2_Denso, B3_Conferencia, R1_Manifiesto, R2_Simbolo } from './templates/MoreVariations';
 
 const section: React.CSSProperties = { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 };
-const grid2: React.CSSProperties = { display: 'flex', gap: 40, justifyContent: 'center', flexWrap: 'wrap', alignItems: 'flex-start' };
+
+// Grids
+const bannerGrid: React.CSSProperties = { 
+  display: 'grid', 
+  gridTemplateColumns: 'repeat(auto-fit, minmax(650px, 1fr))', 
+  gap: 40, 
+  width: '100%',
+  justifyItems: 'center'
+};
+
+const postGrid: React.CSSProperties = { 
+  display: 'grid', 
+  gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', 
+  gap: 40, 
+  width: '100%',
+  justifyItems: 'center'
+};
+
+const reelGrid: React.CSSProperties = { 
+  display: 'grid', 
+  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+  gap: 40, 
+  width: '100%',
+  justifyItems: 'center'
+};
 
 function App() {
   return (
-    <div style={{ background: '#070F0A', minHeight: '100vh', padding: '60px 40px' }}>
-      <div style={{ maxWidth: 1400, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 80 }}>
+    <div style={{ background: '#070F0A', minHeight: '100vh', padding: '60px 40px', overflowX: 'hidden' }}>
+      <div style={{ maxWidth: 1600, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 80 }}>
 
         <header style={{ textAlign: 'center', padding: '40px 0' }}>
           <Text size="xs" color="muted" style={{ letterSpacing: 6, textTransform: 'uppercase', marginBottom: 12 }}>Elenxos Design System</Text>
@@ -34,36 +58,26 @@ function App() {
         <Divider variant="glow" />
         <Heading level="h3" gradient style={{ textAlign: 'center' }}>Banners (3:1)</Heading>
 
-        <div style={section}><Badge variant="ash">Original — Manifiesto</Badge><SocialBannerExample /></div>
-        <div style={section}><Badge variant="ash">Ultra-Minimal</Badge><B1_Minimal /></div>
-        <div style={section}><Badge variant="ash">Micelio + Símbolos</Badge><B2_Denso /></div>
-        <div style={section}><Badge variant="ash">Conferencia</Badge><B3_Conferencia /></div>
+        <div style={bannerGrid}>
+          <div style={section}><Badge variant="ash">Original — Manifiesto</Badge><SocialBannerExample /></div>
+          <div style={section}><Badge variant="ash">Ultra-Minimal</Badge><B1_Minimal /></div>
+          <div style={section}><Badge variant="ash">Micelio + Símbolos</Badge><B2_Denso /></div>
+          <div style={section}><Badge variant="ash">Conferencia</Badge><B3_Conferencia /></div>
+        </div>
 
         {/* ── POSTS ── */}
         <Divider variant="glow" />
         <Heading level="h3" gradient style={{ textAlign: 'center' }}>Posts (1:1)</Heading>
 
-        <div style={grid2}>
+        <div style={postGrid}>
           <div style={section}><Badge variant="kodama">Cita Filosófica</Badge><SocialPostExample /></div>
           <div style={section}><Badge variant="mask">Cita Roja</Badge><V2_CitaRoja /></div>
-        </div>
-
-        <div style={grid2}>
           <div style={section}><Badge variant="forest">Perspectiva 3D</Badge><V3_Perspectiva /></div>
           <div style={section}><Badge variant="kodama">Glassmorphism</Badge><V4_Glass /></div>
-        </div>
-
-        <div style={grid2}>
           <div style={section}><Badge variant="ash">Símbolo Psi</Badge><V5_Simbolo /></div>
           <div style={section}><Badge variant="ash">Datos Split</Badge><V6_DatosSplit /></div>
-        </div>
-
-        <div style={grid2}>
           <div style={section}><Badge variant="warning">Pregunta</Badge><V7_Pregunta /></div>
           <div style={section}><Badge variant="ash">Próximamente</Badge><V8_Proximamente /></div>
-        </div>
-
-        <div style={grid2}>
           <div style={section}><Badge variant="forest">Micelio Puro</Badge><V1_Micelio /></div>
         </div>
 
@@ -71,7 +85,7 @@ function App() {
         <Divider variant="glow" />
         <Heading level="h3" gradient style={{ textAlign: 'center' }}>Reels / Historias (9:16)</Heading>
 
-        <div style={grid2}>
+        <div style={reelGrid}>
           <div style={section}><Badge variant="forest">Del barro</Badge><SocialReelExample /></div>
           <div style={section}><Badge variant="mask">Manifiesto</Badge><R1_Manifiesto /></div>
           <div style={section}><Badge variant="kodama">Símbolo ∀</Badge><R2_Simbolo /></div>
