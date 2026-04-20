@@ -1,0 +1,41 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-hexgrid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__hex {
+    fill: none;
+    stroke-width: 0.8;
+    opacity: 0.15;
+  }
+
+  &--animated &__hex {
+    opacity: 0;
+    animation: elx-hexgrid-appear 1.5s ease both;
+  }
+
+  // Colors
+  &--kodama &__hex { stroke: $color-kodama; }
+  &--mask   &__hex { stroke: $color-mask; }
+  &--muted  &__hex { stroke: $color-ash-light; }
+  &--mixed  &__hex {
+    &:nth-child(3n)   { stroke: $color-kodama; }
+    &:nth-child(3n+1) { stroke: $color-mask; }
+    &:nth-child(3n+2) { stroke: $color-ash-light; }
+  }
+}
+
+@keyframes elx-hexgrid-appear {
+  0%   { opacity: 0; transform: scale(0.6); }
+  100% { opacity: 0.15; transform: scale(1); }
+}

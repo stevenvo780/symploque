@@ -39,7 +39,7 @@ export type { DividerProps } from './components/Divider/Divider';
 export { KodamaParticles } from './components/KodamaParticles/KodamaParticles';
 export type { KodamaParticlesProps } from './components/KodamaParticles/KodamaParticles';
 
-export { SocialCanvas } from './components/SocialCanvas/SocialCanvas';
+export { SocialCanvas, ScaleOverrideProvider } from './components/SocialCanvas/SocialCanvas';
 export type { SocialCanvasProps } from './components/SocialCanvas/SocialCanvas';
 
 export { CinematicText } from './components/CinematicText/CinematicText';
@@ -50,6 +50,54 @@ export type { AuraBackgroundProps } from './components/AuraBackground/AuraBackgr
 
 export { LogicMesh } from './components/LogicMesh/LogicMesh';
 export type { LogicMeshProps } from './components/LogicMesh/LogicMesh';
+
+// ── Visual / Decorative ─────────────────────────────────────
+export { GlowOrb } from './components/GlowOrb/GlowOrb';
+export { GridPattern } from './components/GridPattern/GridPattern';
+export { GradientWave } from './components/GradientWave/GradientWave';
+export { IconSymbol } from './components/IconSymbol/IconSymbol';
+export { FrameOverlay } from './components/FrameOverlay/FrameOverlay';
+export { QuoteCard } from './components/QuoteCard/QuoteCard';
+export { StatsDisplay } from './components/StatsDisplay/StatsDisplay';
+export { BrandMark } from './components/BrandMark/BrandMark';
+export { ScanLines } from './components/ScanLines/ScanLines';
+
+// ── Geek / Philosophy / Math Components ─────────────────────
+export { MatrixRain } from './components/MatrixRain/MatrixRain';
+export type { MatrixRainProps } from './components/MatrixRain/MatrixRain';
+
+export { FibonacciSpiral } from './components/FibonacciSpiral/FibonacciSpiral';
+export type { FibonacciSpiralProps } from './components/FibonacciSpiral/FibonacciSpiral';
+
+export { PenrosePattern } from './components/PenrosePattern/PenrosePattern';
+export type { PenrosePatternProps } from './components/PenrosePattern/PenrosePattern';
+
+export { ElenxosLogo } from './components/ElenxosLogo/ElenxosLogo';
+export type { ElenxosLogoProps } from './components/ElenxosLogo/ElenxosLogo';
+
+export { DialecticFlow } from './components/DialecticFlow/DialecticFlow';
+export type { DialecticFlowProps } from './components/DialecticFlow/DialecticFlow';
+
+export { GlitchText } from './components/GlitchText/GlitchText';
+export type { GlitchTextProps } from './components/GlitchText/GlitchText';
+
+export { TopologyMorph } from './components/TopologyMorph/TopologyMorph';
+export type { TopologyMorphProps } from './components/TopologyMorph/TopologyMorph';
+
+export { FormulaDisplay } from './components/FormulaDisplay/FormulaDisplay';
+export type { FormulaDisplayProps } from './components/FormulaDisplay/FormulaDisplay';
+
+export { OuroborosLoader } from './components/OuroborosLoader/OuroborosLoader';
+export type { OuroborosLoaderProps } from './components/OuroborosLoader/OuroborosLoader';
+
+export { HexGrid } from './components/HexGrid/HexGrid';
+export type { HexGridProps } from './components/HexGrid/HexGrid';
+
+export { QuantumParticle } from './components/QuantumParticle/QuantumParticle';
+export type { QuantumParticleProps } from './components/QuantumParticle/QuantumParticle';
+
+export { ProofChain } from './components/ProofChain/ProofChain';
+export type { ProofChainProps } from './components/ProofChain/ProofChain';
 
 // ── Design Tokens (JS) ──────────────────────────────────────
 export { tokens } from './utils/tokens';

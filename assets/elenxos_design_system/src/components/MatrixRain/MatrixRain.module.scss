@@ -1,0 +1,42 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../animations/animations';
+
+.elx-matrix-rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+
+  &__col {
+    position: absolute;
+    top: -20%;
+    display: flex;
+    flex-direction: column;
+    animation: elx-matrix-rain 8s linear infinite;
+  }
+
+  &__char {
+    font-family: $font-mono;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.6;
+    animation: elx-quantum-flicker 4s ease infinite;
+  }
+
+  &--kodama &__char {
+    color: $color-kodama;
+    text-shadow: 0 0 8px rgba($color-kodama, 0.5);
+  }
+
+  &--mask &__char {
+    color: $color-mask-light;
+    text-shadow: 0 0 8px rgba($color-mask, 0.5);
+  }
+
+  &--amber &__char {
+    color: #D4A373;
+    text-shadow: 0 0 8px rgba(212, 163, 115, 0.5);
+  }
+}

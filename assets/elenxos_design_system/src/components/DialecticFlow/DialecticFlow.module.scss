@@ -1,0 +1,74 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../animations/animations';
+
+.elx-dialectic {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 5;
+  position: relative;
+
+  &__node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid;
+    animation: elx-dialectic-pulse 4s ease-in-out infinite;
+  }
+
+  &__thesis .elx-dialectic__circle { animation-delay: 0s; }
+  &__antithesis .elx-dialectic__circle { animation-delay: 1.3s; }
+  &__synthesis .elx-dialectic__circle { animation-delay: 2.6s; }
+
+  &__label {
+    font-family: $font-sans;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    letter-spacing: $letter-spacing-wider;
+    text-transform: uppercase;
+  }
+
+  &__arrow {
+    width: 30px;
+    height: 2px;
+    position: relative;
+    &::after {
+      content: '→';
+      position: absolute;
+      right: -4px;
+      top: -9px;
+      font-size: 14px;
+    }
+  }
+
+  // Colors
+  &--kodama {
+    .elx-dialectic__circle { border-color: $color-kodama; }
+    .elx-dialectic__label  { color: $color-kodama; }
+    .elx-dialectic__arrow  { background: rgba($color-kodama, 0.3); &::after { color: $color-kodama; } }
+    .elx-dialectic__synthesis .elx-dialectic__circle {
+      background: rgba($color-kodama, 0.15);
+      box-shadow: 0 0 20px rgba($color-kodama, 0.3);
+    }
+  }
+
+  &--mask {
+    .elx-dialectic__circle { border-color: $color-mask; }
+    .elx-dialectic__label  { color: $color-mask-light; }
+    .elx-dialectic__arrow  { background: rgba($color-mask, 0.3); &::after { color: $color-mask-light; } }
+  }
+
+  &--gold {
+    .elx-dialectic__circle { border-color: #D4A373; }
+    .elx-dialectic__label  { color: #D4A373; }
+    .elx-dialectic__arrow  { background: rgba(212, 163, 115, 0.3); &::after { color: #D4A373; } }
+  }
+}

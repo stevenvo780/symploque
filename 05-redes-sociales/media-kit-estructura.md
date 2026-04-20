@@ -15,17 +15,17 @@ Referencia complementaria:
 - [x] **Tipografías:** Ya existe criterio claro: `Playfair Display` + `Inter`.
 
 ## 2. Capturas de Pantalla (Product Shots)
-- [ ] **Hero Shot:** Captura limpia del dashboard de Agora en alta resolución.
-- [ ] **Módulo de Editor Semántico:** Zoom en el editor con un texto en Markdown y lógica ST visible.
-- [ ] **Módulo de Terminal:** Captura de la terminal multi-sesión con una ejecución real.
-- [ ] **Módulo de Colaboración:** Vista de tableros Kanban o lista de miembros del equipo.
+- `[x]` **Hero Shot:** Captura limpia del dashboard de Agora en alta resolución.
+- `[x]` **Módulo de Editor Semántico:** Zoom en el editor con un texto en Markdown y lógica ST visible.
+- `[ ]` **Módulo de Terminal:** Captura de la terminal multi-sesión con una ejecución real.
+- `[ ]` **Módulo de Colaboración:** Vista de tableros Kanban o lista de miembros del equipo.
 - [ ] **Dispositivos:** Mockups de Agora funcionando en un MacBook, un iPad y un iPhone (para denotar PWA & Offline).
 
 ## 3. Gráficos de Redes Sociales (Social Media Templates)
 - [x] **Banners exploratorios:** Ya existen banners y perfiles base en `assets/elenxos_social_media/`.
 - [x] **Renders multi-plataforma:** Ya existe un paquete utilizable en `../creador-imagenes-de-marca/output/`.
-- [ ] **Plantilla para Carruseles:** Falta un template estable con la flecha `Escribe → Formaliza → Verifica → Colabora`.
-- [ ] **Plantilla para "Caso Verificado":** Falta el diseño estandar para testimonios o pilotos.
+- `[x]` **Plantilla para Carruseles:** Generada en React y exportada como PNG con Playwright.
+- `[ ]` **Plantilla para "Caso Verificado":** Falta el diseño estandar para testimonios o pilotos.
 - [ ] **Fondo de Videollamada:** Un fondo profesional con el logo de Agora/Elenxos para demos y reuniones.
 
 ## 4. Fotos de Equipo (Human Assets)

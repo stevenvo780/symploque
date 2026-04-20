@@ -1,0 +1,32 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-topology {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  &__shape {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 1.5px solid;
+    animation: elx-topology-morph 6s ease-in-out infinite, elx-float-slow 8s ease-in-out infinite;
+    opacity: 0.3;
+  }
+
+  &--kodama &__shape {
+    border-color: $color-kodama;
+    box-shadow: 0 0 10px rgba($color-kodama, 0.15);
+  }
+
+  &--mask &__shape {
+    border-color: $color-mask;
+    box-shadow: 0 0 10px rgba($color-mask, 0.15);
+  }
+
+  &--mixed &__shape {
+    &:nth-child(odd)  { border-color: $color-kodama; }
+    &:nth-child(even) { border-color: $color-mask; }
+  }
+}

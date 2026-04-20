@@ -1,0 +1,49 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../animations/animations';
+
+.elx-fibonacci {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__path {
+    stroke: $color-kodama;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+  }
+
+  &--animated &__path {
+    animation: elx-fibonacci-draw 4s ease forwards;
+  }
+
+  &__rect {
+    stroke: rgba($color-kodama, 0.15);
+  }
+
+  &__phi {
+    font-family: $font-serif;
+    font-size: 16px;
+    fill: $color-kodama;
+    opacity: 0.6;
+    animation: elx-kodama-text-glow 3s ease-in-out infinite;
+  }
+
+  &--kodama &__path { stroke: $color-kodama; }
+  &--mask &__path   { stroke: $color-mask-light; }
+  &--gold &__path   { stroke: #D4A373; }
+  &--mask &__rect   { stroke: rgba($color-mask, 0.15); }
+  &--gold &__rect   { stroke: rgba(212, 163, 115, 0.15); }
+  &--mask &__phi    { fill: $color-mask-light; }
+  &--gold &__phi    { fill: #D4A373; }
+}
+
+@keyframes elx-fibonacci-draw {
+  to { stroke-dashoffset: 0; }
+}

@@ -1,0 +1,59 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../animations/animations';
+
+.elx-ouroboros {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &__svg { width: 100%; height: 100%; }
+
+  &__ring {
+    transform-origin: center;
+    animation: elx-ouroboros var(--speed, 4s) linear infinite;
+  }
+
+  &__inner {
+    transform-origin: center;
+    animation: elx-ouroboros var(--speed, 4s) linear infinite reverse;
+    opacity: 0.4;
+  }
+
+  &__head { animation: elx-synapse-fire 2s ease-in-out infinite; }
+
+  &__symbol {
+    position: absolute;
+    font-family: $font-serif;
+    font-size: 0.3em;
+    opacity: 0.6;
+  }
+
+  // Speed
+  &--slow   { --speed: 6s; }
+  &--normal  { --speed: 4s; }
+  &--fast    { --speed: 2s; }
+
+  // Colors
+  &--kodama {
+    .elx-ouroboros__ring  { stroke: $color-kodama; }
+    .elx-ouroboros__inner { stroke: $color-kodama-bright; }
+    .elx-ouroboros__head  { fill: $color-kodama-bright; }
+    .elx-ouroboros__symbol { color: $color-kodama; }
+  }
+
+  &--mask {
+    .elx-ouroboros__ring  { stroke: $color-mask; }
+    .elx-ouroboros__inner { stroke: $color-mask-light; }
+    .elx-ouroboros__head  { fill: $color-mask-light; }
+    .elx-ouroboros__symbol { color: $color-mask-light; }
+  }
+
+  &--gold {
+    .elx-ouroboros__ring  { stroke: #D4A373; }
+    .elx-ouroboros__inner { stroke: #E8C49A; }
+    .elx-ouroboros__head  { fill: #E8C49A; }
+    .elx-ouroboros__symbol { color: #D4A373; }
+  }
+}

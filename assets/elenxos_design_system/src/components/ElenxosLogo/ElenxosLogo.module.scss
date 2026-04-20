@@ -1,0 +1,71 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  // Color variants
+  &--cream {
+    .elx-logo__hex  { stroke: #f0e6d3; opacity: 0.4; }
+    .elx-logo__tri  { stroke: #f0e6d3; opacity: 0.6; }
+    .elx-logo__net  { stroke: #f0e6d3; opacity: 0.8; }
+    .elx-logo__node-center { fill: #f0e6d3; }
+    .elx-logo__node { fill: #f0e6d3; opacity: 0.9; }
+  }
+
+  &--kodama {
+    .elx-logo__hex  { stroke: $color-kodama; opacity: 0.4; }
+    .elx-logo__tri  { stroke: $color-kodama; opacity: 0.6; }
+    .elx-logo__net  { stroke: $color-kodama-bright; opacity: 0.8; }
+    .elx-logo__node-center { fill: $color-kodama-bright; }
+    .elx-logo__node { fill: $color-kodama; opacity: 0.9; }
+  }
+
+  &--white {
+    .elx-logo__hex  { stroke: #fff; opacity: 0.3; }
+    .elx-logo__tri  { stroke: #fff; opacity: 0.5; }
+    .elx-logo__net  { stroke: #fff; opacity: 0.7; }
+    .elx-logo__node-center { fill: #fff; }
+    .elx-logo__node { fill: #fff; opacity: 0.9; }
+  }
+
+  &--mask {
+    .elx-logo__hex  { stroke: $color-mask-light; opacity: 0.4; }
+    .elx-logo__tri  { stroke: $color-mask-light; opacity: 0.6; }
+    .elx-logo__net  { stroke: $color-mask; opacity: 0.8; }
+    .elx-logo__node-center { fill: $color-mask-light; }
+    .elx-logo__node { fill: $color-mask; opacity: 0.9; }
+  }
+
+  // Animation
+  &--animated {
+    .elx-logo__hex { animation: elx-breathe 4s ease-in-out infinite; }
+    .elx-logo__net { 
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+      animation: elx-logo-draw 2s ease forwards 0.5s;
+    }
+    .elx-logo__node { animation: elx-fade-in 0.8s ease both 1.5s; }
+    .elx-logo__node-center { animation: elx-synapse-fire 3s ease-in-out infinite 2s; }
+  }
+
+  // Glow
+  &--glow {
+    filter: drop-shadow(0 0 12px rgba($color-kodama, 0.4));
+  }
+  &--glow#{&}--mask {
+    filter: drop-shadow(0 0 12px rgba($color-mask, 0.4));
+  }
+}
+
+@keyframes elx-logo-draw {
+  to { stroke-dashoffset: 0; }
+}

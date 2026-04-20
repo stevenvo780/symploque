@@ -1,0 +1,39 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-quantum {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+
+  &__particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: elx-quantum-flicker 3s ease-in-out infinite,
+               elx-float-slow 6s ease-in-out infinite;
+  }
+
+  &__entangle-line {
+    position: absolute;
+    height: 1px;
+    opacity: 0;
+    transform-origin: left center;
+  }
+
+  &--entangled &__entangle-line {
+    animation: elx-entangle-a 3s ease-in-out infinite;
+  }
+
+  // Colors
+  &--kodama &__particle { background: $color-kodama-bright; box-shadow: 0 0 8px $color-kodama; }
+  &--kodama &__entangle-line { background: linear-gradient(90deg, $color-kodama, transparent); }
+
+  &--mask   &__particle { background: $color-mask-light; box-shadow: 0 0 8px $color-mask; }
+  &--mask   &__entangle-line { background: linear-gradient(90deg, $color-mask, transparent); }
+
+  &--mixed  &__particle {
+    &:nth-child(odd)  { background: $color-kodama-bright; box-shadow: 0 0 8px $color-kodama; }
+    &:nth-child(even) { background: $color-mask-light; box-shadow: 0 0 8px $color-mask; }
+  }
+}

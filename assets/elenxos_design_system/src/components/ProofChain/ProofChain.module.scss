@@ -1,0 +1,78 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/typography' as *;
+@use '../../animations/animations';
+
+.elx-proof {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 5;
+  position: relative;
+
+  &__step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: rgba(#000, 0.2);
+    backdrop-filter: blur(4px);
+    position: relative;
+  }
+
+  &__symbol {
+    font-family: $font-mono;
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    min-width: 28px;
+    text-align: center;
+  }
+
+  &__text {
+    font-family: $font-sans;
+    font-size: $font-size-sm;
+    line-height: 1.4;
+  }
+
+  &__connector {
+    position: absolute;
+    left: 22px;
+    bottom: -8px;
+    width: 2px;
+    height: 8px;
+    z-index: 1;
+  }
+
+  // Animation
+  &--animated &__step {
+    opacity: 0;
+    transform: translateX(-12px);
+    animation: elx-proof-appear 0.5s ease both;
+  }
+
+  // Colors
+  &--kodama {
+    .elx-proof__symbol    { color: $color-kodama-bright; }
+    .elx-proof__text      { color: $color-text-primary; }
+    .elx-proof__connector { background: rgba($color-kodama, 0.3); }
+    .elx-proof__step      { border-left: 2px solid rgba($color-kodama, 0.3); }
+  }
+
+  &--mask {
+    .elx-proof__symbol    { color: $color-mask-light; }
+    .elx-proof__text      { color: $color-text-primary; }
+    .elx-proof__connector { background: rgba($color-mask, 0.3); }
+    .elx-proof__step      { border-left: 2px solid rgba($color-mask, 0.3); }
+  }
+
+  &--gold {
+    .elx-proof__symbol    { color: #D4A373; }
+    .elx-proof__text      { color: $color-text-primary; }
+    .elx-proof__connector { background: rgba(#D4A373, 0.3); }
+    .elx-proof__step      { border-left: 2px solid rgba(#D4A373, 0.3); }
+  }
+}
+
+@keyframes elx-proof-appear {
+  to { opacity: 1; transform: translateX(0); }
+}

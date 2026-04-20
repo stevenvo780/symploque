@@ -1,0 +1,32 @@
+@use '../../tokens/colors' as *;
+@use '../../animations/animations';
+
+.elx-penrose {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__tile {
+    animation: elx-fade-in 1.5s ease both;
+  }
+
+  &--animated &__tile {
+    animation: elx-fade-in 1.5s ease both, elx-penrose-morph 12s ease-in-out infinite;
+  }
+
+  &__shape {
+    fill: none;
+    stroke-width: 0.3;
+  }
+
+  &--kodama &__shape { stroke: rgba($color-kodama, 0.3); }
+  &--mask &__shape   { stroke: rgba($color-mask, 0.3); }
+  &--muted &__shape  { stroke: rgba($color-text-muted, 0.2); }
+}

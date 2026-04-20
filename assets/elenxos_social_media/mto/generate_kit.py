@@ -13,38 +13,59 @@ PALETTE = {
 
 OUTPUT_DIR = "kit_logos"
 
-def get_svg_logo(color="#A3E4D7"):
-    """Retorna el contenido SVG del logo de Elenxos."""
-    return f'''<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Hexágono -->
-    <polygon points="20,2 35.6,11 35.6,29 20,38 4.4,29 4.4,11" stroke="{color}" stroke-width="1.2" stroke-linejoin="round" opacity="0.4"/>
+def get_logo_geometry(color="#A3E4D7"):
+    """Retorna los elementos internos del logo de Elenxos sin el tag <svg>."""
+    return f'''
+    <!-- Hexágono: El marco analítico -->
+    <polygon points="20,2 35.6,11 35.6,29 20,38 4.4,29 4.4,11" stroke="{color}" stroke-width="1.2" stroke-linejoin="round" opacity="0.4" fill="none"/>
     
-    <!-- Triángulo inmerso -->
-    <polygon points="4.4,11 35.6,11 20,38" stroke="{color}" stroke-width="1" stroke-linejoin="round" opacity="0.6"/>
+    <!-- Triángulo inmerso: La síntesis disciplinar -->
+    <polygon points="4.4,11 35.6,11 20,38" stroke="{color}" stroke-width="1" stroke-linejoin="round" opacity="0.6" fill="none"/>
     
-    <!-- Topología de red -->
+    <!-- Topología de red: Sistemas complejos -->
     <path d="M20,20 L20,2 M20,20 L35.6,29 M20,20 L4.4,29" stroke="{color}" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
     
-    <!-- Nodos -->
+    <!-- Nodos: Convergencia epistémica -->
     <circle cx="20" cy="20" r="3.5" fill="{color}" opacity="1"/>
     <circle cx="20" cy="11" r="1.5" fill="{color}" opacity="0.9"/>
     <circle cx="27.8" cy="24.5" r="1.5" fill="{color}" opacity="0.9"/>
     <circle cx="12.2" cy="24.5" r="1.5" fill="{color}" opacity="0.9"/>
+'''
+
+def get_svg_logo(color="#A3E4D7", size=None):
+    """Retorna un SVG completo del logo."""
+    dims = f'width="{size}" height="{size}"' if size else ""
+    return f'''<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" {dims}>
+    {get_logo_geometry(color)}
 </svg>'''
 
-def get_svg_banner(bg_color="#0F2519", logo_color="#A3E4D7", text_color="#FFFFFF"):
-    """Retorna el contenido SVG de un banner básico 3:1."""
+def get_svg_banner(bg_color="#0F2519", logo_color="#A3E4D7", text_color="#FFFFFF", title="ELENXOS", subtitle="AGORA · INVESTIGACIÓN COOPERATIVA"):
+    """Retorna el contenido SVG de un banner 3:1 optimizado."""
     return f'''<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fondo -->
     <rect width="1200" height="400" fill="{bg_color}"/>
     
-    <!-- Logo a la izquierda -->
-    <g transform="translate(100, 100) scale(5)">
-        {get_svg_logo(logo_color)}
+    <!-- Patrón de fondo sutil (Opcional: Rejilla lógica) -->
+    <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="{logo_color}" stroke-width="0.5" opacity="0.05"/>
+        </pattern>
+    </defs>
+    <rect width="1200" height="400" fill="url(#grid)" />
+
+    <!-- Logo: Ahora incrustado directamente como grupo para máxima compatibilidad -->
+    <g transform="translate(150, 100) scale(5)">
+        {get_logo_geometry(logo_color)}
     </g>
     
-    <!-- Texto -->
-    <text x="350" y="200" font-family="Playfair Display, serif" font-size="80" fill="{text_color}" font-weight="bold">ELENXOS</text>
-    <text x="350" y="260" font-family="Inter, sans-serif" font-size="30" fill="{logo_color}" letter-spacing="4">AGORA · INVESTIGACIÓN COOPERATIVA</text>
+    <!-- Composición de Texto -->
+    <g transform="translate(420, 185)">
+        <text font-family="Playfair Display, serif" font-size="100" fill="{text_color}" font-weight="bold" letter-spacing="2">{title}</text>
+        <text y="70" font-family="Inter, sans-serif" font-size="28" fill="{logo_color}" letter-spacing="6" opacity="0.9">{subtitle}</text>
+    </g>
+    
+    <!-- Elemento decorativo: Línea de rigor -->
+    <rect x="420" y="210" width="400" height="1" fill="{logo_color}" opacity="0.3"/>
 </svg>'''
 
 def run_command(command):
@@ -57,8 +78,8 @@ def main():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
         
-    # 1. Generar SVGs básicos
-    print("🎨 Generando SVGs...")
+    # 1. Generar SVGs de logos
+    print("🎨 Generando SVGs de logos...")
     for name, color in PALETTE.items():
         svg_path = os.path.join(OUTPUT_DIR, f"logo_{name}.svg")
         with open(svg_path, "w") as f:
@@ -70,34 +91,30 @@ def main():
     for name, color in PALETTE.items():
         svg_path = os.path.join(OUTPUT_DIR, f"logo_{name}.svg")
         for size in sizes:
-            ext = "png"
-            if size <= 64:
-                prefix = "favicon"
-            else:
-                prefix = "logo"
-            
-            output_png = os.path.join(OUTPUT_DIR, f"{prefix}_{name}_{size}.{ext}")
-            # rsvg-convert -w {size} -h {size} {svg_path} > {output_png}
+            prefix = "favicon" if size <= 64 else "logo"
+            output_png = os.path.join(OUTPUT_DIR, f"{prefix}_{name}_{size}.png")
+            # Forzamos dimensiones en rsvg-convert para asegurar nitidez
             run_command(f"rsvg-convert -w {size} -h {size} {svg_path} -o {output_png}")
 
     # 3. Generar Banners
-    print("🚩 Generando Banners...")
+    print("🚩 Generando Banners optimizados...")
     banner_variations = [
-        ("banner_main", PALETTE["forest"], PALETTE["kodama"], PALETTE["white"]),
-        ("banner_minimal", PALETTE["black"], PALETTE["white"], PALETTE["white"]),
-        ("banner_vibrant", PALETTE["mask"], PALETTE["white"], PALETTE["white"]),
+        ("banner_main", PALETTE["forest"], PALETTE["kodama"], PALETTE["white"], "ELENXOS", "AGORA · INVESTIGACIÓN COOPERATIVA"),
+        ("banner_minimal", PALETTE["black"], PALETTE["white"], PALETTE["white"], "ELENXOS", "CANON METODOLÓGICO"),
+        ("banner_vibrant", PALETTE["mask"], PALETTE["white"], PALETTE["white"], "ELENXOS", "EL RIGOR DEL INSTINTO"),
+        ("banner_agora", PALETTE["forest"], PALETTE["kodama"], PALETTE["white"], "AGORA", "ESPACIO DE TRABAJO RIGUROSO"),
     ]
     
-    for name, bg, logo, text in banner_variations:
+    for name, bg, logo, text, title, subtitle in banner_variations:
         svg_banner_path = os.path.join(OUTPUT_DIR, f"{name}.svg")
         with open(svg_banner_path, "w") as f:
-            f.write(get_svg_banner(bg, logo, text))
+            f.write(get_svg_banner(bg, logo, text, title, subtitle))
         
         # Convertir banner a PNG
         output_png = os.path.join(OUTPUT_DIR, f"{name}.png")
         run_command(f"rsvg-convert -w 1200 -h 400 {svg_banner_path} -o {output_png}")
 
-    print(f"\n✅ Kit de logos completado en la carpeta: {OUTPUT_DIR}")
+    print(f"\n✅ Kit de logos mejorado y banners corregidos en: {OUTPUT_DIR}")
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,12 @@
-import React, { useMemo } from 'react';
+import React, { createContext, useContext, useMemo } from 'react';
 import styles from './SocialCanvas.module.scss';
+
+// Context to override scale for render/export mode (scale=1)
+const ScaleOverrideContext = createContext<number | null>(null);
+
+export const ScaleOverrideProvider: React.FC<{ scale: number; children: React.ReactNode }> = ({ scale, children }) => (
+  <ScaleOverrideContext.Provider value={scale}>{children}</ScaleOverrideContext.Provider>
+);
 
 export interface SocialCanvasProps {
   format?: 'post' | 'reel' | 'banner';
@@ -14,6 +21,9 @@ export const SocialCanvas: React.FC<SocialCanvasProps> = ({
   children,
   className = '',
 }) => {
+  const overrideScale = useContext(ScaleOverrideContext);
+  const effectiveScale = overrideScale ?? scale;
+
   const classes = [
     styles['elx-social-canvas'],
     styles[`elx-social-canvas--${format}`],
@@ -31,15 +41,15 @@ export const SocialCanvas: React.FC<SocialCanvasProps> = ({
       width: '100%',
       display: 'flex',
       justifyContent: 'center',
-      height: heightMap[format] * scale,
+      height: heightMap[format] * effectiveScale,
     };
-  }, [format, scale]);
+  }, [format, effectiveScale]);
 
   return (
     <div style={wrapperStyle}>
       <div 
         className={classes} 
-        style={{ transform: `scale(${scale})` }}
+        style={{ transform: `scale(${effectiveScale})` }}
         aria-hidden="true" // Esencialmente es un lienzo decorativo
       >
         <div className={styles['elx-social-canvas__content']}>
