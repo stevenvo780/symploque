@@ -23,32 +23,38 @@ Si solo vas a abrir tres archivos, abre estos:
 - `00-central/`
   - [agente.md](./agente.md)
   - [central-operativo-agora.md](./central-operativo-agora.md)
+  - [estado-actual-y-transicion.md](./estado-actual-y-transicion.md)
+  - [plan-transicion-remitente-y-sitios-publicos.md](./plan-transicion-remitente-y-sitios-publicos.md)
 - `01-estrategia-comercial/`
   - [plan-comercial-90-dias.md](../01-estrategia-comercial/plan-comercial-90-dias.md)
-  - [ejecucion-semana-1.md](../01-estrategia-comercial/ejecucion-semana-1.md)
   - [segmentacion-clientes-ranqueada.md](../01-estrategia-comercial/segmentacion-clientes-ranqueada.md)
   - [automatizaciones-agente-captacion.md](../01-estrategia-comercial/automatizaciones-agente-captacion.md)
   - [ideas-expansion-base-datos.md](../01-estrategia-comercial/ideas-expansion-base-datos.md)
   - [playbook-busqueda-autonoma-clientes.md](../01-estrategia-comercial/playbook-busqueda-autonoma-clientes.md)
+- `02-identidad-y-marca/`
+  - [manifiesto-corto-agora.md](../02-identidad-y-marca/manifiesto-corto-agora.md)
+  - [glosario-de-marca.md](../02-identidad-y-marca/glosario-de-marca.md)
+  - [guia-estilo-y-marca-redes.md](../02-identidad-y-marca/guia-estilo-y-marca-redes.md)
+  - [narrativa-futura-alineada-agora.md](../02-identidad-y-marca/narrativa-futura-alineada-agora.md)
+  - [media-kit-estructura.md](../02-identidad-y-marca/media-kit-estructura.md)
+- `03-operacion-redes/`
+  - [estrategia-redes-sociales.md](../03-operacion-redes/estrategia-redes-sociales.md)
+  - [lote-1-publicaciones-por-plataforma.md](../03-operacion-redes/lote-1-publicaciones-por-plataforma.md)
+  - [calendario-semana-1-redes.md](../03-operacion-redes/calendario-semana-1-redes.md)
+  - [protocolo-de-interaccion.md](../03-operacion-redes/protocolo-de-interaccion.md)
 - `04-mensajeria-email/`
   - [01-disculpa-repetidos.md](../04-mensajeria-email/01-disculpa-repetidos.md)
   - [02-primer-contacto-estandar.md](../04-mensajeria-email/02-primer-contacto-estandar.md)
   - [03-primer-contacto-semilleros.md](../04-mensajeria-email/03-primer-contacto-semilleros.md)
   - [04-primer-contacto-directores.md](../04-mensajeria-email/04-primer-contacto-directores.md)
   - [05-seguimiento-corto.md](../04-mensajeria-email/05-seguimiento-corto.md)
+  - [email.md](../04-mensajeria-email/email.md)
 - `05-datos-y-reportes/`
   - [canales-publicos-contacto.md](../05-datos-y-reportes/canales-publicos-contacto.md)
   - [leads-agora-maestro.csv](../05-datos-y-reportes/leads-agora-maestro.csv)
-- `05-datos-y-reportes/`
   - [reporte-proceso-expansion-contactos.md](../05-datos-y-reportes/reporte-proceso-expansion-contactos.md)
-- `03-operacion-redes/`
-  - [resumen-vision-board-marketing-maven.md](../03-operacion-redes/resumen-vision-board-marketing-maven.md)
-  - [que-rescatar-y-que-descartar-del-vision-board.md](../03-operacion-redes/que-rescatar-y-que-descartar-del-vision-board.md)
-  - [narrativa-futura-alineada-agora.md](../03-operacion-redes/narrativa-futura-alineada-agora.md)
-  - [estrategia-redes-sociales.md](../03-operacion-redes/estrategia-redes-sociales.md)
-  - [manifiesto-corto-agora.md](../03-operacion-redes/manifiesto-corto-agora.md)
-  - [lote-1-publicaciones-por-plataforma.md](../03-operacion-redes/lote-1-publicaciones-por-plataforma.md)
-  - [calendario-semana-1-redes.md](../03-operacion-redes/calendario-semana-1-redes.md)
+- `docs/`
+  - [erpnext-erp-crm.md](../docs/erpnext-erp-crm.md) — infraestructura ERP + CRM (ERPNext v15, Docker, accesos, operaciones)
 
 ## Documento rector
 

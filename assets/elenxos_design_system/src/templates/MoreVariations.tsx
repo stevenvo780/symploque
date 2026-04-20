@@ -45,6 +45,7 @@ export const B2_Denso = () => (
     <IconSymbol symbol="forall" size={60} color="muted" x="10%" y="30%" />
     <IconSymbol symbol="implies" size={50} color="muted" x="88%" y="65%" delay={2} />
     <BrandMark position="bottom-left" fontSize={18} />
+    <div style={abs({ padding: '0 120px', textAlign: 'center' })}>
       <CinematicText text="Donde el rigor" level="h2" delayStep={0.05} style={{ fontSize: 52 }} />
       <CinematicText text="se encuentra con la intuición." level="h2" color="kodama" delayStep={0.04} baseDelay={0.8} style={{ fontSize: 52 }} />
     </div>

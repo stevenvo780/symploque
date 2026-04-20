@@ -21,6 +21,10 @@ Se verifico el 2026-04-20 que ya existen estos puntos publicos:
 - producto: `https://agora.elenxos.com/`
 - manifest publico de Agora: `https://agora.elenxos.com/manifest.json`
 - documentacion publica de Agora: `https://agora.elenxos.com/docs`
+- ERP (Contabilidad, Facturación, Inventario): `https://erp.proxy.humanizar-dev.cloud`
+- CRM (Leads, Oportunidades, Clientes): `https://crm.proxy.humanizar-dev.cloud`
+
+Documentacion de infraestructura ERP/CRM: [docs/erpnext-erp-crm.md](../docs/erpnext-erp-crm.md)
 
 La documentacion del repo ya no debe tratar esos dominios como hipoteticos.
 

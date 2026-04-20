@@ -85,6 +85,14 @@ def main() -> int:
             print(body)
         return 0
 
+    print(f"\n¡ADVERTENCIA DE SEGURIDAD!")
+    print(f"Está a punto de enviar {len(rows)} correos reales desde {args.sender}.")
+    print("Asegúrese de haber revisado el preview sin la bandera --send antes de continuar.")
+    confirm = input("¿Está absolutamente seguro de que desea proceder? Escriba 'CONFIRMAR' para enviar: ")
+    if confirm != "CONFIRMAR":
+        print("Envío cancelado por seguridad.")
+        return 0
+
     try:
         base_url = require_env("MAIL_API_BASE_URL")
         api_key = require_env("MAIL_API_KEY")
