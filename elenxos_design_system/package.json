@@ -32,7 +32,10 @@
     "preview": "vite preview",
     "render": "tsx scripts/render-images.ts",
     "render:all": "tsx scripts/render-images.ts --all",
-    "generate:ai": "cd ai-generator && python generar_maxcalidad.py --steps 50"
+    "campaign": "tsx scripts/generate-campaign.ts",
+    "campaign:dolor": "tsx scripts/generate-campaign.ts --narrativa dolor",
+    "campaign:solucion": "tsx scripts/generate-campaign.ts --narrativa solucion",
+    "campaign:ecosistema": "tsx scripts/generate-campaign.ts --narrativa ecosistema"
   },
   "dependencies": {
     "react": ">=18.0.0",

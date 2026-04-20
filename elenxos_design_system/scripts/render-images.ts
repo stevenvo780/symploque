@@ -13,118 +13,18 @@
  *   2. Abre Playwright (Chromium headless)
  *   3. Para cada template: navega, espera render, screenshot del elemento
  *   4. Guarda PNG en output/react/{category}/{id}.png
+ *
+ * Los metadatos de templates vienen de src/templates/registry.ts
+ * (fuente única de verdad compartida con RenderPage.tsx).
  */
 
-import { execSync, spawn, type ChildProcess } from 'child_process';
-import { existsSync, mkdirSync } from 'fs';
+import { spawn, type ChildProcess } from 'child_process';
+import { mkdirSync } from 'fs';
 import { resolve, join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { TEMPLATE_DATA, type TemplateInfo } from '../src/templates/registry';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-
-// ── Template registry (mirror of RenderPage.tsx) ─────────────
-interface TemplateInfo {
-  id: string;
-  format: 'post' | 'reel' | 'banner';
-  width: number;
-  height: number;
-  category: string;
-}
-
-const TEMPLATES: TemplateInfo[] = [
-  { id: 'post_tesis',         format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'post_micelio',       format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'post_cita_roja',     format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'post_perspectiva',   format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'post_glass',         format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'post_simbolo',       format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'post_datos_split',   format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'post_pregunta',      format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'post_proximamente',  format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'lote1_estandar',     format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'lote1_flujo',        format: 'post',   width: 1080, height: 1080, category: 'instagram' },
-  { id: 'banner_original',    format: 'banner', width: 1500, height: 500,  category: 'linkedin' },
-  { id: 'banner_minimal',     format: 'banner', width: 1500, height: 500,  category: 'linkedin' },
-  { id: 'banner_denso',       format: 'banner', width: 1500, height: 500,  category: 'linkedin' },
-  { id: 'banner_conferencia', format: 'banner', width: 1500, height: 500,  category: 'linkedin' },
-  { id: 'reel_original',      format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
-  { id: 'reel_manifiesto',    format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
-  { id: 'reel_simbolo',       format: 'reel',   width: 1080, height: 1920, category: 'instagram' },
-  // Hybrid: AI image + React components
-  { id: 'hybrid_arbol_tesis',      format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
-  { id: 'hybrid_problema',         format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
-  { id: 'hybrid_respuesta',        format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
-  { id: 'hybrid_diferenciador',    format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
-  { id: 'hybrid_madurez',          format: 'post',   width: 1080, height: 1080, category: 'hybrid' },
-  { id: 'hybrid_reel_manifiesto',  format: 'reel',   width: 1080, height: 1920, category: 'hybrid' },
-  { id: 'hybrid_story_teaser',     format: 'reel',   width: 1080, height: 1920, category: 'hybrid' },
-  { id: 'hybrid_banner_linkedin',  format: 'banner', width: 1500, height: 500,  category: 'hybrid' },
-  { id: 'hybrid_banner_og',        format: 'banner', width: 1500, height: 500,  category: 'hybrid' },
-  { id: 'hybrid_banner_x',         format: 'banner', width: 1500, height: 500,  category: 'hybrid' },
-  { id: 'hybrid_banner_yt',        format: 'banner', width: 1500, height: 500,  category: 'hybrid' },
-
-  // ══════════════════════════════════════════════════════════════
-  //  CAMPAIGN — Narrativa 1: Dolor (Lote 1 + Lote 2)
-  // ══════════════════════════════════════════════════════════════
-  { id: 'n1_l1_post_caos',          format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_post_archivos',      format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_post_pregunta',      format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_reel_dolor',         format: 'reel',   width: 1080, height: 1920, category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_story_stat',         format: 'reel',   width: 1080, height: 1920, category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_banner_linkedin',    format: 'banner', width: 1500, height: 500,  category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_banner_x',           format: 'banner', width: 1500, height: 500,  category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_hybrid_caos',        format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_hybrid_escritorio',  format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l1_hybrid_antes',       format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_post_fragmentos',    format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_post_ciclo',         format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_post_dato',          format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_reel_flujo',         format: 'reel',   width: 1080, height: 1920, category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_story_antes',        format: 'reel',   width: 1080, height: 1920, category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_banner_contraste',   format: 'banner', width: 1500, height: 500,  category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_banner_pregunta',    format: 'banner', width: 1500, height: 500,  category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_hybrid_red',         format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_hybrid_nodos',       format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-  { id: 'n1_l2_hybrid_puente',      format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
-
-  // ══════════════════════════════════════════════════════════════
-  //  CAMPAIGN — Narrativa 2: Solución (Lote 3 + Lote 4)
-  // ══════════════════════════════════════════════════════════════
-  { id: 'n2_l3_post_flujo',         format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_post_markdown',      format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_post_verificacion',  format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_reel_demo',          format: 'reel',   width: 1080, height: 1920, category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_story_feature',      format: 'reel',   width: 1080, height: 1920, category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_banner_solucion',    format: 'banner', width: 1500, height: 500,  category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_banner_cta',         format: 'banner', width: 1500, height: 500,  category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_hybrid_flujo',       format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_hybrid_editor',      format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l3_hybrid_equipo',      format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_post_rigor',         format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_post_logica',        format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_post_motor',         format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_reel_rigor',         format: 'reel',   width: 1080, height: 1920, category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_story_formal',       format: 'reel',   width: 1080, height: 1920, category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_banner_formal',      format: 'banner', width: 1500, height: 500,  category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_banner_motor',       format: 'banner', width: 1500, height: 500,  category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_hybrid_rigor',       format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_hybrid_pensar',      format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-  { id: 'n2_l4_hybrid_cta',         format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
-
-  // ══════════════════════════════════════════════════════════════
-  //  CAMPAIGN — Narrativa 3: Ecosistema (Lote 5)
-  // ══════════════════════════════════════════════════════════════
-  { id: 'n3_l5_post_semillero',     format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_post_cooperar',      format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_post_futuro',        format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_reel_vision',        format: 'reel',   width: 1080, height: 1920, category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_story_unete',        format: 'reel',   width: 1080, height: 1920, category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_banner_ecosistema',  format: 'banner', width: 1500, height: 500,  category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_banner_cta',         format: 'banner', width: 1500, height: 500,  category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_hybrid_comunidad',   format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_hybrid_red',         format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
-  { id: 'n3_l5_hybrid_agora',       format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
-];
 
 // ── Args ─────────────────────────────────────────────────────
 function parseArgs() {
@@ -144,8 +44,8 @@ function parseArgs() {
   }
 
   const selected = templateFilter
-    ? TEMPLATES.filter(t => templateFilter!.includes(t.id))
-    : TEMPLATES;
+    ? TEMPLATE_DATA.filter(t => templateFilter!.includes(t.id))
+    : TEMPLATE_DATA;
 
   return { selected, outputDir };
 }
