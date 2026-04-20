@@ -28,6 +28,35 @@ import {
   H8_BannerLinkedin, H9_BannerOG, H10_BannerX, H11_BannerYT,
 } from './templates/HybridVariations';
 
+// Campaign templates — narrativas completas
+import {
+  // Narrativa 1 Lote 1: Caos digital
+  N1_L1_Post_Caos, N1_L1_Post_Archivos, N1_L1_Post_Pregunta,
+  N1_L1_Reel_Dolor, N1_L1_Story_Stat,
+  N1_L1_Banner_Linkedin, N1_L1_Banner_X,
+  N1_L1_Hybrid_Caos, N1_L1_Hybrid_Escritorio, N1_L1_Hybrid_Antes,
+  // Narrativa 1 Lote 2: Fragmentación
+  N1_L2_Post_Fragmentos, N1_L2_Post_Ciclo, N1_L2_Post_Dato,
+  N1_L2_Reel_Flujo, N1_L2_Story_Antes,
+  N1_L2_Banner_Contraste, N1_L2_Banner_Pregunta,
+  N1_L2_Hybrid_Red, N1_L2_Hybrid_Nodos, N1_L2_Hybrid_Puente,
+  // Narrativa 2 Lote 3: Flujo unificado
+  N2_L3_Post_Flujo, N2_L3_Post_Markdown, N2_L3_Post_Verificacion,
+  N2_L3_Reel_Demo, N2_L3_Story_Feature,
+  N2_L3_Banner_Solucion, N2_L3_Banner_CTA,
+  N2_L3_Hybrid_Flujo, N2_L3_Hybrid_Editor, N2_L3_Hybrid_Equipo,
+  // Narrativa 2 Lote 4: Rigor formal
+  N2_L4_Post_Rigor, N2_L4_Post_Logica, N2_L4_Post_Motor,
+  N2_L4_Reel_Rigor, N2_L4_Story_Formal,
+  N2_L4_Banner_Formal, N2_L4_Banner_Motor,
+  N2_L4_Hybrid_Rigor, N2_L4_Hybrid_Pensar, N2_L4_Hybrid_CTA,
+  // Narrativa 3 Lote 5: Comunidad
+  N3_L5_Post_Semillero, N3_L5_Post_Cooperar, N3_L5_Post_Futuro,
+  N3_L5_Reel_Vision, N3_L5_Story_Unete,
+  N3_L5_Banner_Ecosistema, N3_L5_Banner_CTA,
+  N3_L5_Hybrid_Comunidad, N3_L5_Hybrid_Red, N3_L5_Hybrid_Agora,
+} from './templates/CampaignTemplates';
+
 // ── Registry ─────────────────────────────────────────────────
 export interface TemplateEntry {
   id: string;
@@ -78,6 +107,72 @@ export const TEMPLATE_REGISTRY: TemplateEntry[] = [
   { id: 'hybrid_banner_og',       component: H9_BannerOG,       format: 'banner', width: 1500, height: 500, category: 'hybrid' },
   { id: 'hybrid_banner_x',        component: H10_BannerX,       format: 'banner', width: 1500, height: 500, category: 'hybrid' },
   { id: 'hybrid_banner_yt',       component: H11_BannerYT,      format: 'banner', width: 1500, height: 500, category: 'hybrid' },
+
+  // ══════════════════════════════════════════════════════════════
+  //  CAMPAIGN TEMPLATES — Narrativa 1: Dolor (Lote 1 + Lote 2)
+  // ══════════════════════════════════════════════════════════════
+  // L1: Caos digital — MatrixRain + GlitchText
+  { id: 'n1_l1_post_caos',          component: N1_L1_Post_Caos,         format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_post_archivos',      component: N1_L1_Post_Archivos,     format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_post_pregunta',      component: N1_L1_Post_Pregunta,     format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_reel_dolor',         component: N1_L1_Reel_Dolor,        format: 'reel',   width: 1080, height: 1920, category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_story_stat',         component: N1_L1_Story_Stat,        format: 'reel',   width: 1080, height: 1920, category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_banner_linkedin',    component: N1_L1_Banner_Linkedin,   format: 'banner', width: 1500, height: 500,  category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_banner_x',           component: N1_L1_Banner_X,          format: 'banner', width: 1500, height: 500,  category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_hybrid_caos',        component: N1_L1_Hybrid_Caos,       format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_hybrid_escritorio',  component: N1_L1_Hybrid_Escritorio, format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l1_hybrid_antes',       component: N1_L1_Hybrid_Antes,      format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  // L2: Fragmentación — HexGrid + ProofChain
+  { id: 'n1_l2_post_fragmentos',    component: N1_L2_Post_Fragmentos,   format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_post_ciclo',         component: N1_L2_Post_Ciclo,        format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_post_dato',          component: N1_L2_Post_Dato,         format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_reel_flujo',         component: N1_L2_Reel_Flujo,        format: 'reel',   width: 1080, height: 1920, category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_story_antes',        component: N1_L2_Story_Antes,       format: 'reel',   width: 1080, height: 1920, category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_banner_contraste',   component: N1_L2_Banner_Contraste,  format: 'banner', width: 1500, height: 500,  category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_banner_pregunta',    component: N1_L2_Banner_Pregunta,   format: 'banner', width: 1500, height: 500,  category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_hybrid_red',         component: N1_L2_Hybrid_Red,        format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_hybrid_nodos',       component: N1_L2_Hybrid_Nodos,      format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+  { id: 'n1_l2_hybrid_puente',      component: N1_L2_Hybrid_Puente,     format: 'post',   width: 1080, height: 1080, category: 'campaign/n1_dolor' },
+
+  // ══════════════════════════════════════════════════════════════
+  //  CAMPAIGN TEMPLATES — Narrativa 2: Solución (Lote 3 + Lote 4)
+  // ══════════════════════════════════════════════════════════════
+  // L3: Flujo unificado — LogicMesh + KodamaParticles
+  { id: 'n2_l3_post_flujo',         component: N2_L3_Post_Flujo,        format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_post_markdown',      component: N2_L3_Post_Markdown,     format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_post_verificacion',  component: N2_L3_Post_Verificacion, format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_reel_demo',          component: N2_L3_Reel_Demo,         format: 'reel',   width: 1080, height: 1920, category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_story_feature',      component: N2_L3_Story_Feature,     format: 'reel',   width: 1080, height: 1920, category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_banner_solucion',    component: N2_L3_Banner_Solucion,   format: 'banner', width: 1500, height: 500,  category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_banner_cta',         component: N2_L3_Banner_CTA,        format: 'banner', width: 1500, height: 500,  category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_hybrid_flujo',       component: N2_L3_Hybrid_Flujo,      format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_hybrid_editor',      component: N2_L3_Hybrid_Editor,     format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l3_hybrid_equipo',      component: N2_L3_Hybrid_Equipo,     format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  // L4: Rigor formal — Penrose + Fibonacci
+  { id: 'n2_l4_post_rigor',         component: N2_L4_Post_Rigor,        format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_post_logica',        component: N2_L4_Post_Logica,       format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_post_motor',         component: N2_L4_Post_Motor,        format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_reel_rigor',         component: N2_L4_Reel_Rigor,        format: 'reel',   width: 1080, height: 1920, category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_story_formal',       component: N2_L4_Story_Formal,      format: 'reel',   width: 1080, height: 1920, category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_banner_formal',      component: N2_L4_Banner_Formal,     format: 'banner', width: 1500, height: 500,  category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_banner_motor',       component: N2_L4_Banner_Motor,      format: 'banner', width: 1500, height: 500,  category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_hybrid_rigor',       component: N2_L4_Hybrid_Rigor,      format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_hybrid_pensar',      component: N2_L4_Hybrid_Pensar,     format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+  { id: 'n2_l4_hybrid_cta',         component: N2_L4_Hybrid_CTA,        format: 'post',   width: 1080, height: 1080, category: 'campaign/n2_solucion' },
+
+  // ══════════════════════════════════════════════════════════════
+  //  CAMPAIGN TEMPLATES — Narrativa 3: Ecosistema (Lote 5)
+  // ══════════════════════════════════════════════════════════════
+  { id: 'n3_l5_post_semillero',     component: N3_L5_Post_Semillero,    format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_post_cooperar',      component: N3_L5_Post_Cooperar,     format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_post_futuro',        component: N3_L5_Post_Futuro,       format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_reel_vision',        component: N3_L5_Reel_Vision,       format: 'reel',   width: 1080, height: 1920, category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_story_unete',        component: N3_L5_Story_Unete,       format: 'reel',   width: 1080, height: 1920, category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_banner_ecosistema',  component: N3_L5_Banner_Ecosistema, format: 'banner', width: 1500, height: 500,  category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_banner_cta',         component: N3_L5_Banner_CTA,        format: 'banner', width: 1500, height: 500,  category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_hybrid_comunidad',   component: N3_L5_Hybrid_Comunidad,  format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_hybrid_red',         component: N3_L5_Hybrid_Red,        format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
+  { id: 'n3_l5_hybrid_agora',       component: N3_L5_Hybrid_Agora,      format: 'post',   width: 1080, height: 1080, category: 'campaign/n3_ecosistema' },
 ];
 
 // ── Render wrapper: scale=1, exact pixel size ────────────────
@@ -143,17 +238,6 @@ const RenderPage: React.FC = () => {
           margin: 0,
         }}
       >
-        <style>{`
-          #render-root *,
-          #render-root *::before,
-          #render-root *::after {
-            animation-delay: 0s !important;
-            animation-duration: 0.001s !important;
-            animation-iteration-count: 1 !important;
-            animation-fill-mode: forwards !important;
-            transition: none !important;
-          }
-        `}</style>
         {templates.map((entry) => (
           <FullSizeTemplate key={entry.id} entry={entry} />
         ))}
