@@ -14,6 +14,5 @@ node_modules/
 
 # Design system build & generated images
 assets/elenxos_design_system/dist/
-assets/elenxos_design_system/output/
 assets/elenxos_design_system/ai-generator/venv/
 assets/elenxos_design_system/ai-generator/output_maxcalidad/
