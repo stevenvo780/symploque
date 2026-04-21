@@ -65,8 +65,9 @@ Cada carpeta contiene:
 
 Regla actual del pipeline:
 
-- 10 piezas por campaña
-- 5 con IA y 5 sin IA
+- 25 piezas por campaña
+- mínimo 5 piezas por categoría (`publicaciones`, `flyers`, `reels`, `stories`, `banners`)
+- el reparto entre `con_ia` y `sin_ia` varía según disponibilidad de templates y fondos AI
 - el slot `flyer` usa el layout cuadrado de `post` como equivalente operativo
 
 ## Faltantes reales del media kit

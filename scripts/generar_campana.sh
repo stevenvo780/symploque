@@ -42,6 +42,11 @@ Cada una contiene:
   con_ia/ y sin_ia/
   publicaciones/, flyers/, reels/, stories/, banners/
 
+Regla actual:
+  - 25 piezas por campaña
+  - mínimo 5 piezas por categoría
+  - el reparto entre con_ia/sin_ia varía según disponibilidad
+
 Con filtros (--narrativa / --lote / --tipo o --legacy) genera selecciones puntuales en:
   assets/entregables/campanas/selecciones/
 

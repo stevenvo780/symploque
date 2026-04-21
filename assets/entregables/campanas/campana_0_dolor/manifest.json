@@ -1,62 +1,45 @@
 {
-  "generatedAt": "2026-04-20T21:06:51.844Z",
+  "generatedAt": "2026-04-20T23:25:37.952Z",
   "titulo": "Campaña 0 — Dolor",
   "narrativa": "dolor",
   "target": "Tesistas, investigadores individuales y semilleros que trabajan con archivos dispersos.",
   "objetivo": "Mostrar el dolor operativo y hacer evidente la necesidad de un flujo único de investigación.",
-  "totalItems": 10,
+  "run": {
+    "seedBase": 12345,
+    "aiMode": "cached",
+    "aiSteps": null,
+    "aiGuidance": null
+  },
+  "totalItems": 25,
   "counts": {
-    "con_ia": 5,
-    "sin_ia": 5
+    "con_ia": 8,
+    "sin_ia": 17,
+    "por_categoria": {
+      "publicaciones": 5,
+      "flyers": 5,
+      "reels": 5,
+      "stories": 5,
+      "banners": 5
+    }
+  },
+  "ai": {
+    "promptFile": null,
+    "sourcesDir": null,
+    "generatedTemplates": []
   },
   "notes": {
     "flyer": "El sistema no tiene layout flyer dedicado; se usa el layout post 1080×1080 como flyer operativo.",
-    "video": "Reels y stories se exportaron también como MP4 de 8s."
+    "video": "No se generaron MP4 porque se usó --skip-video.",
+    "ai": "Se reutilizó la librería AI sincronizada en public/ai-images/."
   },
   "items": [
     {
       "slot": "publicacion",
       "kind": "publicaciones",
-      "variant": "sin_ia",
-      "templateId": "n1_l1_post_caos",
-      "description": "Post principal de dolor.",
-      "png": "sin_ia/publicaciones/publicacion__n1_l1_post_caos.png",
-      "mp4": null
-    },
-    {
-      "slot": "flyer",
-      "kind": "flyers",
-      "variant": "sin_ia",
-      "templateId": "n1_l1_post_archivos",
-      "description": "Flyer cuadrado del caos documental.",
-      "png": "sin_ia/flyers/flyer__n1_l1_post_archivos.png",
-      "mp4": null
-    },
-    {
-      "slot": "reel",
-      "kind": "reels",
-      "variant": "sin_ia",
-      "templateId": "n1_l1_reel_dolor",
-      "description": "Reel de dolor para awareness.",
-      "png": "sin_ia/reels/reel__n1_l1_reel_dolor.png",
-      "mp4": "sin_ia/reels/reel__n1_l1_reel_dolor.mp4"
-    },
-    {
-      "slot": "story",
-      "kind": "stories",
-      "variant": "sin_ia",
-      "templateId": "n1_l1_story_stat",
-      "description": "Story estadística para interacción.",
-      "png": "sin_ia/stories/story__n1_l1_story_stat.png",
-      "mp4": "sin_ia/stories/story__n1_l1_story_stat.mp4"
-    },
-    {
-      "slot": "banner",
-      "kind": "banners",
-      "variant": "sin_ia",
-      "templateId": "n1_l1_banner_linkedin",
-      "description": "Banner base para perfil y campaña.",
-      "png": "sin_ia/banners/banner__n1_l1_banner_linkedin.png",
+      "variant": "con_ia",
+      "templateId": "n1_l2_hybrid_nodos",
+      "description": "Pieza AI para publicación basada en nodos.",
+      "png": "con_ia/publicaciones/publicacion__n1_l2_hybrid_nodos.png",
       "mp4": null
     },
     {
@@ -64,17 +47,80 @@
       "kind": "publicaciones",
       "variant": "con_ia",
       "templateId": "hybrid_problema",
-      "description": "Post AI para dramatizar el problema.",
+      "description": "Post AI que dramatiza el problema.",
       "png": "con_ia/publicaciones/publicacion__hybrid_problema.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_post_caos",
+      "description": "Post principal del caos documental.",
+      "png": "sin_ia/publicaciones/publicacion__n1_l1_post_caos.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_cita_roja",
+      "description": "Post dramático sobre el problema real.",
+      "png": "sin_ia/publicaciones/publicacion__post_cita_roja.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_post_fragmentos",
+      "description": "Post de fragmentación académica.",
+      "png": "sin_ia/publicaciones/publicacion__n1_l2_post_fragmentos.png",
       "mp4": null
     },
     {
       "slot": "flyer",
       "kind": "flyers",
       "variant": "con_ia",
-      "templateId": "hybrid_diferenciador",
-      "description": "Flyer AI con claim visual fuerte.",
-      "png": "con_ia/flyers/flyer__hybrid_diferenciador.png",
+      "templateId": "n1_l1_hybrid_antes",
+      "description": "Pieza AI para flyer basada en antes.",
+      "png": "con_ia/flyers/flyer__n1_l1_hybrid_antes.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_arbol_tesis",
+      "description": "Pieza AI para flyer basada en arbol tesis.",
+      "png": "con_ia/flyers/flyer__hybrid_arbol_tesis.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_post_dato",
+      "description": "Pieza editorial para flyer basada en dato.",
+      "png": "sin_ia/flyers/flyer__n1_l2_post_dato.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "post_datos_split",
+      "description": "Flyer con fractura entre dato y flujo.",
+      "png": "sin_ia/flyers/flyer__post_datos_split.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_post_ciclo",
+      "description": "Flyer del ciclo roto de trabajo.",
+      "png": "sin_ia/flyers/flyer__n1_l2_post_ciclo.png",
       "mp4": null
     },
     {
@@ -82,26 +128,134 @@
       "kind": "reels",
       "variant": "con_ia",
       "templateId": "hybrid_reel_manifiesto",
-      "description": "Reel AI de alto impacto.",
+      "description": "Reel AI de alto impacto para dolor.",
       "png": "con_ia/reels/reel__hybrid_reel_manifiesto.png",
-      "mp4": "con_ia/reels/reel__hybrid_reel_manifiesto.mp4"
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_reel_flujo",
+      "description": "Reel sobre fricción y pérdida de continuidad.",
+      "png": "sin_ia/reels/reel__n1_l2_reel_flujo.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_story_stat",
+      "description": "Pieza editorial para reel basada en stat.",
+      "png": "sin_ia/reels/reel__n1_l1_story_stat.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_story_antes",
+      "description": "Pieza editorial para reel basada en antes.",
+      "png": "sin_ia/reels/reel__n1_l2_story_antes.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_chaos",
+      "description": "Reel visual del paso del caos al orden.",
+      "png": "sin_ia/reels/reel__reel_geek_chaos.png",
+      "mp4": null
     },
     {
       "slot": "story",
       "kind": "stories",
       "variant": "con_ia",
       "templateId": "hybrid_story_teaser",
-      "description": "Story AI para empujar demo/CTA.",
+      "description": "Story AI de tensión y teaser.",
       "png": "con_ia/stories/story__hybrid_story_teaser.png",
-      "mp4": "con_ia/stories/story__hybrid_story_teaser.mp4"
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_matrix",
+      "description": "Story con caída de símbolos y desorientación.",
+      "png": "sin_ia/stories/story__reel_geek_matrix.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_proof",
+      "description": "Pieza editorial para story basada en geek proof.",
+      "png": "sin_ia/stories/story__reel_geek_proof.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_dialectic",
+      "description": "Pieza editorial para story basada en geek dialectic.",
+      "png": "sin_ia/stories/story__reel_geek_dialectic.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_reel_dolor",
+      "description": "Pieza editorial para story basada en dolor.",
+      "png": "sin_ia/stories/story__n1_l1_reel_dolor.png",
+      "mp4": null
     },
     {
       "slot": "banner",
       "kind": "banners",
       "variant": "con_ia",
       "templateId": "hybrid_banner_x",
-      "description": "Banner AI para teaser y header.",
+      "description": "Banner AI panorámico con transformación incompleta.",
       "png": "con_ia/banners/banner__hybrid_banner_x.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_yt",
+      "description": "Banner AI tipo portal / umbral de cambio.",
+      "png": "con_ia/banners/banner__hybrid_banner_yt.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_banner_linkedin",
+      "description": "Banner base de dolor / dispersión.",
+      "png": "sin_ia/banners/banner__n1_l1_banner_linkedin.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_banner_contraste",
+      "description": "Banner de contraste entre caos y foco.",
+      "png": "sin_ia/banners/banner__n1_l2_banner_contraste.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_banner_pregunta",
+      "description": "Pieza editorial para banner basada en pregunta.",
+      "png": "sin_ia/banners/banner__n1_l2_banner_pregunta.png",
       "mp4": null
     }
   ]

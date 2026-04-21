@@ -22,8 +22,10 @@ import { resolve, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import {
   CAMPAIGN_META,
+  TEMPLATE_DATA,
   getTemplateById,
   type CampaignMeta,
+  type TemplateInfo,
 } from '../src/templates/registry';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -176,6 +178,44 @@ const SLOT_TO_KIND: Record<DeliverySlot, AssetKind> = {
   story: 'stories',
   banner: 'banners',
 };
+
+const ITEMS_PER_CATEGORY = 5;
+
+const SLOT_LABELS: Record<DeliverySlot, string> = {
+  publicacion: 'publicación',
+  flyer: 'flyer',
+  reel: 'reel',
+  story: 'story',
+  banner: 'banner',
+};
+
+const SLOT_FORMAT: Record<DeliverySlot, TemplateInfo['format']> = {
+  publicacion: 'post',
+  flyer: 'post',
+  reel: 'reel',
+  story: 'reel',
+  banner: 'banner',
+};
+
+const SLOT_PRIMARY_TYPE: Record<DeliverySlot, CampaignMeta['tipo']> = {
+  publicacion: 'post',
+  flyer: 'post',
+  reel: 'reel',
+  story: 'story',
+  banner: 'banner',
+};
+
+const SLOT_VARIANT_TARGETS: Record<DeliverySlot, Record<AssetVariant, number>> = {
+  publicacion: { sin_ia: 3, con_ia: 2 },
+  flyer: { sin_ia: 3, con_ia: 2 },
+  reel: { sin_ia: 4, con_ia: 1 },
+  story: { sin_ia: 4, con_ia: 1 },
+  banner: { sin_ia: 3, con_ia: 2 },
+};
+
+const CAMPAIGN_META_BY_ID = new Map<string, CampaignMeta>(
+  CAMPAIGN_META.map(meta => [meta.id, meta]),
+);
 
 const candidate = (templateId: string, description: string, weight = 1): CandidateTemplate => ({
   templateId,
@@ -683,31 +723,158 @@ function buildAIPrompt(campaign: DeliveryCampaign, item: DeliveryItem, seed: num
   ].join(', ');
 }
 
+function humanizeTemplateId(templateId: string): string {
+  return templateId
+    .replace(/^n\d+_l\d+_/, '')
+    .replace(/^hybrid_/, '')
+    .replace(/^(post|reel|banner|story)_/, '')
+    .replace(/_/g, ' ')
+    .trim();
+}
+
+function describeFallbackTemplate(templateId: string, slot: DeliverySlot, variant: AssetVariant): string {
+  const prefix = variant === 'con_ia' ? 'Pieza AI' : 'Pieza editorial';
+  return `${prefix} para ${SLOT_LABELS[slot]} basada en ${humanizeTemplateId(templateId)}.`;
+}
+
+function buildFallbackPool(
+  blueprint: DeliveryCampaignBlueprint,
+  variant: AssetVariant,
+  slot: DeliverySlot,
+): CandidateTemplate[] {
+  const format = SLOT_FORMAT[slot];
+  const primaryType = SLOT_PRIMARY_TYPE[slot];
+
+  return TEMPLATE_DATA.flatMap((template) => {
+    if (template.format !== format) return [];
+
+    const meta = CAMPAIGN_META_BY_ID.get(template.id);
+    const isAITemplate = Boolean(AI_IMAGE_PATHS[template.id]);
+
+    if (variant === 'con_ia' && !isAITemplate) return [];
+    if (variant === 'sin_ia' && isAITemplate) return [];
+
+    if (meta && meta.narrativa !== blueprint.narrativa) return [];
+
+    let weight = meta ? 3 : 1;
+
+    if (meta?.tipo === primaryType) {
+      weight += 2;
+    } else if (slot === 'story' && meta?.tipo === 'reel') {
+      weight += 1;
+    } else if (slot === 'reel' && meta?.tipo === 'story') {
+      weight += 1;
+    }
+
+    if (template.category === 'hybrid' && variant === 'con_ia') {
+      weight += 1;
+    }
+
+    return [candidate(template.id, describeFallbackTemplate(template.id, slot, variant), weight)];
+  });
+}
+
+function mergeCandidatePools(primary: CandidateTemplate[], fallback: CandidateTemplate[]): CandidateTemplate[] {
+  const merged = new Map<string, CandidateTemplate>();
+
+  for (const item of fallback) {
+    merged.set(item.templateId, item);
+  }
+
+  for (const item of primary) {
+    const existing = merged.get(item.templateId);
+    merged.set(item.templateId, {
+      templateId: item.templateId,
+      description: item.description || existing?.description || item.templateId,
+      weight: Math.max(existing?.weight ?? 0, (item.weight ?? 1) + 10),
+    });
+  }
+
+  return [...merged.values()];
+}
+
+function pickDistinctCandidates(
+  pool: CandidateTemplate[],
+  count: number,
+  rng: () => number,
+  usedTemplateIds: Set<string>,
+): CandidateTemplate[] {
+  const picked: CandidateTemplate[] = [];
+
+  while (picked.length < count) {
+    const available = pool.filter(item => !usedTemplateIds.has(item.templateId));
+    if (available.length === 0) break;
+
+    const choice = pickWeightedCandidate(available, rng);
+    usedTemplateIds.add(choice.templateId);
+    picked.push(choice);
+  }
+
+  return picked;
+}
+
 function materializeDeliveryCampaign(blueprint: DeliveryCampaignBlueprint, runSeed: number): DeliveryCampaign {
   const rng = createRng(normalizeSeed(runSeed ^ hashString(blueprint.folderName)));
   const usedTemplateIds = new Set<string>();
   const items: DeliveryItem[] = [];
 
-  for (const variant of ['sin_ia', 'con_ia'] as const) {
-    for (const slot of SLOT_ORDER) {
-      const pool = blueprint.pools[variant][slot];
-      const available = pool.filter(candidate => !usedTemplateIds.has(candidate.templateId));
+  for (const slot of SLOT_ORDER) {
+    const mergedPools: Record<AssetVariant, CandidateTemplate[]> = {
+      sin_ia: mergeCandidatePools(
+        blueprint.pools.sin_ia[slot],
+        buildFallbackPool(blueprint, 'sin_ia', slot),
+      ),
+      con_ia: mergeCandidatePools(
+        blueprint.pools.con_ia[slot],
+        buildFallbackPool(blueprint, 'con_ia', slot),
+      ),
+    };
 
-      if (available.length === 0) {
-        throw new Error(`Sin candidatos disponibles para ${blueprint.folderName} / ${variant} / ${slot}.`);
+    const slotItems: DeliveryItem[] = [];
+
+    for (const variant of ['con_ia', 'sin_ia'] as const) {
+      const picked = pickDistinctCandidates(
+        mergedPools[variant],
+        SLOT_VARIANT_TARGETS[slot][variant],
+        rng,
+        usedTemplateIds,
+      );
+
+      for (const item of picked) {
+        slotItems.push({
+          slot,
+          kind: SLOT_TO_KIND[slot],
+          variant,
+          templateId: item.templateId,
+          description: item.description,
+        });
+      }
+    }
+
+    while (slotItems.length < ITEMS_PER_CATEGORY) {
+      let filled = false;
+
+      for (const variant of ['sin_ia', 'con_ia'] as const) {
+        const [extra] = pickDistinctCandidates(mergedPools[variant], 1, rng, usedTemplateIds);
+        if (!extra) continue;
+
+        slotItems.push({
+          slot,
+          kind: SLOT_TO_KIND[slot],
+          variant,
+          templateId: extra.templateId,
+          description: extra.description,
+        });
+        filled = true;
+        break;
       }
 
-      const picked = pickWeightedCandidate(available, rng);
-      usedTemplateIds.add(picked.templateId);
-
-      items.push({
-        slot,
-        kind: SLOT_TO_KIND[slot],
-        variant,
-        templateId: picked.templateId,
-        description: picked.description,
-      });
+      if (!filled) {
+        throw new Error(`Sin suficientes candidatos para ${blueprint.folderName} / ${slot}.`);
+      }
     }
+
+    items.push(...slotItems);
   }
 
   return {
@@ -870,13 +1037,20 @@ function isLegacyMode(args: Args): boolean {
 
 function ensureDeliveryCampaignShape(campaign: DeliveryCampaign) {
   const total = campaign.items.length;
-  const conIA = campaign.items.filter(item => item.variant === 'con_ia').length;
-  const sinIA = campaign.items.filter(item => item.variant === 'sin_ia').length;
 
-  if (total !== 10 || conIA !== 5 || sinIA !== 5) {
+  if (total < SLOT_ORDER.length * ITEMS_PER_CATEGORY) {
     throw new Error(
-      `${campaign.folderName} está mal configurada: esperaba 10 items (5 con IA / 5 sin IA) y encontré ${total} (${conIA} con IA / ${sinIA} sin IA).`,
+      `${campaign.folderName} está mal configurada: esperaba al menos ${SLOT_ORDER.length * ITEMS_PER_CATEGORY} items y encontré ${total}.`,
     );
+  }
+
+  for (const slot of SLOT_ORDER) {
+    const slotCount = campaign.items.filter(item => item.slot === slot).length;
+    if (slotCount < ITEMS_PER_CATEGORY) {
+      throw new Error(
+        `${campaign.folderName} está mal configurada: ${slot} debería tener al menos ${ITEMS_PER_CATEGORY} items y solo tiene ${slotCount}.`,
+      );
+    }
   }
 }
 
@@ -1131,6 +1305,13 @@ function writePackManifest(
   runSeed: number,
   aiModeLabel: 'fresh' | 'cached',
 ) {
+  const conIA = campaign.items.filter(item => item.variant === 'con_ia').length;
+  const sinIA = campaign.items.filter(item => item.variant === 'sin_ia').length;
+  const countByKind = SLOT_ORDER.reduce((acc, slot) => {
+    acc[SLOT_TO_KIND[slot]] = campaign.items.filter(item => item.slot === slot).length;
+    return acc;
+  }, {} as Record<AssetKind, number>);
+
   const manifest = {
     generatedAt: new Date().toISOString(),
     titulo: campaign.titulo,
@@ -1145,8 +1326,9 @@ function writePackManifest(
     },
     totalItems: campaign.items.length,
     counts: {
-      con_ia: campaign.items.filter(item => item.variant === 'con_ia').length,
-      sin_ia: campaign.items.filter(item => item.variant === 'sin_ia').length,
+      con_ia: conIA,
+      sin_ia: sinIA,
+      por_categoria: countByKind,
     },
     ai: bundle
       ? {
@@ -1208,9 +1390,9 @@ ${campaign.objetivo}
 
 ## Regla del pack
 
-- 10 piezas totales
-- 5 piezas \`sin_ia\`
-- 5 piezas \`con_ia\`
+- ${campaign.items.length} piezas totales
+- al menos ${ITEMS_PER_CATEGORY} piezas por categoría (publicaciones, flyers, reels, stories, banners)
+- distribución generada en esta corrida: ${sinIA} sin_ia / ${conIA} con_ia
 - tipos cubiertos: publicaciones, flyers, reels, stories, banners
 - nota: \`flyers/\` usa layout cuadrado de post (1080×1080) porque hoy no existe un layout flyer dedicado en el renderer
 
@@ -1270,7 +1452,7 @@ function runDeliveryCampaigns(args: Args) {
   console.log(`║  Campañas:   ${String(deliveryCampaigns.length).padEnd(43)}║`);
   console.log(`║  Seed base:  ${String(runSeed).padEnd(43)}║`);
   console.log(`║  IA:         ${aiHeaderValue}`.padEnd(57) + `║`);
-  console.log(`║  Regla:      10 items por campaña (5 IA / 5 no IA)`.padEnd(57) + `║`);
+  console.log(`║  Regla:      25 items por campaña (5 por categoría)`.padEnd(57) + `║`);
   console.log(`╚══════════════════════════════════════════════════════════╝\n`);
 
   for (const [index, campaign] of deliveryCampaigns.entries()) {

@@ -1,80 +1,126 @@
 {
-  "generatedAt": "2026-04-20T21:08:26.453Z",
+  "generatedAt": "2026-04-20T23:27:14.521Z",
   "titulo": "Campaña 1 — Solución",
   "narrativa": "solucion",
   "target": "Coordinadores de semilleros, centros de escritura y equipos que necesitan flujo + verificación.",
   "objetivo": "Mostrar a Agora como infraestructura útil: editor, lógica formal, verificación y colaboración.",
-  "totalItems": 10,
+  "run": {
+    "seedBase": 12345,
+    "aiMode": "cached",
+    "aiSteps": null,
+    "aiGuidance": null
+  },
+  "totalItems": 25,
   "counts": {
-    "con_ia": 5,
-    "sin_ia": 5
+    "con_ia": 8,
+    "sin_ia": 17,
+    "por_categoria": {
+      "publicaciones": 5,
+      "flyers": 5,
+      "reels": 5,
+      "stories": 5,
+      "banners": 5
+    }
+  },
+  "ai": {
+    "promptFile": null,
+    "sourcesDir": null,
+    "generatedTemplates": []
   },
   "notes": {
     "flyer": "El sistema no tiene layout flyer dedicado; se usa el layout post 1080×1080 como flyer operativo.",
-    "video": "Reels y stories se exportaron también como MP4 de 8s."
+    "video": "No se generaron MP4 porque se usó --skip-video.",
+    "ai": "Se reutilizó la librería AI sincronizada en public/ai-images/."
   },
   "items": [
     {
       "slot": "publicacion",
       "kind": "publicaciones",
-      "variant": "sin_ia",
-      "templateId": "n2_l3_post_flujo",
-      "description": "Post principal de solución.",
-      "png": "sin_ia/publicaciones/publicacion__n2_l3_post_flujo.png",
-      "mp4": null
-    },
-    {
-      "slot": "flyer",
-      "kind": "flyers",
-      "variant": "sin_ia",
-      "templateId": "n2_l4_post_rigor",
-      "description": "Flyer cuadrado de rigor formal.",
-      "png": "sin_ia/flyers/flyer__n2_l4_post_rigor.png",
-      "mp4": null
-    },
-    {
-      "slot": "reel",
-      "kind": "reels",
-      "variant": "sin_ia",
-      "templateId": "n2_l3_reel_demo",
-      "description": "Reel demo de Agora.",
-      "png": "sin_ia/reels/reel__n2_l3_reel_demo.png",
-      "mp4": "sin_ia/reels/reel__n2_l3_reel_demo.mp4"
-    },
-    {
-      "slot": "story",
-      "kind": "stories",
-      "variant": "sin_ia",
-      "templateId": "n2_l4_story_formal",
-      "description": "Story de verificación formal.",
-      "png": "sin_ia/stories/story__n2_l4_story_formal.png",
-      "mp4": "sin_ia/stories/story__n2_l4_story_formal.mp4"
-    },
-    {
-      "slot": "banner",
-      "kind": "banners",
-      "variant": "sin_ia",
-      "templateId": "n2_l3_banner_solucion",
-      "description": "Banner de propuesta de valor.",
-      "png": "sin_ia/banners/banner__n2_l3_banner_solucion.png",
+      "variant": "con_ia",
+      "templateId": "n2_l3_hybrid_flujo",
+      "description": "Post AI de flujo verde integrado.",
+      "png": "con_ia/publicaciones/publicacion__n2_l3_hybrid_flujo.png",
       "mp4": null
     },
     {
       "slot": "publicacion",
       "kind": "publicaciones",
       "variant": "con_ia",
-      "templateId": "hybrid_respuesta",
-      "description": "Post AI de respuesta / transformación.",
-      "png": "con_ia/publicaciones/publicacion__hybrid_respuesta.png",
+      "templateId": "n2_l4_hybrid_pensar",
+      "description": "Pieza AI para publicación basada en pensar.",
+      "png": "con_ia/publicaciones/publicacion__n2_l4_hybrid_pensar.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_geek_proof",
+      "description": "Post visual de demostración formal.",
+      "png": "sin_ia/publicaciones/publicacion__post_geek_proof.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_geek_turing",
+      "description": "Post técnico sobre computabilidad.",
+      "png": "sin_ia/publicaciones/publicacion__post_geek_turing.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_glass",
+      "description": "Post glassmorphism sobre un solo flujo.",
+      "png": "sin_ia/publicaciones/publicacion__post_glass.png",
       "mp4": null
     },
     {
       "slot": "flyer",
       "kind": "flyers",
       "variant": "con_ia",
-      "templateId": "hybrid_madurez",
-      "description": "Flyer AI para madurez del producto.",
-      "png": "con_ia/flyers/flyer__hybrid_madurez.png",
+      "templateId": "n2_l3_hybrid_editor",
+      "description": "Flyer AI con editor central.",
+      "png": "con_ia/flyers/flyer__n2_l3_hybrid_editor.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_diferenciador",
+      "description": "Pieza AI para flyer basada en diferenciador.",
+      "png": "con_ia/flyers/flyer__hybrid_diferenciador.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "post_perspectiva",
+      "description": "Pieza editorial para flyer basada en perspectiva.",
+      "png": "sin_ia/flyers/flyer__post_perspectiva.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "post_datos_split",
+      "description": "Flyer de datos y estructura.",
+      "png": "sin_ia/flyers/flyer__post_datos_split.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_post_verificacion",
+      "description": "Flyer sobre verificación integrada.",
+      "png": "sin_ia/flyers/flyer__n2_l3_post_verificacion.png",
       "mp4": null
     },
     {
@@ -82,26 +128,134 @@
       "kind": "reels",
       "variant": "con_ia",
       "templateId": "hybrid_reel_manifiesto",
-      "description": "Reel AI para posicionamiento.",
+      "description": "Reel AI de posicionamiento / demostración.",
       "png": "con_ia/reels/reel__hybrid_reel_manifiesto.png",
-      "mp4": "con_ia/reels/reel__hybrid_reel_manifiesto.mp4"
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_proof",
+      "description": "Reel visual paso a paso de prueba formal.",
+      "png": "sin_ia/reels/reel__reel_geek_proof.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_reel_rigor",
+      "description": "Reel sobre rigor, lógica y validación.",
+      "png": "sin_ia/reels/reel__n2_l4_reel_rigor.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_story_formal",
+      "description": "Pieza editorial para reel basada en formal.",
+      "png": "sin_ia/reels/reel__n2_l4_story_formal.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_chaos",
+      "description": "Pieza editorial para reel basada en geek chaos.",
+      "png": "sin_ia/reels/reel__reel_geek_chaos.png",
+      "mp4": null
     },
     {
       "slot": "story",
       "kind": "stories",
       "variant": "con_ia",
       "templateId": "hybrid_story_teaser",
-      "description": "Story AI de activación.",
+      "description": "Story AI de activación y prueba.",
       "png": "con_ia/stories/story__hybrid_story_teaser.png",
-      "mp4": "con_ia/stories/story__hybrid_story_teaser.mp4"
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_quantum",
+      "description": "Story experimental sobre observación y decisión.",
+      "png": "sin_ia/stories/story__reel_geek_quantum.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_story_feature",
+      "description": "Story de feature principal.",
+      "png": "sin_ia/stories/story__n2_l3_story_feature.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_reel_demo",
+      "description": "Pieza editorial para story basada en demo.",
+      "png": "sin_ia/stories/story__n2_l3_reel_demo.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_simbolo",
+      "description": "Pieza editorial para story basada en simbolo.",
+      "png": "sin_ia/stories/story__reel_simbolo.png",
+      "mp4": null
     },
     {
       "slot": "banner",
       "kind": "banners",
       "variant": "con_ia",
-      "templateId": "hybrid_banner_linkedin",
-      "description": "Banner AI para LinkedIn.",
-      "png": "con_ia/banners/banner__hybrid_banner_linkedin.png",
+      "templateId": "hybrid_banner_yt",
+      "description": "Banner AI para demo/portal.",
+      "png": "con_ia/banners/banner__hybrid_banner_yt.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_og",
+      "description": "Banner AI para sharing institucional.",
+      "png": "con_ia/banners/banner__hybrid_banner_og.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_conferencia",
+      "description": "Banner editorial con credibilidad institucional.",
+      "png": "sin_ia/banners/banner__banner_conferencia.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_banner_formal",
+      "description": "Banner sobre formalización rigurosa.",
+      "png": "sin_ia/banners/banner__n2_l4_banner_formal.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_banner_motor",
+      "description": "Pieza editorial para banner basada en motor.",
+      "png": "sin_ia/banners/banner__n2_l4_banner_motor.png",
       "mp4": null
     }
   ]
