@@ -72,6 +72,14 @@ RESOLUTIONS = {
     "ultra_tall": (640, 1536),
 }
 
+RESOLUTION_FALLBACKS = {
+    "ultra_wide": [(1536, 640), (1344, 576), (1152, 512)],
+    "wide": [(1344, 768), (1216, 704), (1024, 576)],
+    "square": [(1024, 1024), (896, 896), (768, 768)],
+    "tall": [(768, 1344), (704, 1216), (640, 1152)],
+    "ultra_tall": [(640, 1536), (576, 1344), (512, 1152)],
+}
+
 
 def vram_report(device: str) -> str:
     if not device.startswith("cuda") or not torch.cuda.is_available():
@@ -140,30 +148,51 @@ def render_item(
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     resolution_key = classify_aspect(width, height)
-    gen_width, gen_height = RESOLUTIONS[resolution_key]
-    generator = torch.Generator(device=device).manual_seed(seed)
+    attempts = RESOLUTION_FALLBACKS[resolution_key]
 
     print(f"    ↳ {item['templateId']} [{item['slot']}/{item['narrativa']}]")
-    print(f"      seed={seed} | gen={gen_width}x{gen_height} → final={width}x{height}")
-    print(f"      VRAM: {vram_report(device)}")
 
-    with torch.inference_mode():
-        result = pipe(
-            prompt=prompt,
-            negative_prompt=negative_prompt,
-            width=gen_width,
-            height=gen_height,
-            num_inference_steps=steps,
-            guidance_scale=guidance,
-            generator=generator,
+    last_oom: torch.cuda.OutOfMemoryError | None = None
+
+    for attempt_index, (gen_width, gen_height) in enumerate(attempts, start=1):
+        generator = torch.Generator(device=device).manual_seed(seed)
+        print(
+            f"      seed={seed} | gen={gen_width}x{gen_height} → final={width}x{height}"
+            f" | intento {attempt_index}/{len(attempts)}"
         )
+        print(f"      VRAM: {vram_report(device)}")
 
-    image: Image.Image = result.images[0]
-    if (image.width, image.height) != (width, height):
-        image = image.resize((width, height), Image.LANCZOS)
+        try:
+            with torch.inference_mode():
+                result = pipe(
+                    prompt=prompt,
+                    negative_prompt=negative_prompt,
+                    width=gen_width,
+                    height=gen_height,
+                    num_inference_steps=steps,
+                    guidance_scale=guidance,
+                    generator=generator,
+                )
+        except torch.cuda.OutOfMemoryError as exc:
+            last_oom = exc
+            print(f"      ! OOM en {gen_width}x{gen_height}; probando fallback de menor resolución")
+            if device.startswith("cuda"):
+                torch.cuda.empty_cache()
+                torch.cuda.ipc_collect()
+            gc.collect()
+            continue
 
-    image.save(output_path, "PNG")
-    return output_path
+        image: Image.Image = result.images[0]
+        if (image.width, image.height) != (width, height):
+            image = image.resize((width, height), Image.LANCZOS)
+
+        image.save(output_path, "PNG")
+        return output_path
+
+    if last_oom is not None:
+        raise last_oom
+
+    raise RuntimeError("No se pudo generar la imagen AI.")
 
 
 def main() -> int:

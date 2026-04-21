@@ -15,6 +15,7 @@ Uso:
   ./scripts/generar_campana.sh --skip-video
   ./scripts/generar_campana.sh --reuse-ai
   ./scripts/generar_campana.sh --seed 12345
+  ./scripts/generar_campana.sh --campaign campana_1_solucion
   ./scripts/generar_campana.sh --narrativa dolor
   ./scripts/generar_campana.sh --lote 1
   ./scripts/generar_campana.sh --tipo post
@@ -43,9 +44,10 @@ Cada una contiene:
   publicaciones/, flyers/, reels/, stories/, banners/
 
 Regla actual:
-  - 25 piezas por campaña
-  - mínimo 5 piezas por categoría
-  - el reparto entre con_ia/sin_ia varía según disponibilidad
+  - 50 piezas por campaña
+  - 5 piezas por categoría dentro de sin_ia/
+  - 5 piezas por categoría dentro de con_ia/
+  - 25 piezas editoriales + 25 piezas con IA fresca por campaña
 
 Con filtros (--narrativa / --lote / --tipo o --legacy) genera selecciones puntuales en:
   assets/entregables/campanas/selecciones/
@@ -54,6 +56,7 @@ Ejemplos:
   ./scripts/generar_campana.sh
   ./scripts/generar_campana.sh --skip-video
   ./scripts/generar_campana.sh --reuse-ai
+  ./scripts/generar_campana.sh --campaign campana_1_solucion
   ./scripts/generar_campana.sh --seed 12345
   ./scripts/generar_campana.sh --narrativa dolor
   ./scripts/generar_campana.sh --legacy --lote 1

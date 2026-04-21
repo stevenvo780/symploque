@@ -19,22 +19,38 @@
  */
 
 import { spawn, type ChildProcess } from 'child_process';
-import { mkdirSync } from 'fs';
+import { mkdirSync, readFileSync } from 'fs';
 import { resolve, join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { TEMPLATE_DATA, type TemplateInfo } from '../src/templates/registry';
+import { TEMPLATE_DATA, getTemplateById, type TemplateInfo } from '../src/templates/registry';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+
+interface RenderSpecItem {
+  templateId: string;
+  outputName?: string;
+  aiBackgroundPath?: string | null;
+}
+
+interface RenderJob {
+  template: TemplateInfo;
+  outputName: string;
+  aiBackgroundPath: string | null;
+}
 
 // ── Args ─────────────────────────────────────────────────────
 function parseArgs() {
   const args = process.argv.slice(2);
   let templateFilter: string[] | null = null;
+  let specPath: string | null = null;
   let outputDir = join(ROOT, 'output', 'react');
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--template' && args[i + 1]) {
       templateFilter = args[i + 1].split(',').map((s: string) => s.trim());
+      i++;
+    } else if (args[i] === '--spec' && args[i + 1]) {
+      specPath = resolve(args[i + 1]);
       i++;
     } else if (args[i] === '--output' && args[i + 1]) {
       outputDir = resolve(args[i + 1]);
@@ -43,11 +59,51 @@ function parseArgs() {
     // --all is default
   }
 
+  if (specPath) {
+    const parsed = JSON.parse(readFileSync(specPath, 'utf-8')) as RenderSpecItem[] | { items?: RenderSpecItem[] };
+    const rawItems = Array.isArray(parsed) ? parsed : parsed.items;
+
+    if (!Array.isArray(rawItems)) {
+      throw new Error('El archivo --spec debe ser un array JSON o un objeto con { items }.');
+    }
+
+    const jobs = rawItems.map((item, index): RenderJob => {
+      if (!item || typeof item.templateId !== 'string' || item.templateId.trim() === '') {
+        throw new Error(`Item inválido en --spec[${index}]: falta templateId.`);
+      }
+
+      const template = getTemplateById(item.templateId.trim());
+      if (!template) {
+        throw new Error(`Template no encontrado en --spec[${index}]: ${item.templateId}`);
+      }
+
+      const outputName = typeof item.outputName === 'string' && item.outputName.trim()
+        ? item.outputName.trim()
+        : template.id;
+
+      return {
+        template,
+        outputName,
+        aiBackgroundPath: typeof item.aiBackgroundPath === 'string' && item.aiBackgroundPath.trim()
+          ? item.aiBackgroundPath.trim()
+          : null,
+      };
+    });
+
+    return { jobs, outputDir };
+  }
+
   const selected = templateFilter
     ? TEMPLATE_DATA.filter(t => templateFilter!.includes(t.id))
     : TEMPLATE_DATA;
 
-  return { selected, outputDir };
+  const jobs = selected.map((template): RenderJob => ({
+    template,
+    outputName: template.id,
+    aiBackgroundPath: null,
+  }));
+
+  return { jobs, outputDir };
 }
 
 // ── Vite dev server ──────────────────────────────────────────
@@ -79,16 +135,16 @@ function startVite(): Promise<{ proc: ChildProcess; url: string }> {
 
 // ── Main ─────────────────────────────────────────────────────
 async function main() {
-  const { selected, outputDir } = parseArgs();
+  const { jobs, outputDir } = parseArgs();
 
-  if (selected.length === 0) {
+  if (jobs.length === 0) {
     console.error('❌ No templates matched the filter.');
     process.exit(1);
   }
 
   console.log(`\n═══════════════════════════════════════════════════`);
   console.log(`  ELENXOS React→PNG Renderer`);
-  console.log(`  Templates: ${selected.length}`);
+  console.log(`  Renders: ${jobs.length}`);
   console.log(`  Output: ${outputDir}`);
   console.log(`═══════════════════════════════════════════════════\n`);
 
@@ -105,12 +161,13 @@ async function main() {
     const { chromium } = await import('playwright');
     const browser = await chromium.launch({ headless: true });
 
-    for (const tmpl of selected) {
-      const outPath = join(outputDir, tmpl.category, `${tmpl.id}.png`);
+    for (const job of jobs) {
+      const tmpl = job.template;
+      const outPath = join(outputDir, tmpl.category, `${job.outputName}.png`);
       mkdirSync(join(outputDir, tmpl.category), { recursive: true });
 
       try {
-        console.log(`\n[${ok + fail + 1}/${selected.length}] ${tmpl.id} (${tmpl.width}×${tmpl.height})`);
+        console.log(`\n[${ok + fail + 1}/${jobs.length}] ${job.outputName} ← ${tmpl.id} (${tmpl.width}×${tmpl.height})`);
 
         // Create page with exact viewport
         const page = await browser.newPage({
@@ -129,8 +186,12 @@ async function main() {
         });
 
         // Navigate to render page for this specific template
-        const renderUrl = `${baseUrl}/render.html?template=${tmpl.id}`;
-        await page.goto(renderUrl, { waitUntil: 'networkidle' });
+        const renderUrl = new URL(`${baseUrl}/render.html`);
+        renderUrl.searchParams.set('template', tmpl.id);
+        if (job.aiBackgroundPath) {
+          renderUrl.searchParams.set('aiBg', job.aiBackgroundPath);
+        }
+        await page.goto(renderUrl.toString(), { waitUntil: 'networkidle' });
 
         // Wait for the template element to mount
         const selector = `[data-template-id="${tmpl.id}"]`;
@@ -211,7 +272,7 @@ async function main() {
   }
 
   console.log(`\n═══════════════════════════════════════════════════`);
-  console.log(`  RESULTADO: ${ok}/${selected.length} imágenes generadas`);
+  console.log(`  RESULTADO: ${ok}/${jobs.length} imágenes generadas`);
   if (fail > 0) console.log(`  Errores: ${fail}`);
   console.log(`  Output: ${outputDir}`);
   console.log(`═══════════════════════════════════════════════════\n`);

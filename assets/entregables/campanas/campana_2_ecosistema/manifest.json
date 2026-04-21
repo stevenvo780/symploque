@@ -1,0 +1,729 @@
+{
+  "generatedAt": "2026-04-21T01:00:03.008Z",
+  "titulo": "Campaña 2 — Ecosistema",
+  "narrativa": "ecosistema",
+  "target": "Directores de semilleros, comunidades académicas y alianzas institucionales.",
+  "objetivo": "Presentar a Agora como plataforma cooperativa y ecosistema de investigación a escala.",
+  "run": {
+    "seedBase": 12345,
+    "aiMode": "fresh",
+    "aiSteps": 12,
+    "aiGuidance": 3
+  },
+  "totalItems": 50,
+  "counts": {
+    "con_ia": 25,
+    "sin_ia": 25,
+    "por_categoria": {
+      "publicaciones": 10,
+      "flyers": 10,
+      "reels": 10,
+      "stories": 10,
+      "banners": 10
+    },
+    "por_categoria_y_variante": {
+      "sin_ia": {
+        "publicaciones": 5,
+        "flyers": 5,
+        "reels": 5,
+        "stories": 5,
+        "banners": 5
+      },
+      "con_ia": {
+        "publicaciones": 5,
+        "flyers": 5,
+        "reels": 5,
+        "stories": 5,
+        "banners": 5
+      }
+    }
+  },
+  "ai": {
+    "promptFile": "prompts_ai.json",
+    "sourcesDir": "con_ia/fuentes_ai/",
+    "generatedTemplates": [
+      {
+        "instanceId": "publicacion__n3_l5_hybrid_red__con_ia_01",
+        "templateId": "n3_l5_hybrid_red",
+        "slot": "publicacion",
+        "seed": 2385973070,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/publicacion__n3_l5_hybrid_red__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__n3_l5_hybrid_comunidad__con_ia_01",
+        "templateId": "n3_l5_hybrid_comunidad",
+        "slot": "publicacion",
+        "seed": 2417224710,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/publicacion__n3_l5_hybrid_comunidad__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__hybrid_arbol_tesis__con_ia_01",
+        "templateId": "hybrid_arbol_tesis",
+        "slot": "publicacion",
+        "seed": 962335204,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/publicacion__hybrid_arbol_tesis__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__n3_l5_hybrid_agora__con_ia_01",
+        "templateId": "n3_l5_hybrid_agora",
+        "slot": "publicacion",
+        "seed": 119482966,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/publicacion__n3_l5_hybrid_agora__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__hybrid_madurez__con_ia_01",
+        "templateId": "hybrid_madurez",
+        "slot": "publicacion",
+        "seed": 975741447,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/publicacion__hybrid_madurez__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n3_l5_hybrid_agora__con_ia_01",
+        "templateId": "n3_l5_hybrid_agora",
+        "slot": "flyer",
+        "seed": 1057646355,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/flyer__n3_l5_hybrid_agora__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__hybrid_diferenciador__con_ia_01",
+        "templateId": "hybrid_diferenciador",
+        "slot": "flyer",
+        "seed": 1603143763,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/flyer__hybrid_diferenciador__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__hybrid_respuesta__con_ia_01",
+        "templateId": "hybrid_respuesta",
+        "slot": "flyer",
+        "seed": 425725519,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/flyer__hybrid_respuesta__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n3_l5_hybrid_red__con_ia_01",
+        "templateId": "n3_l5_hybrid_red",
+        "slot": "flyer",
+        "seed": 1501252097,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/flyer__n3_l5_hybrid_red__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__hybrid_arbol_tesis__con_ia_01",
+        "templateId": "hybrid_arbol_tesis",
+        "slot": "flyer",
+        "seed": 2765184424,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/flyer__hybrid_arbol_tesis__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_01",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 4210440925,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/reel__hybrid_reel_manifiesto__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_story_teaser__con_ia_01",
+        "templateId": "hybrid_story_teaser",
+        "slot": "reel",
+        "seed": 3130005180,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/reel__hybrid_story_teaser__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_02",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 163351282,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/reel__hybrid_reel_manifiesto__con_ia_02.png"
+      },
+      {
+        "instanceId": "reel__hybrid_story_teaser__con_ia_02",
+        "templateId": "hybrid_story_teaser",
+        "slot": "reel",
+        "seed": 3339104715,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/reel__hybrid_story_teaser__con_ia_02.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_03",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 4017238131,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/reel__hybrid_reel_manifiesto__con_ia_03.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_01",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 2411902443,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/story__hybrid_story_teaser__con_ia_01.png"
+      },
+      {
+        "instanceId": "story__hybrid_reel_manifiesto__con_ia_01",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "story",
+        "seed": 771936042,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/story__hybrid_reel_manifiesto__con_ia_01.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_02",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 1891042856,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/story__hybrid_story_teaser__con_ia_02.png"
+      },
+      {
+        "instanceId": "story__hybrid_reel_manifiesto__con_ia_02",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "story",
+        "seed": 596391745,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/story__hybrid_reel_manifiesto__con_ia_02.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_03",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 16811881,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/story__hybrid_story_teaser__con_ia_03.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_og__con_ia_01",
+        "templateId": "hybrid_banner_og",
+        "slot": "banner",
+        "seed": 2002887823,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/banner__hybrid_banner_og__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_linkedin__con_ia_01",
+        "templateId": "hybrid_banner_linkedin",
+        "slot": "banner",
+        "seed": 745482426,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/banner__hybrid_banner_linkedin__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_yt__con_ia_01",
+        "templateId": "hybrid_banner_yt",
+        "slot": "banner",
+        "seed": 2238501068,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/banner__hybrid_banner_yt__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_x__con_ia_01",
+        "templateId": "hybrid_banner_x",
+        "slot": "banner",
+        "seed": 2773458524,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/banner__hybrid_banner_x__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_linkedin__con_ia_02",
+        "templateId": "hybrid_banner_linkedin",
+        "slot": "banner",
+        "seed": 1472196534,
+        "publicPath": "public/ai-images/generated/campana_2_ecosistema/banner__hybrid_banner_linkedin__con_ia_02.png"
+      }
+    ]
+  },
+  "notes": {
+    "flyer": "El sistema no tiene layout flyer dedicado; se usa el layout post 1080×1080 como flyer operativo.",
+    "video": "No se generaron MP4 porque se usó --skip-video.",
+    "ai": "Se generaron fondos AI nuevos para esta corrida y se dejaron trazas en prompts_ai.json + con_ia/fuentes_ai/."
+  },
+  "items": [
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_post_futuro",
+      "instanceId": "publicacion__n3_l5_post_futuro__sin_ia_01",
+      "description": "Post sobre futuro académico cooperativo.",
+      "png": "sin_ia/publicaciones/publicacion__n3_l5_post_futuro__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_geek_logo_hero",
+      "instanceId": "publicacion__post_geek_logo_hero__sin_ia_01",
+      "description": "Post marca / comunidad ampliada.",
+      "png": "sin_ia/publicaciones/publicacion__post_geek_logo_hero__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_micelio",
+      "instanceId": "publicacion__post_micelio__sin_ia_01",
+      "description": "Post orgánico sobre red viva de conocimiento.",
+      "png": "sin_ia/publicaciones/publicacion__post_micelio__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_post_cooperar",
+      "instanceId": "publicacion__n3_l5_post_cooperar__sin_ia_01",
+      "description": "Pieza editorial para publicación basada en cooperar.",
+      "png": "sin_ia/publicaciones/publicacion__n3_l5_post_cooperar__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_geek_rizoma",
+      "instanceId": "publicacion__post_geek_rizoma__sin_ia_01",
+      "description": "Post rizomático sobre conexiones múltiples.",
+      "png": "sin_ia/publicaciones/publicacion__post_geek_rizoma__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n3_l5_hybrid_red",
+      "instanceId": "publicacion__n3_l5_hybrid_red__con_ia_01",
+      "description": "Pieza AI para publicación basada en red.",
+      "png": "con_ia/publicaciones/publicacion__n3_l5_hybrid_red__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n3_l5_hybrid_comunidad",
+      "instanceId": "publicacion__n3_l5_hybrid_comunidad__con_ia_01",
+      "description": "Post AI de comunidad académica viva.",
+      "png": "con_ia/publicaciones/publicacion__n3_l5_hybrid_comunidad__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "hybrid_arbol_tesis",
+      "instanceId": "publicacion__hybrid_arbol_tesis__con_ia_01",
+      "description": "Post AI de conocimiento conectado.",
+      "png": "con_ia/publicaciones/publicacion__hybrid_arbol_tesis__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n3_l5_hybrid_agora",
+      "instanceId": "publicacion__n3_l5_hybrid_agora__con_ia_01",
+      "description": "Post AI de agora futura.",
+      "png": "con_ia/publicaciones/publicacion__n3_l5_hybrid_agora__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "hybrid_madurez",
+      "instanceId": "publicacion__hybrid_madurez__con_ia_01",
+      "description": "Pieza AI para publicación basada en madurez.",
+      "png": "con_ia/publicaciones/publicacion__hybrid_madurez__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "post_geek_fib_nature",
+      "instanceId": "flyer__post_geek_fib_nature__sin_ia_01",
+      "description": "Flyer orgánico sobre crecimiento gradual.",
+      "png": "sin_ia/flyers/flyer__post_geek_fib_nature__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "post_datos_split",
+      "instanceId": "flyer__post_datos_split__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en datos split.",
+      "png": "sin_ia/flyers/flyer__post_datos_split__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_post_semillero",
+      "instanceId": "flyer__n3_l5_post_semillero__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en semillero.",
+      "png": "sin_ia/flyers/flyer__n3_l5_post_semillero__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "post_perspectiva",
+      "instanceId": "flyer__post_perspectiva__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en perspectiva.",
+      "png": "sin_ia/flyers/flyer__post_perspectiva__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_post_futuro",
+      "instanceId": "flyer__n3_l5_post_futuro__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en futuro.",
+      "png": "sin_ia/flyers/flyer__n3_l5_post_futuro__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n3_l5_hybrid_agora",
+      "instanceId": "flyer__n3_l5_hybrid_agora__con_ia_01",
+      "description": "Pieza AI para flyer basada en agora.",
+      "png": "con_ia/flyers/flyer__n3_l5_hybrid_agora__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_diferenciador",
+      "instanceId": "flyer__hybrid_diferenciador__con_ia_01",
+      "description": "Flyer AI de múltiples caminos convergentes.",
+      "png": "con_ia/flyers/flyer__hybrid_diferenciador__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_respuesta",
+      "instanceId": "flyer__hybrid_respuesta__con_ia_01",
+      "description": "Flyer AI de síntesis y convergencia.",
+      "png": "con_ia/flyers/flyer__hybrid_respuesta__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n3_l5_hybrid_red",
+      "instanceId": "flyer__n3_l5_hybrid_red__con_ia_01",
+      "description": "Flyer AI de red cooperativa.",
+      "png": "con_ia/flyers/flyer__n3_l5_hybrid_red__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_arbol_tesis",
+      "instanceId": "flyer__hybrid_arbol_tesis__con_ia_01",
+      "description": "Pieza AI para flyer basada en arbol tesis.",
+      "png": "con_ia/flyers/flyer__hybrid_arbol_tesis__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_dialectic",
+      "instanceId": "reel__reel_geek_dialectic__sin_ia_01",
+      "description": "Reel de síntesis institucional.",
+      "png": "sin_ia/reels/reel__reel_geek_dialectic__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_chaos",
+      "instanceId": "reel__reel_geek_chaos__sin_ia_01",
+      "description": "Pieza editorial para reel basada en geek chaos.",
+      "png": "sin_ia/reels/reel__reel_geek_chaos__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_simbolo",
+      "instanceId": "reel__reel_simbolo__sin_ia_01",
+      "description": "Reel símbolo / invitación a pertenecer.",
+      "png": "sin_ia/reels/reel__reel_simbolo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_reel_vision",
+      "instanceId": "reel__n3_l5_reel_vision__sin_ia_01",
+      "description": "Reel de visión de ecosistema.",
+      "png": "sin_ia/reels/reel__n3_l5_reel_vision__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_original",
+      "instanceId": "reel__reel_original__sin_ia_01",
+      "description": "Pieza editorial para reel basada en original.",
+      "png": "sin_ia/reels/reel__reel_original__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_01",
+      "description": "Reel AI para visión narrativa del ecosistema.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "reel__hybrid_story_teaser__con_ia_01",
+      "description": "Pieza AI para reel basada en teaser.",
+      "png": "con_ia/reels/reel__hybrid_story_teaser__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_02",
+      "description": "Reel AI para visión narrativa del ecosistema. · variación AI 02.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "reel__hybrid_story_teaser__con_ia_02",
+      "description": "Pieza AI para reel basada en teaser. · variación AI 02.",
+      "png": "con_ia/reels/reel__hybrid_story_teaser__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_03",
+      "description": "Reel AI para visión narrativa del ecosistema. · variación AI 03.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_03.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_story_unete",
+      "instanceId": "story__n3_l5_story_unete__sin_ia_01",
+      "description": "Story de invitación a sumarse.",
+      "png": "sin_ia/stories/story__n3_l5_story_unete__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_simbolo",
+      "instanceId": "story__reel_simbolo__sin_ia_01",
+      "description": "Pieza editorial para story basada en simbolo.",
+      "png": "sin_ia/stories/story__reel_simbolo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_matrix",
+      "instanceId": "story__reel_geek_matrix__sin_ia_01",
+      "description": "Story experimental de red emergente.",
+      "png": "sin_ia/stories/story__reel_geek_matrix__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_chaos",
+      "instanceId": "story__reel_geek_chaos__sin_ia_01",
+      "description": "Pieza editorial para story basada en geek chaos.",
+      "png": "sin_ia/stories/story__reel_geek_chaos__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_manifiesto",
+      "instanceId": "story__reel_manifiesto__sin_ia_01",
+      "description": "Story manifiesto breve de pertenencia.",
+      "png": "sin_ia/stories/story__reel_manifiesto__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_01",
+      "description": "Story AI de onboarding / invitación.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "story__hybrid_reel_manifiesto__con_ia_01",
+      "description": "Pieza AI para story basada en manifiesto.",
+      "png": "con_ia/stories/story__hybrid_reel_manifiesto__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_02",
+      "description": "Story AI de onboarding / invitación. · variación AI 02.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "story__hybrid_reel_manifiesto__con_ia_02",
+      "description": "Pieza AI para story basada en manifiesto. · variación AI 02.",
+      "png": "con_ia/stories/story__hybrid_reel_manifiesto__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_03",
+      "description": "Story AI de onboarding / invitación. · variación AI 03.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_03.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_banner_ecosistema",
+      "instanceId": "banner__n3_l5_banner_ecosistema__sin_ia_01",
+      "description": "Banner sobre red cooperativa.",
+      "png": "sin_ia/banners/banner__n3_l5_banner_ecosistema__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_geek_quantum",
+      "instanceId": "banner__banner_geek_quantum__sin_ia_01",
+      "description": "Banner de red viva / partículas conectadas.",
+      "png": "sin_ia/banners/banner__banner_geek_quantum__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n3_l5_banner_cta",
+      "instanceId": "banner__n3_l5_banner_cta__sin_ia_01",
+      "description": "Banner de CTA comunitario.",
+      "png": "sin_ia/banners/banner__n3_l5_banner_cta__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_geek_dialectic",
+      "instanceId": "banner__banner_geek_dialectic__sin_ia_01",
+      "description": "Banner dialéctico de síntesis académica.",
+      "png": "sin_ia/banners/banner__banner_geek_dialectic__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_denso",
+      "instanceId": "banner__banner_denso__sin_ia_01",
+      "description": "Pieza editorial para banner basada en denso.",
+      "png": "sin_ia/banners/banner__banner_denso__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_og",
+      "instanceId": "banner__hybrid_banner_og__con_ia_01",
+      "description": "Banner AI para sharing y portada.",
+      "png": "con_ia/banners/banner__hybrid_banner_og__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_linkedin",
+      "instanceId": "banner__hybrid_banner_linkedin__con_ia_01",
+      "description": "Banner AI editorial para alianzas.",
+      "png": "con_ia/banners/banner__hybrid_banner_linkedin__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_yt",
+      "instanceId": "banner__hybrid_banner_yt__con_ia_01",
+      "description": "Banner AI panorámico de visión.",
+      "png": "con_ia/banners/banner__hybrid_banner_yt__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_x",
+      "instanceId": "banner__hybrid_banner_x__con_ia_01",
+      "description": "Pieza AI para banner basada en x.",
+      "png": "con_ia/banners/banner__hybrid_banner_x__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_linkedin",
+      "instanceId": "banner__hybrid_banner_linkedin__con_ia_02",
+      "description": "Banner AI editorial para alianzas. · variación AI 02.",
+      "png": "con_ia/banners/banner__hybrid_banner_linkedin__con_ia_02.png",
+      "mp4": null
+    }
+  ]
+}

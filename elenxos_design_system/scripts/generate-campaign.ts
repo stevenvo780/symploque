@@ -43,6 +43,7 @@ interface DeliveryItem {
   kind: AssetKind;
   variant: AssetVariant;
   templateId: string;
+  instanceId: string;
   description: string;
 }
 
@@ -72,6 +73,7 @@ interface DeliveryCampaignBlueprint {
 
 interface AIGenerationItem {
   templateId: string;
+  instanceId: string;
   slot: DeliverySlot;
   kind: AssetKind;
   variant: AssetVariant;
@@ -96,10 +98,17 @@ interface AIGenerationBundle {
   items: AIGenerationItem[];
 }
 
+interface RenderSpecItem {
+  templateId: string;
+  outputName: string;
+  aiBackgroundPath?: string | null;
+}
+
 interface Args {
   narrativa: string | null;
   lotes: number[] | null;
   tipo: string | null;
+  campaign: string | null;
   outputBase: string | null;
   skipVideo: boolean;
   videoDuration: number;
@@ -179,7 +188,11 @@ const SLOT_TO_KIND: Record<DeliverySlot, AssetKind> = {
   banner: 'banners',
 };
 
-const ITEMS_PER_CATEGORY = 5;
+const DELIVERY_VARIANTS: AssetVariant[] = ['sin_ia', 'con_ia'];
+const ITEMS_PER_CATEGORY_PER_VARIANT = 5;
+const TOTAL_ITEMS_PER_CATEGORY = ITEMS_PER_CATEGORY_PER_VARIANT * DELIVERY_VARIANTS.length;
+const GENERATED_AI_PUBLIC_PREFIX = '/ai-images/generated';
+const GENERATED_AI_PUBLIC_DIR = join(ROOT, 'public', 'ai-images', 'generated');
 
 const SLOT_LABELS: Record<DeliverySlot, string> = {
   publicacion: 'publicación',
@@ -203,14 +216,6 @@ const SLOT_PRIMARY_TYPE: Record<DeliverySlot, CampaignMeta['tipo']> = {
   reel: 'reel',
   story: 'story',
   banner: 'banner',
-};
-
-const SLOT_VARIANT_TARGETS: Record<DeliverySlot, Record<AssetVariant, number>> = {
-  publicacion: { sin_ia: 3, con_ia: 2 },
-  flyer: { sin_ia: 3, con_ia: 2 },
-  reel: { sin_ia: 4, con_ia: 1 },
-  story: { sin_ia: 4, con_ia: 1 },
-  banner: { sin_ia: 3, con_ia: 2 },
 };
 
 const CAMPAIGN_META_BY_ID = new Map<string, CampaignMeta>(
@@ -737,6 +742,34 @@ function describeFallbackTemplate(templateId: string, slot: DeliverySlot, varian
   return `${prefix} para ${SLOT_LABELS[slot]} basada en ${humanizeTemplateId(templateId)}.`;
 }
 
+function buildDeliveryItemInstanceId(
+  slot: DeliverySlot,
+  variant: AssetVariant,
+  templateId: string,
+  occurrence: number,
+): string {
+  return `${slot}__${templateId}__${variant}_${String(occurrence).padStart(2, '0')}`;
+}
+
+function describeDeliveryInstance(
+  description: string,
+  variant: AssetVariant,
+  occurrence: number,
+): string {
+  if (occurrence === 1) return description;
+
+  const suffix = variant === 'con_ia' ? 'variación AI' : 'variación editorial';
+  return `${description} · ${suffix} ${String(occurrence).padStart(2, '0')}.`;
+}
+
+function buildFreshAIPublicPath(campaignFolder: string, instanceId: string): string {
+  return `${GENERATED_AI_PUBLIC_PREFIX}/${campaignFolder}/${instanceId}.png`;
+}
+
+function publicPathToOutputPath(publicPath: string): string {
+  return join(ROOT, 'public', publicPath.replace(/^\/+/, ''));
+}
+
 function buildFallbackPool(
   blueprint: DeliveryCampaignBlueprint,
   variant: AssetVariant,
@@ -793,20 +826,25 @@ function mergeCandidatePools(primary: CandidateTemplate[], fallback: CandidateTe
   return [...merged.values()];
 }
 
-function pickDistinctCandidates(
+function pickCandidatesWithBalancedReuse(
   pool: CandidateTemplate[],
   count: number,
   rng: () => number,
-  usedTemplateIds: Set<string>,
 ): CandidateTemplate[] {
+  if (pool.length === 0) return [];
+
   const picked: CandidateTemplate[] = [];
+  const localCounts = new Map<string, number>();
 
   while (picked.length < count) {
-    const available = pool.filter(item => !usedTemplateIds.has(item.templateId));
-    if (available.length === 0) break;
+    const minUsage = pool.reduce(
+      (min, item) => Math.min(min, localCounts.get(item.templateId) ?? 0),
+      Number.POSITIVE_INFINITY,
+    );
+    const available = pool.filter(item => (localCounts.get(item.templateId) ?? 0) === minUsage);
 
     const choice = pickWeightedCandidate(available, rng);
-    usedTemplateIds.add(choice.templateId);
+    localCounts.set(choice.templateId, (localCounts.get(choice.templateId) ?? 0) + 1);
     picked.push(choice);
   }
 
@@ -815,7 +853,6 @@ function pickDistinctCandidates(
 
 function materializeDeliveryCampaign(blueprint: DeliveryCampaignBlueprint, runSeed: number): DeliveryCampaign {
   const rng = createRng(normalizeSeed(runSeed ^ hashString(blueprint.folderName)));
-  const usedTemplateIds = new Set<string>();
   const items: DeliveryItem[] = [];
 
   for (const slot of SLOT_ORDER) {
@@ -830,51 +867,35 @@ function materializeDeliveryCampaign(blueprint: DeliveryCampaignBlueprint, runSe
       ),
     };
 
-    const slotItems: DeliveryItem[] = [];
-
-    for (const variant of ['con_ia', 'sin_ia'] as const) {
-      const picked = pickDistinctCandidates(
+    for (const variant of DELIVERY_VARIANTS) {
+      const picked = pickCandidatesWithBalancedReuse(
         mergedPools[variant],
-        SLOT_VARIANT_TARGETS[slot][variant],
+        ITEMS_PER_CATEGORY_PER_VARIANT,
         rng,
-        usedTemplateIds,
       );
 
+      if (picked.length < ITEMS_PER_CATEGORY_PER_VARIANT) {
+        throw new Error(
+          `Sin suficientes candidatos para ${blueprint.folderName} / ${slot} / ${variant}.`,
+        );
+      }
+
+      const occurrences = new Map<string, number>();
+
       for (const item of picked) {
-        slotItems.push({
+        const occurrence = (occurrences.get(item.templateId) ?? 0) + 1;
+        occurrences.set(item.templateId, occurrence);
+
+        items.push({
           slot,
           kind: SLOT_TO_KIND[slot],
           variant,
           templateId: item.templateId,
-          description: item.description,
+          instanceId: buildDeliveryItemInstanceId(slot, variant, item.templateId, occurrence),
+          description: describeDeliveryInstance(item.description, variant, occurrence),
         });
       }
     }
-
-    while (slotItems.length < ITEMS_PER_CATEGORY) {
-      let filled = false;
-
-      for (const variant of ['sin_ia', 'con_ia'] as const) {
-        const [extra] = pickDistinctCandidates(mergedPools[variant], 1, rng, usedTemplateIds);
-        if (!extra) continue;
-
-        slotItems.push({
-          slot,
-          kind: SLOT_TO_KIND[slot],
-          variant,
-          templateId: extra.templateId,
-          description: extra.description,
-        });
-        filled = true;
-        break;
-      }
-
-      if (!filled) {
-        throw new Error(`Sin suficientes candidatos para ${blueprint.folderName} / ${slot}.`);
-      }
-    }
-
-    items.push(...slotItems);
   }
 
   return {
@@ -900,20 +921,22 @@ function buildAIGenerationBundle(campaign: DeliveryCampaign, args: Args, runSeed
     .filter(item => item.variant === 'con_ia')
     .map((item, index) => {
       const template = getTemplateById(item.templateId);
-      const publicPath = AI_IMAGE_PATHS[item.templateId];
+      const defaultPublicPath = AI_IMAGE_PATHS[item.templateId];
 
       if (!template) {
         throw new Error(`Template IA no encontrado: ${item.templateId}`);
       }
 
-      if (!publicPath) {
+      if (!defaultPublicPath) {
         throw new Error(`No existe publicPath esperado para template IA: ${item.templateId}`);
       }
 
-      const seed = normalizeSeed(seedBase + hashString(`${item.templateId}:${index}`));
+      const publicPath = buildFreshAIPublicPath(campaign.folderName, item.instanceId);
+      const seed = normalizeSeed(seedBase + hashString(`${item.instanceId}:${index}`));
 
       return {
         templateId: item.templateId,
+        instanceId: item.instanceId,
         slot: item.slot,
         kind: item.kind,
         variant: item.variant,
@@ -925,7 +948,7 @@ function buildAIGenerationBundle(campaign: DeliveryCampaign, args: Args, runSeed
         prompt: buildAIPrompt(campaign, item, seed),
         negativePrompt: NEGATIVE_AI_PROMPT,
         publicPath,
-        outputPath: join(ROOT, 'public', publicPath),
+        outputPath: publicPathToOutputPath(publicPath),
       } satisfies AIGenerationItem;
     });
 
@@ -945,6 +968,7 @@ function parseArgs(): Args {
   let narrativa: string | null = null;
   let lotes: number[] | null = null;
   let tipo: string | null = null;
+  let campaign: string | null = null;
   let outputBase: string | null = null;
   let skipVideo = false;
   let videoDuration = 8;
@@ -964,6 +988,9 @@ function parseArgs(): Args {
         break;
       case '--tipo':
         tipo = args[++i];
+        break;
+      case '--campaign':
+        campaign = args[++i];
         break;
       case '--output':
         outputBase = args[++i];
@@ -1020,6 +1047,7 @@ function parseArgs(): Args {
     narrativa,
     lotes,
     tipo,
+    campaign,
     outputBase,
     skipVideo,
     videoDuration,
@@ -1038,18 +1066,30 @@ function isLegacyMode(args: Args): boolean {
 function ensureDeliveryCampaignShape(campaign: DeliveryCampaign) {
   const total = campaign.items.length;
 
-  if (total < SLOT_ORDER.length * ITEMS_PER_CATEGORY) {
+  if (total < SLOT_ORDER.length * TOTAL_ITEMS_PER_CATEGORY) {
     throw new Error(
-      `${campaign.folderName} está mal configurada: esperaba al menos ${SLOT_ORDER.length * ITEMS_PER_CATEGORY} items y encontré ${total}.`,
+      `${campaign.folderName} está mal configurada: esperaba al menos ${SLOT_ORDER.length * TOTAL_ITEMS_PER_CATEGORY} items y encontré ${total}.`,
     );
   }
 
   for (const slot of SLOT_ORDER) {
     const slotCount = campaign.items.filter(item => item.slot === slot).length;
-    if (slotCount < ITEMS_PER_CATEGORY) {
+    if (slotCount < TOTAL_ITEMS_PER_CATEGORY) {
       throw new Error(
-        `${campaign.folderName} está mal configurada: ${slot} debería tener al menos ${ITEMS_PER_CATEGORY} items y solo tiene ${slotCount}.`,
+        `${campaign.folderName} está mal configurada: ${slot} debería tener al menos ${TOTAL_ITEMS_PER_CATEGORY} items y solo tiene ${slotCount}.`,
       );
+    }
+
+    for (const variant of DELIVERY_VARIANTS) {
+      const variantCount = campaign.items.filter(
+        item => item.slot === slot && item.variant === variant,
+      ).length;
+
+      if (variantCount < ITEMS_PER_CATEGORY_PER_VARIANT) {
+        throw new Error(
+          `${campaign.folderName} está mal configurada: ${slot}/${variant} debería tener al menos ${ITEMS_PER_CATEGORY_PER_VARIANT} items y solo tiene ${variantCount}.`,
+        );
+      }
     }
   }
 }
@@ -1096,6 +1136,10 @@ function syncAIAssetLibrary() {
   console.log(`  🔁 ${copied} assets AI sincronizados hacia public/ai-images/`);
 }
 
+function resetFreshAIPublicDir(campaignFolder: string) {
+  rmSync(join(GENERATED_AI_PUBLIC_DIR, campaignFolder), { recursive: true, force: true });
+}
+
 function validateAIImagesByTemplateIds(templateIds: string[]): { ok: string[]; missing: string[] } {
   const ok: string[] = [];
   const missing: string[] = [];
@@ -1109,6 +1153,24 @@ function validateAIImagesByTemplateIds(templateIds: string[]): { ok: string[]; m
       ok.push(templateId);
     } else {
       missing.push(`${templateId} → public${expectedPath}`);
+    }
+  }
+
+  return { ok, missing };
+}
+
+function validateAIImagesByPublicPaths(
+  items: Array<{ label: string; publicPath: string }>,
+): { ok: string[]; missing: string[] } {
+  const ok: string[] = [];
+  const missing: string[] = [];
+
+  for (const item of items) {
+    const fullPath = publicPathToOutputPath(item.publicPath);
+    if (existsSync(fullPath)) {
+      ok.push(item.label);
+    } else {
+      missing.push(`${item.label} → public${item.publicPath}`);
     }
   }
 
@@ -1177,13 +1239,14 @@ function writeAIBundleArtifacts(bundle: AIGenerationBundle, packDir: string) {
   mkdirSync(sourcesDir, { recursive: true });
 
   const items = bundle.items.map((item) => {
-    const copiedSource = `con_ia/fuentes_ai/${item.slot}__${item.templateId}.png`;
+    const copiedSource = `con_ia/fuentes_ai/${item.instanceId}.png`;
 
     if (existsSync(item.outputPath)) {
       copyFileSync(item.outputPath, join(packDir, copiedSource));
     }
 
     return {
+      instanceId: item.instanceId,
       templateId: item.templateId,
       slot: item.slot,
       kind: item.kind,
@@ -1209,6 +1272,64 @@ function writeAIBundleArtifacts(bundle: AIGenerationBundle, packDir: string) {
     generatedAt: new Date().toISOString(),
     items,
   }, null, 2)}\n`);
+}
+
+function buildRenderSpecItems(
+  campaign: DeliveryCampaign,
+  bundle: AIGenerationBundle | null,
+  onlyVideo = false,
+): RenderSpecItem[] {
+  const aiPathByInstance = new Map((bundle?.items ?? []).map(item => [item.instanceId, item.publicPath]));
+
+  return campaign.items
+    .filter(item => !onlyVideo || item.kind === 'reels' || item.kind === 'stories')
+    .map((item) => ({
+      templateId: item.templateId,
+      outputName: item.instanceId,
+      aiBackgroundPath: item.variant === 'con_ia'
+        ? (aiPathByInstance.get(item.instanceId) ?? AI_IMAGE_PATHS[item.templateId] ?? null)
+        : null,
+    }));
+}
+
+function writeRenderSpecFile(items: RenderSpecItem[], specPath: string) {
+  mkdirSync(dirname(specPath), { recursive: true });
+  writeFileSync(specPath, `${JSON.stringify({ items }, null, 2)}\n`);
+}
+
+function renderImagesFromSpec(items: RenderSpecItem[], outputDir: string, specPath: string): boolean {
+  writeRenderSpecFile(items, specPath);
+  const cmd = `npx tsx scripts/render-images.ts --spec "${specPath}" --output "${outputDir}"`;
+  console.log(`[CMD] ${cmd}\n`);
+
+  try {
+    execSync(cmd, { cwd: ROOT, stdio: 'inherit' });
+    return true;
+  } catch {
+    console.error('❌ Error generando imágenes');
+    return false;
+  }
+}
+
+function renderVideosFromSpec(
+  items: RenderSpecItem[],
+  outputDir: string,
+  duration: number,
+  specPath: string,
+): boolean {
+  if (items.length === 0) return true;
+
+  writeRenderSpecFile(items, specPath);
+  const cmd = `npx tsx scripts/render-video.ts --spec "${specPath}" --output "${outputDir}" --duration ${duration}`;
+  console.log(`[CMD] ${cmd}\n`);
+
+  try {
+    execSync(cmd, { cwd: ROOT, stdio: 'inherit' });
+    return true;
+  } catch {
+    console.error('❌ Error generando videos');
+    return false;
+  }
 }
 
 function renderImages(templateIds: string[], outputDir: string): boolean {
@@ -1268,8 +1389,8 @@ function copyPackOutputs(
     const destDir = join(packDir, item.variant, item.kind);
     mkdirSync(destDir, { recursive: true });
 
-    const pngSource = join(stagingImageDir, template.category, `${item.templateId}.png`);
-    const baseName = `${item.slot}__${item.templateId}`;
+    const pngSource = join(stagingImageDir, template.category, `${item.instanceId}.png`);
+    const baseName = item.instanceId;
     const pngTarget = join(destDir, `${baseName}.png`);
 
     if (!existsSync(pngSource)) {
@@ -1282,7 +1403,7 @@ function copyPackOutputs(
     const needsVideo = !skipVideo && (item.kind === 'reels' || item.kind === 'stories');
     if (!needsVideo) continue;
 
-    const mp4Source = join(stagingVideoDir, template.category, `${item.templateId}.mp4`);
+    const mp4Source = join(stagingVideoDir, template.category, `${item.instanceId}.mp4`);
     const mp4Target = join(destDir, `${baseName}.mp4`);
 
     if (!existsSync(mp4Source)) {
@@ -1311,6 +1432,15 @@ function writePackManifest(
     acc[SLOT_TO_KIND[slot]] = campaign.items.filter(item => item.slot === slot).length;
     return acc;
   }, {} as Record<AssetKind, number>);
+  const countByVariantAndKind = DELIVERY_VARIANTS.reduce((acc, variant) => {
+    acc[variant] = SLOT_ORDER.reduce((slotAcc, slot) => {
+      slotAcc[SLOT_TO_KIND[slot]] = campaign.items.filter(
+        item => item.slot === slot && item.variant === variant,
+      ).length;
+      return slotAcc;
+    }, {} as Record<AssetKind, number>);
+    return acc;
+  }, {} as Record<AssetVariant, Record<AssetKind, number>>);
 
   const manifest = {
     generatedAt: new Date().toISOString(),
@@ -1329,12 +1459,14 @@ function writePackManifest(
       con_ia: conIA,
       sin_ia: sinIA,
       por_categoria: countByKind,
+      por_categoria_y_variante: countByVariantAndKind,
     },
     ai: bundle
       ? {
           promptFile: 'prompts_ai.json',
           sourcesDir: 'con_ia/fuentes_ai/',
           generatedTemplates: bundle.items.map(item => ({
+            instanceId: item.instanceId,
             templateId: item.templateId,
             slot: item.slot,
             seed: item.seed,
@@ -1360,10 +1492,11 @@ function writePackManifest(
       kind: item.kind,
       variant: item.variant,
       templateId: item.templateId,
+      instanceId: item.instanceId,
       description: item.description,
-      png: `${item.variant}/${item.kind}/${item.slot}__${item.templateId}.png`,
+      png: `${item.variant}/${item.kind}/${item.instanceId}.png`,
       mp4: !skipVideo && (item.kind === 'reels' || item.kind === 'stories')
-        ? `${item.variant}/${item.kind}/${item.slot}__${item.templateId}.mp4`
+        ? `${item.variant}/${item.kind}/${item.instanceId}.mp4`
         : null,
     })),
   };
@@ -1371,11 +1504,11 @@ function writePackManifest(
   writeFileSync(join(packDir, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
 
   const tableRows = campaign.items
-    .map((item) => `| ${item.variant} | ${item.kind} | \`${item.templateId}\` | ${item.description} |`)
+    .map((item) => `| ${item.variant} | ${item.kind} | \`${item.templateId}\` | \`${item.instanceId}\` | ${item.description} |`)
     .join('\n');
 
   const variationNotes = bundle
-    ? '- fondos AI frescos guardados en `con_ia/fuentes_ai/`\n- prompts y seeds de IA guardados en `prompts_ai.json`'
+    ? '- fondos AI frescos únicos por instancia guardados en `con_ia/fuentes_ai/`\n- prompts y seeds de IA guardados en `prompts_ai.json`'
     : '- se reutilizó la librería AI sincronizada en `public/ai-images/`';
 
   const readme = `# ${campaign.titulo}
@@ -1391,7 +1524,9 @@ ${campaign.objetivo}
 ## Regla del pack
 
 - ${campaign.items.length} piezas totales
-- al menos ${ITEMS_PER_CATEGORY} piezas por categoría (publicaciones, flyers, reels, stories, banners)
+- ${ITEMS_PER_CATEGORY_PER_VARIANT} piezas por categoría en \`sin_ia/\`
+- ${ITEMS_PER_CATEGORY_PER_VARIANT} piezas por categoría en \`con_ia/\`
+- ${TOTAL_ITEMS_PER_CATEGORY} piezas por categoría en total (publicaciones, flyers, reels, stories, banners)
 - distribución generada en esta corrida: ${sinIA} sin_ia / ${conIA} con_ia
 - tipos cubiertos: publicaciones, flyers, reels, stories, banners
 - nota: \`flyers/\` usa layout cuadrado de post (1080×1080) porque hoy no existe un layout flyer dedicado en el renderer
@@ -1417,8 +1552,8 @@ ${variationNotes}
 
 ## Mapping de templates
 
-| Variante | Tipo | Template | Descripción |
-| :--- | :--- | :--- | :--- |
+| Variante | Tipo | Template | Archivo | Descripción |
+| :--- | :--- | :--- | :--- | :--- |
 ${tableRows}
 
 ## Video
@@ -1433,7 +1568,16 @@ function runDeliveryCampaigns(args: Args) {
   const freshAI = shouldGenerateFreshAI(args);
   const aiModeLabel: 'fresh' | 'cached' = freshAI ? 'fresh' : 'cached';
   const runSeed = normalizeSeed(args.seed ?? Date.now());
-  const deliveryCampaigns = buildDeliveryCampaigns(runSeed);
+  const allDeliveryCampaigns = buildDeliveryCampaigns(runSeed);
+  const deliveryCampaigns = args.campaign
+    ? allDeliveryCampaigns.filter(campaign => campaign.folderName === args.campaign)
+    : allDeliveryCampaigns;
+
+  if (deliveryCampaigns.length === 0) {
+    console.error(`❌ Campaña oficial no encontrada: ${args.campaign}`);
+    console.error(`   Opciones: ${allDeliveryCampaigns.map(campaign => campaign.folderName).join(', ')}`);
+    process.exit(1);
+  }
 
   for (const campaign of deliveryCampaigns) {
     ensureDeliveryCampaignShape(campaign);
@@ -1451,8 +1595,9 @@ function runDeliveryCampaigns(args: Args) {
   console.log(`║  Base output: ${baseOutputDir}`.padEnd(57) + `║`);
   console.log(`║  Campañas:   ${String(deliveryCampaigns.length).padEnd(43)}║`);
   console.log(`║  Seed base:  ${String(runSeed).padEnd(43)}║`);
+  if (args.campaign) console.log(`║  Filtro:     ${args.campaign.padEnd(43)}║`);
   console.log(`║  IA:         ${aiHeaderValue}`.padEnd(57) + `║`);
-  console.log(`║  Regla:      25 items por campaña (5 por categoría)`.padEnd(57) + `║`);
+  console.log(`║  Regla:      50 items por campaña (5 por categoría x variante)`.padEnd(57) + `║`);
   console.log(`╚══════════════════════════════════════════════════════════╝\n`);
 
   for (const [index, campaign] of deliveryCampaigns.entries()) {
@@ -1460,15 +1605,11 @@ function runDeliveryCampaigns(args: Args) {
     const stagingDir = join(packDir, '_staging');
     const stagingImageDir = join(stagingDir, 'images');
     const stagingVideoDir = join(stagingDir, 'video');
-    const templateIds = [...new Set(campaign.items.map(item => item.templateId))];
-    const videoTemplateIds = [...new Set(
-      campaign.items
-        .filter(item => item.kind === 'reels' || item.kind === 'stories')
-        .map(item => item.templateId),
-    )];
     const aiBundle = freshAI
       ? buildAIGenerationBundle(campaign, args, normalizeSeed(runSeed + (index + 1) * 4099))
       : null;
+    const imageRenderSpec = buildRenderSpecItems(campaign, aiBundle);
+    const videoRenderSpec = buildRenderSpecItems(campaign, aiBundle, true);
 
     console.log(`\n── CAMPAÑA ${index}: ${campaign.folderName} ──\n`);
     console.log(`  Target: ${campaign.target}`);
@@ -1476,12 +1617,13 @@ function runDeliveryCampaigns(args: Args) {
     console.log(`  Output: ${packDir}`);
     console.log(`  Templates elegidos:`);
     for (const item of campaign.items) {
-      console.log(`    · [${item.variant}/${item.slot}] ${item.templateId}`);
+      console.log(`    · [${item.variant}/${item.slot}] ${item.instanceId} ← ${item.templateId}`);
     }
 
     resetGeneratedPackDir(packDir);
 
     if (aiBundle) {
+      resetFreshAIPublicDir(campaign.folderName);
       console.log(`\n  · Generar AI fresca (${aiBundle.items.length} fondos / seed ${aiBundle.seedBase})`);
       if (!renderFreshAIAssets(aiBundle, packDir)) {
         hadFailure = true;
@@ -1489,32 +1631,43 @@ function runDeliveryCampaigns(args: Args) {
       }
     }
 
-    const { ok: aiOk, missing: aiMissing } = validateAIImagesByTemplateIds(
-      campaign.items
-        .filter(item => item.variant === 'con_ia')
-        .map(item => item.templateId),
-    );
+    const { ok: aiOk, missing: aiMissing } = aiBundle
+      ? validateAIImagesByPublicPaths(
+          aiBundle.items.map(item => ({ label: item.instanceId, publicPath: item.publicPath })),
+        )
+      : validateAIImagesByTemplateIds([
+          ...new Set(
+            campaign.items
+              .filter(item => item.variant === 'con_ia')
+              .map(item => item.templateId),
+          ),
+        ]);
 
     console.log(`\n  · Validación AI:`);
-    console.log(`    ✓ ${aiOk.length} templates IA con fondo disponible`);
+    console.log(`    ✓ ${aiOk.length} ${aiBundle ? 'fondos AI por instancia' : 'templates IA'} con fondo disponible`);
     if (aiMissing.length > 0) {
       hadFailure = true;
-      console.log(`    ✗ ${aiMissing.length} templates IA sin fondo disponible:`);
+      console.log(`    ✗ ${aiMissing.length} ${aiBundle ? 'instancias IA' : 'templates IA'} sin fondo disponible:`);
       for (const missing of aiMissing) {
         console.log(`      → ${missing}`);
       }
       continue;
     }
 
-    console.log(`\n  · Render PNG (${templateIds.length} templates)`);
-    if (!renderImages(templateIds, stagingImageDir)) {
+    console.log(`\n  · Render PNG (${imageRenderSpec.length} piezas)`);
+    if (!renderImagesFromSpec(imageRenderSpec, stagingImageDir, join(stagingDir, 'render_images_spec.json'))) {
       hadFailure = true;
       continue;
     }
 
     if (!args.skipVideo) {
-      console.log(`\n  · Render MP4 (${videoTemplateIds.length} templates / ${args.videoDuration}s)`);
-      if (!renderVideos(videoTemplateIds, stagingVideoDir, args.videoDuration)) {
+      console.log(`\n  · Render MP4 (${videoRenderSpec.length} piezas / ${args.videoDuration}s)`);
+      if (!renderVideosFromSpec(
+        videoRenderSpec,
+        stagingVideoDir,
+        args.videoDuration,
+        join(stagingDir, 'render_video_spec.json'),
+      )) {
         hadFailure = true;
         continue;
       }

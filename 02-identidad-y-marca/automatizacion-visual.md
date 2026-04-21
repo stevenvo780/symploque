@@ -99,9 +99,11 @@ Cada campaña queda estructurada asi:
 
 Regla fija del pipeline por campaña:
 
-- 25 piezas totales
-- mínimo 5 piezas por categoría (`publicaciones`, `flyers`, `reels`, `stories`, `banners`)
-- el reparto entre piezas con IA y sin IA se adapta a la disponibilidad real del pool
+- 50 piezas totales
+- 5 piezas por categoría dentro de `sin_ia/`
+- 5 piezas por categoría dentro de `con_ia/`
+- 10 piezas por categoría en total (`publicaciones`, `flyers`, `reels`, `stories`, `banners`)
+- la corrida oficial completa genera 25 piezas editoriales y 25 piezas con IA fresca
 - reels y stories exportan PNG preview y MP4
 - `flyers/` usa el layout cuadrado de `post` porque el renderer todavia no tiene un formato flyer dedicado
 

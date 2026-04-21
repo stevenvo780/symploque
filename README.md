@@ -90,9 +90,11 @@ Cada campaña contiene:
 
 Regla actual del pipeline:
 
-- 25 piezas por campaña
-- mínimo 5 piezas por categoría (`publicaciones`, `flyers`, `reels`, `stories`, `banners`)
-- el reparto entre `con_ia` y `sin_ia` se ajusta por disponibilidad, priorizando variedad y costo razonable de IA
+- 50 piezas por campaña
+- 5 piezas por categoría dentro de `sin_ia/`
+- 5 piezas por categoría dentro de `con_ia/`
+- 10 piezas por categoría en total (`publicaciones`, `flyers`, `reels`, `stories`, `banners`)
+- la corrida oficial sin argumentos genera 25 piezas editoriales y 25 piezas con IA fresca por campaña
 - sin argumentos, el modo oficial genera fondos AI nuevos por campaña y deja trazas en `prompts_ai.json` + `con_ia/fuentes_ai/`
 - el generador ahora elige variaciones de templates compatibles por narrativa usando un seed reproducible
 - puedes fijar la corrida con `--seed 12345`

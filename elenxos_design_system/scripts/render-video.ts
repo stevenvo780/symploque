@@ -24,17 +24,30 @@
  */
 
 import { spawn, execSync, type ChildProcess } from 'child_process';
-import { mkdirSync, unlinkSync } from 'fs';
+import { mkdirSync, readFileSync, unlinkSync } from 'fs';
 import { resolve, join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { TEMPLATE_DATA, type TemplateInfo } from '../src/templates/registry';
+import { TEMPLATE_DATA, getTemplateById, type TemplateInfo } from '../src/templates/registry';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+
+interface RenderSpecItem {
+  templateId: string;
+  outputName?: string;
+  aiBackgroundPath?: string | null;
+}
+
+interface RenderJob {
+  template: TemplateInfo;
+  outputName: string;
+  aiBackgroundPath: string | null;
+}
 
 // ── Args ─────────────────────────────────────────────────────
 function parseArgs() {
   const args = process.argv.slice(2);
   let templateFilter: string[] | null = null;
+  let specPath: string | null = null;
   let outputDir = join(ROOT, 'output', 'video');
   let duration = 8; // seconds
   let allFormats = false;
@@ -43,6 +56,9 @@ function parseArgs() {
     switch (args[i]) {
       case '--template':
         templateFilter = args[++i].split(',').map(s => s.trim());
+        break;
+      case '--spec':
+        specPath = resolve(args[++i]);
         break;
       case '--output':
         outputDir = resolve(args[++i]);
@@ -54,6 +70,44 @@ function parseArgs() {
         allFormats = true;
         break;
     }
+  }
+
+  if (specPath) {
+    const parsed = JSON.parse(readFileSync(specPath, 'utf-8')) as RenderSpecItem[] | { items?: RenderSpecItem[] };
+    const rawItems = Array.isArray(parsed) ? parsed : parsed.items;
+
+    if (!Array.isArray(rawItems)) {
+      throw new Error('El archivo --spec debe ser un array JSON o un objeto con { items }.');
+    }
+
+    const jobs = rawItems.map((item, index): RenderJob => {
+      if (!item || typeof item.templateId !== 'string' || item.templateId.trim() === '') {
+        throw new Error(`Item inválido en --spec[${index}]: falta templateId.`);
+      }
+
+      const template = getTemplateById(item.templateId.trim());
+      if (!template) {
+        throw new Error(`Template no encontrado en --spec[${index}]: ${item.templateId}`);
+      }
+
+      const outputName = typeof item.outputName === 'string' && item.outputName.trim()
+        ? item.outputName.trim()
+        : template.id;
+
+      return {
+        template,
+        outputName,
+        aiBackgroundPath: typeof item.aiBackgroundPath === 'string' && item.aiBackgroundPath.trim()
+          ? item.aiBackgroundPath.trim()
+          : null,
+      };
+    });
+
+    if (!Number.isFinite(duration) || duration <= 0) {
+      throw new Error('La duración de video debe ser un número mayor que 0.');
+    }
+
+    return { jobs, outputDir, duration };
   }
 
   let selected: TemplateInfo[];
@@ -71,7 +125,13 @@ function parseArgs() {
     throw new Error('La duración de video debe ser un número mayor que 0.');
   }
 
-  return { selected, outputDir, duration };
+  const jobs = selected.map((template): RenderJob => ({
+    template,
+    outputName: template.id,
+    aiBackgroundPath: null,
+  }));
+
+  return { jobs, outputDir, duration };
 }
 
 // ── Vite dev server ──────────────────────────────────────────
@@ -111,9 +171,9 @@ function convertToMp4(webmPath: string, mp4Path: string): void {
 
 // ── Main ─────────────────────────────────────────────────────
 async function main() {
-  const { selected, outputDir, duration } = parseArgs();
+  const { jobs, outputDir, duration } = parseArgs();
 
-  if (selected.length === 0) {
+  if (jobs.length === 0) {
     console.error('❌ No templates matched the filter.');
     process.exit(1);
   }
@@ -128,7 +188,7 @@ async function main() {
 
   console.log(`\n═══════════════════════════════════════════════════`);
   console.log(`  ELENXOS React→VIDEO Renderer`);
-  console.log(`  Templates: ${selected.length}`);
+  console.log(`  Renders:   ${jobs.length}`);
   console.log(`  Duration:  ${duration}s per video`);
   console.log(`  Output:    ${outputDir}`);
   console.log(`═══════════════════════════════════════════════════\n`);
@@ -145,14 +205,15 @@ async function main() {
     const { chromium } = await import('playwright');
     const browser = await chromium.launch({ headless: true });
 
-    for (const tmpl of selected) {
+    for (const job of jobs) {
+      const tmpl = job.template;
       const categoryDir = join(outputDir, tmpl.category);
       mkdirSync(categoryDir, { recursive: true });
 
-      const mp4Path = join(categoryDir, `${tmpl.id}.mp4`);
+      const mp4Path = join(categoryDir, `${job.outputName}.mp4`);
 
       try {
-        console.log(`\n[${ok + fail + 1}/${selected.length}] 🎬 ${tmpl.id} (${tmpl.width}×${tmpl.height}, ${duration}s)`);
+        console.log(`\n[${ok + fail + 1}/${jobs.length}] 🎬 ${job.outputName} ← ${tmpl.id} (${tmpl.width}×${tmpl.height}, ${duration}s)`);
 
         // Create browser context with screencast recording
         const context = await browser.newContext({
@@ -173,8 +234,12 @@ async function main() {
         });
 
         // Navigate — use render.html with scale=1 for pixel-perfect capture
-        const renderUrl = `${baseUrl}/render.html?template=${tmpl.id}`;
-        await page.goto(renderUrl, { waitUntil: 'networkidle' });
+        const renderUrl = new URL(`${baseUrl}/render.html`);
+        renderUrl.searchParams.set('template', tmpl.id);
+        if (job.aiBackgroundPath) {
+          renderUrl.searchParams.set('aiBg', job.aiBackgroundPath);
+        }
+        await page.goto(renderUrl.toString(), { waitUntil: 'networkidle' });
 
         // Wait for template mount
         const selector = `[data-template-id="${tmpl.id}"]`;
@@ -210,7 +275,7 @@ async function main() {
   }
 
   console.log(`\n═══════════════════════════════════════════════════`);
-  console.log(`  RESULTADO: ${ok}/${selected.length} videos generados`);
+  console.log(`  RESULTADO: ${ok}/${jobs.length} videos generados`);
   if (fail > 0) console.log(`  Errores: ${fail}`);
   console.log(`  Output: ${outputDir}`);
   console.log(`═══════════════════════════════════════════════════\n`);
