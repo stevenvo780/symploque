@@ -14,12 +14,38 @@ Este documento registra las cuentas creadas bajo el correo `media@elenxos.com` y
 
 ## 2. Checklist de Configuración (Post-Creación)
 
-Para cada cuenta, marcar una vez completado:
-- [ ] Foto de Perfil (Logo oficial del Media Kit).
-- [ ] Banner / Portada (Alineado a la Capa A o B).
-- [ ] Bio optimizada con keywords (Rigor, Investigación, Agora).
-- [ ] Enlace verificado a `elenxos.com` o `agora.elenxos.com`.
-- [ ] Cuenta convertida a "Perfil Profesional/Empresa" (para métricas).
+Guía completa con textos y archivos exactos: [guia-configuracion-manual-redes.md](./guia-configuracion-manual-redes.md)
+
+### Instagram (@agora.elenxos)
+- [ ] Foto de Perfil → `assets/brand/mto/kit_logos/logo_kodama_512.png`
+- [ ] Bio optimizada (ver guía)
+- [ ] Website → `agora.elenxos.com` (solo desde app móvil)
+- [ ] Categoría → Software > Educación
+- [ ] Primera publicación (Post 1 del Lote 1)
+
+### LinkedIn (Elenxos)
+- [ ] Página de empresa creada con URL `/company/elenxos`
+- [ ] Logo → `assets/brand/mto/kit_logos/logo_white_512.png`
+- [ ] Banner → `assets/brand/mto/kit_logos/banner_main.png`
+- [ ] Tagline y descripción (ver guía)
+- [ ] Website → `elenxos.com`
+- [ ] Primera publicación (Post 1 del Lote 1)
+
+### X / Twitter
+- [ ] Cuenta creada con handle definitivo
+- [ ] Foto de Perfil → `assets/brand/mto/kit_logos/logo_kodama_512.png`
+- [ ] Banner → `campana_0_dolor/con_ia/banners/banner__hybrid_banner_x__con_ia_01.png`
+- [ ] Bio (ver guía)
+- [ ] Website → `agora.elenxos.com`
+- [ ] Primer post + Hilo inaugural
+
+### YouTube (Elenxos)
+- [ ] Canal creado con nombre `Elenxos`
+- [ ] Foto de Perfil → `assets/brand/mto/kit_logos/logo_kodama_1024.png`
+- [ ] Banner → `campana_0_dolor/con_ia/banners/banner__hybrid_banner_yt__con_ia_01.png`
+- [ ] Descripción del canal (ver guía)
+- [ ] Links configurados
+
 
 ## 3. Acceso Centralizado (Seguridad)
 
