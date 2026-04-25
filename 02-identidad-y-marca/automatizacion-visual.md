@@ -22,7 +22,7 @@ La regla operativa es simple:
 ## Regla para no mezclar sistemas
 
 - `03-operacion-redes/` manda la ejecucion semanal real.
-- `05-redes-sociales/` conserva el arco estrategico de 8 semanas y usa IDs narrativos tipo `s1_*`.
+- `06-redes-sociales/` conserva el arco estrategico de 8 semanas y usa IDs narrativos tipo `s1_*`.
 - `elenxos_design_system/` renderiza con IDs ejecutables tipo `n1_l1_*`, `n2_l3_*` y plantillas standalone.
 - `assets/scripts/generate_hybrid.py` usa una tercera capa de IDs de exportacion (`s1_post1`, `s2_post1`, etc.), asi que hoy debe tratarse como puente legacy hasta unificar el mapping.
 

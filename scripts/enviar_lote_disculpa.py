@@ -11,24 +11,84 @@ from urllib import error, parse, request
 CSV_PATH = Path("05-datos-y-reportes/operacion-email/disculpa-error-pendientes.csv")
 
 
+TEMPLATE_PATH = Path("04-mensajeria-email/01-disculpa-repetidos.md")
+DEFAULT_SENDER = "ventas@elenxos.com"
+DEFAULT_REVIEW_PATH = Path("04-mensajeria-email/lote-disculpa-error-revision.md")
+
+
 def build_body(contact_name: str, body_variant: str, duplicate_count: int) -> str:
-    if body_variant == "persona":
-        saludo = f"Hola, {contact_name}."
+    with TEMPLATE_PATH.open("r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Extraer el cuerpo despues de la linea '---'
+    parts = content.split("---")
+    if len(parts) > 1:
+        body = parts[-1].strip()
     else:
-        saludo = f"Hola, equipo de {contact_name}."
+        body = content.strip()
 
-    mensaje_prev = "los correos anteriores, que fueron enviados por error" if duplicate_count > 1 else "el correo anterior, que fue enviado por error"
+    if body_variant != "persona":
+        contact_name = f"equipo de {contact_name}"
 
-    return (
-        f"{saludo}\n\n"
-        f"Le escribimos desde Elenxos para ofrecer una sincera disculpa por {mensaje_prev} durante la migración de nuestro sistema.\n\n"
-        "Por favor ignore ese mensaje. No requiere ninguna acción de su parte.\n\n"
-        "Lamentamos la confusión y agradecemos profundamente su comprensión.\n\n"
-        "Saludos,\n\n"
-        "Jacob Agudelo & Steven Vallejo\n"
-        "Fundadores, Elenxos\n"
-        "www.elenxos.com\n"
-    )
+    # Reemplazar la variable {{contact_name}}
+    body = body.replace("{{contact_name}}", contact_name)
+
+    if duplicate_count > 1:
+        body = body.replace("el correo anterior", "los correos anteriores")
+        body = body.replace("El mensaje fue enviado", "Los mensajes fueron enviados")
+        body = body.replace("ese mensaje", "esos mensajes")
+        body = body.replace("No requiere", "No requieren")
+
+    return body + "\n"
+
+
+def format_review_markdown(rows: list[dict[str, str]], sender: str, csv_path: Path) -> str:
+    double_rows = [row for row in rows if int(row["duplicate_count"]) > 1]
+    lines = [
+        "# Lote de Correos de Disculpa - Revision",
+        "",
+        "> Estado: borrador revisable. No se ha ejecutado ningun envio desde este archivo.",
+        "",
+        f"- Remitente oficial previsto: `{sender}`",
+        f"- Archivo fuente: `{csv_path}`",
+        f"- Plantilla base: `{TEMPLATE_PATH}`",
+        f"- Total de correos en el lote: {len(rows)}",
+        f"- Casos con mas de un envio errado registrado: {len(double_rows)}",
+        "",
+        "## Checklist antes del envio oficial",
+        "",
+        "- Confirmar que todos los destinatarios corresponden al incidente.",
+        "- Confirmar que el asunto y el nombre de saludo son correctos.",
+        "- Revisar especialmente los casos con mas de un envio errado.",
+        f"- Preview en consola: `python3 scripts/enviar_lote_disculpa.py --sender {sender}`",
+        f"- Envio oficial, solo tras aprobar: `python3 scripts/enviar_lote_disculpa.py --sender {sender} --send`",
+        "",
+        "## Correos",
+        "",
+    ]
+
+    for index, row in enumerate(rows, start=1):
+        body = build_body(row["contact_name"], row["body_variant"], int(row["duplicate_count"])).rstrip()
+        lines.extend(
+            [
+                f"### {index:02d}. {row['contact_name']} - {row['institution']}",
+                "",
+                f"- Incidente: `{row['incident_id']}`",
+                f"- Para: `{row['email']}`",
+                f"- Remitente previsto: `{sender}`",
+                f"- Asunto: `{row['subject']}`",
+                f"- Variante: `{row['body_variant']}`",
+                f"- Envios errados registrados: {row['duplicate_count']}",
+                f"- Estado actual: `{row['send_status']}`",
+                "",
+                "```text",
+                body,
+                "```",
+                "",
+            ]
+        )
+
+    return "\n".join(lines)
 
 
 def require_env(name: str) -> str:
@@ -63,7 +123,13 @@ def send_email(base_url: str, api_key: str, sender: str, sender_password: str, t
 def main() -> int:
     parser = argparse.ArgumentParser(description="Enviar lote de disculpa por error de envio.")
     parser.add_argument("--csv", default=str(CSV_PATH), help="Ruta al CSV del lote.")
-    parser.add_argument("--sender", default="admin@elenxos.com", help="Cuenta remitente.")
+    parser.add_argument("--sender", default=DEFAULT_SENDER, help="Cuenta remitente.")
+    parser.add_argument(
+        "--review-md",
+        nargs="?",
+        const=str(DEFAULT_REVIEW_PATH),
+        help="Escribe un Markdown revisable del lote. Si no se pasa ruta, usa la ruta operativa por defecto.",
+    )
     parser.add_argument("--send", action="store_true", help="Ejecuta el envio real. Sin esta bandera solo hace preview.")
     args = parser.parse_args()
 
@@ -75,7 +141,18 @@ def main() -> int:
     with path.open(newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
 
+    if args.send and args.review_md:
+        print("--review-md no puede combinarse con --send.", file=sys.stderr)
+        return 2
+
     if not args.send:
+        if args.review_md:
+            review_path = Path(args.review_md)
+            review_path.parent.mkdir(parents=True, exist_ok=True)
+            review_path.write_text(format_review_markdown(rows, args.sender, path), encoding="utf-8")
+            print(f"Review written to {review_path}")
+            return 0
+
         print(f"Preview for {len(rows)} emails from {args.sender}")
         for row in rows:
             body = build_body(row["contact_name"], row["body_variant"], int(row["duplicate_count"]))

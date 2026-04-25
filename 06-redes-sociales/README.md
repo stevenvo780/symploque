@@ -32,3 +32,14 @@ Conserva el arco narrativo largo, el sistema semanal y los prompts conceptuales 
   IDs de exportacion del script legacy `../assets/scripts/generate_hybrid.py`.
 
 Hasta unificar el mapping, no mezclar estos tres niveles en el mismo flujo sin documentar el puente.
+
+El mapping completo con tablas de correspondencia está en [`../03-operacion-redes/mapping-ids-templates.md`](../03-operacion-redes/mapping-ids-templates.md).
+
+## Relación con `03-operacion-redes/`
+
+Este directorio **no manda la ejecución semanal**. Solo conserva el arco narrativo largo.
+
+- **`03-operacion-redes/`** tiene el copy ejecutable, el calendario semanal y el protocolo de interacción.
+- **Este directorio** tiene el plan conceptual de 8 semanas con copies editoriales y prompts de IA.
+
+El Lote 1 de `03-operacion-redes/` y las Semanas 1-2 de aquí cubren la misma fase (dolor / cercanía), pero el Lote 1 es el punto de arranque inmediato. Las Semanas 1-2 amplían y complementan ese material.

@@ -1,23 +1,23 @@
 # Plantilla 02: Primer Contacto Estándar
 
-**Objetivo:** Presentación corporativa resaltando la dualidad de filósofos de la UdeA + 10 años de experiencia en software/IA.
+**Objetivo:** Captación directa enfocada en resolver la dispersión de información y el caos organizativo de los investigadores.
 **Para quién:** Profesores, investigadores y contactos generales que no han recibido ningún correo previo.
-**Asunto:** De la filosofía en la UdeA a transformar la academia (Elenxos)
+**Asunto:** Una solución al caos de la investigación académica (desde la UdeA)
 
 ---
 
 Hola {{contact_name}},
 
-Soy Steven Vallejo y junto a Jacob Agudelo fundamos **Elenxos**. Somos un equipo de filósofos formados en la Universidad de Antioquia con una enorme vocación por la investigación y la ciencia. Empezamos preguntándonos cómo organizar el caos del pensamiento y el aprendizaje colaborativo en la academia.
+Sabemos que investigar a menudo significa luchar contra la dispersión: notas perdidas, múltiples versiones de un mismo documento y referencias difíciles de trazar. 
 
-Lo que nos hace diferentes es que hemos combinado nuestra formación filosófica con nuestros más de 10 años de experiencia en ingeniería de software e inteligencia artificial. Así nació nuestro emprendimiento, respaldado por una capacidad técnica de creación que consideramos insuperable. Hemos traducido todo nuestro rigor y metodología académica en software de vanguardia.
+Soy Steven Vallejo y, junto a Jacob Agudelo, fundamos **Elenxos**. Como filósofos formados en la Universidad de Antioquia con más de 10 años de experiencia en ingeniería de software, decidimos construir una solución definitiva para este problema.
 
-El resultado de este esfuerzo es **Agora**, nuestra plataforma diseñada específicamente para la investigación cooperativa y la estructuración del conocimiento. Hemos puesto toda nuestra rigurosidad axiomática allí para que investigadores, docentes y semilleros tengan una herramienta verdaderamente potente.
+Así creamos **Agora**, una plataforma de vanguardia diseñada específicamente para la investigación cooperativa. Hemos traducido nuestra rigurosidad académica en una tecnología que te permite estructurar tu conocimiento, organizar tus fuentes y redactar de forma colaborativa en un solo espacio sin fricción.
 
-Puedes conocer el producto y probarlo directamente aquí:
+Puedes explorar la plataforma y probarla de forma gratuita aquí:
 👉 **[https://agora.elenxos.com/](https://agora.elenxos.com/)**
 
-Me encantaría saber si en {{institution}} (o específicamente en {{role_or_unit}}) ven valor en aplicar este nivel de tecnología a sus propios procesos de lectura y escritura.
+Me encantaría saber si en {{institution}} (o en {{role_or_unit}}) les sería útil implementar este nivel de tecnología para potenciar sus procesos de lectura y escritura.
 
 Un saludo muy sincero,
 

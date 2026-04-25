@@ -13,7 +13,9 @@ Este directorio concentra la ejecucion de contenido y la operacion diaria de red
 - [protocolo-de-interaccion.md](./protocolo-de-interaccion.md)
   Rutina de engagement y salto a demo.
 - [directorio-cuentas-y-estado.md](./directorio-cuentas-y-estado.md)
-  Estado operativo de cuentas, bios, banners y acceso centralizado.
+  Estado operativo de cuentas, bios, banners, acceso centralizado y dependencias externas.
+- [mapping-ids-templates.md](./mapping-ids-templates.md)
+  Puente entre IDs narrativos (`s1_*`), ejecutables (`n1_l1_*`) y de export legacy (`s1_post1`).
 
 ## Dependencias de identidad
 
@@ -28,3 +30,13 @@ La operacion no debe separarse del sistema de marca. Antes de lanzar piezas, rev
 1. Si vas a publicar esta semana: abre `lote-1-publicaciones-por-plataforma.md` + `calendario-semana-1-redes.md`.
 2. Si vas a responder o mover leads: abre `protocolo-de-interaccion.md`.
 3. Si vas a crear o configurar cuentas: abre `directorio-cuentas-y-estado.md`.
+4. Si necesitas conectar IDs narrativos con templates renderizables: abre `mapping-ids-templates.md`.
+
+## Relación con `06-redes-sociales/`
+
+El directorio `06-redes-sociales/` conserva el arco narrativo largo (sistema de 8 semanas con copies y prompts por fase). No manda la ejecución real.
+
+- **Este directorio** (`03-operacion-redes/`) tiene el copy listo para publicar, los calendarios semanales y el protocolo de interacción.
+- **`06-redes-sociales/`** tiene el plan conceptual de 8 semanas con temas, copies editoriales y prompts de IA.
+
+Ambos cubren la misma fase inicial (dolor / cercanía), pero el Lote 1 de aquí es el punto de arranque inmediato. Las Semanas 1-2 del sistema de 8 semanas amplían y complementan, no reemplazan.

@@ -31,7 +31,7 @@ Si solo vas a abrir cinco archivos, abre estos en este orden:
 - `03-operacion-redes/`: copy, calendario y operacion diaria de redes
 - `04-mensajeria-email/`: plantillas y operacion de correo
 - `05-datos-y-reportes/`: base operativa, reconciliacion y reportes
-- `05-redes-sociales/`: sistema estrategico semanal y roadmap narrativo
+- `06-redes-sociales/`: sistema estrategico semanal y roadmap narrativo
 - `assets/`: kit de marca, prompts y entregables visuales
 - `elenxos_design_system/`: renderer React → PNG / MP4 para piezas publicas
 - `scripts/`: automatizaciones locales de soporte
@@ -51,7 +51,7 @@ Para no mezclar capas:
 
 - `02-identidad-y-marca/` define la marca y el criterio visual
 - `03-operacion-redes/` define que sale esta semana y en que formato
-- `05-redes-sociales/` conserva el sistema estrategico de 8 semanas y prompts narrativos
+- `06-redes-sociales/` conserva el sistema estrategico de 8 semanas y prompts narrativos
 - `assets/` guarda el kit de marca, prompts y entregables
 - `elenxos_design_system/` es el renderer ejecutable para generar piezas
 - `scripts/iniciar_automatizacion_redes.sh` es el punto de entrada rapido para identidad + lote 1 minimo
