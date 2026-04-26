@@ -12,9 +12,13 @@ en una capa operativa provisional para que el equipo pueda reconciliar:
 
 from __future__ import annotations
 
+import argparse
 import csv
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
+import shutil
+import sys
 
 
 REPO_DIR = Path(__file__).resolve().parents[1]
@@ -23,6 +27,7 @@ OPERACION_DIR = REPO_DIR / "05-datos-y-reportes" / "operacion-email"
 MASTER_OPERATIVO = OPERACION_DIR / "contactos-maestro-operativo.csv"
 ENVIADOS_IMPORTAR = OPERACION_DIR / "correos-enviados-importar.csv"
 DECLARACION_PENDIENTES = OPERACION_DIR / "declaracion-pendientes.csv"
+OUTPUT_FILES = [MASTER_OPERATIVO, ENVIADOS_IMPORTAR, DECLARACION_PENDIENTES]
 
 PERSONAL_SENDER = "stevenvallejo780@gmail.com"
 OFFICIAL_SENDER = "ventas@elenxos.com"
@@ -200,6 +205,22 @@ def write_csv(path: Path, headers: list[str], rows: list[dict[str, str]]) -> Non
         writer.writerows(rows)
 
 
+def existing_outputs(paths: list[Path]) -> list[Path]:
+    return [path for path in paths if path.exists()]
+
+
+def backup_outputs(paths: list[Path]) -> Path | None:
+    existing = existing_outputs(paths)
+    if not existing:
+        return None
+
+    backup_dir = OPERACION_DIR / "backups" / f"bootstrap-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+    backup_dir.mkdir(parents=True, exist_ok=True)
+    for path in existing:
+        shutil.copy2(path, backup_dir / path.name)
+    return backup_dir
+
+
 def build_master_row(row: LegacyRow) -> dict[str, str]:
     contacted = row.is_contacted
     email_value = row.contact_value if row.contact_type == "email" else ""
@@ -283,26 +304,53 @@ def build_declaration_row(row: LegacyRow) -> dict[str, str]:
     }
 
 
-def main() -> None:
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Bootstrap seguro de la operacion email desde leads-agora-maestro.csv.")
+    parser.add_argument("--force", action="store_true", help="Sobrescribe CSVs operativos existentes.")
+    parser.add_argument("--backup", action="store_true", help="Copia CSVs existentes a operacion-email/backups/ antes de sobrescribir.")
+    parser.add_argument("--dry-run", action="store_true", help="Calcula conteos sin escribir archivos.")
+    args = parser.parse_args()
+
     rows = read_legacy_rows()
 
     master_rows = [build_master_row(row) for row in rows]
     sent_rows = [build_sent_row(row) for row in rows if row.is_contacted]
     declaration_rows = [build_declaration_row(row) for row in rows if row.is_contacted]
 
+    print("Bootstrap calculado:")
+    print(f"- contactos maestro: {len(master_rows)}")
+    print(f"- enviados provisionales: {len(sent_rows)}")
+    print(f"- declaracion provisional: {len(declaration_rows)}")
+
+    if args.dry_run:
+        print("Modo dry-run: no se escribieron archivos.")
+        return 0
+
+    existing = existing_outputs(OUTPUT_FILES)
+    if existing and not args.force:
+        print("\nSalida bloqueada: ya existen CSVs operativos.", file=sys.stderr)
+        for path in existing:
+            print(f"- {path}", file=sys.stderr)
+        print("\nUse --force para sobrescribir o --force --backup para respaldar antes.", file=sys.stderr)
+        return 2
+
     OPERACION_DIR.mkdir(parents=True, exist_ok=True)
+    backup_dir = backup_outputs(OUTPUT_FILES) if args.backup else None
     write_csv(MASTER_OPERATIVO, MASTER_HEADERS, master_rows)
     write_csv(ENVIADOS_IMPORTAR, ENVIADOS_HEADERS, sent_rows)
     write_csv(DECLARACION_PENDIENTES, DECLARACION_HEADERS, declaration_rows)
 
-    print("Bootstrap completado:")
-    print(f"- contactos maestro: {len(master_rows)}")
-    print(f"- enviados provisionales: {len(sent_rows)}")
-    print(f"- declaracion provisional: {len(declaration_rows)}")
+    print("\nBootstrap escrito correctamente:")
+    print(f"- {MASTER_OPERATIVO}")
+    print(f"- {ENVIADOS_IMPORTAR}")
+    print(f"- {DECLARACION_PENDIENTES}")
+    if backup_dir:
+        print(f"Backup previo: {backup_dir}")
     print()
     print("Siguiente paso obligatorio:")
     print("- verificar las filas contactadas contra la bandeja real antes de enviar declaracion")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

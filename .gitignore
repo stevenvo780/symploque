@@ -16,3 +16,9 @@ node_modules/
 assets/elenxos_design_system/dist/
 assets/elenxos_design_system/ai-generator/venv/
 assets/elenxos_design_system/ai-generator/output_maxcalidad/
+
+# Local operational safety artifacts
+05-datos-y-reportes/operacion-email/logs/
+05-datos-y-reportes/operacion-email/backups/
+05-datos-y-reportes/operacion-email/*.local.csv
+05-datos-y-reportes/operacion-email/*-export.csv
