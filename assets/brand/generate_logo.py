@@ -1,4 +1,6 @@
 import os
+import shutil
+import subprocess
 
 BRAND_NAME = "elenxos"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -81,6 +83,21 @@ def write_svg(output_path, svg_content):
     return resolved_path
 
 
+def export_png(svg_path, output_path, width, height):
+    """Exporta PNG desde SVG si rsvg-convert está disponible."""
+    if not shutil.which("rsvg-convert"):
+        print("⚠️ rsvg-convert no está instalado; se omite PNG:", output_path)
+        return
+
+    resolved_output = resolve_output_path(output_path)
+    os.makedirs(os.path.dirname(resolved_output), exist_ok=True)
+    subprocess.run(
+        ["rsvg-convert", "-w", str(width), "-h", str(height), svg_path, "-o", resolved_output],
+        check=True,
+    )
+    print(f"🖼️ PNG generado en: {resolved_output}")
+
+
 def generate_elenxos_logo(output_path="logo_elenxos.svg", color=PALETTE["gold"], background_color=None):
     """Generates the Elenxos vector icon as an SVG file."""
     resolved_path = write_svg(output_path, get_svg_logo(color, background_color=background_color))
@@ -124,6 +141,17 @@ def generate_principal_assets(prefix=""):
         BACKGROUNDS["white"],
         PALETTE["forest"],
     )
+
+    png_exports = [
+        (f"{prefix}logo_elenxos_principal.svg", f"{prefix}logo_elenxos_principal_1024.png", 1024, 1024),
+        (f"{prefix}logo_elenxos_principal_fondo_negro.svg", f"{prefix}logo_elenxos_principal_fondo_negro.png", 1200, 320),
+        (f"{prefix}logo_elenxos_principal_fondo_blanco.svg", f"{prefix}logo_elenxos_principal_fondo_blanco.png", 1200, 320),
+        (f"{prefix}logo_elenxos_principal_fondo_negro_icono.svg", f"{prefix}logo_elenxos_principal_fondo_negro_icono_1024.png", 1024, 1024),
+        (f"{prefix}logo_elenxos_principal_fondo_blanco_icono.svg", f"{prefix}logo_elenxos_principal_fondo_blanco_icono_1024.png", 1024, 1024),
+    ]
+
+    for svg_output, png_output, width, height in png_exports:
+        export_png(resolve_output_path(svg_output), png_output, width, height)
 
 
 if __name__ == "__main__":
