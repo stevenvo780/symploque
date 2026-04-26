@@ -1,23 +1,23 @@
 # Plantilla 03: Primer Contacto para Semilleros
 
-**Objetivo:** Adaptar la narrativa unificada a los dolores específicos de los grupos de investigación (archivos dispersos, reuniones sin seguimiento).
+**Objetivo:** Abordar directamente la dificultad de mantener el ritmo y el conocimiento centralizado en un grupo de investigación.
 **Para quién:** Coordinadores de semilleros y directores de grupos de investigación.
-**Asunto:** Software para organizar el trabajo de los semilleros (desde la UdeA)
+**Asunto:** Cómo centralizar y potenciar el trabajo de tu semillero
 
 ---
 
 Hola {{contact_name}},
 
-Soy Steven Vallejo y junto a Jacob Agudelo fundamos **Elenxos**. Somos un equipo de filósofos formados en la Universidad de Antioquia. Hace tiempo notamos un problema en los semilleros y grupos de investigación: las lecturas, los PDFs, las notas y los acuerdos suelen quedar dispersos entre Drive y WhatsApp, dificultando la continuidad del trabajo.
+Es un desafío mantener el ritmo en los semilleros y grupos de investigación cuando los aportes, lecturas y acuerdos terminan dispersos entre grupos de WhatsApp y carpetas de Drive desordenadas. El conocimiento se fragmenta y la continuidad se pierde.
 
-Para solucionar esto, decidimos combinar nuestra formación metodológica con nuestra experiencia de más de 10 años en ingeniería de software e inteligencia artificial.
+Soy Steven Vallejo, fundador de **Elenxos** junto a Jacob Agudelo. Como filósofos formados en la UdeA e ingenieros de software, decidimos crear una herramienta para resolver este desgaste operativo.
 
-Así creamos **Agora**, una plataforma de vanguardia construida con una capacidad técnica insuperable, diseñada específicamente para ordenar el aprendizaje colaborativo. Sirve para reunir fuentes, borradores y seguimiento en un solo espacio sin fricción operativa.
+Hemos construido **Agora**, una plataforma de colaboración diseñada específicamente para organizar el aprendizaje de grupos de investigación. Agora centraliza las fuentes, los borradores y el seguimiento en un ecosistema estructurado, permitiendo que tu semillero se enfoque en crear, no en buscar archivos perdidos.
 
-Puedes conocer el producto y ver cómo ordenaría el trabajo de tu semillero aquí:
+Puedes ver cómo transformaría la dinámica de tu equipo probando la herramienta aquí:
 👉 **[https://agora.elenxos.com/](https://agora.elenxos.com/)**
 
-Me encantaría saber si en {{role_or_unit}} de {{institution}} ven valor en centralizar todo su proceso de investigación en un sistema con este nivel de rigor tecnológico.
+Nos gustaría saber si en {{role_or_unit}} de {{institution}} verían valor en organizar su proceso investigativo con esta tecnología.
 
 Un saludo muy sincero,
 

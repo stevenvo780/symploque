@@ -53,7 +53,7 @@ Eso obliga a que el repo haga la misma separacion:
 - `03-datos/leads-agora-top-50-hoy.csv`: corte historico de ejecucion
 - `02-mensajeria/mensajes-y-copy.md`: sistema reutilizable de copy
 - `04-reportes/`: historial de lotes y ejecucion
-- `05-redes-sociales/`: historial de narrativa y marca de Agora
+- `06-redes-sociales/`: historial de narrativa y marca de Agora
 
 ## Que cambia desde hoy
 

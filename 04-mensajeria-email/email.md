@@ -25,7 +25,8 @@ export MAIL_FROM_PASSWORD="REEMPLAZAR_EN_LOCAL"
 - `media@elenxos.com`
 - `admin@elenxos.com`
 
-La contrasena de esas cuentas no debe quedar escrita aqui.
+La contrasena de esas cuentas vive en `.env` (no versionado). Todas comparten la misma contrasena.
+No guardar credenciales directamente en archivos `.md` ni en commits.
 
 ## Endpoints
 
@@ -153,6 +154,8 @@ console.log(data);
 
 Para que la transición de remitente personal a corporativo sea exitosa, cada correo enviado debe reforzar la autoridad de **Elenxos** y la utilidad de **Agora**.
 
+> **ACCION EXTERNA REQUERIDA:** La URL `https://www.linkedin.com/company/elenxos` retorna 404 (verificado 2026-04-24). Antes de enviar correos con esta firma, crear la pagina de empresa en LinkedIn o corregir la URL. Mientras tanto, el enlace de LinkedIn no debe incluirse en envios reales.
+
 ### Firma Corporativa Recomendada (HTML)
 
 Se recomienda incluir esta firma en el campo `html` de la API para construir credibilidad en cada contacto:
@@ -174,7 +177,7 @@ Se recomienda incluir esta firma en el campo `html` de la API para construir cre
   </p>
   <p style="font-size: 12px; margin-top: 10px;">
     Siguenos: 
-    <a href="https://www.linkedin.com/company/elenxos" style="color: #007bff;">LinkedIn</a> | 
+    <a href="https://www.linkedin.com/company/elenxos" style="color: #007bff;">LinkedIn</a> | <!-- TODO: verificar URL real de la pagina de empresa LinkedIn antes de enviar -->
     <a href="https://www.instagram.com/agora.elenxos" style="color: #007bff;">Instagram</a>
   </p>
 </div>

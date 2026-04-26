@@ -3,10 +3,20 @@
 set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-design_root="$repo_root/assets/elenxos_design_system"
-logo_root="$repo_root/assets/basic/mto"
+design_root="$repo_root/elenxos_design_system"
+logo_root="$repo_root/assets/brand/mto"
 output_root="${1:-$design_root/output/redes-sociales-lote-1}"
 templates="${2:-lote1_estandar,lote1_flujo,reel_manifiesto,banner_minimal}"
+
+if [[ ! -d "$design_root" ]]; then
+  echo "No existe el renderer esperado en: $design_root" >&2
+  exit 1
+fi
+
+if [[ ! -d "$logo_root" ]]; then
+  echo "No existe el kit de marca esperado en: $logo_root" >&2
+  exit 1
+fi
 
 require_cmd() {
   if ! command -v "$1" >/dev/null 2>&1; then

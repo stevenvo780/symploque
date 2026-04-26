@@ -18,8 +18,8 @@ Esta guía sirve para alinear la creación de contenido visual y escrito, asegur
 
 ### Fuente canónica
 
-- Manual visual y conceptual: [../assets/basic/manual_de_marca.md](../assets/basic/manual_de_marca.md)
-- Tokens oficiales: [../assets/elenxos_design_system/src/tokens/_colors.scss](../assets/elenxos_design_system/src/tokens/_colors.scss)
+- Manual visual y conceptual: [../assets/brand/manual_de_marca.md](../assets/brand/manual_de_marca.md)
+- Tokens oficiales: [../elenxos_design_system/src/tokens/_colors.scss](../elenxos_design_system/src/tokens/_colors.scss)
 - Inventario usable hoy: [../assets/README.md](../assets/README.md)
 
 ---
@@ -89,7 +89,7 @@ La referencia canonica ahora es:
 
 - media kit y faltantes reales: [media-kit-estructura.md](./media-kit-estructura.md)
 - inventario de assets existentes: [../assets/README.md](../assets/README.md)
-- engagement: [protocolo-de-interaccion.md](./protocolo-de-interaccion.md)
-- firma y outreach: [../email.md](../email.md)
+- engagement: [../03-operacion-redes/protocolo-de-interaccion.md](../03-operacion-redes/protocolo-de-interaccion.md)
+- firma y outreach: [../04-mensajeria-email/email.md](../04-mensajeria-email/email.md)
 
 Si una pieza o tarea no cabe en alguno de esos cuatro frentes, probablemente no es una prioridad de arranque.

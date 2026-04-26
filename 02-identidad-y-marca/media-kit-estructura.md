@@ -5,11 +5,11 @@ Este documento ya no es solo una lista aspiracional. Desde ahora funciona como c
 Referencia complementaria:
 
 - inventario actual: [../assets/README.md](../assets/README.md)
-- criterio visual canonico: [../assets/basic/manual_de_marca.md](../assets/basic/manual_de_marca.md)
-- tokens oficiales: [../assets/elenxos_design_system/src/tokens/_colors.scss](../assets/elenxos_design_system/src/tokens/_colors.scss)
+- criterio visual canonico: [../assets/brand/manual_de_marca.md](../assets/brand/manual_de_marca.md)
+- tokens oficiales: [../elenxos_design_system/src/tokens/_colors.scss](../elenxos_design_system/src/tokens/_colors.scss)
 
 ## 1. Identidad Visual (Brand Assets)
-- [x] **Logos:** Ya existe un kit exportable en `../assets/basic/mto/kit_logos/` con SVG y PNG en multiples tamaños.
+- [x] **Logos:** Ya existe un kit exportable en `../assets/brand/mto/kit_logos/` con SVG y PNG en multiples tamaños.
 - [x] **Variantes de Color:** Ya existen variantes `forest`, `kodama`, `mask`, `ash`, `white` y `black` dentro del kit.
 - [x] **Paleta de Colores:** Ya existe una paleta canonica en el manual de marca y en el design system.
 - [x] **Tipografías:** Ya existe criterio claro: `Playfair Display` + `Inter`.
@@ -22,8 +22,8 @@ Referencia complementaria:
 - [ ] **Dispositivos:** Mockups de Agora funcionando en un MacBook, un iPad y un iPhone (para denotar PWA & Offline).
 
 ## 3. Gráficos de Redes Sociales (Social Media Templates)
-- [x] **Banners exploratorios:** Ya existen banners y logos base en `assets/basic/mto/kit_logos/`.
-- [x] **Renders multi-plataforma:** Ya existe el pipeline React → PNG en `../assets/elenxos_design_system/` y mantiene el registry renderizable.
+- [x] **Banners exploratorios:** Ya existen banners y logos base en `../assets/brand/mto/kit_logos/`.
+- [x] **Renders multi-plataforma:** Ya existe el pipeline React → PNG en `../elenxos_design_system/` y mantiene el registry renderizable.
 - [x] **Plantilla para Carruseles:** Ya existen `lote1_estandar` y `lote1_flujo` para arrancar la primera semana.
 - [x] **Plantilla para Reel:** Ya existe `reel_manifiesto` para la pieza vertical de arranque.
 - [x] **Banners listos para perfiles:** Ya existen `banner_main.png`, `banner_minimal.png`, `banner_vibrant.png` y `banner_agora.png` en el kit.
@@ -44,9 +44,9 @@ Fuente operativa:
 Comandos base:
 
 ```bash
-python3 ../assets/basic/mto/generate_kit.py
-python3 ../assets/basic/mto/generate_variants.py
-npm --prefix ../assets/elenxos_design_system run render -- --template lote1_estandar,lote1_flujo,reel_manifiesto,banner_minimal
+python3 ../assets/brand/mto/generate_kit.py
+python3 ../assets/brand/mto/generate_variants.py
+npm --prefix ../elenxos_design_system run render -- --template lote1_estandar,lote1_flujo,reel_manifiesto,banner_minimal --output ./output/redes-sociales-lote-1
 ```
 
 Comando recomendado para no repetir pasos a mano:

@@ -20,7 +20,7 @@
   - `02-mensajeria/`: sistema modular de copy reutilizable
   - `03-datos/`: historico de contactos y nueva base de operacion email
   - `04-reportes/`: reportes y lotes historicos
-  - `05-redes-sociales/`: narrativa y marca historica
+  - `06-redes-sociales/`: narrativa y marca historica
   - `06-operacion-email/`: plan de remitente corporativo y salida sobre sitios publicos vivos
 - Data stores and external services:
   - CSV historicos de `Agora`

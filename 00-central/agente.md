@@ -121,7 +121,7 @@ El sistema documental central queda asi:
   - `leads-agora-maestro.csv`
 - `04-reportes/`
   - `reporte-proceso-expansion-contactos.md`
-- `05-redes-sociales/`
+- `06-redes-sociales/`
   - `resumen-vision-board-marketing-maven.md`
   - `que-rescatar-y-que-descartar-del-vision-board.md`
   - `narrativa-futura-alineada-agora.md`

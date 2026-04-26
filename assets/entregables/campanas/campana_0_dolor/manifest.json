@@ -1,0 +1,729 @@
+{
+  "generatedAt": "2026-04-21T00:51:04.331Z",
+  "titulo": "Campaña 0 — Dolor",
+  "narrativa": "dolor",
+  "target": "Tesistas, investigadores individuales y semilleros que trabajan con archivos dispersos.",
+  "objetivo": "Mostrar el dolor operativo y hacer evidente la necesidad de un flujo único de investigación.",
+  "run": {
+    "seedBase": 12345,
+    "aiMode": "fresh",
+    "aiSteps": 12,
+    "aiGuidance": 3
+  },
+  "totalItems": 50,
+  "counts": {
+    "con_ia": 25,
+    "sin_ia": 25,
+    "por_categoria": {
+      "publicaciones": 10,
+      "flyers": 10,
+      "reels": 10,
+      "stories": 10,
+      "banners": 10
+    },
+    "por_categoria_y_variante": {
+      "sin_ia": {
+        "publicaciones": 5,
+        "flyers": 5,
+        "reels": 5,
+        "stories": 5,
+        "banners": 5
+      },
+      "con_ia": {
+        "publicaciones": 5,
+        "flyers": 5,
+        "reels": 5,
+        "stories": 5,
+        "banners": 5
+      }
+    }
+  },
+  "ai": {
+    "promptFile": "prompts_ai.json",
+    "sourcesDir": "con_ia/fuentes_ai/",
+    "generatedTemplates": [
+      {
+        "instanceId": "publicacion__n1_l2_hybrid_red__con_ia_01",
+        "templateId": "n1_l2_hybrid_red",
+        "slot": "publicacion",
+        "seed": 3582361614,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/publicacion__n1_l2_hybrid_red__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__hybrid_arbol_tesis__con_ia_01",
+        "templateId": "hybrid_arbol_tesis",
+        "slot": "publicacion",
+        "seed": 1754197866,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/publicacion__hybrid_arbol_tesis__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__n1_l2_hybrid_puente__con_ia_01",
+        "templateId": "n1_l2_hybrid_puente",
+        "slot": "publicacion",
+        "seed": 2086591668,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/publicacion__n1_l2_hybrid_puente__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__hybrid_problema__con_ia_01",
+        "templateId": "hybrid_problema",
+        "slot": "publicacion",
+        "seed": 3161496617,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/publicacion__hybrid_problema__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__n1_l1_hybrid_escritorio__con_ia_01",
+        "templateId": "n1_l1_hybrid_escritorio",
+        "slot": "publicacion",
+        "seed": 3487162115,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/publicacion__n1_l1_hybrid_escritorio__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n1_l2_hybrid_nodos__con_ia_01",
+        "templateId": "n1_l2_hybrid_nodos",
+        "slot": "flyer",
+        "seed": 2662216036,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/flyer__n1_l2_hybrid_nodos__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__hybrid_diferenciador__con_ia_01",
+        "templateId": "hybrid_diferenciador",
+        "slot": "flyer",
+        "seed": 2378228806,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/flyer__hybrid_diferenciador__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n1_l1_hybrid_escritorio__con_ia_01",
+        "templateId": "n1_l1_hybrid_escritorio",
+        "slot": "flyer",
+        "seed": 2356389357,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/flyer__n1_l1_hybrid_escritorio__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__hybrid_madurez__con_ia_01",
+        "templateId": "hybrid_madurez",
+        "slot": "flyer",
+        "seed": 406019355,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/flyer__hybrid_madurez__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n1_l1_hybrid_antes__con_ia_01",
+        "templateId": "n1_l1_hybrid_antes",
+        "slot": "flyer",
+        "seed": 460237863,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/flyer__n1_l1_hybrid_antes__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_01",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 690558672,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/reel__hybrid_reel_manifiesto__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_story_teaser__con_ia_01",
+        "templateId": "hybrid_story_teaser",
+        "slot": "reel",
+        "seed": 3905090223,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/reel__hybrid_story_teaser__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_02",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 938436325,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/reel__hybrid_reel_manifiesto__con_ia_02.png"
+      },
+      {
+        "instanceId": "reel__hybrid_story_teaser__con_ia_02",
+        "templateId": "hybrid_story_teaser",
+        "slot": "reel",
+        "seed": 4114189758,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/reel__hybrid_story_teaser__con_ia_02.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_03",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 497355878,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/reel__hybrid_reel_manifiesto__con_ia_03.png"
+      },
+      {
+        "instanceId": "story__hybrid_reel_manifiesto__con_ia_01",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "story",
+        "seed": 1496688228,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/story__hybrid_reel_manifiesto__con_ia_01.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_01",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 3170209867,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/story__hybrid_story_teaser__con_ia_01.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_02",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 2666127899,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/story__hybrid_story_teaser__con_ia_02.png"
+      },
+      {
+        "instanceId": "story__hybrid_reel_manifiesto__con_ia_02",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "story",
+        "seed": 1371476788,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/story__hybrid_reel_manifiesto__con_ia_02.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_03",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 791896924,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/story__hybrid_story_teaser__con_ia_03.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_x__con_ia_01",
+        "templateId": "hybrid_banner_x",
+        "slot": "banner",
+        "seed": 3565321186,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/banner__hybrid_banner_x__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_yt__con_ia_01",
+        "templateId": "hybrid_banner_yt",
+        "slot": "banner",
+        "seed": 3030363730,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/banner__hybrid_banner_yt__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_linkedin__con_ia_01",
+        "templateId": "hybrid_banner_linkedin",
+        "slot": "banner",
+        "seed": 1470234612,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/banner__hybrid_banner_linkedin__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_og__con_ia_01",
+        "templateId": "hybrid_banner_og",
+        "slot": "banner",
+        "seed": 2761195247,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/banner__hybrid_banner_og__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_yt__con_ia_02",
+        "templateId": "hybrid_banner_yt",
+        "slot": "banner",
+        "seed": 2169428670,
+        "publicPath": "public/ai-images/generated/campana_0_dolor/banner__hybrid_banner_yt__con_ia_02.png"
+      }
+    ]
+  },
+  "notes": {
+    "flyer": "El sistema no tiene layout flyer dedicado; se usa el layout post 1080×1080 como flyer operativo.",
+    "video": "No se generaron MP4 porque se usó --skip-video.",
+    "ai": "Se generaron fondos AI nuevos para esta corrida y se dejaron trazas en prompts_ai.json + con_ia/fuentes_ai/."
+  },
+  "items": [
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_post_ciclo",
+      "instanceId": "publicacion__n1_l2_post_ciclo__sin_ia_01",
+      "description": "Pieza editorial para publicación basada en ciclo.",
+      "png": "sin_ia/publicaciones/publicacion__n1_l2_post_ciclo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_glass",
+      "instanceId": "publicacion__post_glass__sin_ia_01",
+      "description": "Pieza editorial para publicación basada en glass.",
+      "png": "sin_ia/publicaciones/publicacion__post_glass__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_geek_logo_hero",
+      "instanceId": "publicacion__post_geek_logo_hero__sin_ia_01",
+      "description": "Pieza editorial para publicación basada en geek logo hero.",
+      "png": "sin_ia/publicaciones/publicacion__post_geek_logo_hero__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_cita_roja",
+      "instanceId": "publicacion__post_cita_roja__sin_ia_01",
+      "description": "Post dramático sobre el problema real.",
+      "png": "sin_ia/publicaciones/publicacion__post_cita_roja__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_post_fragmentos",
+      "instanceId": "publicacion__n1_l2_post_fragmentos__sin_ia_01",
+      "description": "Post de fragmentación académica.",
+      "png": "sin_ia/publicaciones/publicacion__n1_l2_post_fragmentos__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n1_l2_hybrid_red",
+      "instanceId": "publicacion__n1_l2_hybrid_red__con_ia_01",
+      "description": "Post AI sobre red desconectada.",
+      "png": "con_ia/publicaciones/publicacion__n1_l2_hybrid_red__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "hybrid_arbol_tesis",
+      "instanceId": "publicacion__hybrid_arbol_tesis__con_ia_01",
+      "description": "Pieza AI para publicación basada en arbol tesis.",
+      "png": "con_ia/publicaciones/publicacion__hybrid_arbol_tesis__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n1_l2_hybrid_puente",
+      "instanceId": "publicacion__n1_l2_hybrid_puente__con_ia_01",
+      "description": "Pieza AI para publicación basada en puente.",
+      "png": "con_ia/publicaciones/publicacion__n1_l2_hybrid_puente__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "hybrid_problema",
+      "instanceId": "publicacion__hybrid_problema__con_ia_01",
+      "description": "Post AI que dramatiza el problema.",
+      "png": "con_ia/publicaciones/publicacion__hybrid_problema__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n1_l1_hybrid_escritorio",
+      "instanceId": "publicacion__n1_l1_hybrid_escritorio__con_ia_01",
+      "description": "Pieza AI para publicación basada en escritorio.",
+      "png": "con_ia/publicaciones/publicacion__n1_l1_hybrid_escritorio__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_post_fragmentos",
+      "instanceId": "flyer__n1_l2_post_fragmentos__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en fragmentos.",
+      "png": "sin_ia/flyers/flyer__n1_l2_post_fragmentos__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_post_ciclo",
+      "instanceId": "flyer__n1_l2_post_ciclo__sin_ia_01",
+      "description": "Flyer del ciclo roto de trabajo.",
+      "png": "sin_ia/flyers/flyer__n1_l2_post_ciclo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_post_archivos",
+      "instanceId": "flyer__n1_l1_post_archivos__sin_ia_01",
+      "description": "Flyer del archivo disperso.",
+      "png": "sin_ia/flyers/flyer__n1_l1_post_archivos__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_post_dato",
+      "instanceId": "flyer__n1_l2_post_dato__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en dato.",
+      "png": "sin_ia/flyers/flyer__n1_l2_post_dato__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "post_geek_proof",
+      "instanceId": "flyer__post_geek_proof__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en geek proof.",
+      "png": "sin_ia/flyers/flyer__post_geek_proof__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n1_l2_hybrid_nodos",
+      "instanceId": "flyer__n1_l2_hybrid_nodos__con_ia_01",
+      "description": "Flyer AI con nodos sin cohesión.",
+      "png": "con_ia/flyers/flyer__n1_l2_hybrid_nodos__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_diferenciador",
+      "instanceId": "flyer__hybrid_diferenciador__con_ia_01",
+      "description": "Flyer AI con vías divergentes y claim fuerte.",
+      "png": "con_ia/flyers/flyer__hybrid_diferenciador__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n1_l1_hybrid_escritorio",
+      "instanceId": "flyer__n1_l1_hybrid_escritorio__con_ia_01",
+      "description": "Flyer AI con escritorio saturado.",
+      "png": "con_ia/flyers/flyer__n1_l1_hybrid_escritorio__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_madurez",
+      "instanceId": "flyer__hybrid_madurez__con_ia_01",
+      "description": "Pieza AI para flyer basada en madurez.",
+      "png": "con_ia/flyers/flyer__hybrid_madurez__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n1_l1_hybrid_antes",
+      "instanceId": "flyer__n1_l1_hybrid_antes__con_ia_01",
+      "description": "Pieza AI para flyer basada en antes.",
+      "png": "con_ia/flyers/flyer__n1_l1_hybrid_antes__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_reel_dolor",
+      "instanceId": "reel__n1_l1_reel_dolor__sin_ia_01",
+      "description": "Reel principal de awareness sobre dispersión.",
+      "png": "sin_ia/reels/reel__n1_l1_reel_dolor__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_reel_flujo",
+      "instanceId": "reel__n1_l2_reel_flujo__sin_ia_01",
+      "description": "Reel sobre fricción y pérdida de continuidad.",
+      "png": "sin_ia/reels/reel__n1_l2_reel_flujo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_dialectic",
+      "instanceId": "reel__reel_geek_dialectic__sin_ia_01",
+      "description": "Pieza editorial para reel basada en geek dialectic.",
+      "png": "sin_ia/reels/reel__reel_geek_dialectic__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_story_stat",
+      "instanceId": "reel__n1_l1_story_stat__sin_ia_01",
+      "description": "Pieza editorial para reel basada en stat.",
+      "png": "sin_ia/reels/reel__n1_l1_story_stat__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_story_antes",
+      "instanceId": "reel__n1_l2_story_antes__sin_ia_01",
+      "description": "Pieza editorial para reel basada en antes.",
+      "png": "sin_ia/reels/reel__n1_l2_story_antes__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_01",
+      "description": "Reel AI de alto impacto para dolor.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "reel__hybrid_story_teaser__con_ia_01",
+      "description": "Pieza AI para reel basada en teaser.",
+      "png": "con_ia/reels/reel__hybrid_story_teaser__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_02",
+      "description": "Reel AI de alto impacto para dolor. · variación AI 02.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "reel__hybrid_story_teaser__con_ia_02",
+      "description": "Pieza AI para reel basada en teaser. · variación AI 02.",
+      "png": "con_ia/reels/reel__hybrid_story_teaser__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_03",
+      "description": "Reel AI de alto impacto para dolor. · variación AI 03.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_03.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_story_stat",
+      "instanceId": "story__n1_l1_story_stat__sin_ia_01",
+      "description": "Story con dato de dolor operativo.",
+      "png": "sin_ia/stories/story__n1_l1_story_stat__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_chaos",
+      "instanceId": "story__reel_geek_chaos__sin_ia_01",
+      "description": "Pieza editorial para story basada en geek chaos.",
+      "png": "sin_ia/stories/story__reel_geek_chaos__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_reel_dolor",
+      "instanceId": "story__n1_l1_reel_dolor__sin_ia_01",
+      "description": "Pieza editorial para story basada en dolor.",
+      "png": "sin_ia/stories/story__n1_l1_reel_dolor__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_proof",
+      "instanceId": "story__reel_geek_proof__sin_ia_01",
+      "description": "Pieza editorial para story basada en geek proof.",
+      "png": "sin_ia/stories/story__reel_geek_proof__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n1_l2_reel_flujo",
+      "instanceId": "story__n1_l2_reel_flujo__sin_ia_01",
+      "description": "Pieza editorial para story basada en flujo.",
+      "png": "sin_ia/stories/story__n1_l2_reel_flujo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "story__hybrid_reel_manifiesto__con_ia_01",
+      "description": "Pieza AI para story basada en manifiesto.",
+      "png": "con_ia/stories/story__hybrid_reel_manifiesto__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_01",
+      "description": "Story AI de tensión y teaser.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_02",
+      "description": "Story AI de tensión y teaser. · variación AI 02.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "story__hybrid_reel_manifiesto__con_ia_02",
+      "description": "Pieza AI para story basada en manifiesto. · variación AI 02.",
+      "png": "con_ia/stories/story__hybrid_reel_manifiesto__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_03",
+      "description": "Story AI de tensión y teaser. · variación AI 03.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_03.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_banner_x",
+      "instanceId": "banner__n1_l1_banner_x__sin_ia_01",
+      "description": "Pieza editorial para banner basada en x.",
+      "png": "sin_ia/banners/banner__n1_l1_banner_x__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_denso",
+      "instanceId": "banner__banner_denso__sin_ia_01",
+      "description": "Banner denso con red micelial rota.",
+      "png": "sin_ia/banners/banner__banner_denso__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_original",
+      "instanceId": "banner__banner_original__sin_ia_01",
+      "description": "Pieza editorial para banner basada en original.",
+      "png": "sin_ia/banners/banner__banner_original__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n1_l1_banner_linkedin",
+      "instanceId": "banner__n1_l1_banner_linkedin__sin_ia_01",
+      "description": "Banner base de dolor / dispersión.",
+      "png": "sin_ia/banners/banner__n1_l1_banner_linkedin__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_geek_glitch",
+      "instanceId": "banner__banner_geek_glitch__sin_ia_01",
+      "description": "Banner glitch para dramatizar el quiebre.",
+      "png": "sin_ia/banners/banner__banner_geek_glitch__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_x",
+      "instanceId": "banner__hybrid_banner_x__con_ia_01",
+      "description": "Banner AI panorámico con transformación incompleta.",
+      "png": "con_ia/banners/banner__hybrid_banner_x__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_yt",
+      "instanceId": "banner__hybrid_banner_yt__con_ia_01",
+      "description": "Banner AI tipo portal / umbral de cambio.",
+      "png": "con_ia/banners/banner__hybrid_banner_yt__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_linkedin",
+      "instanceId": "banner__hybrid_banner_linkedin__con_ia_01",
+      "description": "Banner AI editorial para awareness.",
+      "png": "con_ia/banners/banner__hybrid_banner_linkedin__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_og",
+      "instanceId": "banner__hybrid_banner_og__con_ia_01",
+      "description": "Pieza AI para banner basada en og.",
+      "png": "con_ia/banners/banner__hybrid_banner_og__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_yt",
+      "instanceId": "banner__hybrid_banner_yt__con_ia_02",
+      "description": "Banner AI tipo portal / umbral de cambio. · variación AI 02.",
+      "png": "con_ia/banners/banner__hybrid_banner_yt__con_ia_02.png",
+      "mp4": null
+    }
+  ]
+}

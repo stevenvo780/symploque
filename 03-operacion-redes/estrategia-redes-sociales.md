@@ -36,7 +36,7 @@ Pruebas publicas actuales que dan credibilidad:
 
 ## Arquitectura de Marca (Elenxos vs Agora)
 
-Para una ejecución robusta, dividimos la presencia en dos capas según [Guía de Estilo y Marca](./guia-estilo-y-marca-redes.md):
+Para una ejecución robusta, dividimos la presencia en dos capas según [Guía de Estilo y Marca](../02-identidad-y-marca/guia-estilo-y-marca-redes.md):
 
 1. **Capa Elenxos (Autoridad):** Hablar con mas ambicion, tesis y arquitectura intelectual. Ideal para LinkedIn y hilos de X.
 2. **Capa Agora (Operatividad):** Hablar con mas casos, flujos y prueba de producto. Ideal para Instagram, YouTube y el dia a dia en X.
@@ -58,10 +58,10 @@ La tarea de redes es resolver esa tension:
 
 El detalle operativo ya no vive repetido aqui. El checklist canonico queda repartido asi:
 
-- media kit e inventario real: [media-kit-estructura.md](./media-kit-estructura.md) y [../assets/README.md](../assets/README.md)
+- media kit e inventario real: [../02-identidad-y-marca/media-kit-estructura.md](../02-identidad-y-marca/media-kit-estructura.md) y [../assets/README.md](../assets/README.md)
 - engagement: [protocolo-de-interaccion.md](./protocolo-de-interaccion.md)
-- sincronizacion con outreach: [../06-operacion-email/README.md](../06-operacion-email/README.md) y [../email.md](../email.md)
-- glosario editorial: [glosario-de-marca.md](./glosario-de-marca.md)
+- sincronizacion con outreach: [../04-mensajeria-email/email.md](../04-mensajeria-email/email.md) y [../05-datos-y-reportes/operacion-email](../05-datos-y-reportes/operacion-email)
+- glosario editorial: [../02-identidad-y-marca/glosario-de-marca.md](../02-identidad-y-marca/glosario-de-marca.md)
 
 Resumen ejecutivo de lo que sigue faltando para que la marca se sienta establecida:
 

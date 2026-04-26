@@ -205,3 +205,24 @@
   - Confirmed the current shell environment does not have `MAIL_API_BASE_URL`, `MAIL_API_KEY`, `MAIL_FROM_EMAIL`, or `MAIL_FROM_PASSWORD` loaded.
 - Notes:
   - The batch is ready, but the actual send is blocked until the corporate Mail API credentials are loaded or explicitly provided for this session.
+
+## 2026-04-24
+
+- Goal: Audit the social media operations layer and fix all internal repo inconsistencies.
+- Actions:
+  - Audited all 12 files related to social media operations across `03-operacion-redes/`, `05-redes-sociales/`, `02-identidad-y-marca/`, and supporting directories.
+  - Verified all public URLs referenced in social docs: `elenxos.com` (live), `agora.elenxos.com` (live), LinkedIn company page (404), Instagram profile (exists).
+  - Renamed `05-redes-sociales/` to `06-redes-sociales/` to eliminate the duplicate `05-` prefix with `05-datos-y-reportes/`.
+  - Updated all cross-references in `README.md`, `00-central/agente.md`, `00-central/estado-actual-y-transicion.md`, `02-identidad-y-marca/automatizacion-visual.md`, and `docs/codex/PROJECT_CONTEXT.md`.
+  - Added a warning about the broken LinkedIn URL in `04-mensajeria-email/email.md` and a TODO marker on the HTML signature.
+  - Rewrote `03-operacion-redes/directorio-cuentas-y-estado.md` with audit findings from 2026-04-24 and a full external dependencies table (10 items).
+  - Created `03-operacion-redes/mapping-ids-templates.md` to resolve the triple-ID debt (narrative `s1_*`, executable `n1_l1_*`, legacy export `s1_post1`).
+  - Updated both READMEs (`03-operacion-redes/` and `06-redes-sociales/`) to document their mutual relationship and link to the mapping.
+  - Updated `docs/codex/NEXT_ACTIONS.md` with 4 immediate and 5 later social media items, plus 3 open questions.
+- Verification:
+  - Confirmed all references to `05-redes-sociales/` outside `WORKLOG.md` (historical) have been updated.
+  - Confirmed the mapping document correctly maps Lote 1 assets to registry IDs.
+  - Confirmed all 14 audit findings from the analysis are addressed: 8 resolved internally, 6 documented as external dependencies.
+- Notes:
+  - The WORKLOG.md historical entries mentioning `05-redes-sociales/` were left as-is because they describe past actions.
+  - 10 external dependencies are now documented in `directorio-cuentas-y-estado.md` §6. The most critical is the LinkedIn company page (404) which is embedded in the email signature.

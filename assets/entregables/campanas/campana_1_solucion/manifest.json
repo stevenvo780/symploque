@@ -1,0 +1,729 @@
+{
+  "generatedAt": "2026-04-21T00:41:46.738Z",
+  "titulo": "Campaña 1 — Solución",
+  "narrativa": "solucion",
+  "target": "Coordinadores de semilleros, centros de escritura y equipos que necesitan flujo + verificación.",
+  "objetivo": "Mostrar a Agora como infraestructura útil: editor, lógica formal, verificación y colaboración.",
+  "run": {
+    "seedBase": 12345,
+    "aiMode": "fresh",
+    "aiSteps": 12,
+    "aiGuidance": 3
+  },
+  "totalItems": 50,
+  "counts": {
+    "con_ia": 25,
+    "sin_ia": 25,
+    "por_categoria": {
+      "publicaciones": 10,
+      "flyers": 10,
+      "reels": 10,
+      "stories": 10,
+      "banners": 10
+    },
+    "por_categoria_y_variante": {
+      "sin_ia": {
+        "publicaciones": 5,
+        "flyers": 5,
+        "reels": 5,
+        "stories": 5,
+        "banners": 5
+      },
+      "con_ia": {
+        "publicaciones": 5,
+        "flyers": 5,
+        "reels": 5,
+        "stories": 5,
+        "banners": 5
+      }
+    }
+  },
+  "ai": {
+    "promptFile": "prompts_ai.json",
+    "sourcesDir": "con_ia/fuentes_ai/",
+    "generatedTemplates": [
+      {
+        "instanceId": "publicacion__n2_l3_hybrid_equipo__con_ia_01",
+        "templateId": "n2_l3_hybrid_equipo",
+        "slot": "publicacion",
+        "seed": 1130919985,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/publicacion__n2_l3_hybrid_equipo__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__hybrid_respuesta__con_ia_01",
+        "templateId": "hybrid_respuesta",
+        "slot": "publicacion",
+        "seed": 1786217858,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/publicacion__hybrid_respuesta__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__hybrid_problema__con_ia_01",
+        "templateId": "hybrid_problema",
+        "slot": "publicacion",
+        "seed": 1858650387,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/publicacion__hybrid_problema__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__n2_l3_hybrid_flujo__con_ia_01",
+        "templateId": "n2_l3_hybrid_flujo",
+        "slot": "publicacion",
+        "seed": 1809045397,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/publicacion__n2_l3_hybrid_flujo__con_ia_01.png"
+      },
+      {
+        "instanceId": "publicacion__n2_l4_hybrid_rigor__con_ia_01",
+        "templateId": "n2_l4_hybrid_rigor",
+        "slot": "publicacion",
+        "seed": 4223435864,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/publicacion__n2_l4_hybrid_rigor__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n2_l3_hybrid_equipo__con_ia_01",
+        "templateId": "n2_l3_hybrid_equipo",
+        "slot": "flyer",
+        "seed": 3462406925,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/flyer__n2_l3_hybrid_equipo__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n2_l3_hybrid_flujo__con_ia_01",
+        "templateId": "n2_l3_hybrid_flujo",
+        "slot": "flyer",
+        "seed": 298626143,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/flyer__n2_l3_hybrid_flujo__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n2_l4_hybrid_pensar__con_ia_01",
+        "templateId": "n2_l4_hybrid_pensar",
+        "slot": "flyer",
+        "seed": 3574524716,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/flyer__n2_l4_hybrid_pensar__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__n2_l3_hybrid_editor__con_ia_01",
+        "templateId": "n2_l3_hybrid_editor",
+        "slot": "flyer",
+        "seed": 490223480,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/flyer__n2_l3_hybrid_editor__con_ia_01.png"
+      },
+      {
+        "instanceId": "flyer__hybrid_madurez__con_ia_01",
+        "templateId": "hybrid_madurez",
+        "slot": "flyer",
+        "seed": 3398140421,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/flyer__hybrid_madurez__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_01",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 3699457357,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/reel__hybrid_reel_manifiesto__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_story_teaser__con_ia_01",
+        "templateId": "hybrid_story_teaser",
+        "slot": "reel",
+        "seed": 2619021612,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/reel__hybrid_story_teaser__con_ia_01.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_02",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 3947335010,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/reel__hybrid_reel_manifiesto__con_ia_02.png"
+      },
+      {
+        "instanceId": "reel__hybrid_story_teaser__con_ia_02",
+        "templateId": "hybrid_story_teaser",
+        "slot": "reel",
+        "seed": 2828121147,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/reel__hybrid_story_teaser__con_ia_02.png"
+      },
+      {
+        "instanceId": "reel__hybrid_reel_manifiesto__con_ia_03",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "reel",
+        "seed": 3506254563,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/reel__hybrid_reel_manifiesto__con_ia_03.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_01",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 1900918875,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/story__hybrid_story_teaser__con_ia_01.png"
+      },
+      {
+        "instanceId": "story__hybrid_reel_manifiesto__con_ia_01",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "story",
+        "seed": 260952474,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/story__hybrid_reel_manifiesto__con_ia_01.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_02",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 1380059288,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/story__hybrid_story_teaser__con_ia_02.png"
+      },
+      {
+        "instanceId": "story__hybrid_reel_manifiesto__con_ia_02",
+        "templateId": "hybrid_reel_manifiesto",
+        "slot": "story",
+        "seed": 85408177,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/story__hybrid_reel_manifiesto__con_ia_02.png"
+      },
+      {
+        "instanceId": "story__hybrid_story_teaser__con_ia_03",
+        "templateId": "hybrid_story_teaser",
+        "slot": "story",
+        "seed": 3800795609,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/story__hybrid_story_teaser__con_ia_03.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_yt__con_ia_01",
+        "templateId": "hybrid_banner_yt",
+        "slot": "banner",
+        "seed": 1761072738,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/banner__hybrid_banner_yt__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_x__con_ia_01",
+        "templateId": "hybrid_banner_x",
+        "slot": "banner",
+        "seed": 2296030194,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/banner__hybrid_banner_x__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_og__con_ia_01",
+        "templateId": "hybrid_banner_og",
+        "slot": "banner",
+        "seed": 1458349017,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/banner__hybrid_banner_og__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_linkedin__con_ia_01",
+        "templateId": "hybrid_banner_linkedin",
+        "slot": "banner",
+        "seed": 200943620,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/banner__hybrid_banner_linkedin__con_ia_01.png"
+      },
+      {
+        "instanceId": "banner__hybrid_banner_yt__con_ia_02",
+        "templateId": "hybrid_banner_yt",
+        "slot": "banner",
+        "seed": 883360059,
+        "publicPath": "public/ai-images/generated/campana_1_solucion/banner__hybrid_banner_yt__con_ia_02.png"
+      }
+    ]
+  },
+  "notes": {
+    "flyer": "El sistema no tiene layout flyer dedicado; se usa el layout post 1080×1080 como flyer operativo.",
+    "video": "No se generaron MP4 porque se usó --skip-video.",
+    "ai": "Se generaron fondos AI nuevos para esta corrida y se dejaron trazas en prompts_ai.json + con_ia/fuentes_ai/."
+  },
+  "items": [
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_geek_proof",
+      "instanceId": "publicacion__post_geek_proof__sin_ia_01",
+      "description": "Post visual de demostración formal.",
+      "png": "sin_ia/publicaciones/publicacion__post_geek_proof__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_post_logica",
+      "instanceId": "publicacion__n2_l4_post_logica__sin_ia_01",
+      "description": "Pieza editorial para publicación basada en logica.",
+      "png": "sin_ia/publicaciones/publicacion__n2_l4_post_logica__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "lote1_estandar",
+      "instanceId": "publicacion__lote1_estandar__sin_ia_01",
+      "description": "Pieza editorial para publicación basada en lote1 estandar.",
+      "png": "sin_ia/publicaciones/publicacion__lote1_estandar__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_geek_turing",
+      "instanceId": "publicacion__post_geek_turing__sin_ia_01",
+      "description": "Post técnico sobre computabilidad.",
+      "png": "sin_ia/publicaciones/publicacion__post_geek_turing__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "sin_ia",
+      "templateId": "post_glass",
+      "instanceId": "publicacion__post_glass__sin_ia_01",
+      "description": "Post glassmorphism sobre un solo flujo.",
+      "png": "sin_ia/publicaciones/publicacion__post_glass__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n2_l3_hybrid_equipo",
+      "instanceId": "publicacion__n2_l3_hybrid_equipo__con_ia_01",
+      "description": "Pieza AI para publicación basada en equipo.",
+      "png": "con_ia/publicaciones/publicacion__n2_l3_hybrid_equipo__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "hybrid_respuesta",
+      "instanceId": "publicacion__hybrid_respuesta__con_ia_01",
+      "description": "Post AI de solución / transformación.",
+      "png": "con_ia/publicaciones/publicacion__hybrid_respuesta__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "hybrid_problema",
+      "instanceId": "publicacion__hybrid_problema__con_ia_01",
+      "description": "Pieza AI para publicación basada en problema.",
+      "png": "con_ia/publicaciones/publicacion__hybrid_problema__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n2_l3_hybrid_flujo",
+      "instanceId": "publicacion__n2_l3_hybrid_flujo__con_ia_01",
+      "description": "Post AI de flujo verde integrado.",
+      "png": "con_ia/publicaciones/publicacion__n2_l3_hybrid_flujo__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "publicacion",
+      "kind": "publicaciones",
+      "variant": "con_ia",
+      "templateId": "n2_l4_hybrid_rigor",
+      "instanceId": "publicacion__n2_l4_hybrid_rigor__con_ia_01",
+      "description": "Post AI de formalización y precisión.",
+      "png": "con_ia/publicaciones/publicacion__n2_l4_hybrid_rigor__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_post_verificacion",
+      "instanceId": "flyer__n2_l3_post_verificacion__sin_ia_01",
+      "description": "Flyer sobre verificación integrada.",
+      "png": "sin_ia/flyers/flyer__n2_l3_post_verificacion__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "lote1_estandar",
+      "instanceId": "flyer__lote1_estandar__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en lote1 estandar.",
+      "png": "sin_ia/flyers/flyer__lote1_estandar__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_post_logica",
+      "instanceId": "flyer__n2_l4_post_logica__sin_ia_01",
+      "description": "Flyer sobre lógica aplicada.",
+      "png": "sin_ia/flyers/flyer__n2_l4_post_logica__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_post_rigor",
+      "instanceId": "flyer__n2_l4_post_rigor__sin_ia_01",
+      "description": "Pieza editorial para flyer basada en rigor.",
+      "png": "sin_ia/flyers/flyer__n2_l4_post_rigor__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "sin_ia",
+      "templateId": "lote1_flujo",
+      "instanceId": "flyer__lote1_flujo__sin_ia_01",
+      "description": "Flyer limpio de flujo de trabajo.",
+      "png": "sin_ia/flyers/flyer__lote1_flujo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n2_l3_hybrid_equipo",
+      "instanceId": "flyer__n2_l3_hybrid_equipo__con_ia_01",
+      "description": "Pieza AI para flyer basada en equipo.",
+      "png": "con_ia/flyers/flyer__n2_l3_hybrid_equipo__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n2_l3_hybrid_flujo",
+      "instanceId": "flyer__n2_l3_hybrid_flujo__con_ia_01",
+      "description": "Pieza AI para flyer basada en flujo.",
+      "png": "con_ia/flyers/flyer__n2_l3_hybrid_flujo__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n2_l4_hybrid_pensar",
+      "instanceId": "flyer__n2_l4_hybrid_pensar__con_ia_01",
+      "description": "Flyer AI sobre pensar con profundidad estructurada.",
+      "png": "con_ia/flyers/flyer__n2_l4_hybrid_pensar__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "n2_l3_hybrid_editor",
+      "instanceId": "flyer__n2_l3_hybrid_editor__con_ia_01",
+      "description": "Flyer AI con editor central.",
+      "png": "con_ia/flyers/flyer__n2_l3_hybrid_editor__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "flyer",
+      "kind": "flyers",
+      "variant": "con_ia",
+      "templateId": "hybrid_madurez",
+      "instanceId": "flyer__hybrid_madurez__con_ia_01",
+      "description": "Flyer AI de madurez y evidencia.",
+      "png": "con_ia/flyers/flyer__hybrid_madurez__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_story_formal",
+      "instanceId": "reel__n2_l4_story_formal__sin_ia_01",
+      "description": "Pieza editorial para reel basada en formal.",
+      "png": "sin_ia/reels/reel__n2_l4_story_formal__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_reel_demo",
+      "instanceId": "reel__n2_l3_reel_demo__sin_ia_01",
+      "description": "Reel demo del flujo Agora.",
+      "png": "sin_ia/reels/reel__n2_l3_reel_demo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "reel_simbolo",
+      "instanceId": "reel__reel_simbolo__sin_ia_01",
+      "description": "Reel de símbolo / promesa de producto.",
+      "png": "sin_ia/reels/reel__reel_simbolo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_reel_rigor",
+      "instanceId": "reel__n2_l4_reel_rigor__sin_ia_01",
+      "description": "Reel sobre rigor, lógica y validación.",
+      "png": "sin_ia/reels/reel__n2_l4_reel_rigor__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_story_feature",
+      "instanceId": "reel__n2_l3_story_feature__sin_ia_01",
+      "description": "Pieza editorial para reel basada en feature.",
+      "png": "sin_ia/reels/reel__n2_l3_story_feature__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_01",
+      "description": "Reel AI de posicionamiento / demostración.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "reel__hybrid_story_teaser__con_ia_01",
+      "description": "Pieza AI para reel basada en teaser.",
+      "png": "con_ia/reels/reel__hybrid_story_teaser__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_02",
+      "description": "Reel AI de posicionamiento / demostración. · variación AI 02.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "reel__hybrid_story_teaser__con_ia_02",
+      "description": "Pieza AI para reel basada en teaser. · variación AI 02.",
+      "png": "con_ia/reels/reel__hybrid_story_teaser__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "reel",
+      "kind": "reels",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "reel__hybrid_reel_manifiesto__con_ia_03",
+      "description": "Reel AI de posicionamiento / demostración. · variación AI 03.",
+      "png": "con_ia/reels/reel__hybrid_reel_manifiesto__con_ia_03.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_reel_demo",
+      "instanceId": "story__n2_l3_reel_demo__sin_ia_01",
+      "description": "Pieza editorial para story basada en demo.",
+      "png": "sin_ia/stories/story__n2_l3_reel_demo__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_story_feature",
+      "instanceId": "story__n2_l3_story_feature__sin_ia_01",
+      "description": "Story de feature principal.",
+      "png": "sin_ia/stories/story__n2_l3_story_feature__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_chaos",
+      "instanceId": "story__reel_geek_chaos__sin_ia_01",
+      "description": "Pieza editorial para story basada en geek chaos.",
+      "png": "sin_ia/stories/story__reel_geek_chaos__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "reel_geek_quantum",
+      "instanceId": "story__reel_geek_quantum__sin_ia_01",
+      "description": "Story experimental sobre observación y decisión.",
+      "png": "sin_ia/stories/story__reel_geek_quantum__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_story_formal",
+      "instanceId": "story__n2_l4_story_formal__sin_ia_01",
+      "description": "Story de validación formal.",
+      "png": "sin_ia/stories/story__n2_l4_story_formal__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_01",
+      "description": "Story AI de activación y prueba.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "story__hybrid_reel_manifiesto__con_ia_01",
+      "description": "Pieza AI para story basada en manifiesto.",
+      "png": "con_ia/stories/story__hybrid_reel_manifiesto__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_02",
+      "description": "Story AI de activación y prueba. · variación AI 02.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_reel_manifiesto",
+      "instanceId": "story__hybrid_reel_manifiesto__con_ia_02",
+      "description": "Pieza AI para story basada en manifiesto. · variación AI 02.",
+      "png": "con_ia/stories/story__hybrid_reel_manifiesto__con_ia_02.png",
+      "mp4": null
+    },
+    {
+      "slot": "story",
+      "kind": "stories",
+      "variant": "con_ia",
+      "templateId": "hybrid_story_teaser",
+      "instanceId": "story__hybrid_story_teaser__con_ia_03",
+      "description": "Story AI de activación y prueba. · variación AI 03.",
+      "png": "con_ia/stories/story__hybrid_story_teaser__con_ia_03.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_banner_solucion",
+      "instanceId": "banner__n2_l3_banner_solucion__sin_ia_01",
+      "description": "Banner de propuesta de valor.",
+      "png": "sin_ia/banners/banner__n2_l3_banner_solucion__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n2_l3_banner_cta",
+      "instanceId": "banner__n2_l3_banner_cta__sin_ia_01",
+      "description": "Pieza editorial para banner basada en cta.",
+      "png": "sin_ia/banners/banner__n2_l3_banner_cta__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_geek_proof",
+      "instanceId": "banner__banner_geek_proof__sin_ia_01",
+      "description": "Banner de lógica formal aplicada.",
+      "png": "sin_ia/banners/banner__banner_geek_proof__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "n2_l4_banner_formal",
+      "instanceId": "banner__n2_l4_banner_formal__sin_ia_01",
+      "description": "Banner sobre formalización rigurosa.",
+      "png": "sin_ia/banners/banner__n2_l4_banner_formal__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "sin_ia",
+      "templateId": "banner_geek_glitch",
+      "instanceId": "banner__banner_geek_glitch__sin_ia_01",
+      "description": "Pieza editorial para banner basada en geek glitch.",
+      "png": "sin_ia/banners/banner__banner_geek_glitch__sin_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_yt",
+      "instanceId": "banner__hybrid_banner_yt__con_ia_01",
+      "description": "Banner AI para demo/portal.",
+      "png": "con_ia/banners/banner__hybrid_banner_yt__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_x",
+      "instanceId": "banner__hybrid_banner_x__con_ia_01",
+      "description": "Pieza AI para banner basada en x.",
+      "png": "con_ia/banners/banner__hybrid_banner_x__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_og",
+      "instanceId": "banner__hybrid_banner_og__con_ia_01",
+      "description": "Banner AI para sharing institucional.",
+      "png": "con_ia/banners/banner__hybrid_banner_og__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_linkedin",
+      "instanceId": "banner__hybrid_banner_linkedin__con_ia_01",
+      "description": "Banner AI editorial para propuesta de valor.",
+      "png": "con_ia/banners/banner__hybrid_banner_linkedin__con_ia_01.png",
+      "mp4": null
+    },
+    {
+      "slot": "banner",
+      "kind": "banners",
+      "variant": "con_ia",
+      "templateId": "hybrid_banner_yt",
+      "instanceId": "banner__hybrid_banner_yt__con_ia_02",
+      "description": "Banner AI para demo/portal. · variación AI 02.",
+      "png": "con_ia/banners/banner__hybrid_banner_yt__con_ia_02.png",
+      "mp4": null
+    }
+  ]
+}
