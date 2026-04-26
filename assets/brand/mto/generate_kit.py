@@ -1,8 +1,11 @@
 import os
 import subprocess
 
-# Paleta de colores oficial (Manual de Marca)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Paleta de colores oficial (Manual de Marca + principal de plataforma)
 PALETTE = {
+    "gold": "#C6A64A",    # Principal / doradito original de plataforma
     "forest": "#0F2519",  # Primario
     "kodama": "#A3E4D7",  # Acento Lógico
     "mask": "#8B0000",    # Rojo Máscara / Vitalidad
@@ -11,9 +14,14 @@ PALETTE = {
     "black": "#000000"
 }
 
-OUTPUT_DIR = "kit_logos"
+BACKGROUNDS = {
+    "black": "#050805",
+    "white": "#FFFFFF",
+}
 
-def get_logo_geometry(color="#A3E4D7"):
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "kit_logos")
+
+def get_logo_geometry(color=PALETTE["gold"]):
     """Retorna los elementos internos del logo de Elenxos sin el tag <svg>."""
     return f'''
     <!-- Hexágono: El marco analítico -->
@@ -32,14 +40,25 @@ def get_logo_geometry(color="#A3E4D7"):
     <circle cx="12.2" cy="24.5" r="1.5" fill="{color}" opacity="0.9"/>
 '''
 
-def get_svg_logo(color="#A3E4D7", size=None):
+def get_svg_logo(color=PALETTE["gold"], size=None, background_color=None):
     """Retorna un SVG completo del logo."""
     dims = f'width="{size}" height="{size}"' if size else ""
+    background = f'    <rect width="40" height="40" fill="{background_color}"/>\n' if background_color else ""
     return f'''<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" {dims}>
-    {get_logo_geometry(color)}
+{background}    {get_logo_geometry(color)}
 </svg>'''
 
-def get_svg_banner(bg_color="#0F2519", logo_color="#A3E4D7", text_color="#FFFFFF", title="ELENXOS", subtitle="AGORA · INVESTIGACIÓN COOPERATIVA"):
+def get_svg_lockup(background_color=BACKGROUNDS["black"], logo_color=PALETTE["gold"], text_color=PALETTE["white"]):
+    """Retorna el logo completo: isotipo dorado + wordmark elenxos."""
+    return f'''<svg viewBox="0 0 360 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="360" height="96" fill="{background_color}"/>
+    <g transform="translate(24, 20) scale(1.4)">
+        {get_logo_geometry(logo_color)}
+    </g>
+    <text x="96" y="61" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-0.8" fill="{text_color}">elenxos</text>
+</svg>'''
+
+def get_svg_banner(bg_color=BACKGROUNDS["black"], logo_color=PALETTE["gold"], text_color="#FFFFFF", title="ELENXOS", subtitle="AGORA · INVESTIGACIÓN COOPERATIVA"):
     """Retorna el contenido SVG de un banner 3:1 optimizado."""
     return f'''<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
     <!-- Fondo -->
@@ -77,12 +96,26 @@ def run_command(command):
 def main():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
+    
+    # 0. Generar set principal dorado usado en plataforma
+    print("⭐ Generando logo principal dorado...")
+    principal_assets = {
+        "logo_principal": get_svg_logo(PALETTE["gold"]),
+        "logo_principal_fondo_negro_icono": get_svg_logo(PALETTE["gold"], background_color=BACKGROUNDS["black"]),
+        "logo_principal_fondo_blanco_icono": get_svg_logo(PALETTE["gold"], background_color=BACKGROUNDS["white"]),
+        "logo_principal_fondo_negro": get_svg_lockup(BACKGROUNDS["black"], PALETTE["gold"], PALETTE["white"]),
+        "logo_principal_fondo_blanco": get_svg_lockup(BACKGROUNDS["white"], PALETTE["gold"], PALETTE["forest"]),
+    }
+    for name, svg_content in principal_assets.items():
+        svg_path = os.path.join(OUTPUT_DIR, f"{name}.svg")
+        with open(svg_path, "w", encoding="utf-8") as f:
+            f.write(svg_content)
         
     # 1. Generar SVGs de logos
     print("🎨 Generando SVGs de logos...")
     for name, color in PALETTE.items():
         svg_path = os.path.join(OUTPUT_DIR, f"logo_{name}.svg")
-        with open(svg_path, "w") as f:
+        with open(svg_path, "w", encoding="utf-8") as f:
             f.write(get_svg_logo(color))
             
     # 2. Convertir a PNGs (Varios tamaños)
@@ -96,10 +129,26 @@ def main():
             # Forzamos dimensiones en rsvg-convert para asegurar nitidez
             run_command(f"rsvg-convert -w {size} -h {size} {svg_path} -o {output_png}")
 
+    print("🧩 Generando PNGs del set principal...")
+    principal_png_sizes = {
+        "logo_principal": [(512, 512), (1024, 1024)],
+        "logo_principal_fondo_negro_icono": [(512, 512), (1024, 1024)],
+        "logo_principal_fondo_blanco_icono": [(512, 512), (1024, 1024)],
+        "logo_principal_fondo_negro": [(1200, 320)],
+        "logo_principal_fondo_blanco": [(1200, 320)],
+    }
+    for name, target_sizes in principal_png_sizes.items():
+        svg_path = os.path.join(OUTPUT_DIR, f"{name}.svg")
+        for width, height in target_sizes:
+            suffix = f"_{width}" if width == height else f"_{width}x{height}"
+            output_png = os.path.join(OUTPUT_DIR, f"{name}{suffix}.png")
+            run_command(f"rsvg-convert -w {width} -h {height} {svg_path} -o {output_png}")
+
     # 3. Generar Banners
     print("🚩 Generando Banners optimizados...")
     banner_variations = [
-        ("banner_main", PALETTE["forest"], PALETTE["kodama"], PALETTE["white"], "ELENXOS", "AGORA · INVESTIGACIÓN COOPERATIVA"),
+        ("banner_main", BACKGROUNDS["black"], PALETTE["gold"], PALETTE["white"], "ELENXOS", "AGORA · INVESTIGACIÓN COOPERATIVA"),
+        ("banner_forest_kodama", PALETTE["forest"], PALETTE["kodama"], PALETTE["white"], "ELENXOS", "AGORA · INVESTIGACIÓN COOPERATIVA"),
         ("banner_minimal", PALETTE["black"], PALETTE["white"], PALETTE["white"], "ELENXOS", "CANON METODOLÓGICO"),
         ("banner_vibrant", PALETTE["mask"], PALETTE["white"], PALETTE["white"], "ELENXOS", "EL RIGOR DEL INSTINTO"),
         ("banner_agora", PALETTE["forest"], PALETTE["kodama"], PALETTE["white"], "AGORA", "ESPACIO DE TRABAJO RIGUROSO"),
@@ -107,7 +156,7 @@ def main():
     
     for name, bg, logo, text, title, subtitle in banner_variations:
         svg_banner_path = os.path.join(OUTPUT_DIR, f"{name}.svg")
-        with open(svg_banner_path, "w") as f:
+        with open(svg_banner_path, "w", encoding="utf-8") as f:
             f.write(get_svg_banner(bg, logo, text, title, subtitle))
         
         # Convertir banner a PNG

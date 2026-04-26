@@ -16,6 +16,7 @@ Este directorio concentra la capa visual real del emprendimiento. La regla es si
 ### Elenxos
 
 - Fondo principal: `#0F2519`
+- Logo principal de plataforma: isotipo dorado `#C6A64A` sobre fondo negro o blanco
 - Acento principal: `#A3E4D7` y `#7FFFD4`
 - Acento secundario: `#C73030`
 - Neutros: `#3A3F41`, `#1E2224`, blanco
@@ -43,6 +44,9 @@ No volver a abrir una tercera paleta paralela sin justificarlo.
 
 ### Disponible hoy para usar
 
+- logo principal listo en `logo_elenxos_principal.svg`
+- lockup principal sobre negro en `logo_elenxos_principal_fondo_negro.svg`
+- lockup principal sobre blanco en `logo_elenxos_principal_fondo_blanco.svg`
 - kit de logos y banners exportables en `brand/mto/kit_logos/`
 - pipeline React → PNG para piezas sociales en `../elenxos_design_system/` via `npm run render`
 - lote renderizado base en `../elenxos_design_system/output/react/`

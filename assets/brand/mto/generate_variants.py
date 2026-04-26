@@ -1,8 +1,11 @@
 import os
 import subprocess
 
-# Paleta oficial (Manual de Marca)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Paleta oficial (Manual de Marca + principal de plataforma)
 PALETTE = {
+    "gold": "#C6A64A",
     "kodama": "#A3E4D7",
     "mask": "#8B0000",
     "ash": "#3A3F41",
@@ -10,7 +13,7 @@ PALETTE = {
     "white": "#FFFFFF"
 }
 
-OUTPUT_DIR = "variantes"
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "variantes")
 
 def get_hexagon(color):
     return f'''<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +53,7 @@ def main():
     for name, func in variants:
         for color_name, color_val in PALETTE.items():
             svg_path = os.path.join(OUTPUT_DIR, f"{name}_{color_name}.svg")
-            with open(svg_path, "w") as f:
+            with open(svg_path, "w", encoding="utf-8") as f:
                 f.write(func(color_val))
             
             # También generamos PNG para uso directo en redes/docs

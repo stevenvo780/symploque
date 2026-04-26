@@ -1,5 +1,7 @@
-<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    
+<svg viewBox="0 0 360 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="360" height="96" fill="#050805"/>
+    <g transform="translate(24, 20) scale(1.4)">
+        
     <!-- Hexágono: El marco analítico -->
     <polygon points="20,2 35.6,11 35.6,29 20,38 4.4,29 4.4,11" stroke="#C6A64A" stroke-width="1.2" stroke-linejoin="round" opacity="0.4" fill="none"/>
     
@@ -15,4 +17,6 @@
     <circle cx="27.8" cy="24.5" r="1.5" fill="#C6A64A" opacity="0.9"/>
     <circle cx="12.2" cy="24.5" r="1.5" fill="#C6A64A" opacity="0.9"/>
 
+    </g>
+    <text x="96" y="61" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-0.8" fill="#FFFFFF">elenxos</text>
 </svg>
