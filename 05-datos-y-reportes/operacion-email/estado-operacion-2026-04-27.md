@@ -10,16 +10,18 @@ La operacion tenia una contradiccion: 29 filas figuraban como contactadas y alim
 
 | Archivo | Estado |
 |---|---|
-| `leads-agora-maestro.csv` | 116 contactados, 184 pendientes |
-| `leads-agora-top-50-hoy.csv` | 46 contactados, 4 pendientes sin email |
-| `contactos-maestro-operativo.csv` | 116 con primer contacto enviado, 184 pendientes |
-| `correos-enviados-importar.csv` | 116 envios reales |
+| `leads-agora-maestro.csv` | 291 contactados, 5 rebotados, 4 pendientes sin email |
+| `leads-agora-top-50-hoy.csv` | 45 contactados, 1 rebotado, 4 pendientes sin email |
+| `contactos-maestro-operativo.csv` | 291 con primer contacto pendiente de respuesta, 5 rebotados, 4 pendientes sin email |
+| `correos-enviados-importar.csv` | 296 aceptados por SMTP, 5 rebotes confirmados |
 | `declaracion-pendientes.csv` | 0 filas |
 | `disculpa-error-pendientes.csv` | 0 filas |
 | `erp-leads-wave-1.csv` | 46 Leads creados en ERP |
 | `erp-leads-wave-2.csv` | 70 Leads creados en ERP |
-| `primer-contacto-wave-1.csv` | 46 correos enviados |
-| `primer-contacto-wave-2.csv` | 70 correos enviados |
+| `erp-leads-wave-3.csv` | 180 Leads creados en ERP |
+| `primer-contacto-wave-1.csv` | 45 correos enviados, 1 rebote |
+| `primer-contacto-wave-2.csv` | 67 correos enviados, 3 rebotes |
+| `primer-contacto-wave-3.csv` | 179 correos enviados, 1 rebote |
 
 Backup previo generado por la maquina:
 
@@ -36,7 +38,7 @@ La operacion siguio la secuencia definida: primero guardar contactos efectivos e
 - Candidatos con email: 46
 - Estado local: `erp_sync_status=synced`
 - Archivo de importacion: `05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv`
-- Envio real: 46 enviados, 0 fallidos
+- Envio SMTP: 46 aceptados, 1 rebote confirmado
 - Remitente: `ventas@elenxos.com`
 - Siguiente accion: seguimiento si no responden el 2026-05-04
 
@@ -53,7 +55,22 @@ Se aplico lo aprendido del primer lote: enlaces sin redundancia, sin redes socia
   - `02-primer-contacto-estandar`: 17
   - `03-primer-contacto-semilleros`: 25
   - `04-primer-contacto-directores`: 28
-- Envio real: 70 enviados, 0 fallidos
+- Envio SMTP: 70 aceptados, 3 rebotes confirmados
+- Remitente: `ventas@elenxos.com`
+- Siguiente accion: seguimiento si no responden el 2026-05-04
+
+## Tercer lote ejecutado
+
+Se amplio la operacion a UNAL Bogota con ajuste de clasificacion: los perfiles docentes de departamento usan plantilla estandar, no plantilla administrativa de directores.
+
+- Lote: `wave_3`
+- Candidatos totales: 180
+- Candidatos con email: 180
+- Estado local: `erp_sync_status=synced`
+- Archivo de importacion: `05-datos-y-reportes/operacion-email/erp-leads-wave-3.csv`
+- Distribucion de plantillas:
+  - `02-primer-contacto-estandar`: 180
+- Envio SMTP: 180 aceptados, 1 rebote confirmado
 - Remitente: `ventas@elenxos.com`
 - Siguiente accion: seguimiento si no responden el 2026-05-04
 
@@ -71,6 +88,12 @@ El segundo push directo por login ERPNext tambien se ejecuto correctamente:
 
 - Leads creados: 70
 - Rango ERP: `CRM-LEAD-2026-00047` a `CRM-LEAD-2026-00116`
+- Fallidos: 0
+
+El tercer push directo por login ERPNext tambien se ejecuto correctamente:
+
+- Leads creados: 180
+- Rango ERP: `CRM-LEAD-2026-00117` a `CRM-LEAD-2026-00296`
 - Fallidos: 0
 
 ## Conectividad CRM
@@ -98,10 +121,16 @@ La barrera no es conectividad, sino autenticacion para crear registros.
 - Auditoria de mensajeria: OK, confirma UdeA/Universidad de Antioquia en las 3 plantillas y en la revision del lote.
 - Limpieza de enlaces: OK, sin redes sociales; solo sitios oficiales `www.elenxos.com` y `agora.elenxos.com`.
 - Preview de envio real verificado: sin bloqueos ERP.
-- Envio real ejecutado: 46 enviados, 0 fallidos.
+- Envio real ejecutado: 46 aceptados por SMTP, 1 rebote confirmado.
 - Se preparo y envio el lote de primer contacto `wave_2`.
 - CSV: `05-datos-y-reportes/operacion-email/primer-contacto-wave-2.csv`
 - Revision: `04-mensajeria-email/lote-primer-contacto-wave-2-revision.md`
 - Preview de envio real verificado: sin bloqueos ERP.
-- Envio real `wave_2` ejecutado: 70 enviados, 0 fallidos.
-- Envio acumulado: 116 enviados, 0 fallidos.
+- Envio real `wave_2` ejecutado: 70 aceptados por SMTP, 3 rebotes confirmados.
+- Se preparo y envio el lote de primer contacto `wave_3`.
+- CSV: `05-datos-y-reportes/operacion-email/primer-contacto-wave-3.csv`
+- Revision: `04-mensajeria-email/lote-primer-contacto-wave-3-revision.md`
+- Preview de envio real verificado: sin bloqueos ERP.
+- Envio real `wave_3` ejecutado: 180 aceptados por SMTP, 1 rebote confirmado.
+- Envio acumulado: 296 aceptados por SMTP, 5 rebotes, 291 pendientes de respuesta.
+- Correccion IMAP: 296 copias de campana visibles en la carpeta `Sent` de `ventas@elenxos.com`; no se reenviaron correos.

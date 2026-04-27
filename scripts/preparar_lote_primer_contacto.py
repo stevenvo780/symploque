@@ -103,7 +103,6 @@ def template_for(row: dict[str, str]) -> dict[str, Path | str]:
             "pasantias",
             "practicas",
             "admisiones",
-            "departamento",
         ]
     ):
         return TEMPLATES["directores"]

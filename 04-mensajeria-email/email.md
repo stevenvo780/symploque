@@ -77,11 +77,11 @@ Content-Type: application/json
 
 ## Uso recomendado para esta fase
 
-1. No hay contactos enviados confirmados; la operacion activa es `fresh launch`.
-2. Guardar primero los leads efectivos en ERPNext antes de preparar correos.
+1. La operacion activa ya tiene `wave_1`, `wave_2` y `wave_3` enviadas con trazabilidad.
+2. Guardar primero los leads efectivos en ERPNext antes de preparar nuevas olas o seguimientos.
 3. Usar `https://www.elenxos.com/` cuando el CTA sea institucional o corporativo.
 4. Usar `https://agora.elenxos.com/` cuando el CTA sea de producto, demo o validacion directa de Agora.
-5. Registrar cada envio en `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`.
+5. Registrar cada envio en `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv` y `correos-enviados-importar.csv`; el script tambien anexa copia en IMAP `Sent`.
 6. Mantener `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` vacios salvo que aparezca evidencia real de contacto previo.
 
 ## Checklist previo a cualquier envio
@@ -94,6 +94,7 @@ Content-Type: application/json
 - contacto guardado o listo para guardar en ERPNext
 - lote deduplicado contra `correos-enviados-importar.csv`
 - decision tomada sobre si el contacto requiere primer contacto estandar, semillero o directores/coordinadores
+- reintentos y pausa configurados si se envia volumen contra un mismo dominio
 
 ## Ejemplos
 
@@ -191,4 +192,7 @@ Hoy no hay contactos previos confirmados. Si en el futuro aparece evidencia de q
 - SMTP relay: `148.230.88.162:587` con `STARTTLS`
 - `html` es opcional; si se omite, sale solo texto plano
 - webmail: `https://mail.proxy.humanizar-dev.cloud`
+- IMAP: `mail.proxy.humanizar-dev.cloud:993`
+- La API SMTP no guarda copia automaticamente en `Sent`; el script operativo anexa copia IMAP despues de cada envio exitoso.
+- La respuesta `Email sent` significa aceptado por SMTP, no entrega final; revisar INBOX por rebotes y actualizar `reply_status`.
 - no hay `rate limiting` documentado; enviar por lotes pequenos y registrar respuesta

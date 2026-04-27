@@ -407,7 +407,11 @@ def main() -> int:
             if confirm != "IMPORTAR":
                 print("Importacion cancelada.")
                 return 0
-        results = push_to_erp(candidates, timeout=args.timeout)
+        try:
+            results = push_to_erp(candidates, timeout=args.timeout)
+        except RuntimeError as exc:
+            print(f"ERPNext no disponible para push: {truncate_detail(str(exc))}", file=sys.stderr)
+            return 2
         ok = sum(1 for result in results if result.status in {"synced", "synced_existing"})
         failed = len(results) - ok
         for result in results:

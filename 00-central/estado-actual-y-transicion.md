@@ -6,12 +6,12 @@ Fecha de actualizacion: 2026-04-27
 
 Este repo conserva el historico comercial y narrativo de `Agora`, pero la fase activa cambio.
 
-La prioridad ya no es reconciliar una supuesta ola previa. La operacion fue reiniciada como lanzamiento fresco y `wave_1`/`wave_2` ya quedaron ejecutadas con trazabilidad:
+La prioridad ya no es reconciliar una supuesta ola previa. La operacion fue reiniciada como lanzamiento fresco y `wave_1`/`wave_2`/`wave_3` ya quedaron ejecutadas con trazabilidad:
 
 1. guardar primero los contactos efectivos en ERPNext como Leads
 2. enviar primer contacto desde remitente corporativo
 3. registrar cada envio despues de que el contacto exista en ERP/CRM
-4. monitorear respuestas y rebotes antes de abrir `wave_3`
+4. monitorear respuestas y rebotes antes de abrir nuevas etapas
 
 ## Estado publico verificado
 
@@ -68,7 +68,7 @@ Eso obliga a que el repo haga la misma separacion:
 
 - usuario ERP operativo: `admin@elenxos.com`; contrasena como secreto local no versionado
 - remitente principal de primer contacto: `ventas@elenxos.com`
-- criterio aplicado en `wave_1` y `wave_2`: CTA directo a `agora.elenxos.com`, sin redundancia de links y firma con ambos sitios oficiales
+- criterio aplicado en `wave_1`, `wave_2` y `wave_3`: CTA directo a `agora.elenxos.com`, sin redundancia de links y firma con ambos sitios oficiales
 
 ## Regla operativa
 
@@ -84,9 +84,9 @@ Para nuevas olas, el trabajo correcto es repetir la secuencia:
 
 - 300 prospectos operativos.
 - 296 contactos con email.
-- 116 contactos de `wave_1` y `wave_2` creados como Leads en ERPNext.
-- 116 correos enviados registrados desde `ventas@elenxos.com`.
+- 296 contactos de `wave_1`, `wave_2` y `wave_3` creados como Leads en ERPNext.
+- 296 correos enviados registrados desde `ventas@elenxos.com`.
 - 0 filas de declaracion.
 - 0 filas de disculpa.
-- Archivos ERP generados: [erp-leads-wave-1.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv), [erp-leads-wave-2.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-2.csv)
+- Archivos ERP generados: [erp-leads-wave-1.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv), [erp-leads-wave-2.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-2.csv), [erp-leads-wave-3.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-3.csv)
 - Siguiente accion: seguimiento a no respondidos el 2026-05-04.

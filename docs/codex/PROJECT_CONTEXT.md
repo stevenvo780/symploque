@@ -4,7 +4,7 @@
 
 - Purpose: repositorio operativo para outreach comercial de `Elenxos` y `Agora`.
 - Primary users: operador comercial y agente de Codex encargado de ordenar datos, guardar Leads en ERPNext, preparar correo corporativo y ejecutar outreach con trazabilidad.
-- Current focus: seguimiento post-envio de `wave_1` y `wave_2`. Hay 116 Leads creados en ERPNext y 116 primeros contactos enviados desde `ventas@elenxos.com`.
+- Current focus: seguimiento post-envio de `wave_1`, `wave_2` y `wave_3`. Hay 296 Leads creados en ERPNext, 296 envios aceptados por SMTP, 5 rebotes confirmados y 291 contactos pendientes de respuesta.
 
 ## Architecture
 
@@ -22,8 +22,8 @@
   - `03-operacion-redes/` y `06-redes-sociales/`: narrativa, calendario y operaciones de redes
   - `scripts/`: automatizaciones de bootstrap, auditoria, ERPNext y envio controlado
 - Data stores and external services:
-  - `leads-agora-maestro.csv`: 300 prospectos; 116 contactados y 184 pendientes
-  - `contactos-maestro-operativo.csv`: 300 prospectos; 116 sincronizados con ERPNext y contactados
+  - `leads-agora-maestro.csv`: 300 prospectos; 291 contactados, 5 rebotados y 4 pendientes sin email
+  - `contactos-maestro-operativo.csv`: 300 prospectos; 296 sincronizados con ERPNext, 291 pendientes de respuesta, 5 rebotados y 4 pendientes sin email
   - ERP/CRM: `https://crm.proxy.humanizar-dev.cloud`
   - Mail API: `https://mailapi.proxy.humanizar-dev.cloud`
   - sitio corporativo: `https://www.elenxos.com/`
@@ -49,14 +49,17 @@
 - Usuario ERP operativo: `admin@elenxos.com`; contrasena como secreto local no versionado.
 - `wave_1`: 46 Leads creados en ERPNext (`CRM-LEAD-2026-00001` a `CRM-LEAD-2026-00046`).
 - `wave_2`: 70 Leads creados en ERPNext (`CRM-LEAD-2026-00047` a `CRM-LEAD-2026-00116`).
+- `wave_3`: 180 Leads creados en ERPNext (`CRM-LEAD-2026-00117` a `CRM-LEAD-2026-00296`).
 - Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-1-revision.md`.
 - Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-2-revision.md`.
-- Envio real acumulado: 116 enviados, 0 fallidos; siguiente seguimiento el 2026-05-04.
+- Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-3-revision.md`.
+- Envio real acumulado: 296 aceptados por SMTP; 5 rebotados, 291 pendientes de respuesta; siguiente seguimiento el 2026-05-04.
+- Carpeta IMAP `Sent`: 296 copias de campana visibles; futuros envios anexan copia automaticamente.
 - Auditoria de mensajeria confirma UdeA/Universidad de Antioquia, ausencia de redes sociales, ausencia de CTA duplicado y sitios oficiales Elenxos/Agora.
 
 ## Constraints
 
 - No guardar secretos en markdown, CSV ni scripts.
-- No abrir `wave_3` sin revisar respuestas, rebotes y aprendizajes de `wave_1` y `wave_2`.
+- No abrir nuevas etapas sin revisar respuestas, rebotes y aprendizajes de `wave_1`, `wave_2` y `wave_3`.
 - Registrar cada envio real en `correos-enviados-importar.csv` y `contactos-maestro-operativo.csv`.
 - Mantener `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` vacios salvo evidencia real de contacto previo.

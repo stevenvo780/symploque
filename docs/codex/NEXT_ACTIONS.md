@@ -26,13 +26,22 @@
 - [x] Parametrizar envio por campana para no mezclar `wave_1` y `wave_2`.
 - [x] Crear 70 Leads de `wave_2` en ERPNext y sincronizar IDs locales.
 - [x] Ejecutar envio real de `wave_2`: 70 enviados, 0 fallidos.
-- [x] Reconciliar historico y maestro operativo con 116 envios reales acumulados.
+- [x] Reconciliar historico y maestro operativo con 296 envios reales acumulados.
+- [x] Verificar INBOX de `ventas@elenxos.com` por rebotes.
+- [x] Marcar 5 rebotes confirmados y sacar reporte.
+- [x] Reconstruir/anexar 296 copias de campana en la carpeta IMAP `Sent`.
+- [x] Actualizar envio futuro para anexar copia en `Sent` automaticamente.
+- [x] Crear 180 Leads de `wave_3` en ERPNext y sincronizar IDs locales.
+- [x] Ajustar clasificacion de plantillas para docentes de departamento.
+- [x] Ejecutar envio real de `wave_3`: 180 aceptados por SMTP, 0 fallidos API.
+- [x] Reconciliar legacy, maestro operativo, enviados e IMAP con `wave_3`.
 
 ## Next
 
-- [ ] Monitorear respuestas y rebotes de `wave_1` y `wave_2`.
-- [ ] Hacer seguimiento a los 116 contactos sin respuesta el 2026-05-04.
-- [ ] Preparar `wave_3` solo despues de revisar aprendizajes de las dos primeras olas.
+- [ ] Monitorear respuestas nuevas de `wave_1`, `wave_2` y `wave_3`.
+- [ ] Verificar correo alternativo para los 5 rebotados el 2026-04-28.
+- [ ] Hacer seguimiento a los 291 contactos sin respuesta el 2026-05-04.
+- [ ] Preparar la siguiente etapa solo despues de revisar respuestas, rebotes y senales de interes de los 296 envios.
 - [ ] **REDES — Crear la pagina de empresa de LinkedIn o documentar la URL correcta** (la actual retorna 404).
 - [ ] **REDES — Definir y documentar el handle de X/Twitter** (actualmente TBD, bloquea publicacion en X).
 - [x] **REDES — Verificar acceso a `media@elenxos.com`** para recibir codigos de verificacion de plataformas. (resuelto 2026-04-24, correo de prueba admin→ventas exitoso)
@@ -55,5 +64,6 @@
 - [x] El primer correo entra por canal corporativo `ventas@elenxos.com` y CTA de producto `https://agora.elenxos.com/`.
 - [x] En `wave_1`, el CTA operativo va directo a `Agora` y la firma deja ambos sitios oficiales.
 - [x] En `wave_2`, se mantiene CTA sin redundancia y campana separada `primer_contacto_wave_2`.
+- [x] En `wave_3`, docentes de departamento usan plantilla estandar y campana separada `primer_contacto_wave_3`.
 - [ ] **REDES — La URL correcta de LinkedIn es `/company/elenxos` u otra?** Confirmar si la pagina existe.
 - [ ] **REDES — Con que handle se creo la cuenta de X/Twitter?** Documentar en `directorio-cuentas-y-estado.md`.

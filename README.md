@@ -40,12 +40,12 @@ Si solo vas a abrir cinco archivos, abre estos en este orden:
 ## Estado operativo actual
 
 - Sitios publicos verificados: `https://www.elenxos.com/` y `https://agora.elenxos.com/`
-- La operacion email salio de `fresh launch`: `wave_1` y `wave_2` tienen 116 primeros contactos enviados
-- Los 116 contactos efectivos de `wave_1` y `wave_2` estan guardados como Leads en ERPNext
+- La operacion email salio de `fresh launch`: `wave_1`, `wave_2` y `wave_3` tienen 296 primeros contactos enviados
+- Los 296 contactos efectivos de `wave_1`, `wave_2` y `wave_3` estan guardados como Leads en ERPNext
 - La API de correo responde y los envios corporativos desde `ventas@elenxos.com` quedaron registrados
 - La narrativa de marca ya existe; el faltante principal era volverla operable y menos redundante
 - La nueva base de outreach se puede bootstrapear desde el historico con `scripts/bootstrap_operacion_email.py`
-- Los lotes ERP estan en `05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv` y `05-datos-y-reportes/operacion-email/erp-leads-wave-2.csv`
+- Los lotes ERP estan en `05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv`, `erp-leads-wave-2.csv` y `erp-leads-wave-3.csv`
 - La siguiente accion comercial es monitorear respuestas/rebotes y hacer seguimiento el 2026-05-04
 
 ## Generacion de contenidos: que manda hoy

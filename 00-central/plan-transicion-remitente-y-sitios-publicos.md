@@ -2,7 +2,7 @@
 
 Fecha de actualizacion: 2026-04-27
 
-> Actualizacion operativa: se confirmo que no habia contactos previos, se reinicio como `fresh launch`, se crearon 116 Leads de `wave_1`/`wave_2` en ERPNext y se envio el primer contacto corporativo desde `ventas@elenxos.com`.
+> Actualizacion operativa: se confirmo que no habia contactos previos, se reinicio como `fresh launch`, se crearon 296 Leads de `wave_1`/`wave_2`/`wave_3` en ERPNext y se envio el primer contacto corporativo desde `ventas@elenxos.com`.
 
 ## Objetivo
 
@@ -11,7 +11,7 @@ Pasar de una base local de prospectos a una operacion ordenada desde ERP/CRM y c
 ## Contexto que cambia el plan
 
 - no habia correos previos confirmados antes de `wave_1`
-- `wave_1` y `wave_2` ya registran 116 envios reales, 0 fallidos
+- `wave_1`, `wave_2` y `wave_3` ya registran 296 envios aceptados por SMTP, 5 rebotes confirmados
 - no hay cola activa de `declaracion`
 - la automatizacion de envio corporativo esta documentada en `email.md`
 - ya existen sitios publicos vivos para `Elenxos` y `Agora`
@@ -47,8 +47,8 @@ Salida:
 Regla:
 - no enviar correo a contactos que no esten listos o sincronizados con ERP
 
-Estado `wave_1` y `wave_2`:
-- completado, 116 Leads sincronizados
+Estado `wave_1`, `wave_2` y `wave_3`:
+- completado, 296 Leads sincronizados
 
 ## Fase 1. Primer contacto corporativo
 
@@ -73,8 +73,8 @@ Campos clave a decidir por contacto:
 - link final a usar como CTA
 - plantilla segun segmento
 
-Estado `wave_1` y `wave_2`:
-- completado, 116 enviados desde `ventas@elenxos.com`
+Estado `wave_1`, `wave_2` y `wave_3`:
+- completado, 296 enviados desde `ventas@elenxos.com`
 - CTA operativo: `https://agora.elenxos.com/`
 - firma y cuerpo: solo sitios oficiales Elenxos/Agora, sin redes sociales
 - auditoria: confirma mencion UdeA/Universidad de Antioquia
@@ -96,7 +96,7 @@ Orden recomendado:
 1. importar o sincronizar Leads de `wave_1`
 2. enviar primer contacto por segmento
 3. monitorear rebotes y respuestas
-4. abrir `wave_3` solo despues de registrar aprendizajes de `wave_1` y `wave_2`
+4. abrir nuevas etapas solo despues de registrar aprendizajes de las olas enviadas
 
 Canales previstos:
 
@@ -118,10 +118,10 @@ Cada contacto debe terminar en `contactos-maestro-operativo.csv` con:
 
 ## Cola inmediata
 
-1. monitorear rebotes y respuestas de `wave_1`
+1. monitorear rebotes y respuestas de `wave_1`, `wave_2` y `wave_3`
 2. hacer seguimiento a no respondidos el 2026-05-04
-3. registrar aprendizajes antes de abrir `wave_3`
-4. preparar `wave_3` solo con Leads guardados o sincronizados en ERPNext
+3. registrar aprendizajes antes de abrir nuevas etapas
+4. preparar cualquier nueva ola solo con Leads guardados o sincronizados en ERPNext
 5. mantener la auditoria sin redes sociales, con sitios oficiales y mencion UdeA cuando aplique
 
 ## Riesgos principales

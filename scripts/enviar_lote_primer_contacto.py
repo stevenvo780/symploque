@@ -20,11 +20,15 @@ from __future__ import annotations
 import argparse
 import csv
 from datetime import date, datetime, timedelta
+from email.message import EmailMessage
+from email.utils import formatdate, make_msgid
+import imaplib
 import json
 import os
 from pathlib import Path
 import re
 import sys
+import time
 from urllib import error, parse, request
 
 from preparar_lote_primer_contacto import (
@@ -42,6 +46,10 @@ REPO_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_SENT_PATH = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "correos-enviados-importar.csv"
 DEFAULT_LOG_DIR = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "logs"
 DEFAULT_ENV_FILE = REPO_DIR / ".env"
+LEGACY_PATH = REPO_DIR / "05-datos-y-reportes" / "leads-agora-maestro.csv"
+TOP50_PATH = REPO_DIR / "05-datos-y-reportes" / "leads-agora-top-50-hoy.csv"
+DEFAULT_IMAP_HOST = "mail.proxy.humanizar-dev.cloud"
+DEFAULT_SENT_FOLDER = "Sent"
 SYNCED_ERP_STATUSES = {"synced", "synced_existing"}
 READY_ERP_STATUSES = {"ready_for_import", "synced", "synced_existing"}
 
@@ -136,6 +144,60 @@ def send_email(base_url: str, api_key: str, sender: str, password: str, to: str,
         return False, str(exc)
 
 
+def send_email_with_retries(
+    base_url: str,
+    api_key: str,
+    sender: str,
+    password: str,
+    to: str,
+    subject: str,
+    body: str,
+    retries: int,
+) -> tuple[bool, str]:
+    attempts = max(1, retries + 1)
+    last_detail = ""
+    for attempt in range(1, attempts + 1):
+        ok, detail = send_email(base_url, api_key, sender, password, to, subject, body)
+        if ok:
+            suffix = f" attempts={attempt}" if attempt > 1 else ""
+            return True, f"{detail}{suffix}"
+        last_detail = detail
+        if attempt < attempts:
+            time.sleep(min(2 * attempt, 6))
+    return False, f"{last_detail} attempts={attempts}"
+
+
+def build_sent_message(sender: str, to: str, subject: str, body: str, contact_id: str, campaign: str) -> bytes:
+    msg = EmailMessage()
+    msg["From"] = sender
+    msg["To"] = to
+    msg["Subject"] = subject
+    msg["Date"] = formatdate(localtime=True)
+    msg["Message-ID"] = make_msgid(domain="elenxos.com")
+    msg["X-Elenxos-Contact-ID"] = contact_id
+    msg["X-Elenxos-Campaign"] = campaign
+    msg.set_content(body)
+    return msg.as_bytes()
+
+
+def open_imap_sent(sender: str, password: str) -> imaplib.IMAP4_SSL:
+    host = os.environ.get("MAIL_IMAP_HOST", DEFAULT_IMAP_HOST)
+    port = int(os.environ.get("MAIL_IMAP_PORT", "993"))
+    client = imaplib.IMAP4_SSL(host, port)
+    client.login(sender, password)
+    return client
+
+
+def append_sent_copy(client: imaplib.IMAP4_SSL, folder: str, message_bytes: bytes) -> tuple[bool, str]:
+    try:
+        result, data = client.append(folder, "\\Seen", None, message_bytes)
+    except Exception as exc:  # noqa: BLE001
+        return False, f"sent_copy_error={exc}"
+    if result != "OK":
+        return False, f"sent_copy_error={data}"
+    return True, "sent_copy=appended"
+
+
 def sent_keys(rows: list[dict[str, str]]) -> set[tuple[str, str]]:
     keys: set[tuple[str, str]] = set()
     for row in rows:
@@ -154,7 +216,8 @@ def campaign_from_csv_path(path: Path) -> str:
 
 
 def select_lote_rows(lote_rows: list[dict[str, str]], limit: int | None) -> list[dict[str, str]]:
-    selected = [row for row in lote_rows if normalize(row.get("send_status", "")) != "sent"]
+    closed_statuses = {"sent", "bounced", "do_not_contact"}
+    selected = [row for row in lote_rows if normalize(row.get("send_status", "")).lower() not in closed_statuses]
     if limit is not None:
         selected = selected[:limit]
     return selected
@@ -222,6 +285,47 @@ def update_master_row(source: dict[str, str], lote_row: dict[str, str], sent_dat
     source["landing_url_sent"] = lote_row.get("landing_url", "")
     source["declaration_required"] = "no"
     source["declaration_status"] = "not_applicable"
+    source["notes"] = (
+        f"Primer contacto enviado el {sent_date.isoformat()} desde {lote_row.get('sender', '')}; "
+        f"campana {campaign}; Lead sincronizado en ERPNext."
+    )
+
+
+def sync_legacy_statuses(master_rows: list[dict[str, str]]) -> None:
+    by_email = {normalize_email(row.get("contact_value", "")): row for row in master_rows if row.get("contact_value")}
+    for path in [LEGACY_PATH, TOP50_PATH]:
+        if not path.exists():
+            continue
+        headers, rows = read_csv(path)
+        changed = False
+        for row in rows:
+            source = by_email.get(normalize_email(row.get("contact_value", "")))
+            if not source:
+                continue
+            status = source.get("status", "")
+            if status == "first_contact_sent":
+                row["estado"] = "contactado"
+                row["fecha_ultimo_contacto"] = source.get("last_contact_date", "")
+                row["proxima_accion"] = source.get("next_action", "")
+                row["fecha_proxima_accion"] = source.get("next_action_date", "")
+                row["respuesta"] = "pendiente"
+                row["canal_preferido"] = "email"
+                row["notas"] = (
+                    f"Primer contacto enviado desde {source.get('last_sender_email', '')}; "
+                    f"campana {source.get('last_campaign', '')}; Lead sincronizado en ERPNext."
+                )
+                changed = True
+            elif status == "email_bounced":
+                row["estado"] = "rebotado"
+                row["fecha_ultimo_contacto"] = source.get("last_contact_date", "")
+                row["proxima_accion"] = source.get("next_action", "")
+                row["fecha_proxima_accion"] = source.get("next_action_date", "")
+                row["respuesta"] = "rebote"
+                row["canal_preferido"] = "email"
+                row["notas"] = source.get("notes", "")
+                changed = True
+        if changed:
+            write_csv(path, headers, rows)
 
 
 def write_log(path: Path, rows: list[dict[str, str]]) -> None:
@@ -240,12 +344,21 @@ def main() -> int:
     parser.add_argument("--send", action="store_true", help="Ejecuta envio real.")
     parser.add_argument("--allow-ready-for-import", action="store_true", help="Permite enviar con erp_sync_status=ready_for_import.")
     parser.add_argument("--campaign", help="Nombre de campana para trazabilidad. Por defecto se infiere del nombre del CSV.")
+    parser.add_argument("--no-append-sent", action="store_true", help="No guarda copia del correo en la carpeta IMAP Sent.")
+    parser.add_argument("--delay-seconds", type=float, default=float(os.environ.get("MAIL_SEND_DELAY_SECONDS", "0")), help="Pausa entre correos aceptados por SMTP.")
+    parser.add_argument("--retries", type=int, default=int(os.environ.get("MAIL_SEND_RETRIES", "1")), help="Reintentos adicionales por correo ante fallos transitorios.")
     parser.add_argument("--env-file", default=str(DEFAULT_ENV_FILE), help="Archivo .env local.")
     parser.add_argument("--log-dir", default=str(DEFAULT_LOG_DIR), help="Directorio de logs.")
     args = parser.parse_args()
 
     if args.limit is not None and args.limit < 1:
         print("--limit debe ser mayor que cero", file=sys.stderr)
+        return 2
+    if args.delay_seconds < 0:
+        print("--delay-seconds no puede ser negativo", file=sys.stderr)
+        return 2
+    if args.retries < 0:
+        print("--retries no puede ser negativo", file=sys.stderr)
         return 2
 
     load_env_file(Path(args.env_file))
@@ -294,15 +407,30 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 2
 
+    sent_folder = os.environ.get("MAIL_SENT_FOLDER", DEFAULT_SENT_FOLDER)
+    imap_client: imaplib.IMAP4_SSL | None = None
+    if not args.no_append_sent:
+        try:
+            imap_client = open_imap_sent(selected[0]["sender"], password) if selected else None
+        except Exception as exc:  # noqa: BLE001
+            print(f"No se pudo abrir IMAP para guardar copias en Sent: {exc}", file=sys.stderr)
+
     sent_date = date.today()
     sent_at = datetime.now().isoformat(timespec="seconds")
     sent_rows_new: list[dict[str, str]] = []
     log_rows: list[dict[str, str]] = []
     failures = 0
 
-    for row in selected:
+    for index, row in enumerate(selected, start=1):
         body = body_for_lote_row(row, master_by_id)
-        ok, detail = send_email(base_url, api_key, row["sender"], password, row["email"], row["subject"], body)
+        ok, detail = send_email_with_retries(base_url, api_key, row["sender"], password, row["email"], row["subject"], body, args.retries)
+        if ok and imap_client is not None:
+            copy_ok, copy_detail = append_sent_copy(
+                imap_client,
+                sent_folder,
+                build_sent_message(row["sender"], row["email"], row["subject"], body, row["contact_id"], campaign),
+            )
+            detail = f"{detail} {copy_detail}"
         status = "sent" if ok else "failed"
         print(f"{status.upper()} {row['contact_id']} {row['email']} {detail}")
         log_rows.append({"timestamp": sent_at, "contact_id": row["contact_id"], "email": row["email"], "status": status, "detail": detail[:700]})
@@ -312,15 +440,23 @@ def main() -> int:
             source = master_by_id[row["contact_id"]]
             sent_rows_new.append(build_sent_row(row, source, sent_at, campaign))
             update_master_row(source, row, sent_date, campaign)
+            if args.delay_seconds and index < len(selected):
+                time.sleep(args.delay_seconds)
         else:
             failures += 1
 
     append_csv(DEFAULT_SENT_PATH, SENT_HEADERS, sent_rows_new)
     write_csv(MASTER_PATH, master_headers, master_rows)
+    sync_legacy_statuses(master_rows)
     write_csv(lote_path, lote_headers or LOTE_HEADERS, lote_rows)
 
     log_path = Path(args.log_dir) / f"primer-contacto-{datetime.now().strftime('%Y%m%d-%H%M%S')}.csv"
     write_log(log_path, log_rows)
+    if imap_client is not None:
+        try:
+            imap_client.logout()
+        except Exception:
+            pass
     print(f"Log: {log_path}")
     print(f"Resumen: enviados={len(sent_rows_new)} fallidos={failures}")
     return 1 if failures else 0

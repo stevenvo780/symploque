@@ -16,7 +16,7 @@ Si solo vas a abrir tres archivos, abre estos:
 - Objetivo comercial inicial: 100 clientes en 3 meses
 - Logica actual: partir de UdeA y escalar a universidades y nodos afines
 - Modelo: freemium
-- Activo mas valioso hoy: 300 prospectos, 116 Leads en ERPNext y 116 primeros contactos enviados desde canal corporativo
+- Activo mas valioso hoy: 300 prospectos, 296 Leads en ERPNext y 296 primeros contactos enviados desde canal corporativo
 
 ## Mapa de carpetas
 
@@ -67,9 +67,9 @@ Si solo vas a abrir tres archivos, abre estos:
 Si el trabajo empieza hoy:
 
 1. abrir [operacion-email/README.md](../05-datos-y-reportes/operacion-email/README.md)
-2. revisar los lotes historicos de `wave_1` y `wave_2` como evidencia de envio
+2. revisar los lotes historicos de `wave_1`, `wave_2` y `wave_3` como evidencia de envio
 3. monitorear rebotes y respuestas
-4. registrar aprendizajes antes de abrir `wave_3`
+4. registrar aprendizajes antes de abrir nuevas etapas
 5. hacer seguimiento a no respondidos el 2026-05-04
 
 ## Lectura estrategica
@@ -103,14 +103,16 @@ Este corte contiene los `priority_rank` `1-50` y deja una primera tanda lista pa
 
 ## Actualizacion 2026-04-27
 
-Se reinicio la operacion como `fresh launch`, se guardaron los Leads efectivos en ERPNext y se envio el primer contacto corporativo de `wave_1` y `wave_2`:
+Se reinicio la operacion como `fresh launch`, se guardaron los Leads efectivos en ERPNext y se envio el primer contacto corporativo de `wave_1`, `wave_2` y `wave_3`:
 
 - [operacion-email/erp-leads-wave-1.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv)
 - [operacion-email/erp-leads-wave-2.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-2.csv)
+- [operacion-email/erp-leads-wave-3.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-3.csv)
 - [lote-primer-contacto-wave-1-revision.md](../04-mensajeria-email/lote-primer-contacto-wave-1-revision.md)
 - [lote-primer-contacto-wave-2-revision.md](../04-mensajeria-email/lote-primer-contacto-wave-2-revision.md)
+- [lote-primer-contacto-wave-3-revision.md](../04-mensajeria-email/lote-primer-contacto-wave-3-revision.md)
 - [operacion-email/estado-operacion-2026-04-27.md](../05-datos-y-reportes/operacion-email/estado-operacion-2026-04-27.md)
 
-Los 116 Leads de `wave_1` y `wave_2` ya estan creados en ERPNext y el remitente oficial de los lotes es `ventas@elenxos.com`.
+Los 296 Leads de `wave_1`, `wave_2` y `wave_3` ya estan creados en ERPNext y el remitente oficial de los lotes es `ventas@elenxos.com`.
 
-Resultado acumulado: 116 enviados, 0 fallidos. Auditoria OK: las plantillas mencionan procedencia UdeA/Universidad de Antioquia, no incluyen redes sociales, no duplican CTA de Agora y solo dejan sitios oficiales Elenxos/Agora.
+Resultado acumulado: 296 aceptados por SMTP, 5 rebotes confirmados, 291 pendientes de respuesta. Auditoria OK: las plantillas mencionan procedencia UdeA/Universidad de Antioquia, no incluyen redes sociales, no duplican CTA de Agora y solo dejan sitios oficiales Elenxos/Agora.
