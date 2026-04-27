@@ -1,17 +1,17 @@
 # Estado actual y transicion operativa
 
-Fecha de actualizacion: 2026-04-20
+Fecha de actualizacion: 2026-04-27
 
 ## Lectura corta
 
 Este repo conserva el historico comercial y narrativo de `Agora`, pero la fase activa cambio.
 
-La prioridad ya no es redactar mas correos desde remitente personal. La prioridad actual es:
+La prioridad ya no es reconciliar una supuesta ola previa. La operacion fue reiniciada como lanzamiento fresco y `wave_1`/`wave_2` ya quedaron ejecutadas con trazabilidad:
 
-1. reconciliar los correos ya enviados desde `stevenvallejo780@gmail.com`
-2. preparar una ola de `declaracion` desde remitente corporativo
-3. alinear el repo con la marca publica `Elenxos`
-4. relanzar outreach desde cuenta de empresa y con trazabilidad limpia
+1. guardar primero los contactos efectivos en ERPNext como Leads
+2. enviar primer contacto desde remitente corporativo
+3. registrar cada envio despues de que el contacto exista en ERP/CRM
+4. monitorear respuestas y rebotes antes de abrir `wave_3`
 
 ## Estado publico verificado
 
@@ -49,8 +49,8 @@ Eso obliga a que el repo haga la misma separacion:
 
 ## Que documentos siguen vigentes
 
-- `03-datos/leads-agora-maestro.csv`: base historica principal
-- `03-datos/leads-agora-top-50-hoy.csv`: corte historico de ejecucion
+- `05-datos-y-reportes/leads-agora-maestro.csv`: base historica principal
+- `05-datos-y-reportes/leads-agora-top-50-hoy.csv`: corte historico de ejecucion
 - `02-mensajeria/mensajes-y-copy.md`: sistema reutilizable de copy
 - `04-reportes/`: historial de lotes y ejecucion
 - `06-redes-sociales/`: historial de narrativa y marca de Agora
@@ -60,21 +60,33 @@ Eso obliga a que el repo haga la misma separacion:
 - la nueva verdad operativa para correo sale desde `04-mensajeria-email/`
 - la nueva organizacion de datos sale desde `05-datos-y-reportes/operacion-email/`
 - el bootstrap inicial de la base nueva ya sale desde `scripts/bootstrap_operacion_email.py`
+- el reinicio de lanzamiento fresco ya sale desde `scripts/reiniciar_operacion_email.py`
+- la exportacion/importacion a ERPNext ya sale desde `scripts/erpnext_importar_contactos.py`
 - no se deben guardar secretos reales en markdown ni CSV
 
 ## Insumos que faltan del usuario
 
-- lista de correos ya enviados desde la cuenta personal
-- criterio para el correo de declaracion: formal, cercano o correccion simple de remitente
-- criterio de CTA por pieza: enviar a `www.elenxos.com` o directo a `agora.elenxos.com`
+- usuario ERP operativo: `admin@elenxos.com`; contrasena como secreto local no versionado
+- remitente principal de primer contacto: `ventas@elenxos.com`
+- criterio aplicado en `wave_1` y `wave_2`: CTA directo a `agora.elenxos.com`, sin redundancia de links y firma con ambos sitios oficiales
 
 ## Regla operativa
 
-Hasta que no entren esos insumos, el trabajo correcto no es enviar. El trabajo correcto es dejar:
+Para nuevas olas, el trabajo correcto es repetir la secuencia:
 
-- plan
-- base de datos
-- checklist
-- automatizacion
+- auditoria sin bloqueadores
+- Leads guardados o sincronizados en ERPNext
+- plantillas sin redes sociales y con mencion UdeA/Universidad de Antioquia cuando aplique
+- envio controlado desde `ventas@elenxos.com`
+- registro en maestro operativo y `correos-enviados-importar.csv`
 
-listos para ejecutar sin improvisacion sobre los sitios ya publicados.
+## Estado fresh launch 2026-04-27
+
+- 300 prospectos operativos.
+- 296 contactos con email.
+- 116 contactos de `wave_1` y `wave_2` creados como Leads en ERPNext.
+- 116 correos enviados registrados desde `ventas@elenxos.com`.
+- 0 filas de declaracion.
+- 0 filas de disculpa.
+- Archivos ERP generados: [erp-leads-wave-1.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv), [erp-leads-wave-2.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-2.csv)
+- Siguiente accion: seguimiento a no respondidos el 2026-05-04.

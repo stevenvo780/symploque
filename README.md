@@ -30,7 +30,7 @@ Si solo vas a abrir cinco archivos, abre estos en este orden:
 - `02-identidad-y-marca/`: criterio de marca, media kit y automatizacion visual
 - `03-operacion-redes/`: copy, calendario y operacion diaria de redes
 - `04-mensajeria-email/`: plantillas y operacion de correo
-- `05-datos-y-reportes/`: base operativa, reconciliacion y reportes
+- `05-datos-y-reportes/`: base operativa, ERP/CRM y reportes
 - `06-redes-sociales/`: sistema estrategico semanal y roadmap narrativo
 - `assets/`: kit de marca, prompts y entregables visuales
 - `elenxos_design_system/`: renderer React → PNG / MP4 para piezas publicas
@@ -40,10 +40,13 @@ Si solo vas a abrir cinco archivos, abre estos en este orden:
 ## Estado operativo actual
 
 - Sitios publicos verificados: `https://www.elenxos.com/` y `https://agora.elenxos.com/`
-- La prioridad no es enviar mas; es cerrar `datos + remitente + CTA + firma + marca`
-- La API de correo existe y responde; el cuello de botella real es reconciliacion y gating
+- La operacion email salio de `fresh launch`: `wave_1` y `wave_2` tienen 116 primeros contactos enviados
+- Los 116 contactos efectivos de `wave_1` y `wave_2` estan guardados como Leads en ERPNext
+- La API de correo responde y los envios corporativos desde `ventas@elenxos.com` quedaron registrados
 - La narrativa de marca ya existe; el faltante principal era volverla operable y menos redundante
 - La nueva base de outreach se puede bootstrapear desde el historico con `scripts/bootstrap_operacion_email.py`
+- Los lotes ERP estan en `05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv` y `05-datos-y-reportes/operacion-email/erp-leads-wave-2.csv`
+- La siguiente accion comercial es monitorear respuestas/rebotes y hacer seguimiento el 2026-05-04
 
 ## Generacion de contenidos: que manda hoy
 
@@ -109,7 +112,7 @@ Si usas filtros (`--narrativa`, `--lote`, `--tipo` o `--legacy`), la salida punt
 
 - No tratar docs historicos como si fueran la fase activa sin marcar contexto.
 - No guardar secretos en markdown, CSV ni scripts.
-- No lanzar correo corporativo sin pasar por `05-datos-y-reportes/operacion-email/` y `04-mensajeria-email/`.
+- No lanzar correo corporativo sin guardar o dejar listo el Lead en ERPNext y pasar por `05-datos-y-reportes/operacion-email/` y `04-mensajeria-email/`.
 - No abrir nuevas piezas de marca sin revisar antes `assets/README.md`, `02-identidad-y-marca/README.md` y `03-operacion-redes/README.md`.
 
 ## Nota

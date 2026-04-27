@@ -14,8 +14,8 @@ Soy Steven Vallejo y, junto a Jacob Agudelo, fundamos **Elenxos**. Como filósof
 
 Así creamos **Agora**, una plataforma de vanguardia diseñada específicamente para la investigación cooperativa. Hemos traducido nuestra rigurosidad académica en una tecnología que te permite estructurar tu conocimiento, organizar tus fuentes y redactar de forma colaborativa en un solo espacio sin fricción.
 
-Puedes explorar la plataforma y probarla de forma gratuita aquí:
-👉 **[https://agora.elenxos.com/](https://agora.elenxos.com/)**
+Puedes explorar nuestros sitios oficiales aquí:
+Sitios oficiales: **[Elenxos](https://www.elenxos.com/)** | **[Agora](https://agora.elenxos.com/)**
 
 Me encantaría saber si en {{institution}} (o en {{role_or_unit}}) les sería útil implementar este nivel de tecnología para potenciar sus procesos de lectura y escritura.
 

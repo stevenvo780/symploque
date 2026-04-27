@@ -14,8 +14,8 @@ Soy Steven Vallejo. Junto a Jacob Agudelo, fundamos **Elenxos**. Combinamos nues
 
 Desarrollamos **Agora**, una plataforma avanzada diseñada para la gestión cooperativa del conocimiento. Para programas y departamentos, Agora proporciona un espacio estructurado que permite centralizar las evidencias de avance, evaluar borradores y coordinar estudiantes en tiempo real, eliminando el ruido administrativo.
 
-Puedes conocer el nivel de rigor tecnológico de nuestra plataforma aquí:
-👉 **[https://agora.elenxos.com/](https://agora.elenxos.com/)**
+Puedes conocer nuestros sitios oficiales aquí:
+Sitios oficiales: **[Elenxos](https://www.elenxos.com/)** | **[Agora](https://agora.elenxos.com/)**
 
 Me gustaría saber si en la {{role_or_unit}} de {{institution}} estarían interesados en aplicar esta tecnología para organizar y supervisar de manera eficiente sus procesos académicos este semestre.
 

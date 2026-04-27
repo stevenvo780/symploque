@@ -8,6 +8,10 @@ en una capa operativa provisional para que el equipo pueda reconciliar:
 - contactos ya marcados como `contactado`
 - cola inicial de `declaracion`
 - base maestra de outreach con trazabilidad minima
+
+Tambien soporta `--fresh-launch` para reiniciar la operacion cuando se confirma
+que no se ha contactado a nadie: no crea historico de envios ni colas de
+declaracion, y deja todos los contactos como prospectos pendientes.
 """
 
 from __future__ import annotations
@@ -63,6 +67,11 @@ MASTER_HEADERS = [
     "landing_url_sent",
     "declaration_required",
     "declaration_status",
+    "erp_doctype",
+    "erp_lead_id",
+    "erp_sync_status",
+    "erp_synced_at",
+    "erp_sync_notes",
     "launch_wave",
     "tags",
     "notes",
@@ -170,6 +179,19 @@ class LegacyRow:
         return "wave_3"
 
     @property
+    def fresh_launch_wave(self) -> str:
+        try:
+            rank = int(self.priority_rank)
+        except ValueError:
+            return "wave_unclassified"
+
+        if rank <= 50:
+            return "wave_1"
+        if rank <= 120:
+            return "wave_2"
+        return "wave_3"
+
+    @property
     def declaration_priority(self) -> str:
         try:
             rank = int(self.priority_rank)
@@ -189,6 +211,16 @@ class LegacyRow:
             self.priority_tier.lower() if self.priority_tier else "",
             self.segment.lower().replace(" ", "_"),
             "legacy_contacted" if self.is_contacted else "legacy_pending",
+        ]
+        return ",".join(tag for tag in tags if tag)
+
+    def fresh_launch_tags(self) -> str:
+        tags = [
+            "historico_agora",
+            self.priority_tier.lower() if self.priority_tier else "",
+            self.segment.lower().replace(" ", "_"),
+            "fresh_launch",
+            "legacy_uncontacted",
         ]
         return ",".join(tag for tag in tags if tag)
 
@@ -221,9 +253,8 @@ def backup_outputs(paths: list[Path]) -> Path | None:
     return backup_dir
 
 
-def build_master_row(row: LegacyRow) -> dict[str, str]:
-    contacted = row.is_contacted
-    email_value = row.contact_value if row.contact_type == "email" else ""
+def build_master_row(row: LegacyRow, fresh_launch: bool = False) -> dict[str, str]:
+    contacted = row.is_contacted and not fresh_launch
 
     return {
         "contact_id": row.contact_id,
@@ -241,10 +272,12 @@ def build_master_row(row: LegacyRow) -> dict[str, str]:
         "contact_value": row.contact_value,
         "quick_contact_url": row.quick_contact_url,
         "source_url": row.source_url,
-        "status": "legacy_contacted_needs_reconciliation" if contacted else "new_prospect_pending_launch",
-        "last_contact_date": row.fecha_ultimo_contacto,
-        "next_action": row.proxima_accion or ("verificar historial y preparar declaracion" if contacted else "esperar lanzamiento corporativo"),
-        "next_action_date": row.fecha_proxima_accion,
+        "status": "legacy_contacted_needs_reconciliation" if contacted else "new_prospect_pending_erp_import",
+        "last_contact_date": "" if fresh_launch else row.fecha_ultimo_contacto,
+        "next_action": "guardar en ERP y preparar primer contacto" if fresh_launch else row.proxima_accion or (
+            "verificar historial y preparar declaracion" if contacted else "guardar en ERP y preparar primer contacto"
+        ),
+        "next_action_date": "" if fresh_launch else row.fecha_proxima_accion,
         "reply_status": "unknown" if contacted else "not_sent",
         "owner": row.owner,
         "last_sender_email": PERSONAL_SENDER if contacted else "",
@@ -254,12 +287,17 @@ def build_master_row(row: LegacyRow) -> dict[str, str]:
         "landing_url_sent": PRODUCT_URL if contacted else "",
         "declaration_required": "yes" if contacted else "no",
         "declaration_status": "pending_reconciliation" if contacted else "not_applicable",
-        "launch_wave": row.launch_wave,
-        "tags": row.tags,
+        "erp_doctype": "Lead",
+        "erp_lead_id": "",
+        "erp_sync_status": "pending",
+        "erp_synced_at": "",
+        "erp_sync_notes": "",
+        "launch_wave": row.launch_wave if contacted else row.fresh_launch_wave,
+        "tags": row.tags if contacted else row.fresh_launch_tags(),
         "notes": (
             "Auto-bootstrap desde historico. Verificar contra la bandeja real antes de enviar declaracion."
             if contacted
-            else "Auto-bootstrap desde historico. No enviar hasta cerrar CTA, remitente y calendario."
+            else "Auto-bootstrap fresh launch. No se ha contactado aun; importar al ERP antes de enviar."
         ),
     }
 
@@ -309,15 +347,21 @@ def main() -> int:
     parser.add_argument("--force", action="store_true", help="Sobrescribe CSVs operativos existentes.")
     parser.add_argument("--backup", action="store_true", help="Copia CSVs existentes a operacion-email/backups/ antes de sobrescribir.")
     parser.add_argument("--dry-run", action="store_true", help="Calcula conteos sin escribir archivos.")
+    parser.add_argument(
+        "--fresh-launch",
+        action="store_true",
+        help="Ignora marcas historicas de contactado y arranca con cero envios/declaraciones.",
+    )
     args = parser.parse_args()
 
     rows = read_legacy_rows()
 
-    master_rows = [build_master_row(row) for row in rows]
-    sent_rows = [build_sent_row(row) for row in rows if row.is_contacted]
-    declaration_rows = [build_declaration_row(row) for row in rows if row.is_contacted]
+    master_rows = [build_master_row(row, fresh_launch=args.fresh_launch) for row in rows]
+    sent_rows = [] if args.fresh_launch else [build_sent_row(row) for row in rows if row.is_contacted]
+    declaration_rows = [] if args.fresh_launch else [build_declaration_row(row) for row in rows if row.is_contacted]
 
     print("Bootstrap calculado:")
+    print(f"- modo fresh launch: {'si' if args.fresh_launch else 'no'}")
     print(f"- contactos maestro: {len(master_rows)}")
     print(f"- enviados provisionales: {len(sent_rows)}")
     print(f"- declaracion provisional: {len(declaration_rows)}")

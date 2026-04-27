@@ -1,15 +1,18 @@
 # Plan de transicion: remitente personal, remitente corporativo y sitios publicos
 
-Fecha de actualizacion: 2026-04-20
+Fecha de actualizacion: 2026-04-27
+
+> Actualizacion operativa: se confirmo que no habia contactos previos, se reinicio como `fresh launch`, se crearon 116 Leads de `wave_1`/`wave_2` en ERPNext y se envio el primer contacto corporativo desde `ventas@elenxos.com`.
 
 ## Objetivo
 
-Pasar de una operacion artesanal con correos enviados desde cuenta personal a una operacion ordenada desde correo corporativo, con sitios publicos ya publicados y trazabilidad completa.
+Pasar de una base local de prospectos a una operacion ordenada desde ERP/CRM y correo corporativo, con sitios publicos ya publicados y trazabilidad completa.
 
 ## Contexto que cambia el plan
 
-- ya existen correos enviados desde `stevenvallejo780@gmail.com`
-- ahora habra que enviar correos de `declaracion`
+- no habia correos previos confirmados antes de `wave_1`
+- `wave_1` y `wave_2` ya registran 116 envios reales, 0 fallidos
+- no hay cola activa de `declaracion`
 - la automatizacion de envio corporativo esta documentada en `email.md`
 - ya existen sitios publicos vivos para `Elenxos` y `Agora`
 
@@ -20,53 +23,63 @@ Pasar de una operacion artesanal con correos enviados desde cuenta personal a un
 - `https://agora.elenxos.com/manifest.json`
 - `https://agora.elenxos.com/docs`
 
-La ola nueva ya no esta bloqueada por ausencia de landing. Ahora depende de:
+La ola nueva ya no esta bloqueada por ausencia de landing. Para cada nueva tanda depende de:
 
-1. reconciliar historico de correos
+1. guardar Leads efectivos en ERPNext
 2. fijar CTA correcto por tipo de mensaje
 3. fijar remitente correcto por campana
 4. deduplicar y registrar todo en CSV
 
-## Fase 0. Reconciliacion del historico
+## Fase 0. ERP primero
 
 Objetivo:
-- saber exactamente a quien ya se escribio, cuando y desde que remitente
+- guardar los contactos efectivos en CRM/ERP antes de iniciar outreach
 
 Entradas:
-- lista de correos ya enviados por el usuario
-- historico de `03-datos/leads-agora-maestro.csv`
-- historico de `03-datos/leads-agora-top-50-hoy.csv`
+- `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`
+- `05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv`
+- credenciales ERPNext si se usara importacion por API
 
 Salida:
-- `03-datos/operacion-email/correos-enviados-importar.csv` completo
-- primeras filas pobladas en `03-datos/operacion-email/contactos-maestro-operativo.csv`
+- Leads creados en ERPNext/CRM
+- `erp_sync_status` actualizado como `synced` o `synced_existing`
 
 Regla:
-- no mezclar la lista enviada con nuevos prospectos sin marcar procedencia
+- no enviar correo a contactos que no esten listos o sincronizados con ERP
 
-## Fase 1. Cola de declaracion
+Estado `wave_1` y `wave_2`:
+- completado, 116 Leads sincronizados
+
+## Fase 1. Primer contacto corporativo
 
 Objetivo:
-- contactar de nuevo a las personas que ya recibieron un correo desde remitente personal, explicando el canal corporativo correcto
+- iniciar outreach desde remitente corporativo con trazabilidad limpia
 
 Quienes entran:
-- contactos ya impactados desde correo personal
-- contactos para los que conviene normalizar identidad antes del nuevo lanzamiento
+- contactos de `wave_1` con email valido
+- contactos ya guardados o listos para guardar en ERPNext
 
 Quienes no entran:
-- contactos que nunca recibieron correo
+- contactos sin email
+- contactos sin registro ERP/CRM
 - contactos que respondieron negativamente o pidieron no volver a ser contactados
 
 Salida:
-- `03-datos/operacion-email/declaracion-pendientes.csv`
+- filas de envio registradas en `correos-enviados-importar.csv`
+- maestro operativo actualizado con ultimo remitente, asunto, fecha y siguiente accion
 
 Campos clave a decidir por contacto:
-- razon de declaracion
-- prioridad
 - remitente corporativo correcto
 - link final a usar como CTA
+- plantilla segun segmento
 
-## Fase 2. Checklist de salida de campaña
+Estado `wave_1` y `wave_2`:
+- completado, 116 enviados desde `ventas@elenxos.com`
+- CTA operativo: `https://agora.elenxos.com/`
+- firma y cuerpo: solo sitios oficiales Elenxos/Agora, sin redes sociales
+- auditoria: confirma mencion UdeA/Universidad de Antioquia
+
+## Fase 2. Checklist de salida de campana
 
 La nueva ola comercial no debe salir hasta confirmar:
 
@@ -80,9 +93,10 @@ La nueva ola comercial no debe salir hasta confirmar:
 
 Orden recomendado:
 
-1. enviar primero `declaracion`
-2. monitorear rebotes y respuestas
-3. solo despues abrir la ola principal a contactos nuevos o recontactos
+1. importar o sincronizar Leads de `wave_1`
+2. enviar primer contacto por segmento
+3. monitorear rebotes y respuestas
+4. abrir `wave_3` solo despues de registrar aprendizajes de `wave_1` y `wave_2`
 
 Canales previstos:
 
@@ -94,21 +108,21 @@ Canales previstos:
 
 Cada contacto debe terminar en `contactos-maestro-operativo.csv` con:
 
+- `erp_sync_status`
+- `erp_lead_id` cuando exista
 - ultimo remitente usado
 - ultimo asunto
 - estado actual
-- si requiere declaracion
-- si ya recibio declaracion
+- si requiere seguimiento o no contacto futuro
 - siguiente accion
 
 ## Cola inmediata
 
-1. recibir la lista de correos ya enviados
-2. importar esa lista al CSV de reconciliacion
-3. clasificar quienes requieren declaracion
-4. elegir CTA por tipo de campana
-5. validar remitente y firma
-6. ejecutar el primer lote corporativo
+1. monitorear rebotes y respuestas de `wave_1`
+2. hacer seguimiento a no respondidos el 2026-05-04
+3. registrar aprendizajes antes de abrir `wave_3`
+4. preparar `wave_3` solo con Leads guardados o sincronizados en ERPNext
+5. mantener la auditoria sin redes sociales, con sitios oficiales y mencion UdeA cuando aplique
 
 ## Riesgos principales
 
@@ -118,7 +132,7 @@ Si un correo corporativo manda al sitio equivocado, o si mezcla mal `Elenxos` y 
 
 ### 2. Duplicacion
 
-Si no se cruza la lista real de enviados, se puede reenviar por error un primer contacto como si fuera nuevo.
+Si no se cruza el ERP y el CSV maestro antes de cada lote, se puede duplicar un Lead o repetir un contacto.
 
 ### 3. Automatizacion sin gating
 
@@ -130,13 +144,13 @@ Si los envios no aterrizan en el CSV maestro nuevo, la siguiente iteracion vuelv
 
 ## Regla final
 
-La primera victoria de esta fase no es `enviar mas`.
+La primera victoria de esta fase ya no es `enviar mas`.
 
-La primera victoria es dejar cerrada la infraestructura minima de confianza:
+La primera victoria ya quedo cerrada: infraestructura minima de confianza y primer envio trazable.
 
 - identidad
 - dominio
 - sitios publicos
 - remitente
 - datos
-- historial de contactos
+- historial de contactos en ERP/CRM

@@ -16,8 +16,9 @@
 
 Ambas URL apuntan al mismo backend ERPNext v15. El módulo CRM viene integrado.
 
-- **Usuario admin**: `Administrator`
-- **Contraseña**: Vault → `ERPNext Elenxos - Administrator`
+- **Usuario operativo ERP/CRM**: `admin@elenxos.com`
+- **Contraseña**: secreto local / gestor seguro. No versionar en markdown.
+- **Usuario admin legacy**: `Administrator` (conservar solo para administracion de bajo nivel si aplica)
 
 ---
 
@@ -62,7 +63,8 @@ Internet → VPS Nginx (:443 SNI) → nginx_pp_relay (:8444→:8443)
 
 | Entrada | Carpeta Vault | Items |
 |---------|---------------|-------|
-| Admin ERP/CRM | `Trabajo/Humanizar/Accesos` | `ERPNext Elenxos - Administrator` |
+| Usuario operativo ERP/CRM | `Trabajo/Humanizar/Accesos` | `admin@elenxos.com` |
+| Admin ERP/CRM legacy | `Trabajo/Humanizar/Accesos` | `ERPNext Elenxos - Administrator` |
 | DB Root | `Trabajo/Humanizar/Accesos` | `ERPNext Elenxos - DB Root` |
 | DB App User | `Trabajo/Humanizar/Accesos` | `ERPNext Elenxos - DB App User` |
 

@@ -25,6 +25,8 @@ export MAIL_FROM_PASSWORD="REEMPLAZAR_EN_LOCAL"
 - `media@elenxos.com`
 - `admin@elenxos.com`
 
+El remitente oficial de la operacion de correos comerciales es `ventas@elenxos.com`.
+
 La contrasena de esas cuentas vive en `.env` (no versionado). Todas comparten la misma contrasena.
 No guardar credenciales directamente en archivos `.md` ni en commits.
 
@@ -75,11 +77,12 @@ Content-Type: application/json
 
 ## Uso recomendado para esta fase
 
-1. No enviar nuevas olas masivas hasta reconciliar los correos ya enviados desde `stevenvallejo780@gmail.com`.
-2. Preparar primero la ola de `declaracion` desde remitente corporativo.
+1. No hay contactos enviados confirmados; la operacion activa es `fresh launch`.
+2. Guardar primero los leads efectivos en ERPNext antes de preparar correos.
 3. Usar `https://www.elenxos.com/` cuando el CTA sea institucional o corporativo.
 4. Usar `https://agora.elenxos.com/` cuando el CTA sea de producto, demo o validacion directa de Agora.
-5. Registrar cada envio en `03-datos/operacion-email/contactos-maestro-operativo.csv`.
+5. Registrar cada envio en `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`.
+6. Mantener `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` vacios salvo que aparezca evidencia real de contacto previo.
 
 ## Checklist previo a cualquier envio
 
@@ -88,8 +91,9 @@ Content-Type: application/json
 - `MAIL_FROM_PASSWORD` cargada fuera del repo
 - asunto y cuerpo revisados
 - sitios y CTA validados
+- contacto guardado o listo para guardar en ERPNext
 - lote deduplicado contra `correos-enviados-importar.csv`
-- decision tomada sobre si el contacto requiere correo de declaracion
+- decision tomada sobre si el contacto requiere primer contacto estandar, semillero o directores/coordinadores
 
 ## Ejemplos
 
@@ -152,9 +156,7 @@ console.log(data);
 
 ## Recomendación Narrativa y Firma
 
-Para que la transición de remitente personal a corporativo sea exitosa, cada correo enviado debe reforzar la autoridad de **Elenxos** y la utilidad de **Agora**.
-
-> **ACCION EXTERNA REQUERIDA:** La URL `https://www.linkedin.com/company/elenxos` retorna 404 (verificado 2026-04-24). Antes de enviar correos con esta firma, crear la pagina de empresa en LinkedIn o corregir la URL. Mientras tanto, el enlace de LinkedIn no debe incluirse en envios reales.
+Para que el primer contacto corporativo sea creible, cada correo enviado debe reforzar la autoridad de **Elenxos** y la utilidad de **Agora**.
 
 ### Firma Corporativa Recomendada (HTML)
 
@@ -175,17 +177,12 @@ Se recomienda incluir esta firma en el campo `html` de la API para construir cre
   <p style="font-size: 12px; color: #777;">
     Agora: Escribe con libertad, verifica con rigor.
   </p>
-  <p style="font-size: 12px; margin-top: 10px;">
-    Siguenos: 
-    <a href="https://www.linkedin.com/company/elenxos" style="color: #007bff;">LinkedIn</a> | <!-- TODO: verificar URL real de la pagina de empresa LinkedIn antes de enviar -->
-    <a href="https://www.instagram.com/agora.elenxos" style="color: #007bff;">Instagram</a>
-  </p>
 </div>
 ```
 
 ### Transición de Remitente
 
-Si el contacto ya ha recibido correos desde la cuenta personal de Steven, se recomienda incluir esta nota al inicio o final del cuerpo:
+Hoy no hay contactos previos confirmados. Si en el futuro aparece evidencia de que algun contacto ya recibio correo desde una cuenta personal, se puede incluir esta nota al inicio o final del cuerpo:
 
 > "Estamos profesionalizando nuestras comunicaciones. A partir de ahora, este será el canal oficial de **Elenxos** para coordinar demos y pilotos de **Agora**."
 

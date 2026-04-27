@@ -14,8 +14,8 @@ Soy Steven Vallejo, fundador de **Elenxos** junto a Jacob Agudelo. Como filósof
 
 Hemos construido **Agora**, una plataforma de colaboración diseñada específicamente para organizar el aprendizaje de grupos de investigación. Agora centraliza las fuentes, los borradores y el seguimiento en un ecosistema estructurado, permitiendo que tu semillero se enfoque en crear, no en buscar archivos perdidos.
 
-Puedes ver cómo transformaría la dinámica de tu equipo probando la herramienta aquí:
-👉 **[https://agora.elenxos.com/](https://agora.elenxos.com/)**
+Puedes revisar nuestros sitios oficiales aquí:
+Sitios oficiales: **[Elenxos](https://www.elenxos.com/)** | **[Agora](https://agora.elenxos.com/)**
 
 Nos gustaría saber si en {{role_or_unit}} de {{institution}} verían valor en organizar su proceso investigativo con esta tecnología.
 

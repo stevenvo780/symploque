@@ -1,14 +1,14 @@
 # Central operativo Agora
 
-Fecha de actualizacion: 2026-04-11
+Fecha de actualizacion: 2026-04-27
 
 ## Uso rapido
 
 Si solo vas a abrir tres archivos, abre estos:
 
-1. [leads-agora-maestro.csv](../05-datos-y-reportes/leads-agora-maestro.csv)
-2. [04-mensajeria-email/02-primer-contacto-estandar.md](../04-mensajeria-email/02-primer-contacto-estandar.md)
-3. [reporte-proceso-expansion-contactos.md](../05-datos-y-reportes/reporte-proceso-expansion-contactos.md)
+1. [estado-actual-y-transicion.md](./estado-actual-y-transicion.md)
+2. [operacion-email/README.md](../05-datos-y-reportes/operacion-email/README.md)
+3. [leads-agora-maestro.csv](../05-datos-y-reportes/leads-agora-maestro.csv)
 
 ## Estado actual
 
@@ -16,7 +16,7 @@ Si solo vas a abrir tres archivos, abre estos:
 - Objetivo comercial inicial: 100 clientes en 3 meses
 - Logica actual: partir de UdeA y escalar a universidades y nodos afines
 - Modelo: freemium
-- Activo mas valioso hoy: un solo CSV maestro con 300 leads y columnas de seguimiento
+- Activo mas valioso hoy: 300 prospectos, 116 Leads en ERPNext y 116 primeros contactos enviados desde canal corporativo
 
 ## Mapa de carpetas
 
@@ -66,10 +66,11 @@ Si solo vas a abrir tres archivos, abre estos:
 
 Si el trabajo empieza hoy:
 
-1. abrir [leads-agora-maestro.csv](../05-datos-y-reportes/leads-agora-maestro.csv)
-2. filtrar `priority_rank` 1 a 40
-3. usar [02-primer-contacto-estandar.md](../04-mensajeria-email/02-primer-contacto-estandar.md)
-4. registrar `estado`, `respuesta`, `fecha_ultimo_contacto` y `proxima_accion` en el mismo CSV maestro
+1. abrir [operacion-email/README.md](../05-datos-y-reportes/operacion-email/README.md)
+2. revisar los lotes historicos de `wave_1` y `wave_2` como evidencia de envio
+3. monitorear rebotes y respuestas
+4. registrar aprendizajes antes de abrir `wave_3`
+5. hacer seguimiento a no respondidos el 2026-05-04
 
 ## Lectura estrategica
 
@@ -99,3 +100,17 @@ Se genero un corte operativo inmediato para no trabajar el maestro completo al m
 - [top-50-listos-para-atacar-hoy.md](../05-datos-y-reportes/top-50-listos-para-atacar-hoy.md)
 
 Este corte contiene los `priority_rank` `1-50` y deja una primera tanda lista para outreach.
+
+## Actualizacion 2026-04-27
+
+Se reinicio la operacion como `fresh launch`, se guardaron los Leads efectivos en ERPNext y se envio el primer contacto corporativo de `wave_1` y `wave_2`:
+
+- [operacion-email/erp-leads-wave-1.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv)
+- [operacion-email/erp-leads-wave-2.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-2.csv)
+- [lote-primer-contacto-wave-1-revision.md](../04-mensajeria-email/lote-primer-contacto-wave-1-revision.md)
+- [lote-primer-contacto-wave-2-revision.md](../04-mensajeria-email/lote-primer-contacto-wave-2-revision.md)
+- [operacion-email/estado-operacion-2026-04-27.md](../05-datos-y-reportes/operacion-email/estado-operacion-2026-04-27.md)
+
+Los 116 Leads de `wave_1` y `wave_2` ya estan creados en ERPNext y el remitente oficial de los lotes es `ventas@elenxos.com`.
+
+Resultado acumulado: 116 enviados, 0 fallidos. Auditoria OK: las plantillas mencionan procedencia UdeA/Universidad de Antioquia, no incluyen redes sociales, no duplican CTA de Agora y solo dejan sitios oficiales Elenxos/Agora.

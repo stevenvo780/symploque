@@ -130,7 +130,7 @@ El sistema documental central queda asi:
   - `lote-1-publicaciones-por-plataforma.md`
   - `calendario-semana-1-redes.md`
 
-El CSV operativo unico es `03-datos/leads-agora-maestro.csv`.
+El CSV operativo base es `05-datos-y-reportes/leads-agora-maestro.csv`; la capa activa de outreach y ERP vive en `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`.
 
 ## Nota sobre prompt4
 

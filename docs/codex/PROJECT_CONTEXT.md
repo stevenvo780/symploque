@@ -2,53 +2,61 @@
 
 ## Product
 
-- Purpose: repositorio operativo para outreach comercial. Conserva el historico de `Agora` y ahora opera bajo la capa publica de `Elenxos`, con sitio corporativo y producto ya publicados.
-- Primary users: operador comercial y agente de Codex encargado de ordenar datos, preparar correo corporativo y ejecutar outreach con trazabilidad.
-- Current focus: reconciliar correos ya enviados desde remitente personal, preparar la ola de `declaracion`, y alinear toda la documentacion con `www.elenxos.com` y `agora.elenxos.com`.
+- Purpose: repositorio operativo para outreach comercial de `Elenxos` y `Agora`.
+- Primary users: operador comercial y agente de Codex encargado de ordenar datos, guardar Leads en ERPNext, preparar correo corporativo y ejecutar outreach con trazabilidad.
+- Current focus: seguimiento post-envio de `wave_1` y `wave_2`. Hay 116 Leads creados en ERPNext y 116 primeros contactos enviados desde `ventas@elenxos.com`.
 
 ## Architecture
 
 - Main entrypoints:
   - `00-central/estado-actual-y-transicion.md`
-  - `06-operacion-email/plan-transicion-remitente-y-sitios-publicos.md`
-  - `email.md`
-  - `03-datos/README.md`
-  - `03-datos/operacion-email/contactos-maestro-operativo.csv`
+  - `00-central/central-operativo-agora.md`
+  - `05-datos-y-reportes/operacion-email/README.md`
+  - `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`
+  - `04-mensajeria-email/email.md`
 - Key modules:
   - `00-central/`: estado actual, transicion y mapa operativo
-  - `01-estrategia/`: estrategia y playbooks heredados
-  - `02-mensajeria/`: sistema modular de copy reutilizable
-  - `03-datos/`: historico de contactos y nueva base de operacion email
-  - `04-reportes/`: reportes y lotes historicos
-  - `06-redes-sociales/`: narrativa y marca historica
-  - `06-operacion-email/`: plan de remitente corporativo y salida sobre sitios publicos vivos
+  - `01-estrategia-comercial/`: estrategia y playbooks comerciales
+  - `04-mensajeria-email/`: plantillas, lotes revisables y documentacion de Mail API
+  - `05-datos-y-reportes/`: base historica, maestro operativo, ERP y reportes
+  - `03-operacion-redes/` y `06-redes-sociales/`: narrativa, calendario y operaciones de redes
+  - `scripts/`: automatizaciones de bootstrap, auditoria, ERPNext y envio controlado
 - Data stores and external services:
-  - CSV historicos de `Agora`
-  - nuevos CSV de reconciliacion y declaracion para operacion email
-  - Mail API documentada en `email.md`
+  - `leads-agora-maestro.csv`: 300 prospectos; 116 contactados y 184 pendientes
+  - `contactos-maestro-operativo.csv`: 300 prospectos; 116 sincronizados con ERPNext y contactados
+  - ERP/CRM: `https://crm.proxy.humanizar-dev.cloud`
+  - Mail API: `https://mailapi.proxy.humanizar-dev.cloud`
   - sitio corporativo: `https://www.elenxos.com/`
   - producto Agora: `https://agora.elenxos.com/`
-  - docs publicas: `https://agora.elenxos.com/docs`
-  - manifest publico: `https://agora.elenxos.com/manifest.json`
 
 ## Local Commands
 
-- Install: no aplica; no se detecto stack de aplicacion local obligatorio.
-- Test: verificacion manual de consistencia documental, CSV y flujo de envio.
-- Lint: no aplica; repo documental y de datos.
-- Run:
-  - abrir `00-central/estado-actual-y-transicion.md`
-  - revisar `06-operacion-email/plan-transicion-remitente-y-sitios-publicos.md`
-  - poblar `03-datos/operacion-email/`
-  - registrar decisiones en `docs/codex/WORKLOG.md`
+- Auditoria:
+  - `python3 scripts/auditar_operacion_email.py --fail-on-blockers`
+- Exportar o sincronizar Leads ERP:
+  - `python3 scripts/erpnext_importar_contactos.py --push --yes`
+- Preparar lote de primer contacto:
+  - `python3 scripts/preparar_lote_primer_contacto.py`
+- Preview de envio:
+  - `python3 scripts/enviar_lote_primer_contacto.py --limit 3`
+- Envio real:
+  - `python3 scripts/enviar_lote_primer_contacto.py --send`
+  - Solo con aprobacion explicita del lote revisable.
+
+## Current State
+
+- Remitente oficial de correos comerciales: `ventas@elenxos.com`.
+- Usuario ERP operativo: `admin@elenxos.com`; contrasena como secreto local no versionado.
+- `wave_1`: 46 Leads creados en ERPNext (`CRM-LEAD-2026-00001` a `CRM-LEAD-2026-00046`).
+- `wave_2`: 70 Leads creados en ERPNext (`CRM-LEAD-2026-00047` a `CRM-LEAD-2026-00116`).
+- Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-1-revision.md`.
+- Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-2-revision.md`.
+- Envio real acumulado: 116 enviados, 0 fallidos; siguiente seguimiento el 2026-05-04.
+- Auditoria de mensajeria confirma UdeA/Universidad de Antioquia, ausencia de redes sociales, ausencia de CTA duplicado y sitios oficiales Elenxos/Agora.
 
 ## Constraints
 
-- Runtime or platform constraints: workspace documental; no asumir stack de app ni despliegue local.
-- Security or compliance notes: no guardar secretos en markdown o CSV; usar solo datos de contacto que el usuario autorice operar; deduplicar antes de cualquier envio.
-- Known sharp edges:
-  - el repo contiene material historico de `Agora` y nueva operacion de correo; no mezclar ambas capas sin marcar contexto.
-  - no se debe lanzar una ola nueva sin primero reconciliar los correos ya enviados desde remitente personal.
-  - `Elenxos` y `Agora` hoy cumplen funciones publicas distintas: marca corporativa vs producto.
-  - la automatizacion ya existe, pero el gating real sigue dependiendo de deduplicacion, CTA correcto y trazabilidad.
-  - el HTML publico de `elenxos.com` todavia referencia el dominio antiguo de Agora en `sameAs`; eso es una inconsistencia externa a corregir fuera del repo.
+- No guardar secretos en markdown, CSV ni scripts.
+- No abrir `wave_3` sin revisar respuestas, rebotes y aprendizajes de `wave_1` y `wave_2`.
+- Registrar cada envio real en `correos-enviados-importar.csv` y `contactos-maestro-operativo.csv`.
+- Mantener `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` vacios salvo evidencia real de contacto previo.
