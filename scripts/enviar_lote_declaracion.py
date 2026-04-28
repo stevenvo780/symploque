@@ -8,6 +8,8 @@ import sys
 from pathlib import Path
 from urllib import error, parse, request
 
+from enviar_lote_primer_contacto import markdown_to_email_html, markdown_to_plain_text
+
 
 CSV_PATH = Path("05-datos-y-reportes/operacion-email/declaracion-pendientes.csv")
 TEMPLATE_PATH = Path("04-mensajeria-email/06-correo-declaracion.md")
@@ -79,7 +81,7 @@ def format_review_markdown(rows: list[dict[str, str]], sender: str, csv_path: Pa
     return "\n".join(lines)
 
 
-def send_email(base_url: str, api_key: str, sender: str, sender_password: str, to: str, subject: str, body: str) -> tuple[bool, str]:
+def send_email(base_url: str, api_key: str, sender: str, sender_password: str, to: str, subject: str, body: str, html_body: str) -> tuple[bool, str]:
     url = f"{base_url.rstrip('/')}/send?{parse.urlencode({'api_key': api_key})}"
     payload = json.dumps(
         {
@@ -88,6 +90,7 @@ def send_email(base_url: str, api_key: str, sender: str, sender_password: str, t
             "to": to,
             "subject": subject,
             "body": body,
+            "html": html_body,
         }
     ).encode("utf-8")
     req = request.Request(url, data=payload, headers={"Content-Type": "application/json"}, method="POST")
@@ -167,8 +170,17 @@ def main() -> int:
 
     failures = 0
     for row in rows:
-        body = build_body(row["contact_name"], row["institution"], row.get("role_or_unit", ""))
-        ok, detail = send_email(base_url, api_key, args.sender, sender_password, row["email"], "Desde Elenxos - Actualización de nuestro canal de comunicación", body)
+        markdown_body = build_body(row["contact_name"], row["institution"], row.get("role_or_unit", ""))
+        ok, detail = send_email(
+            base_url,
+            api_key,
+            args.sender,
+            sender_password,
+            row["email"],
+            "Desde Elenxos - Actualización de nuestro canal de comunicación",
+            markdown_to_plain_text(markdown_body),
+            markdown_to_email_html(markdown_body),
+        )
         status = "OK" if ok else "FAIL"
         print(f"{status} {row['email']} {detail}")
         if not ok:

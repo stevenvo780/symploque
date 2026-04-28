@@ -5,20 +5,22 @@ Fecha operativa: 2026-04-27
 ## Estado actual
 
 - `wave_1`, `wave_2` y `wave_3` ya fueron contactadas por primer correo corporativo el 2026-04-27.
-- `leads-agora-maestro.csv` registra 291 filas en `estado=contactado`, 5 en `estado=rebotado` y 4 pendientes sin email.
+- `leads-agora-maestro.csv` registra 288 filas en `estado=contactado`, 8 en `estado=rebotado` y 4 pendientes por canal alterno.
 - `leads-agora-top-50-hoy.csv` registra 45 filas en `estado=contactado`, 1 en `estado=rebotado` y 4 pendientes sin email.
 - `contactos-maestro-operativo.csv` tiene 300 prospectos.
 - Hay 296 contactos con email valido.
 - La primera ola (`wave_1`) tiene 50 contactos, de los cuales 46 tienen email.
 - La segunda ola (`wave_2`) tiene 70 contactos, todos con email.
 - `correos-enviados-importar.csv` registra 296 envios aceptados por SMTP.
-- Rebotes confirmados: 5; pendientes de respuesta: 291.
+- Rebotes confirmados: 8; pendientes de respuesta: 288.
 - `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` estan vacios porque este fue primer contacto real.
 - Los lotes ERP quedaron exportados en `erp-leads-wave-1.csv`, `erp-leads-wave-2.csv` y `erp-leads-wave-3.csv`.
 - Los lotes de correo quedaron enviados y marcados como `send_status=sent` o `send_status=bounced` en `primer-contacto-wave-1.csv`, `primer-contacto-wave-2.csv` y `primer-contacto-wave-3.csv`.
 - Los reportes de `wave_2` y `wave_3` quedaron en `reporte-wave-2-2026-04-27.md` y `reporte-wave-3-2026-04-27.md`.
 - El reporte de rebotes quedo en `rebotes-detectados-2026-04-27.md`.
 - El plan siguiente quedo en `plan-siguiente-etapa-2026-04-27.md`.
+- La revision post-analisis quedo en `revision-post-analisis-2026-04-27.md`.
+- La cola de canales alternos quedo en `canales-alternos-pendientes-2026-04-27.csv`.
 - La carpeta IMAP `Sent` tiene 296 copias visibles de campana (`wave_1`, `wave_2`, `wave_3`) mas 1 prueba interna.
 - El remitente oficial de la operacion es `ventas@elenxos.com`.
 - Los 296 Leads de `wave_1`, `wave_2` y `wave_3` ya estan creados en ERPNext y sincronizados localmente.
@@ -115,8 +117,8 @@ No se versionan secretos reales.
 - Limpieza de correo: OK, sin redes sociales; solo sitios oficiales `www.elenxos.com` y `agora.elenxos.com`.
 - Auditoria de mensajeria: OK, confirma procedencia UdeA/Universidad de Antioquia, ausencia de redes sociales y ausencia de CTA duplicado.
 - Envio real `wave_1`: OK SMTP, 46 aceptados, 1 rebote confirmado.
-- Envio real `wave_2`: OK SMTP, 70 aceptados, 3 rebotes confirmados.
-- Envio real `wave_3`: OK SMTP, 180 aceptados, 1 rebote confirmado.
-- Envio acumulado: 296 aceptados por SMTP, 5 rebotes, 291 pendientes de respuesta.
+- Envio real `wave_2`: OK SMTP, 70 aceptados, 5 rebotes confirmados.
+- Envio real `wave_3`: OK SMTP, 180 aceptados, 2 rebotes confirmados.
+- Envio acumulado: 296 aceptados por SMTP, 8 rebotes, 288 pendientes de respuesta.
 - Correccion IMAP: 296 copias de campana visibles en `Sent`; el problema original era que la API SMTP no guardaba copia en Enviados.
 - Seguimiento recomendado: revisar respuestas y rebotes; si no hay respuesta, siguiente accion el 2026-05-04.

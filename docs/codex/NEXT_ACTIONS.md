@@ -28,19 +28,22 @@
 - [x] Ejecutar envio real de `wave_2`: 70 enviados, 0 fallidos.
 - [x] Reconciliar historico y maestro operativo con 296 envios reales acumulados.
 - [x] Verificar INBOX de `ventas@elenxos.com` por rebotes.
-- [x] Marcar 5 rebotes confirmados y sacar reporte.
+- [x] Marcar 8 rebotes confirmados y sacar reporte.
 - [x] Reconstruir/anexar 296 copias de campana en la carpeta IMAP `Sent`.
 - [x] Actualizar envio futuro para anexar copia en `Sent` automaticamente.
 - [x] Crear 180 Leads de `wave_3` en ERPNext y sincronizar IDs locales.
 - [x] Ajustar clasificacion de plantillas para docentes de departamento.
 - [x] Ejecutar envio real de `wave_3`: 180 aceptados por SMTP, 0 fallidos API.
 - [x] Reconciliar legacy, maestro operativo, enviados e IMAP con `wave_3`.
+- [x] Monitorear INBOX el 2026-04-27: 0 respuestas humanas, 8 rebotes, 2 pruebas internas.
+- [x] Preparar cola de 4 contactos por canal alterno.
 
 ## Next
 
 - [ ] Monitorear respuestas nuevas de `wave_1`, `wave_2` y `wave_3`.
-- [ ] Verificar correo alternativo para los 5 rebotados el 2026-04-28.
-- [ ] Hacer seguimiento a los 291 contactos sin respuesta el 2026-05-04.
+- [ ] Verificar correo alternativo para los 8 rebotados el 2026-04-28.
+- [ ] Ejecutar contacto manual/canal alterno para 4 prospectos sin email el 2026-04-28.
+- [ ] Hacer seguimiento a los 288 contactos sin respuesta el 2026-05-04.
 - [ ] Preparar la siguiente etapa solo despues de revisar respuestas, rebotes y senales de interes de los 296 envios.
 - [ ] **REDES — Crear la pagina de empresa de LinkedIn o documentar la URL correcta** (la actual retorna 404).
 - [ ] **REDES — Definir y documentar el handle de X/Twitter** (actualmente TBD, bloquea publicacion en X).

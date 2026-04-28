@@ -8,16 +8,17 @@
 
 Hola {{contact_name}},
 
-Te escribo de nuevo brevemente por si mi correo anterior se traspapeló. 
+Te escribo de nuevo brevemente por si mi correo anterior se perdió entre mensajes.
 
-Como te comentaba, en **Elenxos** (nuestro equipo de la UdeA) estamos impulsando **Agora** para llevar la investigación y la lectura cooperativa a un nivel de eficiencia tecnológica de vanguardia. 
+En **Elenxos**, un equipo nacido desde la UdeA, estamos construyendo **Agora** para ordenar fuentes, borradores y trabajo colaborativo en procesos académicos.
 
-Sabemos que en {{role_or_unit}} de {{institution}} el manejo de fuentes y borradores siempre es un reto operativo, y estamos convencidos de que nuestro software puede quitarles esa fricción de encima de inmediato.
+Pensamos que en {{role_or_unit}} de {{institution}} podría ser útil si están trabajando lectura, escritura, investigación o seguimiento de estudiantes.
 
-Si tienes 5 minutos, me encantaría que le dieras un vistazo:
-👉 **[https://agora.elenxos.com/](https://agora.elenxos.com/)**
+Sitios oficiales:
+- **[Elenxos](https://www.elenxos.com/)**
+- **[Agora](https://agora.elenxos.com/)**
 
-Cualquier feedback que tengas nos sumaría muchísimo.
+Si tiene sentido, puedo compartir una demostración breve y concreta.
 
 Un saludo,
 

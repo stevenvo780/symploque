@@ -22,6 +22,7 @@ import csv
 from datetime import date, datetime, timedelta
 from email.message import EmailMessage
 from email.utils import formatdate, make_msgid
+import html as html_lib
 import imaplib
 import json
 import os
@@ -123,17 +124,27 @@ def require_env(name: str) -> str:
     return value
 
 
-def send_email(base_url: str, api_key: str, sender: str, password: str, to: str, subject: str, body: str) -> tuple[bool, str]:
+def send_email(
+    base_url: str,
+    api_key: str,
+    sender: str,
+    password: str,
+    to: str,
+    subject: str,
+    body: str,
+    html_body: str | None = None,
+) -> tuple[bool, str]:
     url = f"{base_url.rstrip('/')}/send?{parse.urlencode({'api_key': api_key})}"
-    payload = json.dumps(
-        {
-            "from_email": sender,
-            "from_password": password,
-            "to": to,
-            "subject": subject,
-            "body": body,
-        }
-    ).encode("utf-8")
+    payload_data = {
+        "from_email": sender,
+        "from_password": password,
+        "to": to,
+        "subject": subject,
+        "body": body,
+    }
+    if html_body:
+        payload_data["html"] = html_body
+    payload = json.dumps(payload_data).encode("utf-8")
     req = request.Request(url, data=payload, headers={"Content-Type": "application/json"}, method="POST")
     try:
         with request.urlopen(req, timeout=30) as resp:
@@ -152,12 +163,13 @@ def send_email_with_retries(
     to: str,
     subject: str,
     body: str,
+    html_body: str | None,
     retries: int,
 ) -> tuple[bool, str]:
     attempts = max(1, retries + 1)
     last_detail = ""
     for attempt in range(1, attempts + 1):
-        ok, detail = send_email(base_url, api_key, sender, password, to, subject, body)
+        ok, detail = send_email(base_url, api_key, sender, password, to, subject, body, html_body)
         if ok:
             suffix = f" attempts={attempt}" if attempt > 1 else ""
             return True, f"{detail}{suffix}"
@@ -167,7 +179,72 @@ def send_email_with_retries(
     return False, f"{last_detail} attempts={attempts}"
 
 
-def build_sent_message(sender: str, to: str, subject: str, body: str, contact_id: str, campaign: str) -> bytes:
+def markdown_inline_to_html(value: str) -> str:
+    escaped = html_lib.escape(value)
+    escaped = re.sub(
+        r"\[([^\]]+)\]\((https?://[^)\s]+)\)",
+        r'<a href="\2" style="color:#0f5c8c;text-decoration:underline;">\1</a>',
+        escaped,
+    )
+    return re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
+
+
+def markdown_to_plain_text(markdown_body: str) -> str:
+    text = re.sub(r"\*\*\[([^\]]+)\]\((https?://[^)]+)\)\*\*", r"\1: \2", markdown_body)
+    text = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r"\1: \2", text)
+    text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
+    return "\n".join(line.rstrip() for line in text.splitlines()).strip() + "\n"
+
+
+def markdown_to_email_html(markdown_body: str) -> str:
+    lines: list[str] = []
+    paragraph: list[str] = []
+    in_list = False
+
+    def flush_paragraph() -> None:
+        nonlocal paragraph
+        if paragraph:
+            joined = "<br>".join(markdown_inline_to_html(line) for line in paragraph)
+            lines.append(f'<p style="margin:0 0 16px;">{joined}</p>')
+            paragraph = []
+
+    def close_list() -> None:
+        nonlocal in_list
+        if in_list:
+            lines.append("</ul>")
+            in_list = False
+
+    for raw_line in markdown_body.strip().splitlines():
+        line = raw_line.strip()
+        if not line:
+            flush_paragraph()
+            close_list()
+            continue
+        if line.startswith("- "):
+            flush_paragraph()
+            if not in_list:
+                lines.append('<ul style="margin:0 0 16px 20px;padding:0;">')
+                in_list = True
+            lines.append(f'<li style="margin:0 0 6px;">{markdown_inline_to_html(line[2:])}</li>')
+            continue
+        close_list()
+        paragraph.append(line)
+
+    flush_paragraph()
+    close_list()
+
+    content = "\n".join(lines)
+    return f"""<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#ffffff;">
+    <div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.55;color:#202124;max-width:680px;">
+      {content}
+    </div>
+  </body>
+</html>"""
+
+
+def build_sent_message(sender: str, to: str, subject: str, body: str, contact_id: str, campaign: str, html_body: str | None = None) -> bytes:
     msg = EmailMessage()
     msg["From"] = sender
     msg["To"] = to
@@ -176,7 +253,8 @@ def build_sent_message(sender: str, to: str, subject: str, body: str, contact_id
     msg["Message-ID"] = make_msgid(domain="elenxos.com")
     msg["X-Elenxos-Contact-ID"] = contact_id
     msg["X-Elenxos-Campaign"] = campaign
-    msg.set_content(body)
+    msg.set_content(markdown_to_plain_text(body))
+    msg.add_alternative(html_body or markdown_to_email_html(body), subtype="html")
     return msg.as_bytes()
 
 
@@ -250,6 +328,11 @@ def body_for_lote_row(row: dict[str, str], master_by_id: dict[str, dict[str, str
     template = template_for(source)
     _, body_template = read_template(template["path"])  # type: ignore[arg-type]
     return render_body(body_template, source)
+
+
+def email_parts_for_lote_row(row: dict[str, str], master_by_id: dict[str, dict[str, str]]) -> tuple[str, str, str]:
+    markdown_body = body_for_lote_row(row, master_by_id)
+    return markdown_body, markdown_to_plain_text(markdown_body), markdown_to_email_html(markdown_body)
 
 
 def build_sent_row(row: dict[str, str], source: dict[str, str], sent_at: str, campaign: str) -> dict[str, str]:
@@ -422,13 +505,13 @@ def main() -> int:
     failures = 0
 
     for index, row in enumerate(selected, start=1):
-        body = body_for_lote_row(row, master_by_id)
-        ok, detail = send_email_with_retries(base_url, api_key, row["sender"], password, row["email"], row["subject"], body, args.retries)
+        markdown_body, plain_body, html_body = email_parts_for_lote_row(row, master_by_id)
+        ok, detail = send_email_with_retries(base_url, api_key, row["sender"], password, row["email"], row["subject"], plain_body, html_body, args.retries)
         if ok and imap_client is not None:
             copy_ok, copy_detail = append_sent_copy(
                 imap_client,
                 sent_folder,
-                build_sent_message(row["sender"], row["email"], row["subject"], body, row["contact_id"], campaign),
+                build_sent_message(row["sender"], row["email"], row["subject"], markdown_body, row["contact_id"], campaign, html_body),
             )
             detail = f"{detail} {copy_detail}"
         status = "sent" if ok else "failed"

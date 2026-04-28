@@ -25,8 +25,8 @@ Campana: `primer_contacto_wave_3`
 - Aceptados por SMTP: 180
 - Fallidos en API: 0
 - Copias anexadas a IMAP `Sent`: 180
-- Rebotes confirmados inmediatos: 1
-- Pendientes de respuesta de `wave_3`: 179
+- Rebotes confirmados tras monitoreo IMAP: 2
+- Pendientes de respuesta de `wave_3`: 178
 - Archivo lote: `05-datos-y-reportes/operacion-email/primer-contacto-wave-3.csv`
 - Revision historica: `04-mensajeria-email/lote-primer-contacto-wave-3-revision.md`
 - Log: `05-datos-y-reportes/operacion-email/logs/primer-contacto-20260427-155159.csv`
@@ -35,17 +35,18 @@ Campana: `primer_contacto_wave_3`
 
 - `02-primer-contacto-estandar`: 180
 
-## Rebote de wave_3
+## Rebotes de wave_3
 
 | Contact ID | Email | Diagnostico | Accion |
 |---|---|---|---|
 | `agora-legacy-124` | `memontesro@unal.edu.co` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
+| `agora-legacy-289` | `pmunozs@unal.edu.co` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
 
 ## Estado acumulado
 
 - Aceptados por SMTP acumulados: 296
-- Rebotes confirmados acumulados: 5
-- Pendientes de respuesta: 291
+- Rebotes confirmados acumulados: 8
+- Pendientes de respuesta: 288
 - Leads ERP acumulados: 296
 - Pendientes sin email valido: 4
 - IMAP `Sent`: 297 mensajes totales, incluyendo 296 copias de campana y 1 prueba interna.

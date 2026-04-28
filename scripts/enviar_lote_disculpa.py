@@ -13,6 +13,8 @@ from time import monotonic
 from pathlib import Path
 from urllib import error, parse, request
 
+from enviar_lote_primer_contacto import markdown_to_email_html, markdown_to_plain_text
+
 
 REPO_DIR = Path(__file__).resolve().parents[1]
 CSV_PATH = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "disculpa-error-pendientes.csv"
@@ -205,6 +207,7 @@ def send_email_once(
     to: str,
     subject: str,
     body: str,
+    html_body: str,
     timeout: float,
 ) -> tuple[bool, str, int | None]:
     url = f"{base_url.rstrip('/')}/send?{parse.urlencode({'api_key': api_key})}"
@@ -215,6 +218,7 @@ def send_email_once(
             "to": to,
             "subject": subject,
             "body": body,
+            "html": html_body,
         }
     ).encode("utf-8")
     req = request.Request(url, data=payload, headers={"Content-Type": "application/json"}, method="POST")
@@ -245,6 +249,7 @@ def send_email(
     to: str,
     subject: str,
     body: str,
+    html_body: str,
     timeout: float,
     retries: int,
 ) -> SendResult:
@@ -255,7 +260,7 @@ def send_email(
     while attempts < max_attempts:
         attempts += 1
         started = monotonic()
-        ok, detail, http_status = send_email_once(base_url, api_key, sender, sender_password, to, subject, body, timeout)
+        ok, detail, http_status = send_email_once(base_url, api_key, sender, sender_password, to, subject, body, html_body, timeout)
         elapsed = monotonic() - started
         last = SendResult(ok=ok, detail=f"{detail} (elapsed={elapsed:.2f}s)", http_status=http_status, attempts=attempts)
         if not should_retry(last):
@@ -381,7 +386,7 @@ def main() -> int:
 
     failures = 0
     for row in rows:
-        body = build_body(row["contact_name"], row["body_variant"], int(row["duplicate_count"]))
+        markdown_body = build_body(row["contact_name"], row["body_variant"], int(row["duplicate_count"]))
         result = send_email(
             base_url,
             api_key,
@@ -389,7 +394,8 @@ def main() -> int:
             sender_password,
             row["email"],
             row["subject"],
-            body,
+            markdown_to_plain_text(markdown_body),
+            markdown_to_email_html(markdown_body),
             timeout=args.timeout,
             retries=args.retries,
         )

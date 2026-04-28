@@ -15,7 +15,8 @@ Por favor, ignore ese mensaje. No requiere ninguna acción de su parte. También
 Para darle contexto: Elenxos es un equipo que cruza formación académica, investigación y desarrollo de software. Estamos construyendo Agora, una plataforma para organizar lectura, escritura, fuentes y colaboración académica con más trazabilidad y menos dispersión.
 
 Puede conocer Agora aquí:
-https://agora.elenxos.com/
+- **[Agora](https://agora.elenxos.com/)**
+- **[Elenxos](https://www.elenxos.com/)**
 
 De nosotros puede esperar una comunicación cuidadosa, transparente y respetuosa. Si en algún momento desea conversar, será una conversación breve y concreta sobre si Agora tiene sentido para sus procesos académicos; no haremos seguimiento comercial derivado de este error salvo que usted nos responda con interés.
 
@@ -27,4 +28,3 @@ Saludos cordiales,
 
 Jacob Agudelo & Steven Vallejo
 Fundadores, Elenxos
-www.elenxos.com

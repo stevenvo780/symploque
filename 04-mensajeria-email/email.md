@@ -190,7 +190,10 @@ Hoy no hay contactos previos confirmados. Si en el futuro aparece evidencia de q
 ## Notas operativas
 
 - SMTP relay: `148.230.88.162:587` con `STARTTLS`
-- `html` es opcional; si se omite, sale solo texto plano
+- `html` es opcional en la API, pero el script operativo de primer contacto ahora envia siempre dos partes: `text/plain` limpio y `text/html` renderizado desde Markdown.
+- Las plantillas se mantienen en Markdown para edicion humana; antes de enviar, el script elimina `**...**` y `[texto](url)` del texto plano y genera enlaces/negritas reales en HTML.
+- Prueba interna 2026-04-27: la Mail API acepto un mensaje HTML a `ventas@elenxos.com` y el mensaje recibido por IMAP tuvo una parte `text/plain` y una parte `text/html`.
+- La auditoria local valida que las 6 plantillas activas rendericen sin Markdown crudo en texto plano ni HTML.
 - webmail: `https://mail.proxy.humanizar-dev.cloud`
 - IMAP: `mail.proxy.humanizar-dev.cloud:993`
 - La API SMTP no guarda copia automaticamente en `Sent`; el script operativo anexa copia IMAP despues de cada envio exitoso.

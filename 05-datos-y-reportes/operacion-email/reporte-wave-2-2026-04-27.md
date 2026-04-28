@@ -34,7 +34,7 @@ Campana: `primer_contacto_wave_2`
 
 - Aceptados por SMTP: 70
 - Fallidos en API: 0
-- Rebotes confirmados posteriormente: 3
+- Rebotes confirmados posteriormente: 5
 - Archivo lote: `05-datos-y-reportes/operacion-email/primer-contacto-wave-2.csv`
 - Revision historica: `04-mensajeria-email/lote-primer-contacto-wave-2-revision.md`
 - Log: `05-datos-y-reportes/operacion-email/logs/primer-contacto-20260427-142800.csv`
@@ -48,8 +48,8 @@ Campana: `primer_contacto_wave_2`
 ## Estado acumulado
 
 - Aceptados por SMTP acumulados: 116
-- Rebotes confirmados acumulados: 4
-- Pendientes de respuesta: 112
+- Rebotes confirmados acumulados de `wave_1` + `wave_2`: 6
+- Pendientes de respuesta de `wave_1` + `wave_2`: 110
 - Leads ERP acumulados: 116
 - Pendientes operativos: 184
 - Siguiente accion: monitorear respuestas/rebotes y hacer seguimiento el 2026-05-04.

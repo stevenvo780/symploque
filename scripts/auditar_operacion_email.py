@@ -19,6 +19,9 @@ from pathlib import Path
 import re
 from typing import Iterable
 
+from enviar_lote_primer_contacto import markdown_to_email_html, markdown_to_plain_text
+from preparar_lote_primer_contacto import read_template, render_body
+
 
 REPO_DIR = Path(__file__).resolve().parents[1]
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
@@ -33,9 +36,12 @@ FILES = {
 }
 
 MESSAGE_FILES = {
+    "template_disculpa": REPO_DIR / "04-mensajeria-email" / "01-disculpa-repetidos.md",
     "template_estandar": REPO_DIR / "04-mensajeria-email" / "02-primer-contacto-estandar.md",
     "template_semilleros": REPO_DIR / "04-mensajeria-email" / "03-primer-contacto-semilleros.md",
     "template_directores": REPO_DIR / "04-mensajeria-email" / "04-primer-contacto-directores.md",
+    "template_seguimiento": REPO_DIR / "04-mensajeria-email" / "05-seguimiento-corto.md",
+    "template_declaracion": REPO_DIR / "04-mensajeria-email" / "06-correo-declaracion.md",
     "review_wave_1": REPO_DIR / "04-mensajeria-email" / "lote-primer-contacto-wave-1-revision.md",
 }
 
@@ -320,6 +326,37 @@ def add_message_content_checks(report: AuditReport) -> None:
             reviewed_ok += 1
     if review_paths and reviewed_ok == len(review_paths):
         report.checks.append(Check("mensajeria", f"Revisiones de lote validas para UdeA/sin redes/sin CTA duplicado: {reviewed_ok}/{len(review_paths)}"))
+
+    sample_row = {
+        "contact_name": "Contacto Prueba",
+        "institution": "UdeA",
+        "organization": "UdeA",
+        "role_or_unit": "unidad academica",
+        "asunto_del_correo_anterior": "Correo anterior",
+    }
+    render_names = [
+        "template_disculpa",
+        "template_estandar",
+        "template_semilleros",
+        "template_directores",
+        "template_seguimiento",
+        "template_declaracion",
+    ]
+    render_failures: list[str] = []
+    for name in render_names:
+        path = MESSAGE_FILES[name]
+        if not path.exists():
+            continue
+        _, body_template = read_template(path)
+        markdown_body = render_body(body_template, sample_row)
+        plain = markdown_to_plain_text(markdown_body)
+        html = markdown_to_email_html(markdown_body)
+        if any(token in plain for token in ["**", "]("]) or any(token in html for token in ["**", "]("]) or "<a href=" not in html:
+            render_failures.append(name)
+    if render_failures:
+        report.issues.append(Issue("blocker", "mensajeria", f"Render Markdown->email falla en: {', '.join(render_failures)}"))
+    else:
+        report.checks.append(Check("mensajeria", f"Render Markdown a text/plain + text/html sin Markdown crudo: {len(render_names)}/{len(render_names)}"))
 
 
 def audit() -> AuditReport:

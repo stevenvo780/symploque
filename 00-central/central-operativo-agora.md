@@ -115,4 +115,4 @@ Se reinicio la operacion como `fresh launch`, se guardaron los Leads efectivos e
 
 Los 296 Leads de `wave_1`, `wave_2` y `wave_3` ya estan creados en ERPNext y el remitente oficial de los lotes es `ventas@elenxos.com`.
 
-Resultado acumulado: 296 aceptados por SMTP, 5 rebotes confirmados, 291 pendientes de respuesta. Auditoria OK: las plantillas mencionan procedencia UdeA/Universidad de Antioquia, no incluyen redes sociales, no duplican CTA de Agora y solo dejan sitios oficiales Elenxos/Agora.
+Resultado acumulado: 296 aceptados por SMTP, 8 rebotes confirmados, 288 pendientes de respuesta y 4 contactos preparados por canal alterno. Auditoria OK: las plantillas mencionan procedencia UdeA/Universidad de Antioquia, no incluyen redes sociales, no duplican CTA de Agora y solo dejan sitios oficiales Elenxos/Agora.
