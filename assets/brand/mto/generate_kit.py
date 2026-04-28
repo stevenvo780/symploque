@@ -1,7 +1,9 @@
 import os
+import shutil
 import subprocess
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BRAND_DIR = os.path.dirname(SCRIPT_DIR)
 
 # Paleta de colores oficial (Manual de Marca + principal de plataforma)
 PALETTE = {
@@ -19,7 +21,8 @@ BACKGROUNDS = {
     "white": "#FFFFFF",
 }
 
-OUTPUT_DIR = os.path.join(SCRIPT_DIR, "kit_logos")
+OUTPUT_DIR = os.path.join(BRAND_DIR, "logos", "kit_completo")
+LEGACY_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "kit_logos")
 
 def get_logo_geometry(color=PALETTE["gold"]):
     """Retorna los elementos internos del logo de Elenxos sin el tag <svg>."""
@@ -94,6 +97,12 @@ def run_command(command):
         print(f"❌ Error al ejecutar: {command}\n{e}")
 
 def main():
+    if os.path.exists(LEGACY_OUTPUT_DIR):
+        shutil.rmtree(LEGACY_OUTPUT_DIR)
+
+    if os.path.exists(OUTPUT_DIR):
+        shutil.rmtree(OUTPUT_DIR)
+
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
     

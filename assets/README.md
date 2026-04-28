@@ -44,11 +44,10 @@ No volver a abrir una tercera paleta paralela sin justificarlo.
 
 ### Disponible hoy para usar
 
-- logo principal listo en `logo_elenxos_principal.svg`
-- lockup principal sobre negro en `logo_elenxos_principal_fondo_negro.svg`
-- lockup principal sobre blanco en `logo_elenxos_principal_fondo_blanco.svg`
-- PNGs directos del principal en `logo_elenxos_principal_1024.png`, `logo_elenxos_principal_fondo_negro.png` y `logo_elenxos_principal_fondo_blanco.png`
-- kit de logos y banners exportables en `brand/mto/kit_logos/`
+- logos oficiales ordenados en `brand/logos/`
+- logo principal dorado en `brand/logos/principal/`
+- versiones SVG, PNG, JPEG y JPG para fondo negro/blanco en `brand/logos/principal/icono/` y `brand/logos/principal/logo_completo/`
+- kit extendido de logos y banners exportables en `brand/logos/kit_completo/`
 - pipeline React → PNG para piezas sociales en `../elenxos_design_system/` via `npm run render`
 - lote renderizado base en `../elenxos_design_system/output/react/`
 - lote operativo regenerado para salida inmediata en `../elenxos_design_system/output/redes-sociales-lote-1/`

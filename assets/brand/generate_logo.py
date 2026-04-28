@@ -1,9 +1,18 @@
 import os
 import shutil
 import subprocess
+from pathlib import Path
+
+try:
+    from PIL import Image
+except ImportError:  # pragma: no cover - fallback operativo si Pillow no está instalado
+    Image = None
+
 
 BRAND_NAME = "elenxos"
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BRAND_DIR = Path(__file__).resolve().parent
+ASSETS_DIR = BRAND_DIR.parent
+LOGOS_DIR = BRAND_DIR / "logos"
 
 # Paleta oficial Elenxos + color principal usado en plataforma.
 PALETTE = {
@@ -20,13 +29,6 @@ BACKGROUNDS = {
     "black": "#050805",
     "white": "#FFFFFF",
 }
-
-
-def resolve_output_path(output_path):
-    """Resuelve salidas relativas desde assets/brand, no desde el cwd."""
-    if os.path.isabs(output_path):
-        return output_path
-    return os.path.join(SCRIPT_DIR, output_path)
 
 
 def get_logo_geometry(color=PALETTE["gold"]):
@@ -75,92 +77,167 @@ def get_svg_lockup(
 </svg>'''
 
 
-def write_svg(output_path, svg_content):
-    resolved_path = resolve_output_path(output_path)
-    os.makedirs(os.path.dirname(resolved_path), exist_ok=True)
-    with open(resolved_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    return resolved_path
+def write_text(path, content):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding="utf-8")
+    return path
 
 
-def export_png(svg_path, output_path, width, height):
-    """Exporta PNG desde SVG si rsvg-convert está disponible."""
+def require_rsvg_convert():
     if not shutil.which("rsvg-convert"):
-        print("⚠️ rsvg-convert no está instalado; se omite PNG:", output_path)
-        return
+        raise RuntimeError("Falta rsvg-convert. Instala librsvg para exportar PNG/JPEG.")
 
-    resolved_output = resolve_output_path(output_path)
-    os.makedirs(os.path.dirname(resolved_output), exist_ok=True)
+
+def export_png(svg_path, png_path, width, height):
+    """Exporta PNG desde SVG."""
+    require_rsvg_convert()
+    png_path.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run(
-        ["rsvg-convert", "-w", str(width), "-h", str(height), svg_path, "-o", resolved_output],
+        ["rsvg-convert", "-w", str(width), "-h", str(height), str(svg_path), "-o", str(png_path)],
         check=True,
     )
-    print(f"🖼️ PNG generado en: {resolved_output}")
+    return png_path
 
 
-def generate_elenxos_logo(output_path="logo_elenxos.svg", color=PALETTE["gold"], background_color=None):
-    """Generates the Elenxos vector icon as an SVG file."""
-    resolved_path = write_svg(output_path, get_svg_logo(color, background_color=background_color))
-    print(f"✅ Logo generado exitosamente en: {resolved_path} (Color: {color})")
+def export_jpeg(png_path, jpeg_path, background_color="#FFFFFF"):
+    """Convierte PNG a JPEG/JPG, aplanando transparencias porque JPEG no soporta alpha."""
+    if Image is None:
+        print("⚠️ Pillow no está instalado; se omite JPEG:", jpeg_path)
+        return None
+
+    jpeg_path.parent.mkdir(parents=True, exist_ok=True)
+    jpg_path = jpeg_path.with_suffix(".jpg")
+    image = Image.open(png_path).convert("RGBA")
+    background = Image.new("RGBA", image.size, background_color)
+    background.alpha_composite(image)
+    rgb_image = background.convert("RGB")
+    rgb_image.save(jpeg_path, "JPEG", quality=95, optimize=True)
+    rgb_image.save(jpg_path, "JPEG", quality=95, optimize=True)
+    return jpeg_path
 
 
-def generate_elenxos_lockup(
-    output_path="logo_elenxos_principal_fondo_negro.svg",
-    background_color=BACKGROUNDS["black"],
-    text_color=PALETTE["white"],
-):
-    """Generates the complete Elenxos logo with icon and wordmark."""
-    resolved_path = write_svg(
-        output_path,
-        get_svg_lockup(background_color=background_color, text_color=text_color),
+def export_asset(svg_path, base_path, width, height, jpeg_background=None):
+    """Exporta PNG y, cuando aplica, JPEG desde un SVG ya escrito."""
+    png_path = export_png(svg_path, base_path.with_suffix(".png"), width, height)
+    if jpeg_background:
+        export_jpeg(png_path, base_path.with_suffix(".jpeg"), jpeg_background)
+
+
+def remove_path(path):
+    if path.is_dir():
+        shutil.rmtree(path)
+    elif path.exists():
+        path.unlink()
+
+
+def clean_generated_outputs():
+    """Limpia salidas antiguas para evitar logos duplicados y archivos sueltos."""
+    remove_path(LOGOS_DIR)
+
+    for base_dir in (ASSETS_DIR, BRAND_DIR):
+        for loose_file in base_dir.glob("logo_elenxos*"):
+            if loose_file.is_file():
+                loose_file.unlink()
+
+    for legacy_dir in (BRAND_DIR / "mto" / "kit_logos", BRAND_DIR / "mto" / "variantes"):
+        remove_path(legacy_dir)
+
+
+def write_logo_family(relative_dir, filename, svg_content, width, height, jpeg_background=None):
+    target_base = LOGOS_DIR / relative_dir / filename
+    svg_path = write_text(target_base.with_suffix(".svg"), svg_content)
+    export_asset(svg_path, target_base, width, height, jpeg_background)
+    print(f"✅ {target_base.relative_to(BRAND_DIR)}")
+
+
+def generate_principal_assets():
+    """Genera el set principal dorado, ordenado por uso."""
+    print("⭐ Generando logo principal dorado ordenado...")
+
+    write_logo_family(
+        Path("principal/icono/transparente"),
+        "elenxos_icono_dorado",
+        get_svg_logo(PALETTE["gold"]),
+        1024,
+        1024,
     )
-    print(f"✅ Logo completo generado exitosamente en: {resolved_path}")
-
-
-def generate_principal_assets(prefix=""):
-    """Genera el set principal dorado, con versiones para fondo negro y blanco."""
-    generate_elenxos_logo(f"{prefix}logo_elenxos.svg", PALETTE["gold"])
-    generate_elenxos_logo(f"{prefix}logo_elenxos_principal.svg", PALETTE["gold"])
-    generate_elenxos_logo(
-        f"{prefix}logo_elenxos_principal_fondo_negro_icono.svg",
-        PALETTE["gold"],
+    write_logo_family(
+        Path("principal/icono/fondo_negro"),
+        "elenxos_icono_dorado_fondo_negro",
+        get_svg_logo(PALETTE["gold"], background_color=BACKGROUNDS["black"]),
+        1024,
+        1024,
         BACKGROUNDS["black"],
     )
-    generate_elenxos_logo(
-        f"{prefix}logo_elenxos_principal_fondo_blanco_icono.svg",
-        PALETTE["gold"],
+    write_logo_family(
+        Path("principal/icono/fondo_blanco"),
+        "elenxos_icono_dorado_fondo_blanco",
+        get_svg_logo(PALETTE["gold"], background_color=BACKGROUNDS["white"]),
+        1024,
+        1024,
         BACKGROUNDS["white"],
     )
-    generate_elenxos_lockup(
-        f"{prefix}logo_elenxos_principal_fondo_negro.svg",
+    write_logo_family(
+        Path("principal/logo_completo/fondo_negro"),
+        "elenxos_logo_completo_fondo_negro",
+        get_svg_lockup(BACKGROUNDS["black"], PALETTE["gold"], PALETTE["white"]),
+        1200,
+        320,
         BACKGROUNDS["black"],
-        PALETTE["white"],
     )
-    generate_elenxos_lockup(
-        f"{prefix}logo_elenxos_principal_fondo_blanco.svg",
+    write_logo_family(
+        Path("principal/logo_completo/fondo_blanco"),
+        "elenxos_logo_completo_fondo_blanco",
+        get_svg_lockup(BACKGROUNDS["white"], PALETTE["gold"], PALETTE["forest"]),
+        1200,
+        320,
         BACKGROUNDS["white"],
-        PALETTE["forest"],
     )
 
-    png_exports = [
-        (f"{prefix}logo_elenxos_principal.svg", f"{prefix}logo_elenxos_principal_1024.png", 1024, 1024),
-        (f"{prefix}logo_elenxos_principal_fondo_negro.svg", f"{prefix}logo_elenxos_principal_fondo_negro.png", 1200, 320),
-        (f"{prefix}logo_elenxos_principal_fondo_blanco.svg", f"{prefix}logo_elenxos_principal_fondo_blanco.png", 1200, 320),
-        (f"{prefix}logo_elenxos_principal_fondo_negro_icono.svg", f"{prefix}logo_elenxos_principal_fondo_negro_icono_1024.png", 1024, 1024),
-        (f"{prefix}logo_elenxos_principal_fondo_blanco_icono.svg", f"{prefix}logo_elenxos_principal_fondo_blanco_icono_1024.png", 1024, 1024),
-    ]
 
-    for svg_output, png_output, width, height in png_exports:
-        export_png(resolve_output_path(svg_output), png_output, width, height)
+def generate_color_variants():
+    """Genera variantes cromáticas del isotipo sin ensuciar la raíz de brand."""
+    print("🎨 Generando variantes cromáticas del icono...")
+    for name, color in PALETTE.items():
+        write_logo_family(
+            Path("variantes/icono") / name,
+            f"elenxos_icono_{name}",
+            get_svg_logo(color),
+            512,
+            512,
+        )
+
+
+def write_index():
+    index = """# Logos Elenxos
+
+Salida oficial generada por `assets/brand/generate_logo.py`.
+
+## Estructura
+
+- `principal/icono/transparente/`: isotipo dorado en SVG/PNG con fondo transparente.
+- `principal/icono/fondo_negro/`: isotipo dorado en SVG/PNG/JPEG/JPG sobre negro.
+- `principal/icono/fondo_blanco/`: isotipo dorado en SVG/PNG/JPEG/JPG sobre blanco.
+- `principal/logo_completo/fondo_negro/`: isotipo + wordmark en SVG/PNG/JPEG/JPG sobre negro.
+- `principal/logo_completo/fondo_blanco/`: isotipo + wordmark en SVG/PNG/JPEG/JPG sobre blanco.
+- `variantes/icono/`: variaciones cromáticas del isotipo.
+- `kit_completo/`: kit extendido generado por `mto/generate_kit.py`.
+- `variantes/decorativas/`: piezas decorativas generadas por `mto/generate_variants.py`.
+
+## Nota sobre JPEG
+
+JPEG/JPG no soporta transparencia. Por eso los JPEG/JPG oficiales están en las carpetas `fondo_negro` y `fondo_blanco`.
+"""
+    write_text(LOGOS_DIR / "README.md", index)
+
+
+def main():
+    clean_generated_outputs()
+    generate_principal_assets()
+    generate_color_variants()
+    write_index()
+    print(f"\n✅ Logos ordenados en: {LOGOS_DIR}")
 
 
 if __name__ == "__main__":
-    # Principal en assets/brand.
-    generate_principal_assets()
-
-    # Copia corta en assets/ para consumo directo desde la plataforma o docs.
-    generate_principal_assets("../")
-    
-    # Variantes cromáticas conservadas.
-    for name, color in PALETTE.items():
-        generate_elenxos_logo(f"logo_elenxos_{name}.svg", color)
+    main()
