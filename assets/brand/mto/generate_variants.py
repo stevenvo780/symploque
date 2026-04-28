@@ -1,7 +1,9 @@
 import os
+import shutil
 import subprocess
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BRAND_DIR = os.path.dirname(SCRIPT_DIR)
 
 # Paleta oficial (Manual de Marca + principal de plataforma)
 PALETTE = {
@@ -13,7 +15,8 @@ PALETTE = {
     "white": "#FFFFFF"
 }
 
-OUTPUT_DIR = os.path.join(SCRIPT_DIR, "variantes")
+OUTPUT_DIR = os.path.join(BRAND_DIR, "logos", "variantes", "decorativas")
+LEGACY_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "variantes")
 
 def get_hexagon(color):
     return f'''<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -40,6 +43,12 @@ def run_command(command):
         pass # Ignorar si no está rsvg-convert
 
 def main():
+    if os.path.exists(LEGACY_OUTPUT_DIR):
+        shutil.rmtree(LEGACY_OUTPUT_DIR)
+
+    if os.path.exists(OUTPUT_DIR):
+        shutil.rmtree(OUTPUT_DIR)
+
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
         
