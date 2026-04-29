@@ -1,8 +1,9 @@
 # Lote canal alterno - 2026-04-27
 
-> Estado: preparado. No se ejecuto contacto por WhatsApp/telefono desde el repo.
+> Estado: preparado con preview operativo. No se ejecuto contacto por WhatsApp/telefono desde el repo.
 
 - CSV: `05-datos-y-reportes/operacion-email/canales-alternos-pendientes-2026-04-27.csv`
+- Preview de envio manual: `04-mensajeria-email/preview-canal-alterno-2026-04-28.md`
 - Total: 4
 - Accion: contactar por canal alterno o encontrar email oficial.
 - Fecha sugerida: 2026-04-28

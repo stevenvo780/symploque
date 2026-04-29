@@ -226,3 +226,52 @@
 - Notes:
   - The WORKLOG.md historical entries mentioning `05-redes-sociales/` were left as-is because they describe past actions.
   - 10 external dependencies are now documented in `directorio-cuentas-y-estado.md` §6. The most critical is the LinkedIn company page (404) which is embedded in the email signature.
+
+## 2026-04-28
+
+- Goal: Consolidate the daily operating protocol in the Agora agent document.
+- Actions:
+  - Updated `00-central/agente.md` with the current outreach state: 296 SMTP-accepted sends, 296 ERPNext Leads, 8 confirmed bounces, 288 pending replies, and 4 alternate-channel contacts.
+  - Added a daily protocol covering git divergence checks, `NEXT_ACTIONS.md`, email-operation reports, inbox/bounce monitoring, positive-signal response timing, bounce recovery, alternate-channel handling, and the 2026-05-04 follow-up guardrail.
+  - Added a growth routine aligned with the 90-day commercial plan and corrected stale folder references to the current repo layout.
+- Verification:
+  - Read back `00-central/agente.md`, checked required operating phrases, and verified every documented path exists.
+  - Checked for obvious secret markers; the only match is the policy line forbidding secrets in Markdown, CSV, or scripts.
+  - No external sends, ERP writes, WhatsApp contacts, or social publications were executed.
+
+## 2026-04-28 2
+
+- Goal: Resolve the local branch divergence and prepare alternate-channel previews.
+- Actions:
+  - Fetched `origin/main` and merged the remote asset/logos commit into local `main` with the existing email-operations commit.
+  - Created `04-mensajeria-email/preview-canal-alterno-2026-04-28.md` with 3 WhatsApp prefilled links, 1 phone-call script, send guardrails, and post-contact logging guidance.
+  - Linked the preview from `04-mensajeria-email/lote-canal-alterno-2026-04-27.md`.
+  - Updated `docs/codex/NEXT_ACTIONS.md` to mark the alternate-channel preview as ready while keeping manual execution open.
+- Verification:
+  - Branch is no longer behind `origin/main`; local `main` is ahead with the merge and documentation changes.
+  - No WhatsApp messages, phone calls, ERP writes, or social publications were executed.
+
+## 2026-04-28 3
+
+- Goal: Continue repo operations by preparing bounce recovery before discarding contacts.
+- Actions:
+  - Reviewed the 8 confirmed bounces against public sources and separated corrected-email candidates from infrastructure/domain failures.
+  - Created `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-28.csv`.
+  - Created `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-28.md`.
+  - Created `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-28.md`.
+  - Linked the recovery review from `rebotes-detectados-2026-04-27.md` and updated `NEXT_ACTIONS.md`.
+- Verification:
+  - Recovery split: 2 corrected-email candidates, 4 Javeriana mail-loop holds, 2 manual-channel holds.
+  - No emails, ERP writes, WhatsApp messages, or phone calls were executed.
+
+## 2026-04-28 4
+
+- Goal: Prepare the 2026-05-04 follow-up stage without executing it early.
+- Actions:
+  - Counted 288 pending replies across `wave_1`, `wave_2`, and `wave_3`.
+  - Created `04-mensajeria-email/preview-seguimiento-288-2026-05-04.md` with segmented follow-up variants and exclusion rules.
+  - Created `05-datos-y-reportes/operacion-email/plan-seguimiento-288-2026-05-04.md` with eligibility criteria and execution order.
+  - Updated `docs/codex/NEXT_ACTIONS.md` so the follow-up is prepared but still blocked on 2026-05-04 inbox/bounce review and explicit approval.
+- Verification:
+  - Confirmed current eligible count is 288: `wave_1=45`, `wave_2=65`, `wave_3=178`.
+  - No follow-up emails were sent.

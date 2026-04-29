@@ -30,6 +30,13 @@ Origen: INBOX de `ventas@elenxos.com` via IMAP.
 - `leads-agora-maestro.csv` y `leads-agora-top-50-hoy.csv`: estado historico corregido a `rebotado` donde aplica.
 - Carpeta IMAP `Sent`: hay 296 copias de campana visibles; `wave_3` ya anexo copias automaticamente durante el envio.
 
+## Recuperacion preparada
+
+- Revision: `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-28.md`
+- Tabla operativa: `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-28.csv`
+- Preview de mensajes: `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-28.md`
+- Resultado: 2 correos corregidos listos para revision manual, 4 casos Javeriana en espera por `mail loop`, 2 casos para canal manual.
+
 ## Causa del problema de Enviados
 
 La Mail API envia por SMTP y devuelve exito cuando el servidor acepta el mensaje para entrega. Esa aceptacion no implica entrega final ni guarda automaticamente una copia en la carpeta IMAP `Sent`.

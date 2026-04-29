@@ -37,13 +37,18 @@
 - [x] Reconciliar legacy, maestro operativo, enviados e IMAP con `wave_3`.
 - [x] Monitorear INBOX el 2026-04-27: 0 respuestas humanas, 8 rebotes, 2 pruebas internas.
 - [x] Preparar cola de 4 contactos por canal alterno.
+- [x] Crear preview operativo de canal alterno con links prellenados y guion de llamada.
+- [x] Verificar correos alternativos para los 8 rebotados y preparar preview de recuperacion.
+- [x] Preparar plan y preview segmentado para seguimiento de 288 pendientes el 2026-05-04.
 
 ## Next
 
 - [ ] Monitorear respuestas nuevas de `wave_1`, `wave_2` y `wave_3`.
-- [ ] Verificar correo alternativo para los 8 rebotados el 2026-04-28.
+- [ ] Ejecutar envio manual revisado a 2 correos corregidos de rebotes recuperables.
+- [ ] Reintentar Javeriana solo si cesa el `mail loop` o usar backup con redireccion manual.
 - [ ] Ejecutar contacto manual/canal alterno para 4 prospectos sin email el 2026-04-28.
-- [ ] Hacer seguimiento a los 288 contactos sin respuesta el 2026-05-04.
+- [ ] El 2026-05-04, revisar INBOX/rebotes y generar lote final de seguimiento a elegibles.
+- [ ] Hacer seguimiento a los contactos sin respuesta el 2026-05-04 solo despues de preview aprobado.
 - [ ] Preparar la siguiente etapa solo despues de revisar respuestas, rebotes y senales de interes de los 296 envios.
 - [ ] **REDES — Crear la pagina de empresa de LinkedIn o documentar la URL correcta** (la actual retorna 404).
 - [ ] **REDES — Definir y documentar el handle de X/Twitter** (actualmente TBD, bloquea publicacion en X).
