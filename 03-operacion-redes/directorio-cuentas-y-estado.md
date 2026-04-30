@@ -81,6 +81,12 @@ Guía completa con textos y archivos exactos: [guia-configuracion-manual-redes.m
 4. ~~**Acceso a `media@elenxos.com`**~~: **RESUELTO 2026-04-24**. Acceso confirmado, correo de prueba enviado exitosamente (`admin@elenxos.com` → `ventas@elenxos.com`).
 5. **Mail API verificada**: `{"success":true,"message":"Email sent"}`. Credenciales en `.env` (no versionado). API key funcional.
 
+## 7. Verificacion rapida 2026-04-29
+
+- `https://www.linkedin.com/company/elenxos` sigue respondiendo 404 en verificacion publica. La pagina de empresa debe crearse o documentarse con otra URL antes de volver a incluir LinkedIn en firma, redes o outreach.
+- Busquedas publicas de LinkedIn por `Elenxos` no devuelven una pagina de empresa propia; aparecen resultados de nombres parecidos no relacionados.
+- `https://x.com/elenxos` y `https://twitter.com/elenxos` no pudieron verificarse por fetch publico porque X/Twitter responde 403. El handle sigue pendiente de confirmacion manual desde cuenta autenticada.
+
 ## 6. Dependencias externas para operar redes
 
 Estas acciones **no se pueden resolver desde el repo** y requieren acción manual del operador:

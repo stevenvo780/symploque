@@ -40,11 +40,15 @@
 - [x] Crear preview operativo de canal alterno con links prellenados y guion de llamada.
 - [x] Verificar correos alternativos para los 8 rebotados y preparar preview de recuperacion.
 - [x] Preparar plan y preview segmentado para seguimiento de 288 pendientes el 2026-05-04.
+- [x] Monitorear INBOX el 2026-04-29: 0 respuestas humanas, 15 rebotes acumulados.
+- [x] Sincronizar 15 rebotes confirmados y actualizar pendientes a 281.
+- [x] Preparar recuperacion de 15 rebotes y seguimiento actualizado de 281 pendientes.
+- [x] **REDES — Re-verificar LinkedIn/X el 2026-04-29**: LinkedIn `/company/elenxos` sigue 404; X requiere confirmacion manual autenticada.
 
 ## Next
 
 - [ ] Monitorear respuestas nuevas de `wave_1`, `wave_2` y `wave_3`.
-- [ ] Ejecutar envio manual revisado a 2 correos corregidos de rebotes recuperables.
+- [ ] Ejecutar envio manual revisado a 3 correos corregidos de rebotes recuperables.
 - [ ] Reintentar Javeriana solo si cesa el `mail loop` o usar backup con redireccion manual.
 - [ ] Ejecutar contacto manual/canal alterno para 4 prospectos sin email el 2026-04-28.
 - [ ] El 2026-05-04, revisar INBOX/rebotes y generar lote final de seguimiento a elegibles.

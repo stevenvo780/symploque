@@ -275,3 +275,17 @@
 - Verification:
   - Confirmed current eligible count is 288: `wave_1=45`, `wave_2=65`, `wave_3=178`.
   - No follow-up emails were sent.
+
+## 2026-04-29
+
+- Goal: Operate the repo according to protocol and refresh the real email state.
+- Actions:
+  - Checked repo state and confirmed `main` is aligned with `origin/main` before operating.
+  - Ran `scripts/sincronizar_rebotes_imap.py --since 28-Apr-2026 --dry-run`, then consolidated from `27-Apr-2026`.
+  - Synced 15 confirmed bounces into operational CSVs.
+  - Checked INBOX readonly for non-bounce/human replies since 2026-04-28: 0 detected.
+  - Created `estado-operacion-2026-04-29.md`, `revision-post-analisis-2026-04-29.md`, updated bounce recovery docs, and replaced the 288-follow-up plan with a 281-follow-up plan.
+  - Re-verified social blockers: LinkedIn `/company/elenxos` still returns 404; X/Twitter handle could not be confirmed without authenticated access.
+- Verification:
+  - Current counts: 296 SMTP accepted, 15 bounced, 281 pending replies, 4 alternate-channel prospects.
+  - No outreach emails, WhatsApp messages, phone calls, ERP writes, or social publications were executed.

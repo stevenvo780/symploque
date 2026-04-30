@@ -1,6 +1,6 @@
 # Central operativo Agora
 
-Fecha de actualizacion: 2026-04-27
+Fecha de actualizacion: 2026-04-29
 
 ## Uso rapido
 
@@ -70,7 +70,7 @@ Si el trabajo empieza hoy:
 2. revisar los lotes historicos de `wave_1`, `wave_2` y `wave_3` como evidencia de envio
 3. monitorear rebotes y respuestas
 4. registrar aprendizajes antes de abrir nuevas etapas
-5. hacer seguimiento a no respondidos el 2026-05-04
+5. hacer seguimiento a no respondidos elegibles el 2026-05-04
 
 ## Lectura estrategica
 
@@ -116,3 +116,16 @@ Se reinicio la operacion como `fresh launch`, se guardaron los Leads efectivos e
 Los 296 Leads de `wave_1`, `wave_2` y `wave_3` ya estan creados en ERPNext y el remitente oficial de los lotes es `ventas@elenxos.com`.
 
 Resultado acumulado: 296 aceptados por SMTP, 8 rebotes confirmados, 288 pendientes de respuesta y 4 contactos preparados por canal alterno. Auditoria OK: las plantillas mencionan procedencia UdeA/Universidad de Antioquia, no incluyen redes sociales, no duplican CTA de Agora y solo dejan sitios oficiales Elenxos/Agora.
+
+## Actualizacion 2026-04-29
+
+Se monitoreo INBOX en modo seguro y se sincronizaron rebotes IMAP desde el 2026-04-27:
+
+- [operacion-email/estado-operacion-2026-04-29.md](../05-datos-y-reportes/operacion-email/estado-operacion-2026-04-29.md)
+- [operacion-email/rebotes-recuperacion-2026-04-29.csv](../05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-29.csv)
+- [revision-correos-alternativos-rebotes-2026-04-29.md](../05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-29.md)
+- [preview-recuperacion-rebotes-2026-04-29.md](../04-mensajeria-email/preview-recuperacion-rebotes-2026-04-29.md)
+- [plan-seguimiento-281-2026-05-04.md](../05-datos-y-reportes/operacion-email/plan-seguimiento-281-2026-05-04.md)
+- [preview-seguimiento-281-2026-05-04.md](../04-mensajeria-email/preview-seguimiento-281-2026-05-04.md)
+
+Resultado acumulado actualizado: 296 aceptados por SMTP, 15 rebotes confirmados, 281 pendientes de respuesta y 4 contactos preparados por canal alterno. No se detectaron respuestas humanas nuevas desde el 2026-04-28 en la revision IMAP readonly.

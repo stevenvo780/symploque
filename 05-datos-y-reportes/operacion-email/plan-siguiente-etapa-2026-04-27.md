@@ -5,11 +5,11 @@ Fecha: 2026-04-27
 ## Estado base
 
 - Enviados aceptados por SMTP: 296
-- Rebotes confirmados: 8
-- Pendientes de respuesta: 288
+- Rebotes confirmados al 2026-04-29: 15
+- Pendientes de respuesta al 2026-04-29: 281
 - Leads creados en ERPNext: 296
 - Pendientes sin email valido: 4
-- Rebote acumulado inicial: 2.70%
+- Rebote acumulado actualizado: 5.07%
 
 ## Prioridad comercial
 
@@ -20,15 +20,15 @@ Maximizar conversion ahora no es enviar mas a la misma base: ya se contacto todo
 1. Monitorear INBOX de `ventas@elenxos.com` varias veces el 2026-04-27 y 2026-04-28.
 2. Ejecutar `scripts/sincronizar_rebotes_imap.py` despues de cada revision de correo.
 3. Responder manualmente en menos de 2 horas a cualquier senal positiva.
-4. Verificar correo alternativo para los 8 rebotados el 2026-04-28.
+4. Verificar correo alternativo para los 15 rebotados antes de cualquier reenvio.
 5. Enriquecer o descartar los 4 pendientes sin email valido.
-6. Preparar seguimiento corto para los 288 pendientes si no responden antes del 2026-05-04.
+6. Preparar seguimiento corto para los 281 pendientes si no responden antes del 2026-05-04.
 
 ## Segmentos para seguimiento
 
 - `wave_1`: 45 pendientes de respuesta, 1 rebote.
-- `wave_2`: 65 pendientes de respuesta, 5 rebotes.
-- `wave_3`: 178 pendientes de respuesta, 2 rebotes.
+- `wave_2`: 62 pendientes de respuesta, 8 rebotes.
+- `wave_3`: 174 pendientes de respuesta, 6 rebotes.
 
 ## Guardrails
 

@@ -11,7 +11,7 @@ Pasar de una base local de prospectos a una operacion ordenada desde ERP/CRM y c
 ## Contexto que cambia el plan
 
 - no habia correos previos confirmados antes de `wave_1`
-- `wave_1`, `wave_2` y `wave_3` ya registran 296 envios aceptados por SMTP, 8 rebotes confirmados
+- `wave_1`, `wave_2` y `wave_3` ya registran 296 envios aceptados por SMTP, 15 rebotes confirmados
 - no hay cola activa de `declaracion`
 - la automatizacion de envio corporativo esta documentada en `email.md`
 - ya existen sitios publicos vivos para `Elenxos` y `Agora`

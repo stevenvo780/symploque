@@ -5,8 +5,8 @@ Origen: INBOX de `ventas@elenxos.com` via IMAP.
 ## Resumen
 
 - Envios aceptados por SMTP: 296
-- Rebotes confirmados: 8
-- Pendientes de respuesta/seguimiento: 288
+- Rebotes confirmados: 15
+- Pendientes de respuesta/seguimiento: 281
 - Copias visibles de campana en carpeta `Sent`: 296
 
 ## Rebotes
@@ -16,15 +16,22 @@ Origen: INBOX de `ventas@elenxos.com` via IMAP.
 | `agora-legacy-029` | `luisfe.gutierrezcano@upb.edu.co` | `primer_contacto_wave_1` | `550 5.4.1 Recipient address rejected: Access denied` | Verificar correo alternativo o no contactar por email |
 | `agora-legacy-052` | `varga@javeriana.edu.co` | `primer_contacto_wave_2` | `554 5.4.14 Hop count exceeded - possible mail loop` | Verificar correo alternativo o no contactar por email |
 | `agora-legacy-056` | `m.lopeza01@javeriana.edu.co` | `primer_contacto_wave_2` | `554 5.4.14 Hop count exceeded - possible mail loop` | Verificar correo alternativo o no contactar por email |
+| `agora-legacy-057` | `investigacioncisc@javeriana.edu.co` | `primer_contacto_wave_2` | `554 5.4.14 Hop count exceeded - possible mail loop` | Verificar correo alternativo o no contactar por email |
 | `agora-legacy-059` | `maximoni.lopez@javeriana.edu.co` | `primer_contacto_wave_2` | `554 5.4.14 Hop count exceeded - possible mail loop` | Verificar correo alternativo o no contactar por email |
 | `agora-legacy-072` | `semillerosubjetividad@javeriana.edu.co` | `primer_contacto_wave_2` | `554 5.4.14 Hop count exceeded - possible mail loop` | Verificar correo alternativo o no contactar por email |
+| `agora-legacy-076` | `semillerol.n.a@javeriana.edu.co` | `primer_contacto_wave_2` | `554 5.4.14 Hop count exceeded - possible mail loop` | Verificar correo alternativo o no contactar por email |
 | `agora-legacy-099` | `arturij@uninorte.edu.co` | `primer_contacto_wave_2` | `550 5.4.1` | Verificar correo alternativo o no contactar por email |
+| `agora-legacy-111` | `patrujillomo@unal.edu.co` | `primer_contacto_wave_2` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
 | `agora-legacy-124` | `memontesro@unal.edu.co` | `primer_contacto_wave_3` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
+| `agora-legacy-131` | `fariverab@unal.edu.co` | `primer_contacto_wave_3` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
+| `agora-legacy-148` | `melopezhu@unal.edu.co` | `primer_contacto_wave_3` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
+| `agora-legacy-170` | `sgallini@unal.edu.co` | `primer_contacto_wave_3` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
+| `agora-legacy-243` | `jumdiazme@unal.edu.co` | `primer_contacto_wave_3` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
 | `agora-legacy-289` | `pmunozs@unal.edu.co` | `primer_contacto_wave_3` | `Address not found: recipient address could not be found or cannot receive mail` | Verificar correo alternativo o no contactar por email |
 
 ## Correccion aplicada
 
-- `correos-enviados-importar.csv`: `reply_status=bounced` para los 8 casos.
+- `correos-enviados-importar.csv`: `reply_status=bounced` para los 15 casos.
 - `contactos-maestro-operativo.csv`: `status=email_bounced`, `reply_status=bounced`, siguiente accion el `2026-04-28`.
 - `primer-contacto-wave-1.csv`, `primer-contacto-wave-2.csv` y `primer-contacto-wave-3.csv`: `send_status=bounced` para los casos devueltos.
 - `leads-agora-maestro.csv` y `leads-agora-top-50-hoy.csv`: estado historico corregido a `rebotado` donde aplica.
@@ -32,10 +39,10 @@ Origen: INBOX de `ventas@elenxos.com` via IMAP.
 
 ## Recuperacion preparada
 
-- Revision: `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-28.md`
-- Tabla operativa: `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-28.csv`
-- Preview de mensajes: `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-28.md`
-- Resultado: 2 correos corregidos listos para revision manual, 4 casos Javeriana en espera por `mail loop`, 2 casos para canal manual.
+- Revision: `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-29.md`
+- Tabla operativa: `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-29.csv`
+- Preview de mensajes: `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-29.md`
+- Resultado: 3 correos corregidos listos para revision manual, 6 casos Javeriana en espera por `mail loop`, 6 casos para canal manual o confirmacion adicional.
 
 ## Causa del problema de Enviados
 

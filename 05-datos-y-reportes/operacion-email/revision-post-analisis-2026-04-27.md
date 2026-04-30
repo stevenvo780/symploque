@@ -38,3 +38,12 @@
 2. El 2026-04-28, buscar correo alternativo o descartar los 8 rebotados.
 3. El 2026-04-28, ejecutar contacto manual por WhatsApp/telefono para los 4 prospectos de canal alterno.
 4. No enviar seguimiento masivo hasta el 2026-05-04, salvo respuesta humana o senal positiva.
+
+## Actualizacion 2026-04-29
+
+Este corte quedo superado por `05-datos-y-reportes/operacion-email/estado-operacion-2026-04-29.md`.
+
+- Rebotes acumulados: 15
+- Pendientes de respuesta: 281
+- Respuestas humanas nuevas desde el 2026-04-28: 0
+- Seguimiento actualizado: `05-datos-y-reportes/operacion-email/plan-seguimiento-281-2026-05-04.md`
