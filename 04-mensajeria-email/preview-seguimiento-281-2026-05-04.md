@@ -6,7 +6,7 @@
 - Plan: `05-datos-y-reportes/operacion-email/plan-seguimiento-281-2026-05-04.md`
 - Plantilla base: `04-mensajeria-email/05-seguimiento-corto.md`
 - Pendientes actuales: 281
-- Excluir siempre: rebotados, contactos por canal alterno, respuestas humanas, redirecciones ya registradas.
+- Excluir siempre: rebotados, contactos por canal alterno, respuestas humanas, redirecciones ya registradas, y los 3 correos de `recuperacion_rebote_2026_04_30` hasta el 2026-05-07.
 
 ## Distribucion actual
 
@@ -16,6 +16,8 @@
 | `wave_2` pendientes | 62 |
 | `wave_3` pendientes | 174 |
 | Total seguimiento elegible | 281 |
+
+Nota 2026-04-30: hay 284 pendientes activos en total, pero el seguimiento del 2026-05-04 conserva 281 elegibles porque las 3 recuperaciones enviadas el 2026-04-30 tienen seguimiento propio el 2026-05-07.
 
 ## Regla de envio
 

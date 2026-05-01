@@ -289,3 +289,62 @@
 - Verification:
   - Current counts: 296 SMTP accepted, 15 bounced, 281 pending replies, 4 alternate-channel prospects.
   - No outreach emails, WhatsApp messages, phone calls, ERP writes, or social publications were executed.
+
+## 2026-04-30
+
+- Goal: Start today's operation using the current protocol and prepare ethical alternate-channel navigation.
+- Actions:
+  - Checked repo state and reviewed `NEXT_ACTIONS.md` plus latest operation state.
+  - Monitored INBOX readonly from 2026-04-30: 0 new bounces, 0 human replies.
+  - Created `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md` with transparent routing scripts for institutional bots/assistants.
+  - Created `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv` for manual result capture.
+  - Added `scripts/registrar_canal_alterno.py` to apply confirmed manual-channel outcomes to operational CSVs after dry-run review.
+  - Linked the WhatsApp/bot protocol from the alternate-channel preview.
+- Verification:
+  - Did not use deceptive social engineering, false identity, or bot bypass. Protocol requires honest Elenxos/Agora identification and legitimate redirection requests.
+  - No emails, WhatsApp messages, phone calls, ERP writes, or social publications were executed.
+
+## 2026-04-30 2
+
+- Goal: Execute the reviewed recoverable-bounce email action.
+- Actions:
+  - Added `scripts/enviar_recuperacion_rebotes.py` with dry-run default and explicit `--send --yes` gate.
+  - Ran dry-run for the 3 corrected institutional emails and confirmed no duplicate/blocker.
+  - Sent `recuperacion_rebote_2026_04_30` from `ventas@elenxos.com` to the 3 corrected recipients.
+  - Updated `correos-enviados-importar.csv`, `contactos-maestro-operativo.csv`, `leads-agora-maestro.csv`, and `leads-agora-top-50-hoy.csv`.
+  - Updated `00-central/agente.md` so the daily protocol starts from the 2026-04-30 state.
+  - Left the 6 Javeriana `mail loop` cases and 6 manual-confirmation cases on hold.
+- Verification:
+  - SMTP accepted 3/3 and IMAP appended 3/3 copies to `Sent`.
+  - `scripts/auditar_operacion_email.py --fail-on-blockers` passes with `blockers=0 warnings=0`.
+  - `scripts/sincronizar_rebotes_imap.py --since 30-Apr-2026 --dry-run` found 0 new bounces after execution.
+  - Current active state: 299 SMTP accepted, 284 pending replies, 12 active bounces, 4 alternate-channel prospects.
+
+## 2026-05-01
+
+- Goal: Start today's operation and activate the WhatsApp/canal alterno workflow with the latest safeguards.
+- Actions:
+  - Checked repo state: `main...origin/main [ahead 1]` with recent operational edits in progress.
+  - Ran `scripts/auditar_operacion_email.py --fail-on-blockers`: `blockers=0 warnings=0`.
+  - Ran `scripts/sincronizar_rebotes_imap.py --since 01-May-2026 --dry-run`: 0 new bounces.
+  - Checked INBOX readonly for non-bounce/human replies since 2026-05-01: 0 detected.
+  - Ran `scripts/registrar_canal_alterno.py` in dry-run: 0 applicable manual results.
+  - Created `04-mensajeria-email/operacion-whatsapp-2026-05-01.md` with the manual WhatsApp/phone queue, links, scripts, bot guardrails, and registration flow.
+  - Created `05-datos-y-reportes/operacion-email/revision-post-analisis-2026-05-01.md` and updated the operation state/NEXT_ACTIONS.
+- Verification:
+  - Local audit remains clean.
+  - No WhatsApp messages, phone calls, outreach emails, ERP writes, or social publications were executed from the repo.
+  - Manual execution remains open for 3 WhatsApp contacts and 1 phone contact.
+
+## 2026-05-01 2
+
+- Goal: Attempt WhatsApp execution directly from Codex after explicit operator instruction.
+- Actions:
+  - Checked for WhatsApp Business/API integrations, Twilio/Meta credentials, browser automation tools, and local UI control tools.
+  - Confirmed no WhatsApp API or safe UI automation stack is configured in the repo/session.
+  - Opened the 3 `wa.me` links with prefilled transparent messages in Firefox for `agora-legacy-018`, `agora-legacy-019`, and `agora-legacy-022`.
+  - Updated the WhatsApp operation doc, post-analysis review, and next actions to record that links were opened but final send is not verifiable from shell.
+- Verification:
+  - Terminal confirmed the 3 URLs were launched.
+  - Did not mark CSV rows as contacted because there is no reliable send confirmation from this environment.
+  - Did not execute the phone call for `agora-legacy-033`.

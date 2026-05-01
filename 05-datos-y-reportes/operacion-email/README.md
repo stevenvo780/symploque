@@ -1,27 +1,29 @@
 # Operacion email y ERP
 
-Fecha operativa: 2026-04-29
+Fecha operativa: 2026-05-01
 
 ## Estado actual
 
 - `wave_1`, `wave_2` y `wave_3` ya fueron contactadas por primer correo corporativo el 2026-04-27.
-- `leads-agora-maestro.csv` registra 281 filas en `estado=contactado`, 15 en `estado=rebotado` y 4 pendientes por canal alterno.
-- `leads-agora-top-50-hoy.csv` registra 45 filas en `estado=contactado`, 1 en `estado=rebotado` y 4 pendientes sin email.
+- Se ejecuto recuperacion de 3 rebotes corregidos el 2026-04-30.
+- `leads-agora-maestro.csv` registra 284 filas en `estado=contactado`, 12 en `estado=rebotado` y 4 pendientes por canal alterno.
+- `leads-agora-top-50-hoy.csv` registra 46 filas en `estado=contactado` y 4 pendientes sin email.
 - `contactos-maestro-operativo.csv` tiene 300 prospectos.
 - Hay 296 contactos con email valido.
 - La primera ola (`wave_1`) tiene 50 contactos, de los cuales 46 tienen email.
 - La segunda ola (`wave_2`) tiene 70 contactos, todos con email.
-- `correos-enviados-importar.csv` registra 296 envios aceptados por SMTP.
-- Rebotes confirmados: 15; pendientes de respuesta: 281.
+- `correos-enviados-importar.csv` registra 299 envios aceptados por SMTP.
+- Rebotes historicos confirmados: 15; rebotes activos por recuperar: 12; pendientes de respuesta: 284.
 - `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` estan vacios porque este fue primer contacto real.
 - Los lotes ERP quedaron exportados en `erp-leads-wave-1.csv`, `erp-leads-wave-2.csv` y `erp-leads-wave-3.csv`.
 - Los lotes de correo quedaron enviados y marcados como `send_status=sent` o `send_status=bounced` en `primer-contacto-wave-1.csv`, `primer-contacto-wave-2.csv` y `primer-contacto-wave-3.csv`.
 - Los reportes de `wave_2` y `wave_3` quedaron en `reporte-wave-2-2026-04-27.md` y `reporte-wave-3-2026-04-27.md`; el estado consolidado actual esta en `estado-operacion-2026-04-29.md`.
 - El reporte de rebotes quedo en `rebotes-detectados-2026-04-27.md`.
 - El plan siguiente quedo en `plan-siguiente-etapa-2026-04-27.md`.
-- La revision post-analisis vigente quedo en `revision-post-analisis-2026-04-29.md`.
+- La revision post-analisis vigente quedo en `revision-post-analisis-2026-05-01.md`.
 - La cola de canales alternos quedo en `canales-alternos-pendientes-2026-04-27.csv`.
-- La carpeta IMAP `Sent` tiene 296 copias visibles de campana (`wave_1`, `wave_2`, `wave_3`) mas 1 prueba interna.
+- La operacion WhatsApp/canal alterno del dia quedo en `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`.
+- La carpeta IMAP `Sent` tiene 299 copias visibles de campana (`wave_1`, `wave_2`, `wave_3` y recuperacion de rebotes) mas 1 prueba interna.
 - El remitente oficial de la operacion es `ventas@elenxos.com`.
 - Los 296 Leads de `wave_1`, `wave_2` y `wave_3` ya estan creados en ERPNext y sincronizados localmente.
 
@@ -119,6 +121,16 @@ No se versionan secretos reales.
 - Envio real `wave_1`: OK SMTP, 46 aceptados, 1 rebote confirmado.
 - Envio real `wave_2`: OK SMTP, 70 aceptados, 5 rebotes confirmados.
 - Envio real `wave_3`: OK SMTP, 180 aceptados, 2 rebotes confirmados.
-- Envio acumulado actualizado al 2026-04-29: 296 aceptados por SMTP, 15 rebotes, 281 pendientes de respuesta.
-- Correccion IMAP: 296 copias de campana visibles en `Sent`; el problema original era que la API SMTP no guardaba copia en Enviados.
+- Envio acumulado actualizado al 2026-05-01: 299 aceptados por SMTP, 15 rebotes historicos, 12 rebotes activos y 284 pendientes de respuesta.
+- Correccion IMAP: 299 copias de campana visibles en `Sent`; el problema original era que la API SMTP no guardaba copia en Enviados.
 - Seguimiento recomendado: revisar respuestas y rebotes; si no hay respuesta, siguiente accion el 2026-05-04.
+
+## Ejecucion 2026-05-01
+
+- Auditoria local: OK, sin bloqueadores.
+- INBOX readonly desde el 2026-05-01: 0 respuestas humanas, 0 rebotes nuevos.
+- Canal alterno/WhatsApp iniciado como ejecucion manual:
+  - `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`
+  - `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`
+  - `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
+- Dry-run de `scripts/registrar_canal_alterno.py`: 0 resultados aplicables hasta que el operador registre intentos reales.

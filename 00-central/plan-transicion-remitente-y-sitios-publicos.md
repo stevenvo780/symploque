@@ -1,8 +1,8 @@
 # Plan de transicion: remitente personal, remitente corporativo y sitios publicos
 
-Fecha de actualizacion: 2026-04-27
+Fecha de actualizacion: 2026-05-01
 
-> Actualizacion operativa: se confirmo que no habia contactos previos, se reinicio como `fresh launch`, se crearon 296 Leads de `wave_1`/`wave_2`/`wave_3` en ERPNext y se envio el primer contacto corporativo desde `ventas@elenxos.com`.
+> Actualizacion operativa: se confirmo que no habia contactos previos, se reinicio como `fresh launch`, se crearon 296 Leads de `wave_1`/`wave_2`/`wave_3` en ERPNext, se envio el primer contacto corporativo desde `ventas@elenxos.com` y se recuperaron 3 rebotes corregidos.
 
 ## Objetivo
 
@@ -11,7 +11,7 @@ Pasar de una base local de prospectos a una operacion ordenada desde ERP/CRM y c
 ## Contexto que cambia el plan
 
 - no habia correos previos confirmados antes de `wave_1`
-- `wave_1`, `wave_2` y `wave_3` ya registran 296 envios aceptados por SMTP, 15 rebotes confirmados
+- `wave_1`, `wave_2`, `wave_3` y recuperacion registran 299 envios aceptados por SMTP, 15 rebotes historicos y 12 rebotes activos por recuperar
 - no hay cola activa de `declaracion`
 - la automatizacion de envio corporativo esta documentada en `email.md`
 - ya existen sitios publicos vivos para `Elenxos` y `Agora`
@@ -79,6 +79,11 @@ Estado `wave_1`, `wave_2` y `wave_3`:
 - firma y cuerpo: solo sitios oficiales Elenxos/Agora, sin redes sociales
 - auditoria: confirma mencion UdeA/Universidad de Antioquia
 
+Estado recuperacion:
+- completado el 2026-04-30 para 3 correos corregidos
+- total SMTP vigente: 299 aceptados
+- canal alterno/WhatsApp iniciado el 2026-05-01 para 4 contactos sin email
+
 ## Fase 2. Checklist de salida de campana
 
 La nueva ola comercial no debe salir hasta confirmar:
@@ -119,10 +124,12 @@ Cada contacto debe terminar en `contactos-maestro-operativo.csv` con:
 ## Cola inmediata
 
 1. monitorear rebotes y respuestas de `wave_1`, `wave_2` y `wave_3`
-2. hacer seguimiento a no respondidos el 2026-05-04
-3. registrar aprendizajes antes de abrir nuevas etapas
-4. preparar cualquier nueva ola solo con Leads guardados o sincronizados en ERPNext
-5. mantener la auditoria sin redes sociales, con sitios oficiales y mencion UdeA cuando aplique
+2. monitorear rebotes/respuestas de la recuperacion `recuperacion_rebote_2026_04_30`
+3. ejecutar y registrar canal alterno/WhatsApp para 4 contactos sin email
+4. hacer seguimiento a no respondidos elegibles el 2026-05-04, excluyendo los 3 recuperados hasta el 2026-05-07
+5. registrar aprendizajes antes de abrir nuevas etapas
+6. preparar cualquier nueva ola solo con Leads guardados o sincronizados en ERPNext
+7. mantener la auditoria sin redes sociales, con sitios oficiales y mencion UdeA cuando aplique
 
 ## Riesgos principales
 

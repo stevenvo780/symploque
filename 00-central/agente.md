@@ -33,17 +33,19 @@ Pero no limite:
 
 ## Estado operativo actual
 
-Corte: 2026-04-29.
+Corte: 2026-05-01, despues de monitoreo readonly y arranque de canal alterno.
 
 - `wave_1`, `wave_2` y `wave_3` ya fueron enviadas desde `ventas@elenxos.com`.
 - 296 Leads estan creados y sincronizados en ERPNext.
-- 296 correos fueron aceptados por SMTP.
-- 15 contactos tienen rebote confirmado y no deben recibir nuevo correo sin direccion alternativa verificada.
-- 281 contactos siguen pendientes de respuesta.
+- 299 correos fueron aceptados por SMTP: 296 envios iniciales y 3 recuperaciones.
+- 15 contactos tuvieron rebote confirmado historico; 12 siguen como rebotes activos por recuperar.
+- 284 contactos siguen pendientes de respuesta.
 - 4 contactos sin email valido quedaron preparados para canal alterno.
-- El siguiente seguimiento masivo esta programado para el 2026-05-04, salvo respuesta humana o senal positiva antes de esa fecha.
+- INBOX readonly del 2026-05-01: 0 respuestas humanas y 0 rebotes nuevos.
+- La operacion WhatsApp/canal alterno del 2026-05-01 quedo iniciada para ejecucion manual con registro posterior.
+- El siguiente seguimiento masivo elegible esta programado para el 2026-05-04 con 281 contactos; las 3 recuperaciones del 2026-04-30 tienen seguimiento propio el 2026-05-07.
 - `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` deben permanecer vacios salvo evidencia real de contacto previo.
-- La prioridad inmediata no es abrir otra tanda masiva; es capturar respuestas, rescatar rebotes, operar canales alternos y preparar seguimiento.
+- La prioridad inmediata no es abrir otra tanda masiva; es capturar respuestas, monitorear recuperaciones, rescatar rebotes activos, operar canales alternos y preparar seguimiento.
 
 ## Modelo comercial
 
@@ -73,14 +75,14 @@ No debe enviar correos, WhatsApp, DMs, publicar en redes, crear registros extern
 Ejecutar esta rutina al iniciar cada sesion operativa:
 
 1. Revisar el estado del repo con `git status --short --branch`. Si aparece divergencia como `main...origin/main [ahead 1, behind 1]`, dejarla visible antes de editar y evitar pisar trabajo remoto.
-2. Leer `docs/codex/NEXT_ACTIONS.md`, `05-datos-y-reportes/operacion-email/estado-operacion-2026-04-29.md`, `05-datos-y-reportes/operacion-email/plan-siguiente-etapa-2026-04-27.md` y `05-datos-y-reportes/operacion-email/revision-post-analisis-2026-04-29.md` cuando exista.
+2. Leer `docs/codex/NEXT_ACTIONS.md`, `05-datos-y-reportes/operacion-email/estado-operacion-2026-04-29.md`, `05-datos-y-reportes/operacion-email/revision-post-analisis-2026-04-30.md` y el plan de seguimiento vigente antes de actuar.
 3. Correr auditoria local cuando se vaya a tocar mensajeria o datos: `python3 scripts/auditar_operacion_email.py --fail-on-blockers`.
 4. Monitorear INBOX de `ventas@elenxos.com` cuando el operador lo pida o cuando existan credenciales disponibles en la sesion.
 5. Registrar respuestas humanas, rebotes, redirecciones y senales positivas antes de preparar cualquier nueva accion.
 6. Responder una senal positiva en menos de 2 horas con propuesta de demo, piloto o workspace inicial.
-7. Revisar los 15 rebotados y buscar correo alternativo oficial antes de descartarlos.
+7. Revisar los 12 rebotes activos y buscar correo alternativo oficial antes de descartarlos.
 8. Ejecutar o dejar preparado el contacto manual de los 4 prospectos por canal alterno, sin asumir que el repo puede enviar WhatsApp o llamar por telefono.
-9. Preparar el seguimiento corto para los 281 pendientes solo si no responden antes del 2026-05-04.
+9. Preparar el seguimiento corto para los 281 elegibles solo si no responden antes del 2026-05-04; monitorear aparte los 3 recuperados con fecha 2026-05-07.
 10. No abrir una nueva tanda masiva hasta cerrar la revision post-envio de respuestas, rebotes y aprendizajes de `wave_1`, `wave_2` y `wave_3`.
 
 ## Rutina diaria de crecimiento

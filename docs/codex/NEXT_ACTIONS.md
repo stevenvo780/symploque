@@ -44,16 +44,26 @@
 - [x] Sincronizar 15 rebotes confirmados y actualizar pendientes a 281.
 - [x] Preparar recuperacion de 15 rebotes y seguimiento actualizado de 281 pendientes.
 - [x] **REDES — Re-verificar LinkedIn/X el 2026-04-29**: LinkedIn `/company/elenxos` sigue 404; X requiere confirmacion manual autenticada.
+- [x] Monitorear INBOX el 2026-04-30: 0 respuestas humanas, 0 rebotes nuevos.
+- [x] Preparar protocolo transparente WhatsApp/bots para canal alterno y registro operativo.
+- [x] Crear script local para registrar resultados manuales de canal alterno en CSVs.
+- [x] Ejecutar envio manual revisado a 3 correos corregidos de rebotes recuperables: 3 enviados, 0 fallidos, copias en `Sent`.
+- [x] Monitorear INBOX el 2026-05-01: 0 respuestas humanas, 0 rebotes nuevos.
+- [x] Iniciar operacion WhatsApp/canal alterno 2026-05-01 con documento operativo y registro listo.
+- [x] Abrir en Firefox los 3 chats WhatsApp prellenados para canal alterno; envio final no verificable desde shell.
 
 ## Next
 
 - [ ] Monitorear respuestas nuevas de `wave_1`, `wave_2` y `wave_3`.
-- [ ] Ejecutar envio manual revisado a 3 correos corregidos de rebotes recuperables.
+- [ ] Monitorear rebotes/respuestas de la recuperacion `recuperacion_rebote_2026_04_30`.
 - [ ] Reintentar Javeriana solo si cesa el `mail loop` o usar backup con redireccion manual.
-- [ ] Ejecutar contacto manual/canal alterno para 4 prospectos sin email el 2026-04-28.
+- [ ] Confirmar visualmente si los 3 WhatsApp abiertos quedaron enviados y registrar resultado real.
+- [ ] Ejecutar llamada/canal alterno para `agora-legacy-033` si procede.
+- [ ] Registrar resultados reales del canal alterno en `registro-canal-alterno-2026-04-30.csv`.
+- [ ] Aplicar resultados manuales con `python3 scripts/registrar_canal_alterno.py --apply` solo despues de revisar el dry-run.
 - [ ] El 2026-05-04, revisar INBOX/rebotes y generar lote final de seguimiento a elegibles.
 - [ ] Hacer seguimiento a los contactos sin respuesta el 2026-05-04 solo despues de preview aprobado.
-- [ ] Preparar la siguiente etapa solo despues de revisar respuestas, rebotes y senales de interes de los 296 envios.
+- [ ] Preparar la siguiente etapa solo despues de revisar respuestas, rebotes y senales de interes de los 296 envios iniciales y 3 recuperaciones.
 - [ ] **REDES — Crear la pagina de empresa de LinkedIn o documentar la URL correcta** (la actual retorna 404).
 - [ ] **REDES — Definir y documentar el handle de X/Twitter** (actualmente TBD, bloquea publicacion en X).
 - [x] **REDES — Verificar acceso a `media@elenxos.com`** para recibir codigos de verificacion de plataformas. (resuelto 2026-04-24, correo de prueba admin→ventas exitoso)

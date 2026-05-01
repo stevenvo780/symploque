@@ -4,6 +4,8 @@
 
 - CSV fuente: `05-datos-y-reportes/operacion-email/canales-alternos-pendientes-2026-04-27.csv`
 - Lote base: `04-mensajeria-email/lote-canal-alterno-2026-04-27.md`
+- Protocolo para bots/asesores: `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`
+- Registro operativo: `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
 - Total: 4 prospectos sin email valido
 - Canales: 3 WhatsApp oficiales, 1 telefono directo
 - Accion: enviar manualmente el mensaje o llamar para pedir redireccion a la persona/correo adecuado.

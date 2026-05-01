@@ -1,25 +1,27 @@
 # Estado de operacion email / ERP
 
-Fecha de corte: 2026-04-29
+Fecha de corte: 2026-04-30, despues de recuperacion de 3 rebotes corregidos
 
 ## Resumen
 
 - Leads creados en ERPNext: 296
-- Envios aceptados por SMTP: 296
-- Rebotes confirmados acumulados: 15
-- Pendientes de respuesta: 281
+- Envios aceptados por SMTP: 299
+- Rebotes confirmados historicos: 15
+- Rebotes activos por recuperar: 12
+- Pendientes de respuesta: 284
 - Prospectos sin email valido preparados por canal alterno: 4
 - Respuestas humanas nuevas detectadas desde el 2026-04-28: 0
-- Rebote acumulado: 5.07%
+- Rebote historico acumulado: 5.02%
+- Rebote activo tras recuperacion: 4.01%
 
 ## Estado de bases
 
 | Archivo | Estado |
 |---|---|
-| `leads-agora-maestro.csv` | 281 contactados, 15 rebotados, 4 pendientes por canal alterno |
-| `leads-agora-top-50-hoy.csv` | 45 contactados, 1 rebotado, 4 pendientes sin email |
-| `contactos-maestro-operativo.csv` | 281 pendientes de respuesta, 15 rebotados, 4 preparados por canal alterno |
-| `correos-enviados-importar.csv` | 296 aceptados por SMTP, 281 pendientes, 15 rebotados |
+| `leads-agora-maestro.csv` | 284 contactados, 12 rebotados, 4 pendientes por canal alterno |
+| `leads-agora-top-50-hoy.csv` | 46 contactados, 4 pendientes sin email |
+| `contactos-maestro-operativo.csv` | 284 pendientes de respuesta, 12 rebotados, 4 preparados por canal alterno |
+| `correos-enviados-importar.csv` | 299 aceptados por SMTP, 284 pendientes, 15 rebotes historicos |
 | `primer-contacto-wave-1.csv` | 45 pendientes, 1 rebote |
 | `primer-contacto-wave-2.csv` | 62 pendientes, 8 rebotes |
 | `primer-contacto-wave-3.csv` | 174 pendientes, 6 rebotes |
@@ -52,6 +54,31 @@ El monitoreo IMAP del 2026-04-29 consolido 15 rebotes asociados a envios registr
 
 1. No enviar seguimiento masivo antes del 2026-05-04.
 2. Ejecutar contacto manual de los 4 prospectos sin email si el operador confirma que ya puede hacerlo.
-3. Revisar manualmente los 3 correos corregidos de rebotes recuperables antes de cualquier reenvio.
+3. Monitorear los 3 correos corregidos enviados el 2026-04-30.
 4. Mantener en espera los 6 casos Javeriana mientras persista el `mail loop`.
 5. El 2026-05-04, revisar INBOX/rebotes y generar lote final solo con elegibles.
+
+## Actualizacion 2026-04-30
+
+- INBOX readonly desde el 2026-04-30: 0 respuestas humanas, 0 rebotes nuevos.
+- Canal alterno preparado con protocolo transparente para bots/asesores:
+  - `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`
+  - `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
+- Recuperacion de rebotes ejecutada:
+  - Campana: `recuperacion_rebote_2026_04_30`
+  - Enviados: 3
+  - Fallidos: 0
+  - Copias IMAP `Sent`: 3 anexadas
+  - Log: `05-datos-y-reportes/operacion-email/logs/recuperacion-rebotes-20260430-110321.csv`
+  - Rebotes nuevos detectados despues del envio: 0 en dry-run IMAP.
+
+## Actualizacion 2026-05-01
+
+- Auditoria local de operacion email: `blockers=0 warnings=0`.
+- INBOX readonly desde el 2026-05-01:
+  - Rebotes nuevos: 0.
+  - Mensajes no rebote / respuestas humanas: 0.
+- Operacion WhatsApp/canal alterno iniciada para ejecucion manual:
+  - `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`
+  - Registro pendiente: `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
+- Dry-run de registro manual: 0 resultados aplicables; no se aplicaron cambios a maestros.

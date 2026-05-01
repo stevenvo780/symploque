@@ -5,7 +5,7 @@
 - Preview de mensajes: `04-mensajeria-email/preview-seguimiento-281-2026-05-04.md`
 - Base operativa: `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`
 - Contactos elegibles actuales: 281 pendientes de respuesta
-- Contactos excluidos: 15 rebotados, 4 por canal alterno, cualquier respuesta humana nueva
+- Contactos excluidos: 12 rebotados activos, 4 por canal alterno, 3 recuperaciones enviadas el 2026-04-30 con seguimiento propio el 2026-05-07, cualquier respuesta humana nueva
 
 ## Objetivo
 
@@ -20,6 +20,7 @@ Un contacto entra al seguimiento si cumple todo esto:
 - `next_action_date=2026-05-04`
 - `last_campaign` pertenece a `primer_contacto_wave_1`, `primer_contacto_wave_2` o `primer_contacto_wave_3`
 - no aparece como rebotado en `rebotes-detectados-2026-04-27.csv`
+- no pertenece a `recuperacion_rebote_2026_04_30` con `next_action_date=2026-05-07`
 - no tiene respuesta humana nueva registrada
 
 ## Orden de trabajo
@@ -40,6 +41,8 @@ Un contacto entra al seguimiento si cumple todo esto:
 | `wave_2` | 62 | 8 |
 | `wave_3` | 174 | 6 |
 | Total | 281 | 15 |
+
+Nota 2026-04-30: el estado global quedo en 284 pendientes activos despues de recuperar 3 rebotes por correo corregido. Esos 3 no entran al seguimiento del 2026-05-04; su fecha propia de seguimiento es 2026-05-07.
 
 ## Reglas comerciales
 

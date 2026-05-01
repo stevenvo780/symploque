@@ -4,7 +4,7 @@
 
 - Purpose: repositorio operativo para outreach comercial de `Elenxos` y `Agora`.
 - Primary users: operador comercial y agente de Codex encargado de ordenar datos, guardar Leads en ERPNext, preparar correo corporativo y ejecutar outreach con trazabilidad.
-- Current focus: seguimiento post-envio de `wave_1`, `wave_2` y `wave_3`. Hay 296 Leads creados en ERPNext, 296 envios aceptados por SMTP, 15 rebotes confirmados, 281 contactos pendientes de respuesta y 4 prospectos preparados por canal alterno.
+- Current focus: seguimiento post-envio de `wave_1`, `wave_2`, `wave_3` y recuperacion de rebotes. Hay 296 Leads creados en ERPNext, 299 envios aceptados por SMTP, 15 rebotes historicos, 12 rebotes activos por recuperar, 284 contactos pendientes de respuesta y 4 prospectos preparados por canal alterno.
 
 ## Architecture
 
@@ -22,8 +22,8 @@
   - `03-operacion-redes/` y `06-redes-sociales/`: narrativa, calendario y operaciones de redes
   - `scripts/`: automatizaciones de bootstrap, auditoria, ERPNext y envio controlado
 - Data stores and external services:
-  - `leads-agora-maestro.csv`: 300 prospectos; 281 contactados, 15 rebotados y 4 pendientes por canal alterno
-  - `contactos-maestro-operativo.csv`: 300 prospectos; 296 sincronizados con ERPNext, 281 pendientes de respuesta, 15 rebotados y 4 preparados por canal alterno
+  - `leads-agora-maestro.csv`: 300 prospectos; 284 contactados, 12 rebotados y 4 pendientes por canal alterno
+  - `contactos-maestro-operativo.csv`: 300 prospectos; 296 sincronizados con ERPNext, 284 pendientes de respuesta, 12 rebotados y 4 preparados por canal alterno
   - ERP/CRM: `https://crm.proxy.humanizar-dev.cloud`
   - Mail API: `https://mailapi.proxy.humanizar-dev.cloud`
   - sitio corporativo: `https://www.elenxos.com/`
@@ -53,8 +53,8 @@
 - Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-1-revision.md`.
 - Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-2-revision.md`.
 - Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-3-revision.md`.
-- Envio real acumulado: 296 aceptados por SMTP; 15 rebotados, 281 pendientes de respuesta; siguiente seguimiento elegible el 2026-05-04.
-- Carpeta IMAP `Sent`: 296 copias de campana visibles; futuros envios anexan copia automaticamente.
+- Envio real acumulado: 299 aceptados por SMTP; 15 rebotes historicos, 12 rebotes activos, 284 pendientes de respuesta; siguiente seguimiento elegible el 2026-05-04 para 281 contactos, excluyendo las 3 recuperaciones hasta el 2026-05-07.
+- Carpeta IMAP `Sent`: 299 copias de campana visibles; futuros envios anexan copia automaticamente.
 - Auditoria de mensajeria confirma UdeA/Universidad de Antioquia, ausencia de redes sociales, ausencia de CTA duplicado y sitios oficiales Elenxos/Agora.
 
 ## Constraints

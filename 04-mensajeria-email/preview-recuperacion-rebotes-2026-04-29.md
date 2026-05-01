@@ -1,11 +1,12 @@
 # Preview recuperacion de rebotes - 2026-04-29
 
-> Estado: listo para revision manual. No se enviaron correos desde el repo.
+> Estado: ejecutado parcialmente el 2026-04-30. Se enviaron solo los 3 correos corregidos; no se reintentaron casos Javeriana ni contactos sin confirmacion.
 
 - Revision fuente: `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-29.md`
 - Tabla operativa: `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-29.csv`
 - Envio recomendado ahora: solo 3 contactos con correo corregido.
 - Casos en espera: 6 Javeriana por `mail loop`, 6 por canal manual o confirmacion adicional.
+- Ejecucion: `recuperacion_rebote_2026_04_30`, 3 enviados, 0 fallidos, copias en `Sent`.
 
 ## Guardrails
 
@@ -15,7 +16,7 @@
 - No usar correos externos sin decision manual.
 - Registrar cada envio real con fecha, campana, remitente y resultado.
 
-## Listos para correo manual revisado
+## Enviados por correo manual revisado
 
 ### 1. Luis Fernando Gutierrez Cano - UPB
 

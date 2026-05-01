@@ -1,6 +1,6 @@
 # Central operativo Agora
 
-Fecha de actualizacion: 2026-04-29
+Fecha de actualizacion: 2026-05-01
 
 ## Uso rapido
 
@@ -16,7 +16,7 @@ Si solo vas a abrir tres archivos, abre estos:
 - Objetivo comercial inicial: 100 clientes en 3 meses
 - Logica actual: partir de UdeA y escalar a universidades y nodos afines
 - Modelo: freemium
-- Activo mas valioso hoy: 300 prospectos, 296 Leads en ERPNext y 296 primeros contactos enviados desde canal corporativo
+- Activo mas valioso hoy: 300 prospectos, 296 Leads en ERPNext, 299 envios SMTP aceptados y canal alterno listo para 4 contactos sin email
 
 ## Mapa de carpetas
 
@@ -69,8 +69,9 @@ Si el trabajo empieza hoy:
 1. abrir [operacion-email/README.md](../05-datos-y-reportes/operacion-email/README.md)
 2. revisar los lotes historicos de `wave_1`, `wave_2` y `wave_3` como evidencia de envio
 3. monitorear rebotes y respuestas
-4. registrar aprendizajes antes de abrir nuevas etapas
-5. hacer seguimiento a no respondidos elegibles el 2026-05-04
+4. ejecutar manualmente canal alterno/WhatsApp para los 4 contactos sin email
+5. registrar aprendizajes antes de abrir nuevas etapas
+6. hacer seguimiento a no respondidos elegibles el 2026-05-04
 
 ## Lectura estrategica
 
@@ -115,7 +116,7 @@ Se reinicio la operacion como `fresh launch`, se guardaron los Leads efectivos e
 
 Los 296 Leads de `wave_1`, `wave_2` y `wave_3` ya estan creados en ERPNext y el remitente oficial de los lotes es `ventas@elenxos.com`.
 
-Resultado acumulado: 296 aceptados por SMTP, 8 rebotes confirmados, 288 pendientes de respuesta y 4 contactos preparados por canal alterno. Auditoria OK: las plantillas mencionan procedencia UdeA/Universidad de Antioquia, no incluyen redes sociales, no duplican CTA de Agora y solo dejan sitios oficiales Elenxos/Agora.
+Resultado acumulado al 2026-04-27: 296 aceptados por SMTP, 8 rebotes confirmados, 288 pendientes de respuesta y 4 contactos preparados por canal alterno. Auditoria OK: las plantillas mencionan procedencia UdeA/Universidad de Antioquia, no incluyen redes sociales, no duplican CTA de Agora y solo dejan sitios oficiales Elenxos/Agora.
 
 ## Actualizacion 2026-04-29
 
@@ -128,4 +129,15 @@ Se monitoreo INBOX en modo seguro y se sincronizaron rebotes IMAP desde el 2026-
 - [plan-seguimiento-281-2026-05-04.md](../05-datos-y-reportes/operacion-email/plan-seguimiento-281-2026-05-04.md)
 - [preview-seguimiento-281-2026-05-04.md](../04-mensajeria-email/preview-seguimiento-281-2026-05-04.md)
 
-Resultado acumulado actualizado: 296 aceptados por SMTP, 15 rebotes confirmados, 281 pendientes de respuesta y 4 contactos preparados por canal alterno. No se detectaron respuestas humanas nuevas desde el 2026-04-28 en la revision IMAP readonly.
+Resultado acumulado al 2026-04-29: 296 aceptados por SMTP, 15 rebotes confirmados, 281 pendientes de respuesta y 4 contactos preparados por canal alterno. No se detectaron respuestas humanas nuevas desde el 2026-04-28 en la revision IMAP readonly.
+
+## Actualizacion 2026-04-30 / 2026-05-01
+
+Se ejecuto recuperacion de 3 rebotes corregidos el 2026-04-30 y se inicio la operacion WhatsApp/canal alterno el 2026-05-01:
+
+- [operacion-whatsapp-2026-05-01.md](../04-mensajeria-email/operacion-whatsapp-2026-05-01.md)
+- [protocolo-whatsapp-bots-2026-04-30.md](../04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md)
+- [registro-canal-alterno-2026-04-30.csv](../05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv)
+- [revision-post-analisis-2026-05-01.md](../05-datos-y-reportes/operacion-email/revision-post-analisis-2026-05-01.md)
+
+Resultado vigente: 299 aceptados por SMTP, 15 rebotes historicos, 12 rebotes activos por recuperar, 284 pendientes de respuesta y 4 contactos preparados por canal alterno. INBOX readonly desde el 2026-05-01: 0 respuestas humanas y 0 rebotes nuevos.
