@@ -57,10 +57,11 @@
 - [ ] Monitorear respuestas nuevas de `wave_1`, `wave_2` y `wave_3`.
 - [ ] Monitorear rebotes/respuestas de la recuperacion `recuperacion_rebote_2026_04_30`.
 - [ ] Reintentar Javeriana solo si cesa el `mail loop` o usar backup con redireccion manual.
-- [ ] Confirmar visualmente si los 3 WhatsApp abiertos quedaron enviados y registrar resultado real.
-- [ ] Ejecutar llamada/canal alterno para `agora-legacy-033` si procede.
-- [ ] Registrar resultados reales del canal alterno en `registro-canal-alterno-2026-04-30.csv`.
+- [x] Confirmar visualmente si los 3 WhatsApp abiertos quedaron enviados y registrar resultado real. **CONFIRMADO 2026-05-01**: 3 enviados, 3 bots respondieron, asesores no disponibles por festivo.
+- [ ] Ejecutar llamada/canal alterno para `agora-legacy-033` (Javeriana) en dia habil.
+- [x] Registrar resultados reales del canal alterno en `registro-canal-alterno-2026-04-30.csv`. **HECHO 2026-05-01**.
 - [ ] Aplicar resultados manuales con `python3 scripts/registrar_canal_alterno.py --apply` solo despues de revisar el dry-run.
+- [ ] Reintentar EAFIT Pregrados, EAFIT Artes y UPB en dia habil para conectar con asesor humano.
 - [ ] El 2026-05-04, revisar INBOX/rebotes y generar lote final de seguimiento a elegibles.
 - [ ] Hacer seguimiento a los contactos sin respuesta el 2026-05-04 solo despues de preview aprobado.
 - [ ] Preparar la siguiente etapa solo despues de revisar respuestas, rebotes y senales de interes de los 296 envios iniciales y 3 recuperaciones.

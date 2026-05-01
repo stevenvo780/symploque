@@ -1,6 +1,6 @@
 # Operacion WhatsApp canal alterno - 2026-05-01
 
-> Estado: operacion iniciada. Codex abrio los 3 chats WhatsApp prellenados en Firefox el 2026-05-01 12:06 -05; el envio final no es verificable desde shell y no se marca como contacto real hasta confirmar resultado.
+> Estado: **3 de 3 WhatsApp enviados y confirmados**. Los 3 bots institucionales respondieron; asesores humanos no disponibles por festivo 1 de mayo. Pendiente: reintentar en dia habil y ejecutar `agora-legacy-033` por telefono.
 
 ## Preflight ejecutado
 
@@ -8,17 +8,19 @@
 - Auditoria local: `python3 scripts/auditar_operacion_email.py --fail-on-blockers` paso con `blockers=0 warnings=0`.
 - Rebotes desde el 2026-05-01: `0` detectados en dry-run IMAP.
 - Mensajes no rebote desde el 2026-05-01: `0`.
-- Registro de canal alterno: `python3 scripts/registrar_canal_alterno.py` encontro `0` resultados aplicables, porque aun no hay intentos manuales registrados.
+- Registro de canal alterno: actualizado con resultados reales 2026-05-01.
 
-## Ejecucion por Codex
+## Ejecucion por Codex (intento 1)
 
-- `2026-05-01 12:06 -05`: Codex abrio en Firefox los links prellenados de:
-  - `agora-legacy-018` - EAFIT Literatura.
-  - `agora-legacy-019` - EAFIT Artes y Humanidades.
-  - `agora-legacy-022` - UPB Comunicacion Social y Periodismo.
-- Resultado verificable desde terminal: links abiertos.
-- Resultado no verificable desde terminal: mensaje enviado/recibido en WhatsApp.
-- No se actualiza `registro-canal-alterno-2026-04-30.csv` como `contacted` hasta tener confirmacion real del envio o respuesta.
+- `2026-05-01 12:06 -05`: Codex abrio en Firefox los links prellenados pero no se confirmo envio desde terminal.
+
+## Ejecucion por Antigravity (intento 2, confirmado)
+
+- `2026-05-01 13:39 -05`: Mensaje enviado a `agora-legacy-018` (EAFIT Pregrados). Bot reconocio solicitud, ofrecio escalar a asesor humano. Se acepto. Asesores no disponibles por festivo.
+- `2026-05-01 13:43 -05`: Mensaje enviado a `agora-legacy-019` (Universidad EAFIT / Artes y Humanidades). Bot Ana respondio, derivo a menu Pregrado-Posgrado. Asesores fuera de horario por festivo. Mensaje de seguimiento dejado.
+- `2026-05-01 12:07 -05` (mensaje original) + `~13:58 -05` (navegacion bot): Mensaje enviado a `agora-legacy-022` (UPB Comunicacion Social). Bot GEMA recolecto datos, derivo a menu Pregrados. Asesores no disponibles por festivo. Mensaje final dejado.
+- `agora-legacy-033` (Javeriana Catedra UNESCO): **pendiente** — contacto por telefono, debe ejecutarse en dia habil.
+- Registro actualizado en `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`.
 
 ## Guardrail operativo
 

@@ -1,5 +1,5 @@
 contact_id,attempted_at,operator,channel,route_used,outcome,new_contact,next_action,notes
-agora-legacy-018,,,whatsapp oficial,,pending,,contactar por WhatsApp con protocolo transparente,Pregrado en Literatura EAFIT
-agora-legacy-019,,,whatsapp oficial,,pending,,contactar por WhatsApp con protocolo transparente,Escuela de Artes y Humanidades EAFIT
-agora-legacy-022,,,whatsapp oficial,,pending,,contactar por WhatsApp con protocolo transparente,Comunicacion Social y Periodismo UPB
-agora-legacy-033,,,telefono directo,,pending,,llamar o pedir correo institucional,Catedra UNESCO de Comunicacion Javeriana
+agora-legacy-018,2026-05-01 13:39,antigravity,whatsapp oficial,Mensaje directo > Bot respondio > Pidio escalar a asesor > Asesores no disponibles (festivo 1 mayo),human_requested_context,,Esperar respuesta de asesor humano en dia habil,EAFIT Pregrados - Bot reconocio solicitud y ofrecio escalar a asesor humano; asesores fuera de horario por festivo
+agora-legacy-019,2026-05-01 13:43,antigravity,whatsapp oficial,Mensaje directo > Ana bot > Pregrado-Posgrado > Asesores fuera de horario (festivo 1 mayo),human_requested_context,,Esperar respuesta de asesor humano en dia habil,EAFIT Artes y Humanidades - Bot Ana derivo a menu pero asesores fuera de horario; mensaje de seguimiento dejado
+agora-legacy-022,2026-05-01 12:07,antigravity,whatsapp oficial,Mensaje directo > GEMA bot > Autorizo datos > Nombres > ID > Celular (bucle bot) > Asesores no disponibles (festivo 1 mayo),human_requested_context,,Esperar respuesta de asesor humano en dia habil,UPB Comunicacion Social - Bot GEMA recolecta datos obligatorios; se proporcionaron datos basicos; asesores no disponibles por festivo
+agora-legacy-033,,,telefono directo,,pending,,Llamar en dia habil o pedir correo institucional,Catedra UNESCO Comunicacion Javeriana - telefono directo pendiente de ejecucion en dia habil
