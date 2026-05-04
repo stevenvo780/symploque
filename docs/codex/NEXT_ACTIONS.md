@@ -51,6 +51,13 @@
 - [x] Monitorear INBOX el 2026-05-01: 0 respuestas humanas, 0 rebotes nuevos.
 - [x] Iniciar operacion WhatsApp/canal alterno 2026-05-01 con documento operativo y registro listo.
 - [x] Abrir en Firefox los 3 chats WhatsApp prellenados para canal alterno; envio final no verificable desde shell.
+- [x] Aplicar resultados manuales de 3 WhatsApp con `scripts/registrar_canal_alterno.py --apply`.
+- [x] Ajustar auditoria para aceptar contactos por canal alterno sin fila SMTP.
+- [x] Generar lote seguro de seguimiento 2026-05-04: 281 elegibles y preview de 10 mensajes.
+- [x] Agregar ejecutor seguro de seguimiento 2026-05-04 con preview default, validacion contra maestro y bloqueo por fecha.
+- [x] Prospectar 15 nuevos leads publicos para posible `wave_4_candidate`.
+- [x] Convertir la prospeccion publica en artefactos revisables de `wave_4_candidate`: CSV operativo candidato, export ERPNext y lote email borrador.
+- [x] Preparar guion de reintento WhatsApp en dia habil para EAFIT/UPB.
 
 ## Next
 
@@ -60,10 +67,10 @@
 - [x] Confirmar visualmente si los 3 WhatsApp abiertos quedaron enviados y registrar resultado real. **CONFIRMADO 2026-05-01**: 3 enviados, 3 bots respondieron, asesores no disponibles por festivo.
 - [ ] Ejecutar llamada/canal alterno para `agora-legacy-033` (Javeriana) en dia habil.
 - [x] Registrar resultados reales del canal alterno en `registro-canal-alterno-2026-04-30.csv`. **HECHO 2026-05-01**.
-- [ ] Aplicar resultados manuales con `python3 scripts/registrar_canal_alterno.py --apply` solo despues de revisar el dry-run.
-- [ ] Reintentar EAFIT Pregrados, EAFIT Artes y UPB en dia habil para conectar con asesor humano.
-- [ ] El 2026-05-04, revisar INBOX/rebotes y generar lote final de seguimiento a elegibles.
-- [ ] Hacer seguimiento a los contactos sin respuesta el 2026-05-04 solo despues de preview aprobado.
+- [ ] Reintentar EAFIT Pregrados, EAFIT Artes y UPB en dia habil usando `reintento-whatsapp-dia-habil-2026-05-04.md`.
+- [ ] El 2026-05-04, revisar INBOX/rebotes y regenerar/confirmar lote final de seguimiento a elegibles.
+- [ ] Hacer seguimiento a los contactos sin respuesta el 2026-05-04 solo despues de revisar INBOX/rebotes y aprobar `scripts/enviar_lote_seguimiento.py --send`.
+- [ ] Revisar `lote-primer-contacto-wave-4-candidatos-2026-05-01.md` y decidir si se aprueba la importacion/envio de `wave_4_candidate` despues del seguimiento.
 - [ ] Preparar la siguiente etapa solo despues de revisar respuestas, rebotes y senales de interes de los 296 envios iniciales y 3 recuperaciones.
 - [ ] **REDES — Crear la pagina de empresa de LinkedIn o documentar la URL correcta** (la actual retorna 404).
 - [ ] **REDES — Definir y documentar el handle de X/Twitter** (actualmente TBD, bloquea publicacion en X).

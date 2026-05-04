@@ -33,16 +33,18 @@ Pero no limite:
 
 ## Estado operativo actual
 
-Corte: 2026-05-01, despues de monitoreo readonly y arranque de canal alterno.
+Corte: 2026-05-01, despues de monitoreo readonly, WhatsApp confirmado y prospeccion diaria.
 
 - `wave_1`, `wave_2` y `wave_3` ya fueron enviadas desde `ventas@elenxos.com`.
 - 296 Leads estan creados y sincronizados en ERPNext.
 - 299 correos fueron aceptados por SMTP: 296 envios iniciales y 3 recuperaciones.
 - 15 contactos tuvieron rebote confirmado historico; 12 siguen como rebotes activos por recuperar.
 - 284 contactos siguen pendientes de respuesta.
-- 4 contactos sin email valido quedaron preparados para canal alterno.
+- 3 contactos sin email valido fueron contactados por WhatsApp oficial; los 3 quedaron pendientes de asesor humano por festivo.
+- 1 contacto sin email valido sigue pendiente por telefono directo: `agora-legacy-033`.
 - INBOX readonly del 2026-05-01: 0 respuestas humanas y 0 rebotes nuevos.
-- La operacion WhatsApp/canal alterno del 2026-05-01 quedo iniciada para ejecucion manual con registro posterior.
+- La operacion WhatsApp/canal alterno del 2026-05-01 quedo registrada y aplicada a los CSVs operativos.
+- Se preparo prospeccion publica nueva con 15 prospectos y se convirtio en paquete revisable `wave_4_candidate`: CSV operativo candidato, export ERPNext y borradores de primer contacto. No se importo ni envio.
 - El siguiente seguimiento masivo elegible esta programado para el 2026-05-04 con 281 contactos; las 3 recuperaciones del 2026-04-30 tienen seguimiento propio el 2026-05-07.
 - `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` deben permanecer vacios salvo evidencia real de contacto previo.
 - La prioridad inmediata no es abrir otra tanda masiva; es capturar respuestas, monitorear recuperaciones, rescatar rebotes activos, operar canales alternos y preparar seguimiento.
@@ -81,9 +83,10 @@ Ejecutar esta rutina al iniciar cada sesion operativa:
 5. Registrar respuestas humanas, rebotes, redirecciones y senales positivas antes de preparar cualquier nueva accion.
 6. Responder una senal positiva en menos de 2 horas con propuesta de demo, piloto o workspace inicial.
 7. Revisar los 12 rebotes activos y buscar correo alternativo oficial antes de descartarlos.
-8. Ejecutar o dejar preparado el contacto manual de los 4 prospectos por canal alterno, sin asumir que el repo puede enviar WhatsApp o llamar por telefono.
-9. Preparar el seguimiento corto para los 281 elegibles solo si no responden antes del 2026-05-04; monitorear aparte los 3 recuperados con fecha 2026-05-07.
-10. No abrir una nueva tanda masiva hasta cerrar la revision post-envio de respuestas, rebotes y aprendizajes de `wave_1`, `wave_2` y `wave_3`.
+8. Reintentar EAFIT/UPB por WhatsApp en dia habil si no responde asesor humano y ejecutar el telefono pendiente de `agora-legacy-033`, sin asumir que el repo puede llamar por telefono.
+9. Preparar/ejecutar el seguimiento corto para los 281 elegibles solo si no responden antes del 2026-05-04; usar `scripts/enviar_lote_seguimiento.py` despues de revisar INBOX/rebotes y aprobar el envio real.
+10. Revisar `lote-primer-contacto-wave-4-candidatos-2026-05-01.md` solo despues del seguimiento del 2026-05-04; no importar ni enviar `wave_4_candidate` sin aprobacion explicita.
+11. No abrir una nueva tanda masiva hasta cerrar la revision post-envio de respuestas, rebotes y aprendizajes de `wave_1`, `wave_2` y `wave_3`.
 
 ## Rutina diaria de crecimiento
 
@@ -202,7 +205,9 @@ Estos comandos ayudan a diagnosticar o preparar trabajo. El envio real, la publi
 git status --short --branch
 python3 scripts/auditar_operacion_email.py --fail-on-blockers
 python3 scripts/preparar_lote_primer_contacto.py
+python3 scripts/preparar_wave4_desde_prospeccion.py
 python3 scripts/enviar_lote_primer_contacto.py --limit 3
+python3 scripts/enviar_lote_seguimiento.py --limit 5
 ```
 
 ## Nota sobre prompt4

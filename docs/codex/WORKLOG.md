@@ -348,3 +348,54 @@
   - Terminal confirmed the 3 URLs were launched.
   - Did not mark CSV rows as contacted because there is no reliable send confirmation from this environment.
   - Did not execute the phone call for `agora-legacy-033`.
+
+## 2026-05-01 3
+
+- Goal: Continue operating the repo for maximum commercial progress without unauthorized external sends.
+- Actions:
+  - Confirmed the recorded WhatsApp outcomes: 3 messages sent, 3 bots responded, no advisor available due to the May 1 holiday.
+  - Applied `scripts/registrar_canal_alterno.py --apply` to reconcile the 3 WhatsApp outcomes across operational CSVs.
+  - Updated `scripts/auditar_operacion_email.py` so alternate-channel contacts do not require SMTP rows or declaration rows.
+  - Monitored INBOX/rebounces again from 2026-05-01: 0 human replies and 0 new bounces.
+  - Created `scripts/preparar_lote_seguimiento.py`.
+  - Generated `05-datos-y-reportes/operacion-email/seguimiento-2026-05-04.csv` with 281 eligible follow-up contacts.
+  - Generated `04-mensajeria-email/lote-seguimiento-2026-05-04-revision.md` with distribution and 10 previews.
+  - Prospected 15 new public leads from official university pages and prepared:
+    - `05-datos-y-reportes/prospeccion-publica-2026-05-01.csv`
+    - `05-datos-y-reportes/top-15-prospeccion-2026-05-01.md`
+    - `04-mensajeria-email/preview-prospeccion-wave-4-2026-05-01.md`
+  - Prepared `04-mensajeria-email/reintento-whatsapp-dia-habil-2026-05-04.md` for the next business-day advisor retry.
+- Verification:
+  - `scripts/auditar_operacion_email.py --fail-on-blockers` passes with `blockers=0 warnings=0`.
+  - New follow-up CSV parses with 281 rows: wave_1=45, wave_2=62, wave_3=174.
+  - New prospecting CSV parses with 15 rows.
+  - No new emails, ERP writes, phone calls, DMs, or social publications were executed.
+
+## 2026-05-01 4
+
+- Goal: Convert public prospecting into a safe, reviewable wave 4 candidate package.
+- Actions:
+  - Added `scripts/preparar_wave4_desde_prospeccion.py`.
+  - Generated `05-datos-y-reportes/operacion-email/wave-4-candidatos-2026-05-01.csv` with 15 operational candidates.
+  - Generated `05-datos-y-reportes/operacion-email/erp-leads-wave-4-candidatos-2026-05-01.csv` for manual ERPNext import review.
+  - Generated `05-datos-y-reportes/operacion-email/primer-contacto-wave-4-candidatos-2026-05-01.csv` and `04-mensajeria-email/lote-primer-contacto-wave-4-candidatos-2026-05-01.md` with personalized draft emails.
+  - Updated `NEXT_ACTIONS.md`, `PROJECT_CONTEXT.md`, and the operation README with the new review package.
+- Verification:
+  - Wave 4 outputs parse with 15 rows and 15 unique emails.
+  - Template split: 6 centros de escritura, 5 semilleros, 3 revistas, 1 investigacion formativa.
+  - `scripts/auditar_operacion_email.py --fail-on-blockers` passes with `blockers=0 warnings=0`.
+  - No ERP import, email send, phone call, DM, WhatsApp send, or social publication was executed.
+
+## 2026-05-01 5
+
+- Goal: Make the 2026-05-04 follow-up executable through a guarded script instead of manual CSV handling.
+- Actions:
+  - Extended `scripts/preparar_lote_seguimiento.py` so the generated CSV includes `sender`, `landing_url`, `send_status`, `sent_at`, and `notes`.
+  - Regenerated `05-datos-y-reportes/operacion-email/seguimiento-2026-05-04.csv` with 281 rows and `send_status=draft_review`.
+  - Added `scripts/enviar_lote_seguimiento.py` with preview default, master validation, duplicate protection by follow-up campaign, IMAP Sent append support, and explicit `ENVIAR_SEGUIMIENTO` confirmation for real sends.
+  - Updated central docs and next actions with the follow-up execution command.
+- Verification:
+  - `python3 scripts/enviar_lote_seguimiento.py` previews 281 eligible contacts and sends nothing.
+  - `python3 scripts/enviar_lote_seguimiento.py --send --limit 1` blocks correctly on 2026-05-01 because `target-date` is 2026-05-04.
+  - Follow-up CSV parses with 281 rows, 281 `draft_review`, 0 blank bodies.
+  - No email, ERP write, phone call, DM, WhatsApp send, or social publication was executed.

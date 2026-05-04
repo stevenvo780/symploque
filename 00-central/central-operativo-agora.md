@@ -16,7 +16,7 @@ Si solo vas a abrir tres archivos, abre estos:
 - Objetivo comercial inicial: 100 clientes en 3 meses
 - Logica actual: partir de UdeA y escalar a universidades y nodos afines
 - Modelo: freemium
-- Activo mas valioso hoy: 300 prospectos, 296 Leads en ERPNext, 299 envios SMTP aceptados y canal alterno listo para 4 contactos sin email
+- Activo mas valioso hoy: 300 prospectos historicos, 296 Leads en ERPNext, 299 envios SMTP aceptados, 3 WhatsApp enviados por canal alterno y 15 prospectos nuevos convertidos en paquete `wave_4_candidate` revisable
 
 ## Mapa de carpetas
 
@@ -69,9 +69,10 @@ Si el trabajo empieza hoy:
 1. abrir [operacion-email/README.md](../05-datos-y-reportes/operacion-email/README.md)
 2. revisar los lotes historicos de `wave_1`, `wave_2` y `wave_3` como evidencia de envio
 3. monitorear rebotes y respuestas
-4. ejecutar manualmente canal alterno/WhatsApp para los 4 contactos sin email
+4. reintentar los 3 WhatsApp en dia habil si no responde asesor humano y ejecutar la llamada pendiente de Javeriana
 5. registrar aprendizajes antes de abrir nuevas etapas
-6. hacer seguimiento a no respondidos elegibles el 2026-05-04
+6. hacer seguimiento a no respondidos elegibles el 2026-05-04 con `scripts/enviar_lote_seguimiento.py`, solo despues de revisar INBOX/rebotes y aprobar `--send`
+7. revisar `wave_4_candidate` solo despues del seguimiento, sin importar a ERP ni enviar sin aprobacion
 
 ## Lectura estrategica
 
@@ -140,4 +141,9 @@ Se ejecuto recuperacion de 3 rebotes corregidos el 2026-04-30 y se inicio la ope
 - [registro-canal-alterno-2026-04-30.csv](../05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv)
 - [revision-post-analisis-2026-05-01.md](../05-datos-y-reportes/operacion-email/revision-post-analisis-2026-05-01.md)
 
-Resultado vigente: 299 aceptados por SMTP, 15 rebotes historicos, 12 rebotes activos por recuperar, 284 pendientes de respuesta y 4 contactos preparados por canal alterno. INBOX readonly desde el 2026-05-01: 0 respuestas humanas y 0 rebotes nuevos.
+Resultado vigente: 299 aceptados por SMTP, 15 rebotes historicos, 12 rebotes activos por recuperar, 284 pendientes de respuesta email, 3 contactos por WhatsApp pendientes de asesor humano y 1 telefono directo pendiente. INBOX readonly desde el 2026-05-01: 0 respuestas humanas y 0 rebotes nuevos. Tambien quedaron 15 prospectos nuevos preparados como `wave_4_candidate` revisable:
+
+- [wave-4-candidatos-2026-05-01.csv](../05-datos-y-reportes/operacion-email/wave-4-candidatos-2026-05-01.csv)
+- [erp-leads-wave-4-candidatos-2026-05-01.csv](../05-datos-y-reportes/operacion-email/erp-leads-wave-4-candidatos-2026-05-01.csv)
+- [primer-contacto-wave-4-candidatos-2026-05-01.csv](../05-datos-y-reportes/operacion-email/primer-contacto-wave-4-candidatos-2026-05-01.csv)
+- [lote-primer-contacto-wave-4-candidatos-2026-05-01.md](../04-mensajeria-email/lote-primer-contacto-wave-4-candidatos-2026-05-01.md)

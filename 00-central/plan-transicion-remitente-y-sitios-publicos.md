@@ -82,7 +82,8 @@ Estado `wave_1`, `wave_2` y `wave_3`:
 Estado recuperacion:
 - completado el 2026-04-30 para 3 correos corregidos
 - total SMTP vigente: 299 aceptados
-- canal alterno/WhatsApp iniciado el 2026-05-01 para 4 contactos sin email
+- canal alterno/WhatsApp ejecutado el 2026-05-01 para 3 contactos sin email; 1 telefono directo pendiente
+- prospeccion publica del 2026-05-01 preparo 15 prospectos nuevos para revision posterior
 
 ## Fase 2. Checklist de salida de campana
 
@@ -125,11 +126,12 @@ Cada contacto debe terminar en `contactos-maestro-operativo.csv` con:
 
 1. monitorear rebotes y respuestas de `wave_1`, `wave_2` y `wave_3`
 2. monitorear rebotes/respuestas de la recuperacion `recuperacion_rebote_2026_04_30`
-3. ejecutar y registrar canal alterno/WhatsApp para 4 contactos sin email
+3. reintentar asesores EAFIT/UPB en dia habil si no responden y ejecutar telefono pendiente de Javeriana
 4. hacer seguimiento a no respondidos elegibles el 2026-05-04, excluyendo los 3 recuperados hasta el 2026-05-07
-5. registrar aprendizajes antes de abrir nuevas etapas
-6. preparar cualquier nueva ola solo con Leads guardados o sincronizados en ERPNext
-7. mantener la auditoria sin redes sociales, con sitios oficiales y mencion UdeA cuando aplique
+5. revisar los 15 prospectos nuevos antes de convertirlos en nueva ola
+6. registrar aprendizajes antes de abrir nuevas etapas
+7. preparar cualquier nueva ola solo con Leads guardados o sincronizados en ERPNext
+8. mantener la auditoria sin redes sociales, con sitios oficiales y mencion UdeA cuando aplique
 
 ## Riesgos principales
 

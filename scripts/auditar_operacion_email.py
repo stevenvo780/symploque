@@ -201,14 +201,24 @@ def add_cross_dataset_issues(report: AuditReport) -> None:
     sent_ids = set(sent_by_id)
     declaration_ids = {normalize(row.get("contact_id", "")) for row in declaracion if normalize(row.get("contact_id", ""))}
     operativo_ids = {normalize(row.get("contact_id", "")) for row in master_operativo if normalize(row.get("contact_id", ""))}
+    operative_by_id = {
+        normalize(row.get("contact_id", "")): row
+        for row in master_operativo
+        if normalize(row.get("contact_id", ""))
+    }
 
     for row in legacy:
         rank = normalize(row.get("priority_rank", ""))
         contact_id = f"agora-legacy-{rank.zfill(3) if rank else '000'}"
         contacted = normalize(row.get("estado", "")).lower() == "contactado"
+        contact_type = normalize(row.get("contact_type", "")).lower()
+        operative_status = normalize(operative_by_id.get(contact_id, {}).get("status", "")).lower()
+        alternate_channel_contacted = contact_type != "email" and operative_status.startswith("alternate_channel_")
         if contacted:
             if not normalize(row.get("fecha_ultimo_contacto", "")):
                 report.issues.append(Issue("warning", "legacy_master", f"{contact_id} marcado contactado sin fecha_ultimo_contacto"))
+            if alternate_channel_contacted:
+                continue
             if contact_id not in sent_ids:
                 report.issues.append(Issue("blocker", "enviados", f"{contact_id} contactado en historico pero ausente en correos-enviados-importar.csv"))
             sent_row = sent_by_id.get(contact_id, {})

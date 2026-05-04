@@ -4,7 +4,7 @@
 
 - Purpose: repositorio operativo para outreach comercial de `Elenxos` y `Agora`.
 - Primary users: operador comercial y agente de Codex encargado de ordenar datos, guardar Leads en ERPNext, preparar correo corporativo y ejecutar outreach con trazabilidad.
-- Current focus: seguimiento post-envio de `wave_1`, `wave_2`, `wave_3` y recuperacion de rebotes. Hay 296 Leads creados en ERPNext, 299 envios aceptados por SMTP, 15 rebotes historicos, 12 rebotes activos por recuperar, 284 contactos pendientes de respuesta y 4 prospectos preparados por canal alterno.
+- Current focus: seguimiento post-envio de `wave_1`, `wave_2`, `wave_3`, recuperacion de rebotes y nueva prospeccion. Hay 296 Leads creados en ERPNext, 299 envios aceptados por SMTP, 15 rebotes historicos, 12 rebotes activos por recuperar, 284 contactos email pendientes de respuesta, 3 contactos por WhatsApp pendientes de asesor humano y 1 telefono pendiente.
 
 ## Architecture
 
@@ -22,8 +22,10 @@
   - `03-operacion-redes/` y `06-redes-sociales/`: narrativa, calendario y operaciones de redes
   - `scripts/`: automatizaciones de bootstrap, auditoria, ERPNext y envio controlado
 - Data stores and external services:
-  - `leads-agora-maestro.csv`: 300 prospectos; 284 contactados, 12 rebotados y 4 pendientes por canal alterno
-  - `contactos-maestro-operativo.csv`: 300 prospectos; 296 sincronizados con ERPNext, 284 pendientes de respuesta, 12 rebotados y 4 preparados por canal alterno
+  - `leads-agora-maestro.csv`: 300 prospectos; 287 contactados, 12 rebotados y 1 pendiente por canal alterno
+  - `contactos-maestro-operativo.csv`: 300 prospectos; 296 sincronizados con ERPNext, 284 pendientes de respuesta email, 12 rebotados, 3 contactados por canal alterno y 1 preparado por canal alterno
+  - `prospeccion-publica-2026-05-01.csv`: 15 prospectos nuevos preparados para revision como `wave_4_candidate`
+  - `wave-4-candidatos-2026-05-01.csv`: conversion operativa revisable, sin append al maestro y sin envio/import ERP real
   - ERP/CRM: `https://crm.proxy.humanizar-dev.cloud`
   - Mail API: `https://mailapi.proxy.humanizar-dev.cloud`
   - sitio corporativo: `https://www.elenxos.com/`
@@ -39,6 +41,8 @@
   - `python3 scripts/preparar_lote_primer_contacto.py`
 - Preview de envio:
   - `python3 scripts/enviar_lote_primer_contacto.py --limit 3`
+- Preview de seguimiento:
+  - `python3 scripts/enviar_lote_seguimiento.py --limit 5`
 - Envio real:
   - `python3 scripts/enviar_lote_primer_contacto.py --send`
   - Solo con aprobacion explicita del lote revisable.
@@ -55,6 +59,9 @@
 - Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-3-revision.md`.
 - Envio real acumulado: 299 aceptados por SMTP; 15 rebotes historicos, 12 rebotes activos, 284 pendientes de respuesta; siguiente seguimiento elegible el 2026-05-04 para 281 contactos, excluyendo las 3 recuperaciones hasta el 2026-05-07.
 - Carpeta IMAP `Sent`: 299 copias de campana visibles; futuros envios anexan copia automaticamente.
+- Seguimiento 2026-05-04: `scripts/preparar_lote_seguimiento.py` genera 281 elegibles en `seguimiento-2026-05-04.csv` y preview revisable en `lote-seguimiento-2026-05-04-revision.md`.
+- Envio de seguimiento: `scripts/enviar_lote_seguimiento.py` hace preview por defecto, valida contra maestro, evita duplicados por campana y bloquea `--send` antes del 2026-05-04.
+- Wave 4 candidata: `scripts/preparar_wave4_desde_prospeccion.py` genera 15 candidatos, export ERPNext manual y borradores personalizados en `lote-primer-contacto-wave-4-candidatos-2026-05-01.md`; pendiente de aprobacion posterior al seguimiento.
 - Auditoria de mensajeria confirma UdeA/Universidad de Antioquia, ausencia de redes sociales, ausencia de CTA duplicado y sitios oficiales Elenxos/Agora.
 
 ## Constraints

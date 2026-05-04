@@ -12,8 +12,8 @@
 
 | Base | Estado |
 |---|---|
-| `leads-agora-maestro.csv` | 284 contactados, 12 rebotados, 4 pendientes por canal alterno |
-| `contactos-maestro-operativo.csv` | 284 pendientes de respuesta, 12 rebotados, 4 preparados por canal alterno |
+| `leads-agora-maestro.csv` | 287 contactados, 12 rebotados, 1 pendiente por canal alterno |
+| `contactos-maestro-operativo.csv` | 284 pendientes de respuesta email, 12 rebotados, 3 contactados por canal alterno, 1 preparado por canal alterno |
 | `correos-enviados-importar.csv` | 299 aceptados por SMTP, 284 pendientes, 15 rebotes historicos |
 
 ## Operacion WhatsApp iniciada
@@ -42,3 +42,14 @@ El repo abrio los chats WhatsApp prellenados, pero no pudo confirmar ni pulsar d
 3. Operador realiza la llamada de la Catedra UNESCO si procede.
 4. Ejecutar `python3 scripts/registrar_canal_alterno.py` y aplicar solo si el resumen es correcto.
 5. Mantener bloqueado el seguimiento masivo hasta la revision del 2026-05-04.
+
+## Actualizacion posterior 2026-05-01
+
+- Los 3 WhatsApp abiertos fueron confirmados como enviados.
+- Los 3 bots respondieron; no hubo asesor humano disponible por festivo.
+- `scripts/registrar_canal_alterno.py --apply` aplicado correctamente a maestro operativo, maestro historico y top 50.
+- Auditoria ajustada para reconocer contactos por canal alterno sin exigir fila SMTP.
+- Auditoria final: `blockers=0 warnings=0`.
+- Prospeccion nueva generada: 15 prospectos publicos para posible `wave_4_candidate`.
+- Seguimiento 2026-05-04 generado en modo seguro: 281 elegibles.
+- Conversion `wave_4_candidate` generada en modo revision: 15 candidatos, 15 emails unicos, export ERPNext manual y borradores personalizados. No se importo en ERP ni se envio correo.

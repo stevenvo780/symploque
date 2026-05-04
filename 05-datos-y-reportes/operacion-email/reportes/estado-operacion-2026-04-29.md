@@ -18,9 +18,9 @@ Fecha de corte: 2026-04-30, despues de recuperacion de 3 rebotes corregidos
 
 | Archivo | Estado |
 |---|---|
-| `leads-agora-maestro.csv` | 284 contactados, 12 rebotados, 4 pendientes por canal alterno |
-| `leads-agora-top-50-hoy.csv` | 46 contactados, 4 pendientes sin email |
-| `contactos-maestro-operativo.csv` | 284 pendientes de respuesta, 12 rebotados, 4 preparados por canal alterno |
+| `leads-agora-maestro.csv` | 287 contactados, 12 rebotados, 1 pendiente por canal alterno |
+| `leads-agora-top-50-hoy.csv` | 49 contactados, 1 pendiente sin email |
+| `contactos-maestro-operativo.csv` | 284 pendientes de respuesta email, 12 rebotados, 3 contactados por canal alterno, 1 preparado por canal alterno |
 | `correos-enviados-importar.csv` | 299 aceptados por SMTP, 284 pendientes, 15 rebotes historicos |
 | `primer-contacto-wave-1.csv` | 45 pendientes, 1 rebote |
 | `primer-contacto-wave-2.csv` | 62 pendientes, 8 rebotes |
@@ -53,7 +53,7 @@ El monitoreo IMAP del 2026-04-29 consolido 15 rebotes asociados a envios registr
 ## Siguientes acciones reales
 
 1. No enviar seguimiento masivo antes del 2026-05-04.
-2. Ejecutar contacto manual de los 4 prospectos sin email si el operador confirma que ya puede hacerlo.
+2. Reintentar los 3 WhatsApp en dia habil si no responde asesor humano y ejecutar el telefono pendiente de `agora-legacy-033`.
 3. Monitorear los 3 correos corregidos enviados el 2026-04-30.
 4. Mantener en espera los 6 casos Javeriana mientras persista el `mail loop`.
 5. El 2026-05-04, revisar INBOX/rebotes y generar lote final solo con elegibles.
@@ -80,5 +80,10 @@ El monitoreo IMAP del 2026-04-29 consolido 15 rebotes asociados a envios registr
   - Mensajes no rebote / respuestas humanas: 0.
 - Operacion WhatsApp/canal alterno iniciada para ejecucion manual:
   - `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`
-  - Registro pendiente: `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
-- Dry-run de registro manual: 0 resultados aplicables; no se aplicaron cambios a maestros.
+  - Registro: `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
+- Registro manual aplicado:
+  - 3 WhatsApp oficiales enviados y respondidos por bot.
+  - Resultado comun: `human_requested_context`; asesores no disponibles por festivo.
+  - 1 telefono directo pendiente: `agora-legacy-033`.
+- Lote de seguimiento 2026-05-04 generado en modo seguro: 281 elegibles.
+- Prospeccion publica nueva: 15 prospectos preparados para revision.

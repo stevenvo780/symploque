@@ -6,8 +6,8 @@ Fecha operativa: 2026-05-01
 
 - `wave_1`, `wave_2` y `wave_3` ya fueron contactadas por primer correo corporativo el 2026-04-27.
 - Se ejecuto recuperacion de 3 rebotes corregidos el 2026-04-30.
-- `leads-agora-maestro.csv` registra 284 filas en `estado=contactado`, 12 en `estado=rebotado` y 4 pendientes por canal alterno.
-- `leads-agora-top-50-hoy.csv` registra 46 filas en `estado=contactado` y 4 pendientes sin email.
+- `leads-agora-maestro.csv` registra 287 filas en `estado=contactado`, 12 en `estado=rebotado` y 1 pendiente por canal alterno.
+- `leads-agora-top-50-hoy.csv` registra 49 filas en `estado=contactado` y 1 pendiente sin email.
 - `contactos-maestro-operativo.csv` tiene 300 prospectos.
 - Hay 296 contactos con email valido.
 - La primera ola (`wave_1`) tiene 50 contactos, de los cuales 46 tienen email.
@@ -22,7 +22,7 @@ Fecha operativa: 2026-05-01
 - El plan siguiente quedo en `plan-siguiente-etapa-2026-04-27.md`.
 - La revision post-analisis vigente quedo en `revision-post-analisis-2026-05-01.md`.
 - La cola de canales alternos quedo en `canales-alternos-pendientes-2026-04-27.csv`.
-- La operacion WhatsApp/canal alterno del dia quedo en `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`.
+- La operacion WhatsApp/canal alterno del dia quedo en `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`; 3 WhatsApp fueron enviados y registrados, 1 telefono directo sigue pendiente.
 - La carpeta IMAP `Sent` tiene 299 copias visibles de campana (`wave_1`, `wave_2`, `wave_3` y recuperacion de rebotes) mas 1 prueba interna.
 - El remitente oficial de la operacion es `ventas@elenxos.com`.
 - Los 296 Leads de `wave_1`, `wave_2` y `wave_3` ya estan creados en ERPNext y sincronizados localmente.
@@ -83,6 +83,14 @@ python3 scripts/enviar_lote_primer_contacto.py --limit 3
 
 El envio real usa `--send`, pide confirmacion interactiva y por defecto exige `erp_sync_status=synced` o `synced_existing`.
 
+Preview del seguimiento 2026-05-04:
+
+```bash
+python3 scripts/enviar_lote_seguimiento.py --limit 5
+```
+
+El envio real de seguimiento usa `--send`, pide `ENVIAR_SEGUIMIENTO`, valida el maestro operativo, evita duplicar la campana `seguimiento_2026_05_04` y bloquea ejecucion antes del `target-date` salvo `--allow-before-date`.
+
 ## Variables ERPNext
 
 El script acepta estas variables, o sus equivalentes `FRAPPE_*`:
@@ -133,4 +141,23 @@ No se versionan secretos reales.
   - `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`
   - `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`
   - `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
-- Dry-run de `scripts/registrar_canal_alterno.py`: 0 resultados aplicables hasta que el operador registre intentos reales.
+- Registro de canal alterno aplicado:
+  - `agora-legacy-018`: WhatsApp enviado; bot ofrecio escalar a asesor; asesores fuera por festivo.
+  - `agora-legacy-019`: WhatsApp enviado; bot derivo a menu; asesores fuera por festivo.
+  - `agora-legacy-022`: WhatsApp enviado; bot GEMA recolecto datos; asesores fuera por festivo.
+  - `agora-legacy-033`: telefono directo pendiente en dia habil.
+- Lote de seguimiento preparado automaticamente:
+  - `scripts/preparar_lote_seguimiento.py`
+  - `scripts/enviar_lote_seguimiento.py`
+  - `05-datos-y-reportes/operacion-email/seguimiento-2026-05-04.csv`
+  - `04-mensajeria-email/lote-seguimiento-2026-05-04-revision.md`
+- Prospeccion publica nueva:
+  - `05-datos-y-reportes/prospeccion-publica-2026-05-01.csv`
+  - `05-datos-y-reportes/top-15-prospeccion-2026-05-01.md`
+  - `04-mensajeria-email/preview-prospeccion-wave-4-2026-05-01.md`
+- Conversion revisable a `wave_4_candidate`:
+  - `scripts/preparar_wave4_desde_prospeccion.py`
+  - `05-datos-y-reportes/operacion-email/wave-4-candidatos-2026-05-01.csv`
+  - `05-datos-y-reportes/operacion-email/erp-leads-wave-4-candidatos-2026-05-01.csv`
+  - `05-datos-y-reportes/operacion-email/primer-contacto-wave-4-candidatos-2026-05-01.csv`
+  - `04-mensajeria-email/lote-primer-contacto-wave-4-candidatos-2026-05-01.md`
