@@ -1,120 +1,79 @@
 # symploque
 
-Workspace operativo para arrancar `Elenxos` y `Agora` con una capa minima pero seria de:
+Workspace operativo para arrancar `Elenxos` y `Agora`: estrategia comercial,
+marca, mensajes, datos de outreach, redes y automatizaciones locales.
 
-- datos comerciales
-- mensajeria reusable
-- marca y media kit
-- salida de correo corporativo
-- trazabilidad documental
+Este repo no es una app tradicional. La verificacion principal es operativa:
+consistencia entre CSVs, mensajes, sitios publicos, ERP, firma, brand system y
+cola de ejecucion.
 
-Este repo conserva dos capas:
+## Leer primero
 
-- historico documental y comercial de `Agora`
-- fase activa bajo `Elenxos`, con producto y sitio ya publicados
+Si vas a abrir pocos archivos, abre estos en orden:
 
-## Entrada canonica
+1. [`00-central/central-operativo-agora.md`](00-central/central-operativo-agora.md)
+2. [`04-mensajeria-email/README.md`](04-mensajeria-email/README.md)
+3. [`05-datos-y-reportes/operacion-email/README.md`](05-datos-y-reportes/operacion-email/README.md)
+4. [`03-operacion-redes/README.md`](03-operacion-redes/README.md)
+5. [`02-identidad-y-marca/README.md`](02-identidad-y-marca/README.md)
+6. [`docs/codex/NEXT_ACTIONS.md`](docs/codex/NEXT_ACTIONS.md)
 
-Si solo vas a abrir cinco archivos, abre estos en este orden:
+## Estado operativo
 
-1. [00-central/estado-actual-y-transicion.md](00-central/estado-actual-y-transicion.md)
-2. [00-central/central-operativo-agora.md](00-central/central-operativo-agora.md)
-3. [02-identidad-y-marca/README.md](02-identidad-y-marca/README.md)
-4. [03-operacion-redes/README.md](03-operacion-redes/README.md)
-5. [04-mensajeria-email/email.md](04-mensajeria-email/email.md)
+- Sitios publicos: `https://www.elenxos.com/` y `https://agora.elenxos.com/`.
+- `wave_1`, `wave_2` y `wave_3`: 296 primeros contactos enviados desde
+  `ventas@elenxos.com` y sincronizados como Leads en ERPNext.
+- SMTP acepto 299 envios de campana: 296 primeros contactos y 3 recuperaciones.
+- Pendiente inmediato: revisar INBOX/rebotes y ejecutar el runbook de
+  seguimiento del 2026-05-04 antes de cualquier nuevo envio.
+- `wave_4` existe solo como candidato revisable. No importar ni enviar sin
+  aprobacion explicita.
 
-## Estructura
+## Mapa del repo
 
-- `00-central/`: contexto rector, foco actual y criterio de operacion
-- `01-estrategia-comercial/`: planes y playbooks comerciales
-- `02-identidad-y-marca/`: criterio de marca, media kit y automatizacion visual
-- `03-operacion-redes/`: copy, calendario y operacion diaria de redes
-- `04-mensajeria-email/`: plantillas y operacion de correo
-- `05-datos-y-reportes/`: base operativa, ERP/CRM y reportes
-- `06-redes-sociales/`: sistema estrategico semanal y roadmap narrativo
-- `assets/`: kit de marca, prompts y entregables visuales
-- `elenxos_design_system/`: renderer React → PNG / MP4 para piezas publicas
-- `scripts/`: automatizaciones locales de soporte
-- `docs/codex/`: contexto persistente, protocolo y cola de trabajo
+- `00-central/`: criterio rector, estado activo y prioridades.
+- `01-estrategia-comercial/`: planes y playbooks comerciales.
+- `02-identidad-y-marca/`: sistema de marca, media kit y automatizacion visual.
+- `03-operacion-redes/`: contenido listo, calendario, cuentas y protocolo diario.
+- `04-mensajeria-email/`: plantillas, lotes, previews y canal alterno.
+- `05-datos-y-reportes/`: maestros, CSVs operativos, reportes y runbooks.
+- `06-redes-sociales/`: sistema narrativo largo de redes.
+- `assets/`: kit de marca, prompts, imagenes y entregables.
+- `elenxos_design_system/`: renderer React para PNG / MP4.
+- `scripts/`: automatizaciones locales.
+- `docs/`: infraestructura, contexto persistente y protocolo de trabajo.
 
-## Estado operativo actual
+## Comandos frecuentes
 
-- Sitios publicos verificados: `https://www.elenxos.com/` y `https://agora.elenxos.com/`
-- La operacion email salio de `fresh launch`: `wave_1`, `wave_2` y `wave_3` tienen 296 primeros contactos enviados
-- Los 296 contactos efectivos de `wave_1`, `wave_2` y `wave_3` estan guardados como Leads en ERPNext
-- La API de correo responde y los envios corporativos desde `ventas@elenxos.com` quedaron registrados
-- La narrativa de marca ya existe; el faltante principal era volverla operable y menos redundante
-- La nueva base de outreach se puede bootstrapear desde el historico con `scripts/bootstrap_operacion_email.py`
-- Los lotes ERP estan en `05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv`, `erp-leads-wave-2.csv` y `erp-leads-wave-3.csv`
-- La siguiente accion comercial es monitorear respuestas/rebotes y hacer seguimiento el 2026-05-04
+Auditar operacion email:
 
-## Generacion de contenidos: que manda hoy
+```bash
+python3 scripts/auditar_operacion_email.py --fail-on-blockers
+```
 
-Para no mezclar capas:
+Preview de seguimiento:
 
-- `02-identidad-y-marca/` define la marca y el criterio visual
-- `03-operacion-redes/` define que sale esta semana y en que formato
-- `06-redes-sociales/` conserva el sistema estrategico de 8 semanas y prompts narrativos
-- `assets/` guarda el kit de marca, prompts y entregables
-- `elenxos_design_system/` es el renderer ejecutable para generar piezas
-- `scripts/iniciar_automatizacion_redes.sh` es el punto de entrada rapido para identidad + lote 1 minimo
-- `scripts/generar_campana.sh` es el comando simple para producir campañas completas en carpetas ordenadas
+```bash
+python3 scripts/enviar_lote_seguimiento.py --limit 5
+```
 
-### Comando simple para campañas
-
-Desde la raiz del repo:
+Generar campanas visuales:
 
 ```bash
 ./scripts/generar_campana.sh
 ```
 
-Ejemplos utiles:
+Preflight de redes:
 
 ```bash
-./scripts/generar_campana.sh --skip-video
-./scripts/generar_campana.sh --reuse-ai
-./scripts/generar_campana.sh --seed 12345
-./scripts/generar_campana.sh --narrativa dolor
-./scripts/generar_campana.sh --legacy --lote 1
-./scripts/generar_campana.sh --narrativa solucion --video-duration 6
+python3 scripts/publicar_redes.py --preflight
 ```
-
-Salida por defecto:
-
-- `assets/entregables/campanas/campana_0_dolor/`
-- `assets/entregables/campanas/campana_1_solucion/`
-- `assets/entregables/campanas/campana_2_ecosistema/`
-
-Cada campaña contiene:
-
-- `sin_ia/` y `con_ia/`
-- `publicaciones/`, `flyers/`, `reels/`, `stories/`, `banners/`
-- `README.md` y `manifest.json`
-
-Regla actual del pipeline:
-
-- 50 piezas por campaña
-- 5 piezas por categoría dentro de `sin_ia/`
-- 5 piezas por categoría dentro de `con_ia/`
-- 10 piezas por categoría en total (`publicaciones`, `flyers`, `reels`, `stories`, `banners`)
-- la corrida oficial sin argumentos genera 25 piezas editoriales y 25 piezas con IA fresca por campaña
-- sin argumentos, el modo oficial genera fondos AI nuevos por campaña y deja trazas en `prompts_ai.json` + `con_ia/fuentes_ai/`
-- el generador ahora elige variaciones de templates compatibles por narrativa usando un seed reproducible
-- puedes fijar la corrida con `--seed 12345`
-- si quieres reutilizar la librería AI ya sincronizada, usa `--reuse-ai`
-- los `flyers` usan el layout cuadrado de `post` porque hoy no existe un formato flyer dedicado en el renderer
-
-Si usas filtros (`--narrativa`, `--lote`, `--tipo` o `--legacy`), la salida puntual cae en:
-
-- `assets/entregables/campanas/selecciones/YYYY-MM-DD_campaign_*/`
 
 ## Reglas del repo
 
-- No tratar docs historicos como si fueran la fase activa sin marcar contexto.
-- No guardar secretos en markdown, CSV ni scripts.
-- No lanzar correo corporativo sin guardar o dejar listo el Lead en ERPNext y pasar por `05-datos-y-reportes/operacion-email/` y `04-mensajeria-email/`.
-- No abrir nuevas piezas de marca sin revisar antes `assets/README.md`, `02-identidad-y-marca/README.md` y `03-operacion-redes/README.md`.
-
-## Nota
-
-Este repo no es una app tradicional. La verificacion principal es operativa: consistencia entre mensajes, CSV, URLs publicas, firma, brand system y cola de ejecucion.
+- No tratar documentos historicos como si fueran la fase activa.
+- No guardar secretos en Markdown, CSV ni scripts.
+- No enviar correo corporativo sin pasar por auditoria, ERP y CSV operativo.
+- No duplicar contenido: si algo es historico va a `reportes/`, `previews/` o
+  `lotes/`; si algo manda la ejecucion actual debe estar enlazado desde un
+  `README`.

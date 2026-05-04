@@ -18,8 +18,8 @@
 
 ## Operacion WhatsApp iniciada
 
-- Documento operativo de hoy: `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`.
-- Protocolo base: `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`.
+- Documento operativo de hoy: `04-mensajeria-email/canal-alterno/operacion-whatsapp-2026-05-01.md`.
+- Protocolo base: `04-mensajeria-email/canal-alterno/protocolo-whatsapp-bots-2026-04-30.md`.
 - Registro de resultados: `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`.
 - Cola: 3 WhatsApp oficiales y 1 telefono directo.
 

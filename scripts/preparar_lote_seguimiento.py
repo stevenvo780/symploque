@@ -21,6 +21,7 @@ from pathlib import Path
 REPO_DIR = Path(__file__).resolve().parents[1]
 OPERACION_DIR = REPO_DIR / "05-datos-y-reportes" / "operacion-email"
 MENSAJERIA_DIR = REPO_DIR / "04-mensajeria-email"
+LOTES_DIR = MENSAJERIA_DIR / "lotes"
 MASTER_PATH = OPERACION_DIR / "contactos-maestro-operativo.csv"
 
 CAMPAIGNS = {"primer_contacto_wave_1", "primer_contacto_wave_2", "primer_contacto_wave_3"}
@@ -172,12 +173,12 @@ def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
         writer.writerows(rows)
 
 
-def eligible(row: dict[str, str], target_date: str) -> bool:
+def eligible(row: dict[str, str], target_date: str, campaigns: set[str]) -> bool:
     return (
         row.get("status") == "first_contact_sent"
         and row.get("reply_status") == "pending"
         and row.get("next_action_date") == target_date
-        and row.get("last_campaign") in CAMPAIGNS
+        and row.get("last_campaign") in campaigns
         and row.get("contact_channel") == "email"
         and row.get("contact_value")
     )
@@ -202,10 +203,10 @@ def render(row: dict[str, str], variant: str) -> str:
     return VARIANTS[variant]["body"].format(**values)
 
 
-def build_rows(master_rows: list[dict[str, str]], target_date: str, sender: str) -> list[dict[str, str]]:
+def build_rows(master_rows: list[dict[str, str]], target_date: str, sender: str, campaigns: set[str]) -> list[dict[str, str]]:
     output: list[dict[str, str]] = []
     for row in master_rows:
-        if not eligible(row, target_date):
+        if not eligible(row, target_date, campaigns):
             continue
         variant = variant_for(row.get("segment", ""))
         last_subject = row.get("last_subject", "").strip()
@@ -274,6 +275,7 @@ def write_markdown(path: Path, rows: list[dict[str, str]], target_date: str, pre
                 "",
             ]
         )
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -284,11 +286,13 @@ def main() -> int:
     parser.add_argument("--md-output", default="", help="Ruta Markdown de salida.")
     parser.add_argument("--preview-limit", type=int, default=10)
     parser.add_argument("--sender", default="ventas@elenxos.com", help="Remitente previsto.")
+    parser.add_argument("--campaign", action="append", dest="campaigns", help="Campana elegible. Repetible. Por defecto waves 1-3.")
     args = parser.parse_args()
 
-    rows = build_rows(read_csv(MASTER_PATH), args.date, args.sender)
+    campaigns = set(args.campaigns or CAMPAIGNS)
+    rows = build_rows(read_csv(MASTER_PATH), args.date, args.sender, campaigns)
     csv_output = Path(args.csv_output) if args.csv_output else OPERACION_DIR / f"seguimiento-{args.date}.csv"
-    md_output = Path(args.md_output) if args.md_output else MENSAJERIA_DIR / f"lote-seguimiento-{args.date}-revision.md"
+    md_output = Path(args.md_output) if args.md_output else LOTES_DIR / f"lote-seguimiento-{args.date}-revision.md"
     write_csv(csv_output, rows)
     write_markdown(md_output, rows, args.date, args.preview_limit)
     print(f"Elegibles: {len(rows)}")

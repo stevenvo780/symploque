@@ -29,7 +29,7 @@
 - Se actualizo el reporte de rebotes a 8 casos confirmados.
 - Se preparo la cola de 4 prospectos sin email para canal alterno:
   - `05-datos-y-reportes/operacion-email/canales-alternos-pendientes-2026-04-27.csv`
-  - `04-mensajeria-email/lote-canal-alterno-2026-04-27.md`
+  - `04-mensajeria-email/canal-alterno/lote-canal-alterno-2026-04-27.md`
 - Se actualizo el maestro operativo con `status=alternate_channel_ready` para esos 4 prospectos.
 
 ## Siguientes pasos reales
@@ -41,9 +41,9 @@
 
 ## Actualizacion 2026-04-29
 
-Este corte quedo superado por `05-datos-y-reportes/operacion-email/estado-operacion-2026-04-29.md`.
+Este corte quedo superado por `05-datos-y-reportes/operacion-email/reportes/estado-operacion-2026-04-29.md`.
 
 - Rebotes acumulados: 15
 - Pendientes de respuesta: 281
 - Respuestas humanas nuevas desde el 2026-04-28: 0
-- Seguimiento actualizado: `05-datos-y-reportes/operacion-email/plan-seguimiento-281-2026-05-04.md`
+- Seguimiento actualizado: `05-datos-y-reportes/operacion-email/runbooks/plan-seguimiento-281-2026-05-04.md`

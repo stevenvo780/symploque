@@ -25,10 +25,11 @@ Este directorio concentra la ejecucion de contenido y la operacion diaria de red
   Publica posts del Lote 1 vía APIs de LinkedIn, X e Instagram.
   ```bash
   python3 scripts/publicar_redes.py --listar          # ver posts disponibles
+  python3 scripts/publicar_redes.py --preflight       # validar assets/tokens sin publicar
   python3 scripts/publicar_redes.py --post 1 --dry-run # preview sin publicar
   python3 scripts/publicar_redes.py --post 1 --todas   # publicar en todas
   ```
-  Requiere tokens de API en `.env`. Ver docstring del script para instrucciones.
+  Requiere tokens de API en `.env`. El preflight bloquea publicacion si faltan tokens, si LinkedIn sigue sin URL confirmada, si X no tiene handle definitivo o si Instagram no tiene ruta de publicacion viable.
 
 ## Dependencias de identidad
 
@@ -44,7 +45,7 @@ La operacion no debe separarse del sistema de marca. Antes de lanzar piezas, rev
 2. Si vas a responder o mover leads: abre `protocolo-de-interaccion.md`.
 3. Si vas a crear o configurar cuentas: abre `guia-configuracion-manual-redes.md`.
 4. Si necesitas conectar IDs narrativos con templates renderizables: abre `mapping-ids-templates.md`.
-5. Si quieres publicar vía script: `python3 scripts/publicar_redes.py --listar`.
+5. Si quieres publicar vía script: `python3 scripts/publicar_redes.py --preflight` y luego `--dry-run`.
 
 ## Relación con `06-redes-sociales/`
 

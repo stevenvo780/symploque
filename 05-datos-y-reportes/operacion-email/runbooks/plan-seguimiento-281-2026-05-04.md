@@ -2,7 +2,7 @@
 
 > Estado: preparado. No se debe ejecutar antes de revisar respuestas y rebotes el 2026-05-04.
 
-- Preview de mensajes: `04-mensajeria-email/preview-seguimiento-281-2026-05-04.md`
+- Preview de mensajes: `04-mensajeria-email/previews/preview-seguimiento-281-2026-05-04.md`
 - Base operativa: `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`
 - Contactos elegibles actuales: 281 pendientes de respuesta
 - Contactos excluidos: 12 rebotados activos, 4 por canal alterno, 3 recuperaciones enviadas el 2026-04-30 con seguimiento propio el 2026-05-07, cualquier respuesta humana nueva

@@ -1,35 +1,57 @@
 # Operacion email y ERP
 
-Fecha operativa: 2026-05-01
+Este directorio es la verdad operativa de datos para email, ERPNext y
+seguimiento comercial. La capa de copy y revisiones de mensajes vive en
+[`04-mensajeria-email`](../../04-mensajeria-email/README.md).
+
+Fecha de lectura: 2026-05-04.
+
+## Entrada rapida
+
+1. [`contactos-maestro-operativo.csv`](./contactos-maestro-operativo.csv): maestro
+   operativo para scripts, ERP y estado de contacto.
+2. [`correos-enviados-importar.csv`](./correos-enviados-importar.csv): log
+   acumulado de envios aceptados por SMTP.
+3. [`seguimiento-2026-05-04.csv`](./seguimiento-2026-05-04.csv): lote elegible
+   de seguimiento general.
+4. [`runbooks/runbook-seguimiento-2026-05-04.md`](./runbooks/runbook-seguimiento-2026-05-04.md):
+   orden de ejecucion para seguimiento, rebotes y canal alterno.
+5. [`reportes/revision-post-analisis-2026-05-01.md`](./reportes/revision-post-analisis-2026-05-01.md):
+   ultimo corte narrativo antes del seguimiento.
 
 ## Estado actual
 
-- `wave_1`, `wave_2` y `wave_3` ya fueron contactadas por primer correo corporativo el 2026-04-27.
-- Se ejecuto recuperacion de 3 rebotes corregidos el 2026-04-30.
-- `leads-agora-maestro.csv` registra 287 filas en `estado=contactado`, 12 en `estado=rebotado` y 1 pendiente por canal alterno.
-- `leads-agora-top-50-hoy.csv` registra 49 filas en `estado=contactado` y 1 pendiente sin email.
-- `contactos-maestro-operativo.csv` tiene 300 prospectos.
-- Hay 296 contactos con email valido.
-- La primera ola (`wave_1`) tiene 50 contactos, de los cuales 46 tienen email.
-- La segunda ola (`wave_2`) tiene 70 contactos, todos con email.
-- `correos-enviados-importar.csv` registra 299 envios aceptados por SMTP.
-- Rebotes historicos confirmados: 15; rebotes activos por recuperar: 12; pendientes de respuesta: 284.
-- `declaracion-pendientes.csv` y `disculpa-error-pendientes.csv` estan vacios porque este fue primer contacto real.
-- Los lotes ERP quedaron exportados en `erp-leads-wave-1.csv`, `erp-leads-wave-2.csv` y `erp-leads-wave-3.csv`.
-- Los lotes de correo quedaron enviados y marcados como `send_status=sent` o `send_status=bounced` en `primer-contacto-wave-1.csv`, `primer-contacto-wave-2.csv` y `primer-contacto-wave-3.csv`.
-- Los reportes de `wave_2` y `wave_3` quedaron en `reporte-wave-2-2026-04-27.md` y `reporte-wave-3-2026-04-27.md`; el estado consolidado actual esta en `estado-operacion-2026-04-29.md`.
-- El reporte de rebotes quedo en `rebotes-detectados-2026-04-27.md`.
-- El plan siguiente quedo en `plan-siguiente-etapa-2026-04-27.md`.
-- La revision post-analisis vigente quedo en `revision-post-analisis-2026-05-01.md`.
-- La cola de canales alternos quedo en `canales-alternos-pendientes-2026-04-27.csv`.
-- La operacion WhatsApp/canal alterno del dia quedo en `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`; 3 WhatsApp fueron enviados y registrados, 1 telefono directo sigue pendiente.
-- La carpeta IMAP `Sent` tiene 299 copias visibles de campana (`wave_1`, `wave_2`, `wave_3` y recuperacion de rebotes) mas 1 prueba interna.
-- El remitente oficial de la operacion es `ventas@elenxos.com`.
-- Los 296 Leads de `wave_1`, `wave_2` y `wave_3` ya estan creados en ERPNext y sincronizados localmente.
+- `wave_1`, `wave_2` y `wave_3` ya fueron contactadas por primer correo
+  corporativo el 2026-04-27.
+- Hay 300 prospectos operativos; 296 quedaron como Leads en ERPNext.
+- SMTP acepto 299 envios de campana: 296 primeros contactos y 3 recuperaciones
+  de rebotes.
+- Rebotes historicos confirmados: 15. Rebotes activos por recuperar: 12.
+- Pendientes de respuesta email: 284.
+- Canal alterno: 3 WhatsApp enviados y registrados; 1 llamada directa pendiente.
+- `wave_4` esta preparado como paquete candidato revisable, sin importar a ERP
+  ni enviar hasta aprobacion explicita.
 
-## Regla de operacion
+## Estructura
 
-Primero se guardan Leads efectivos en ERPNext. Despues se prepara el primer contacto. Para envio real, el contacto debe estar en `erp_sync_status=synced` o `synced_existing`.
+- CSVs en la raiz: archivos vivos que leen o escriben los scripts.
+- `runbooks/`: pasos de ejecucion y planes fechados.
+- `reportes/`: cortes historicos, revisiones post-analisis, rebotes y monitoreo.
+- `logs/`: resultados tecnicos de envios ejecutados.
+
+## CSVs vivos
+
+- `contactos-maestro-operativo.csv`: fuente primaria de estado.
+- `correos-enviados-importar.csv`: bitacora acumulada de envios.
+- `primer-contacto-wave-1.csv`, `primer-contacto-wave-2.csv`,
+  `primer-contacto-wave-3.csv`: lotes ya ejecutados.
+- `seguimiento-2026-05-04.csv`: seguimiento general.
+- `seguimiento-recuperacion-2026-05-07.csv`: seguimiento separado para
+  recuperaciones.
+- `wave-4-candidatos-2026-05-01.csv`,
+  `erp-leads-wave-4-candidatos-2026-05-01.csv` y
+  `primer-contacto-wave-4-candidatos-2026-05-01.csv`: paquete candidato.
+- `registro-canal-alterno-2026-04-30.csv`: WhatsApp y llamada.
 
 ## Comandos canonicos
 
@@ -39,125 +61,40 @@ Auditoria sin modificar datos:
 python3 scripts/auditar_operacion_email.py --fail-on-blockers
 ```
 
-Reinicio seguro cuando se confirma que nadie ha sido contactado:
+Monitoreo readonly de INBOX:
 
 ```bash
-python3 scripts/reiniciar_operacion_email.py
+python3 scripts/monitorear_inbox_operacion.py --since 2026-05-01 --limit 100
 ```
 
-Generar el lote manual para ERPNext Data Import:
-
-```bash
-python3 scripts/erpnext_importar_contactos.py \
-  --export-csv 05-datos-y-reportes/operacion-email/erp-leads-wave-1.csv \
-  --mark-ready
-```
-
-Crear Leads reales via API, cuando existan credenciales:
-
-```bash
-ERPNEXT_BASE_URL="https://crm.proxy.humanizar-dev.cloud" \
-ERPNEXT_API_KEY="..." \
-ERPNEXT_API_SECRET="..." \
-python3 scripts/erpnext_importar_contactos.py --push --yes
-```
-
-El `--push` es idempotente por email: si el Lead ya existe en ERPNext, no lo duplica y marca la fila local como `synced_existing`.
-
-Preparar el lote de primer contacto sin enviar:
-
-```bash
-python3 scripts/preparar_lote_primer_contacto.py
-```
-
-Salidas:
-
-- `05-datos-y-reportes/operacion-email/primer-contacto-wave-1.csv`
-- `04-mensajeria-email/lote-primer-contacto-wave-1-revision.md`
-
-Preview o envio controlado del lote:
-
-```bash
-python3 scripts/enviar_lote_primer_contacto.py --limit 3
-```
-
-El envio real usa `--send`, pide confirmacion interactiva y por defecto exige `erp_sync_status=synced` o `synced_existing`.
-
-Preview del seguimiento 2026-05-04:
+Preview del seguimiento general:
 
 ```bash
 python3 scripts/enviar_lote_seguimiento.py --limit 5
 ```
 
-El envio real de seguimiento usa `--send`, pide `ENVIAR_SEGUIMIENTO`, valida el maestro operativo, evita duplicar la campana `seguimiento_2026_05_04` y bloquea ejecucion antes del `target-date` salvo `--allow-before-date`.
+Envio real del seguimiento general, solo con aprobacion:
 
-## Variables ERPNext
+```bash
+python3 scripts/enviar_lote_seguimiento.py --send
+```
 
-El script acepta estas variables, o sus equivalentes `FRAPPE_*`:
+Preview del seguimiento separado de recuperaciones:
 
-- `ERPNEXT_BASE_URL`
-- `ERPNEXT_USERNAME`
-- `ERPNEXT_PASSWORD`
-- `ERPNEXT_API_KEY`
-- `ERPNEXT_API_SECRET`
+```bash
+python3 scripts/enviar_lote_seguimiento.py \
+  --csv 05-datos-y-reportes/operacion-email/seguimiento-recuperacion-2026-05-07.csv \
+  --target-date 2026-05-07 \
+  --allowed-campaign recuperacion_rebote_2026_04_30 \
+  --limit 3
+```
 
-No se versionan secretos reales.
+## Reglas
 
-## Flujo recomendado
-
-1. Correr auditoria.
-2. Importar `erp-leads-wave-1.csv` como `Lead` en ERPNext, o ejecutar `--push`.
-3. Confirmar que los Leads quedaron en el CRM.
-4. Si la importacion fue manual, correr luego `--push --yes` con credenciales para reconciliar IDs sin duplicar Leads.
-5. Revisar el primer lote de correo con plantillas de primer contacto, no con declaracion/disculpa.
-6. Registrar cada envio real en `correos-enviados-importar.csv` y actualizar el maestro operativo.
-7. Monitorear respuestas y rebotes antes de abrir nuevas olas o seguimientos.
-
-## Ejecucion 2026-04-27
-
-- Auditoria local: OK, sin bloqueadores.
-- CRM/Frappe: `{"message":"pong"}`.
-- Mail API health: `{"status":"ok"}`.
-- Prueba interna de correo corporativo: OK (`Email sent`), enviada desde y hacia la cuenta configurada en `.env`.
-- ERP auth por usuario/password: OK.
-- ERP push `wave_1`: OK, 46 Leads creados (`CRM-LEAD-2026-00001` a `CRM-LEAD-2026-00046`).
-- ERP push `wave_2`: OK, 70 Leads creados (`CRM-LEAD-2026-00047` a `CRM-LEAD-2026-00116`).
-- ERP push `wave_3`: OK, 180 Leads creados (`CRM-LEAD-2026-00117` a `CRM-LEAD-2026-00296`).
-- Mail API probado con `ventas@elenxos.com`: OK (`Email sent`) en envio interno seguro.
-- Limpieza de correo: OK, sin redes sociales; solo sitios oficiales `www.elenxos.com` y `agora.elenxos.com`.
-- Auditoria de mensajeria: OK, confirma procedencia UdeA/Universidad de Antioquia, ausencia de redes sociales y ausencia de CTA duplicado.
-- Envio real `wave_1`: OK SMTP, 46 aceptados, 1 rebote confirmado.
-- Envio real `wave_2`: OK SMTP, 70 aceptados, 5 rebotes confirmados.
-- Envio real `wave_3`: OK SMTP, 180 aceptados, 2 rebotes confirmados.
-- Envio acumulado actualizado al 2026-05-01: 299 aceptados por SMTP, 15 rebotes historicos, 12 rebotes activos y 284 pendientes de respuesta.
-- Correccion IMAP: 299 copias de campana visibles en `Sent`; el problema original era que la API SMTP no guardaba copia en Enviados.
-- Seguimiento recomendado: revisar respuestas y rebotes; si no hay respuesta, siguiente accion el 2026-05-04.
-
-## Ejecucion 2026-05-01
-
-- Auditoria local: OK, sin bloqueadores.
-- INBOX readonly desde el 2026-05-01: 0 respuestas humanas, 0 rebotes nuevos.
-- Canal alterno/WhatsApp iniciado como ejecucion manual:
-  - `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`
-  - `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`
-  - `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
-- Registro de canal alterno aplicado:
-  - `agora-legacy-018`: WhatsApp enviado; bot ofrecio escalar a asesor; asesores fuera por festivo.
-  - `agora-legacy-019`: WhatsApp enviado; bot derivo a menu; asesores fuera por festivo.
-  - `agora-legacy-022`: WhatsApp enviado; bot GEMA recolecto datos; asesores fuera por festivo.
-  - `agora-legacy-033`: telefono directo pendiente en dia habil.
-- Lote de seguimiento preparado automaticamente:
-  - `scripts/preparar_lote_seguimiento.py`
-  - `scripts/enviar_lote_seguimiento.py`
-  - `05-datos-y-reportes/operacion-email/seguimiento-2026-05-04.csv`
-  - `04-mensajeria-email/lote-seguimiento-2026-05-04-revision.md`
-- Prospeccion publica nueva:
-  - `05-datos-y-reportes/prospeccion-publica-2026-05-01.csv`
-  - `05-datos-y-reportes/top-15-prospeccion-2026-05-01.md`
-  - `04-mensajeria-email/preview-prospeccion-wave-4-2026-05-01.md`
-- Conversion revisable a `wave_4_candidate`:
-  - `scripts/preparar_wave4_desde_prospeccion.py`
-  - `05-datos-y-reportes/operacion-email/wave-4-candidatos-2026-05-01.csv`
-  - `05-datos-y-reportes/operacion-email/erp-leads-wave-4-candidatos-2026-05-01.csv`
-  - `05-datos-y-reportes/operacion-email/primer-contacto-wave-4-candidatos-2026-05-01.csv`
-  - `04-mensajeria-email/lote-primer-contacto-wave-4-candidatos-2026-05-01.md`
+- Primero existe o se sincroniza el Lead en ERPNext; despues se prepara el
+  correo.
+- No abrir nuevas olas mientras haya seguimiento o rebotes sin revisar.
+- No mezclar `wave_4_candidate` con los 296 contactos iniciales.
+- No guardar secretos en Markdown, CSV ni scripts.
+- Todo envio real debe dejar rastro en `correos-enviados-importar.csv`,
+  `contactos-maestro-operativo.csv`, el CSV del lote y copia IMAP `Sent`.

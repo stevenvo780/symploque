@@ -96,6 +96,7 @@ def validate_sendable(
     existing_sent: set[tuple[str, str, str]],
     target_date: str,
     campaign: str,
+    allowed_campaigns: set[str],
 ) -> list[str]:
     errors: list[str] = []
     for row in selected:
@@ -113,7 +114,7 @@ def validate_sendable(
             errors.append(f"{contact_id}: reply_status={source.get('reply_status', '')}; requiere pending")
         if source.get("next_action_date", "") != target_date:
             errors.append(f"{contact_id}: next_action_date={source.get('next_action_date', '')}; requiere {target_date}")
-        if source.get("last_campaign", "") not in CAMPAIGNS:
+        if source.get("last_campaign", "") not in allowed_campaigns:
             errors.append(f"{contact_id}: last_campaign={source.get('last_campaign', '')}; no es primer contacto elegible")
         if source.get("contact_channel", "") != "email":
             errors.append(f"{contact_id}: canal={source.get('contact_channel', '')}; requiere email")
@@ -208,6 +209,7 @@ def main() -> int:
     parser.add_argument("--send", action="store_true", help="Ejecuta envio real.")
     parser.add_argument("--allow-before-date", action="store_true", help="Permite enviar antes de target-date.")
     parser.add_argument("--campaign", help="Nombre de campana. Por defecto seguimiento_YYYY_MM_DD.")
+    parser.add_argument("--allowed-campaign", action="append", dest="allowed_campaigns", help="Campana previa permitida. Repetible. Por defecto waves 1-3.")
     parser.add_argument("--no-append-sent", action="store_true", help="No guarda copia en IMAP Sent.")
     parser.add_argument("--delay-seconds", type=float, default=0.0, help="Pausa entre correos aceptados.")
     parser.add_argument("--retries", type=int, default=1, help="Reintentos adicionales por correo.")
@@ -229,6 +231,7 @@ def main() -> int:
     lote_path = Path(args.csv)
     target_date = args.target_date or infer_target_date(lote_path)
     campaign = args.campaign or campaign_name(target_date)
+    allowed_campaigns = set(args.allowed_campaigns or CAMPAIGNS)
     lote_headers, lote_rows = read_csv(lote_path)
     master_headers, master_rows = read_csv(MASTER_PATH)
     _, sent_rows_existing = read_csv(DEFAULT_SENT_PATH)
@@ -236,11 +239,12 @@ def main() -> int:
     selected = select_lote_rows(lote_rows, args.limit)
 
     errors = validate_headers(lote_headers)
-    errors.extend(validate_sendable(selected, master_by_id, sent_campaign_keys(sent_rows_existing), target_date, campaign))
+    errors.extend(validate_sendable(selected, master_by_id, sent_campaign_keys(sent_rows_existing), target_date, campaign, allowed_campaigns))
 
     print(f"Lote seleccionado: {len(selected)}")
     print(f"Fecha objetivo: {target_date}")
     print(f"Campana: {campaign}")
+    print(f"Campanas previas permitidas: {', '.join(sorted(allowed_campaigns))}")
     for row in selected[:10]:
         print(f"- {row['contact_id']} {row['email']} {row['followup_subject']}")
     if len(selected) > 10:

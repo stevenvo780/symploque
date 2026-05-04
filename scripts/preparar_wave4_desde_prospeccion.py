@@ -24,7 +24,7 @@ DEFAULT_MASTER = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "contact
 DEFAULT_CANDIDATE_CSV = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "wave-4-candidatos-2026-05-01.csv"
 DEFAULT_ERP_CSV = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "erp-leads-wave-4-candidatos-2026-05-01.csv"
 DEFAULT_LOTE_CSV = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "primer-contacto-wave-4-candidatos-2026-05-01.csv"
-DEFAULT_REVIEW = REPO_DIR / "04-mensajeria-email" / "lote-primer-contacto-wave-4-candidatos-2026-05-01.md"
+DEFAULT_REVIEW = REPO_DIR / "04-mensajeria-email" / "lotes" / "lote-primer-contacto-wave-4-candidatos-2026-05-01.md"
 PRODUCT_URL = "https://agora.elenxos.com/"
 CORPORATE_URL = "https://www.elenxos.com/"
 DEFAULT_NEXT_ACTION_DATE = "2026-05-05"
@@ -45,6 +45,7 @@ LOTE_HEADERS = [
     "sender",
     "landing_url",
     "source_url",
+    "body_text",
     "send_status",
     "notes",
 ]
@@ -112,7 +113,7 @@ def read_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
 def write_csv(path: Path, headers: list[str], rows: Iterable[dict[str, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=headers)
+        writer = csv.DictWriter(handle, fieldnames=headers, lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow({field: row.get(field, "") for field in headers})
@@ -300,7 +301,7 @@ def render_email(row: dict[str, str]) -> tuple[str, str, str]:
 def build_lote_rows(candidate_rows: list[dict[str, str]], sender: str) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     for candidate in candidate_rows:
-        template_id, subject, _ = render_email(candidate)
+        template_id, subject, body_text = render_email(candidate)
         rows.append(
             {
                 "contact_id": candidate.get("contact_id", ""),
@@ -317,6 +318,7 @@ def build_lote_rows(candidate_rows: list[dict[str, str]], sender: str) -> list[d
                 "sender": sender,
                 "landing_url": PRODUCT_URL,
                 "source_url": candidate.get("source_url", ""),
+                "body_text": body_text,
                 "send_status": "draft_review",
                 "notes": "No enviado. No importar ni enviar hasta aprobar wave 4.",
             }
@@ -427,6 +429,7 @@ def write_review(
     if len(candidate_rows) > preview_limit:
         lines.append(f"_Se omitieron {len(candidate_rows) - preview_limit} previews para mantener revision manejable._")
 
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines), encoding="utf-8")
 
 

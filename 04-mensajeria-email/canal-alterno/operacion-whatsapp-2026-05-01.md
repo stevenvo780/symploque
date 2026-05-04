@@ -30,7 +30,7 @@
 - Enviar una sola vez por contacto mientras no haya respuesta.
 - Si entregan correo/contacto, registrar y no insistir por WhatsApp.
 
-Protocolo completo: `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`.
+Protocolo completo: `04-mensajeria-email/canal-alterno/protocolo-whatsapp-bots-2026-04-30.md`.
 
 ## Orden de ejecucion
 

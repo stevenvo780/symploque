@@ -110,7 +110,7 @@ La barrera no es conectividad, sino autenticacion para crear registros.
 
 - Se preparo y envio el lote de primer contacto `wave_1`.
 - CSV: `05-datos-y-reportes/operacion-email/primer-contacto-wave-1.csv`
-- Revision: `04-mensajeria-email/lote-primer-contacto-wave-1-revision.md`
+- Revision: `04-mensajeria-email/lotes/lote-primer-contacto-wave-1-revision.md`
 - Distribucion de plantillas:
   - `02-primer-contacto-estandar`: 26
   - `03-primer-contacto-semilleros`: 4
@@ -124,12 +124,12 @@ La barrera no es conectividad, sino autenticacion para crear registros.
 - Envio real ejecutado: 46 aceptados por SMTP, 1 rebote confirmado.
 - Se preparo y envio el lote de primer contacto `wave_2`.
 - CSV: `05-datos-y-reportes/operacion-email/primer-contacto-wave-2.csv`
-- Revision: `04-mensajeria-email/lote-primer-contacto-wave-2-revision.md`
+- Revision: `04-mensajeria-email/lotes/lote-primer-contacto-wave-2-revision.md`
 - Preview de envio real verificado: sin bloqueos ERP.
 - Envio real `wave_2` ejecutado: 70 aceptados por SMTP, 5 rebotes confirmados.
 - Se preparo y envio el lote de primer contacto `wave_3`.
 - CSV: `05-datos-y-reportes/operacion-email/primer-contacto-wave-3.csv`
-- Revision: `04-mensajeria-email/lote-primer-contacto-wave-3-revision.md`
+- Revision: `04-mensajeria-email/lotes/lote-primer-contacto-wave-3-revision.md`
 - Preview de envio real verificado: sin bloqueos ERP.
 - Envio real `wave_3` ejecutado: 180 aceptados por SMTP, 2 rebotes confirmados.
 - Envio acumulado: 296 aceptados por SMTP, 8 rebotes, 288 pendientes de respuesta.

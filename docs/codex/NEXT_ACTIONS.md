@@ -22,7 +22,7 @@
 - [x] Ejecutar envio real de `wave_1`: 46 enviados, 0 fallidos.
 - [x] Reconciliar `leads-agora-maestro.csv`, `leads-agora-top-50-hoy.csv`, maestro operativo y log de enviados.
 - [x] Corregir redundancia de links en plantillas y lote historico.
-- [x] Crear preview de tipos de correo en `04-mensajeria-email/preview-tipos-correos-wave-1.md`.
+- [x] Crear preview de tipos de correo en `04-mensajeria-email/previews/preview-tipos-correos-wave-1.md`.
 - [x] Parametrizar envio por campana para no mezclar `wave_1` y `wave_2`.
 - [x] Crear 70 Leads de `wave_2` en ERPNext y sincronizar IDs locales.
 - [x] Ejecutar envio real de `wave_2`: 70 enviados, 0 fallidos.
@@ -58,6 +58,18 @@
 - [x] Prospectar 15 nuevos leads publicos para posible `wave_4_candidate`.
 - [x] Convertir la prospeccion publica en artefactos revisables de `wave_4_candidate`: CSV operativo candidato, export ERPNext y lote email borrador.
 - [x] Preparar guion de reintento WhatsApp en dia habil para EAFIT/UPB.
+- [x] **WAVE 4** — Buscar 21 leads nuevos en Anillo 1 (EAFIT, UPB, UNAL Medellín, U. de Medellín): semilleros, centros de escritura, revistas y grupos de investigación.
+- [x] **WAVE 4** — Crear CSV de leads: `leads-wave-4-anillo-1-2026-05-01.csv` con correos institucionales verificados.
+- [x] **WAVE 4** — Preparar preview de correos personalizados: `04-mensajeria-email/previews/preview-wave-4-anillo-1-2026-05-01.md`.
+- [x] **REDES — Contenido generado**: 3 posts Instagram + 3 posts LinkedIn + 5 posts X + 1 hilo. Guardado en `contenido-listo-para-publicar-2026-05-01.md`.
+- [x] **REDES — 4 imágenes generadas** para posts (dolor semillero, antes/después, manifiesto, carrusel LinkedIn).
+- [x] **REDES — Instagram confirmada como configurada** por operador.
+- [x] Crear monitor IMAP readonly con reporte diario: `scripts/monitorear_inbox_operacion.py`.
+- [x] Hacer idempotente `scripts/registrar_canal_alterno.py`: los 3 WhatsApp ya aplicados no vuelven a aparecer como aplicables.
+- [x] Preparar runbook 2026-05-04 para seguimiento, rebotes, WhatsApp y llamada Javeriana.
+- [x] Preparar mini-lote separado de seguimiento para 3 recuperaciones: `seguimiento-recuperacion-2026-05-07.csv`.
+- [x] Agregar `scripts/promover_wave4_candidatos.py` y `body_text` en lote wave 4 para usar copy personalizado tras aprobacion.
+- [x] Corregir rutas de assets de redes a `assets/brand/logos/kit_completo` y agregar `scripts/publicar_redes.py --preflight`.
 
 ## Next
 
@@ -67,15 +79,22 @@
 - [x] Confirmar visualmente si los 3 WhatsApp abiertos quedaron enviados y registrar resultado real. **CONFIRMADO 2026-05-01**: 3 enviados, 3 bots respondieron, asesores no disponibles por festivo.
 - [ ] Ejecutar llamada/canal alterno para `agora-legacy-033` (Javeriana) en dia habil.
 - [x] Registrar resultados reales del canal alterno en `registro-canal-alterno-2026-04-30.csv`. **HECHO 2026-05-01**.
-- [ ] Reintentar EAFIT Pregrados, EAFIT Artes y UPB en dia habil usando `reintento-whatsapp-dia-habil-2026-05-04.md`.
+- [ ] Reintentar EAFIT Pregrados, EAFIT Artes y UPB en dia habil usando `04-mensajeria-email/canal-alterno/reintento-whatsapp-dia-habil-2026-05-04.md`.
 - [ ] El 2026-05-04, revisar INBOX/rebotes y regenerar/confirmar lote final de seguimiento a elegibles.
 - [ ] Hacer seguimiento a los contactos sin respuesta el 2026-05-04 solo despues de revisar INBOX/rebotes y aprobar `scripts/enviar_lote_seguimiento.py --send`.
-- [ ] Revisar `lote-primer-contacto-wave-4-candidatos-2026-05-01.md` y decidir si se aprueba la importacion/envio de `wave_4_candidate` despues del seguimiento.
+- [ ] Ejecutar `05-datos-y-reportes/operacion-email/runbooks/runbook-seguimiento-2026-05-04.md` completo antes de cualquier envio de seguimiento.
+- [ ] El 2026-05-07, ejecutar `05-datos-y-reportes/operacion-email/runbooks/runbook-seguimiento-recuperacion-2026-05-07.md` para los 3 correos recuperados.
+- [ ] Revisar y aprobar `04-mensajeria-email/previews/preview-wave-4-anillo-1-2026-05-01.md` para envio de wave 4 (21 leads Anillo 1).
+- [ ] Crear leads wave 4 en ERPNext y sincronizar IDs.
+- [ ] Ejecutar envío wave 4 después de aprobación.
 - [ ] Preparar la siguiente etapa solo despues de revisar respuestas, rebotes y senales de interes de los 296 envios iniciales y 3 recuperaciones.
 - [ ] **REDES — Crear la pagina de empresa de LinkedIn o documentar la URL correcta** (la actual retorna 404).
 - [ ] **REDES — Definir y documentar el handle de X/Twitter** (actualmente TBD, bloquea publicacion en X).
+- [ ] **REDES — Resolver bloqueos de `python3 scripts/publicar_redes.py --preflight` antes de publicar por API**.
 - [x] **REDES — Verificar acceso a `media@elenxos.com`** para recibir codigos de verificacion de plataformas. (resuelto 2026-04-24, correo de prueba admin→ventas exitoso)
-- [ ] **REDES — Configurar LinkedIn e Instagram** (foto, banner, bio, enlace, perfil profesional).
+- [x] **REDES — Configurar Instagram** (configurada por operador 2026-05-01).
+- [ ] **REDES — Configurar LinkedIn** (foto, banner, bio, enlace, perfil profesional).
+- [ ] **REDES — Publicar contenido generado en Instagram** (3 posts listos en `contenido-listo-para-publicar-2026-05-01.md`).
 
 ## Later
 

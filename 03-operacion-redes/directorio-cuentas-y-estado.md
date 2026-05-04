@@ -7,7 +7,7 @@ Este documento registra las cuentas creadas bajo el correo `media@elenxos.com` y
 | Plataforma | Usuario / Handle | Estado | Propósito |
 | :--- | :--- | :--- | :--- |
 | **LinkedIn** | Elenxos | [x] Creada / [ ] Configurada | Autoridad Corporativa |
-| **Instagram** | @agora.elenxos | [x] Creada / [ ] Configurada | Producto y Comunidad |
+| **Instagram** | @agora.elenxos | [x] Creada / [x] Configurada | Producto y Comunidad |
 | **X (Twitter)** | PENDIENTE — definir handle | [x] Creada / [ ] Configurada | Pensamiento e Hilos |
 | **YouTube** | Elenxos / Agora | [x] Creada / [ ] Configurada | Demos y Tutoriales |
 | **GitHub** | elenxos | [x] Creada / [ ] Configurada | Credibilidad Técnica |
@@ -17,7 +17,7 @@ Este documento registra las cuentas creadas bajo el correo `media@elenxos.com` y
 Guía completa con textos y archivos exactos: [guia-configuracion-manual-redes.md](./guia-configuracion-manual-redes.md)
 
 ### Instagram (@agora.elenxos)
-- [ ] Foto de Perfil → `assets/brand/mto/kit_logos/logo_kodama_512.png`
+- [ ] Foto de Perfil → `assets/brand/logos/kit_completo/logo_kodama_512.png`
 - [ ] Bio optimizada (ver guía)
 - [ ] Website → `agora.elenxos.com` (solo desde app móvil)
 - [ ] Categoría → Software > Educación
@@ -25,15 +25,15 @@ Guía completa con textos y archivos exactos: [guia-configuracion-manual-redes.m
 
 ### LinkedIn (Elenxos)
 - [ ] Página de empresa creada con URL `/company/elenxos`
-- [ ] Logo → `assets/brand/mto/kit_logos/logo_white_512.png`
-- [ ] Banner → `assets/brand/mto/kit_logos/banner_main.png`
+- [ ] Logo → `assets/brand/logos/kit_completo/logo_white_512.png`
+- [ ] Banner → `assets/brand/logos/kit_completo/banner_main.png`
 - [ ] Tagline y descripción (ver guía)
 - [ ] Website → `elenxos.com`
 - [ ] Primera publicación (Post 1 del Lote 1)
 
 ### X / Twitter
 - [ ] Cuenta creada con handle definitivo
-- [ ] Foto de Perfil → `assets/brand/mto/kit_logos/logo_kodama_512.png`
+- [ ] Foto de Perfil → `assets/brand/logos/kit_completo/logo_kodama_512.png`
 - [ ] Banner → `campana_0_dolor/con_ia/banners/banner__hybrid_banner_x__con_ia_01.png`
 - [ ] Bio (ver guía)
 - [ ] Website → `agora.elenxos.com`
@@ -41,7 +41,7 @@ Guía completa con textos y archivos exactos: [guia-configuracion-manual-redes.m
 
 ### YouTube (Elenxos)
 - [ ] Canal creado con nombre `Elenxos`
-- [ ] Foto de Perfil → `assets/brand/mto/kit_logos/logo_kodama_1024.png`
+- [ ] Foto de Perfil → `assets/brand/logos/kit_completo/logo_kodama_1024.png`
 - [ ] Banner → `campana_0_dolor/con_ia/banners/banner__hybrid_banner_yt__con_ia_01.png`
 - [ ] Descripción del canal (ver guía)
 - [ ] Links configurados
@@ -115,3 +115,13 @@ Estas acciones **no se pueden resolver desde el repo** y requieren acción manua
 | 8 | Agregar OG tags (`og:title`, `og:description`, `og:image`) a `agora.elenxos.com` | Dev | Preview cards al compartir en redes sociales |
 | 9 | Agregar perfiles sociales al campo `sameAs` del schema.org en `elenxos.com` | Dev | Autoridad SEO de perfiles sociales |
 | 10 | Verificar y corregir la URL de LinkedIn en la firma de correo HTML | Operador | Cada correo corporativo enviado |
+
+## 8. Preflight local
+
+Antes de publicar por API, correr:
+
+```bash
+python3 scripts/publicar_redes.py --preflight
+```
+
+Estado 2026-05-01: assets de posts 1 y 2 existen; publicaciones por API siguen bloqueadas por falta de tokens LinkedIn/X/Instagram, URL LinkedIn no confirmada, handle X pendiente y requisito de URL publica para imagen de Instagram Graph API.

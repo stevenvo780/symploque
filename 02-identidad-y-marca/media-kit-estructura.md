@@ -9,7 +9,7 @@ Referencia complementaria:
 - tokens oficiales: [../elenxos_design_system/src/tokens/_colors.scss](../elenxos_design_system/src/tokens/_colors.scss)
 
 ## 1. Identidad Visual (Brand Assets)
-- [x] **Logos:** Ya existe un kit exportable en `../assets/brand/mto/kit_logos/` con SVG y PNG en multiples tamaños.
+- [x] **Logos:** Ya existe un kit exportable en `../assets/brand/logos/kit_completo/` con SVG y PNG en multiples tamaños.
 - [x] **Variantes de Color:** Ya existen variantes `forest`, `kodama`, `mask`, `ash`, `white` y `black` dentro del kit.
 - [x] **Paleta de Colores:** Ya existe una paleta canonica en el manual de marca y en el design system.
 - [x] **Tipografías:** Ya existe criterio claro: `Playfair Display` + `Inter`.
@@ -22,7 +22,7 @@ Referencia complementaria:
 - [ ] **Dispositivos:** Mockups de Agora funcionando en un MacBook, un iPad y un iPhone (para denotar PWA & Offline).
 
 ## 3. Gráficos de Redes Sociales (Social Media Templates)
-- [x] **Banners exploratorios:** Ya existen banners y logos base en `../assets/brand/mto/kit_logos/`.
+- [x] **Banners exploratorios:** Ya existen banners y logos base en `../assets/brand/logos/kit_completo/`.
 - [x] **Renders multi-plataforma:** Ya existe el pipeline React → PNG en `../elenxos_design_system/` y mantiene el registry renderizable.
 - [x] **Plantilla para Carruseles:** Ya existen `lote1_estandar` y `lote1_flujo` para arrancar la primera semana.
 - [x] **Plantilla para Reel:** Ya existe `reel_manifiesto` para la pieza vertical de arranque.

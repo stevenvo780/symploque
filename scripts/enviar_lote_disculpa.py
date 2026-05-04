@@ -40,7 +40,7 @@ class ValidationResult:
 
 TEMPLATE_PATH = Path("04-mensajeria-email/01-disculpa-repetidos.md")
 DEFAULT_SENDER = "ventas@elenxos.com"
-DEFAULT_REVIEW_PATH = Path("04-mensajeria-email/lote-disculpa-error-revision.md")
+DEFAULT_REVIEW_PATH = Path("04-mensajeria-email/lotes/lote-disculpa-error-revision.md")
 
 
 def build_body(contact_name: str, body_variant: str, duplicate_count: int) -> str:

@@ -4,8 +4,8 @@ Fecha de corte: 2026-04-12
 
 ## Archivo operativo
 
-- CSV de trabajo inmediato: [leads-agora-top-50-hoy.csv](../03-datos/leads-agora-top-50-hoy.csv)
-- Base completa de referencia: [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
+- CSV de trabajo inmediato: [leads-agora-top-50-hoy.csv](./leads-agora-top-50-hoy.csv)
+- Base completa de referencia: [leads-agora-maestro.csv](./leads-agora-maestro.csv)
 
 ## Que contiene este corte
 
@@ -54,8 +54,8 @@ Esto permite tocar primero el tramo `A1`, luego el `A2` y dejar el `B1` como col
 
 Secuencia minima:
 
-1. abrir [leads-agora-top-50-hoy.csv](../03-datos/leads-agora-top-50-hoy.csv)
-2. usar [mensajes-y-copy.md](../02-mensajeria/mensajes-y-copy.md)
+1. abrir [leads-agora-top-50-hoy.csv](./leads-agora-top-50-hoy.csv)
+2. usar [04-mensajeria-email/README.md](../04-mensajeria-email/README.md)
 3. registrar en el mismo CSV `estado`, `fecha_ultimo_contacto`, `respuesta` y `proxima_accion`
 4. si aparece interes real, completar `owner`, `plan_objetivo` y `probabilidad_cierre`
 

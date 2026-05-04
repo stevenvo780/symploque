@@ -39,9 +39,9 @@ Origen: INBOX de `ventas@elenxos.com` via IMAP.
 
 ## Recuperacion preparada
 
-- Revision: `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-29.md`
+- Revision: `05-datos-y-reportes/operacion-email/reportes/revision-correos-alternativos-rebotes-2026-04-29.md`
 - Tabla operativa: `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-29.csv`
-- Preview de mensajes: `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-29.md`
+- Preview de mensajes: `04-mensajeria-email/previews/preview-recuperacion-rebotes-2026-04-29.md`
 - Resultado: 3 correos corregidos listos para revision manual, 6 casos Javeriana en espera por `mail loop`, 6 casos para canal manual o confirmacion adicional.
 
 ## Causa del problema de Enviados

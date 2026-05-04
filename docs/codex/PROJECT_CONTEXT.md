@@ -13,7 +13,7 @@
   - `00-central/central-operativo-agora.md`
   - `05-datos-y-reportes/operacion-email/README.md`
   - `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`
-  - `04-mensajeria-email/email.md`
+  - `04-mensajeria-email/README.md`
 - Key modules:
   - `00-central/`: estado actual, transicion y mapa operativo
   - `01-estrategia-comercial/`: estrategia y playbooks comerciales
@@ -43,6 +43,10 @@
   - `python3 scripts/enviar_lote_primer_contacto.py --limit 3`
 - Preview de seguimiento:
   - `python3 scripts/enviar_lote_seguimiento.py --limit 5`
+- Monitoreo readonly:
+  - `python3 scripts/monitorear_inbox_operacion.py --since 2026-05-01 --limit 100`
+- Preflight redes:
+  - `python3 scripts/publicar_redes.py --preflight`
 - Envio real:
   - `python3 scripts/enviar_lote_primer_contacto.py --send`
   - Solo con aprobacion explicita del lote revisable.
@@ -54,14 +58,16 @@
 - `wave_1`: 46 Leads creados en ERPNext (`CRM-LEAD-2026-00001` a `CRM-LEAD-2026-00046`).
 - `wave_2`: 70 Leads creados en ERPNext (`CRM-LEAD-2026-00047` a `CRM-LEAD-2026-00116`).
 - `wave_3`: 180 Leads creados en ERPNext (`CRM-LEAD-2026-00117` a `CRM-LEAD-2026-00296`).
-- Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-1-revision.md`.
-- Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-2-revision.md`.
-- Lote enviado: `04-mensajeria-email/lote-primer-contacto-wave-3-revision.md`.
+- Lote enviado: `04-mensajeria-email/lotes/lote-primer-contacto-wave-1-revision.md`.
+- Lote enviado: `04-mensajeria-email/lotes/lote-primer-contacto-wave-2-revision.md`.
+- Lote enviado: `04-mensajeria-email/lotes/lote-primer-contacto-wave-3-revision.md`.
 - Envio real acumulado: 299 aceptados por SMTP; 15 rebotes historicos, 12 rebotes activos, 284 pendientes de respuesta; siguiente seguimiento elegible el 2026-05-04 para 281 contactos, excluyendo las 3 recuperaciones hasta el 2026-05-07.
 - Carpeta IMAP `Sent`: 299 copias de campana visibles; futuros envios anexan copia automaticamente.
-- Seguimiento 2026-05-04: `scripts/preparar_lote_seguimiento.py` genera 281 elegibles en `seguimiento-2026-05-04.csv` y preview revisable en `lote-seguimiento-2026-05-04-revision.md`.
+- Seguimiento 2026-05-04: `scripts/preparar_lote_seguimiento.py` genera 281 elegibles en `seguimiento-2026-05-04.csv` y preview revisable en `04-mensajeria-email/lotes/lote-seguimiento-2026-05-04-revision.md`.
 - Envio de seguimiento: `scripts/enviar_lote_seguimiento.py` hace preview por defecto, valida contra maestro, evita duplicados por campana y bloquea `--send` antes del 2026-05-04.
-- Wave 4 candidata: `scripts/preparar_wave4_desde_prospeccion.py` genera 15 candidatos, export ERPNext manual y borradores personalizados en `lote-primer-contacto-wave-4-candidatos-2026-05-01.md`; pendiente de aprobacion posterior al seguimiento.
+- Seguimiento recuperaciones 2026-05-07: mini-lote separado para los 3 correos recuperados, con `--allowed-campaign recuperacion_rebote_2026_04_30`.
+- Wave 4 candidata: `scripts/preparar_wave4_desde_prospeccion.py` genera 15 candidatos, export ERPNext manual y borradores personalizados en `04-mensajeria-email/lotes/lote-primer-contacto-wave-4-candidatos-2026-05-01.md`; `scripts/promover_wave4_candidatos.py` promueve al maestro solo con `--apply` y despues de aprobacion.
+- Redes: `scripts/publicar_redes.py --preflight` valida assets/tokens y mantiene bloqueadas publicaciones por API mientras falten credenciales, URL LinkedIn confirmada o handle X.
 - Auditoria de mensajeria confirma UdeA/Universidad de Antioquia, ausencia de redes sociales, ausencia de CTA duplicado y sitios oficiales Elenxos/Agora.
 
 ## Constraints

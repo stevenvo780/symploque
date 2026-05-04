@@ -2,7 +2,7 @@
 
 > Estado: ejecutado parcialmente el 2026-04-30. Se enviaron solo los 3 correos corregidos; no se reintentaron casos Javeriana ni contactos sin confirmacion.
 
-- Revision fuente: `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-29.md`
+- Revision fuente: `05-datos-y-reportes/operacion-email/reportes/revision-correos-alternativos-rebotes-2026-04-29.md`
 - Tabla operativa: `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-29.csv`
 - Envio recomendado ahora: solo 3 contactos con correo corregido.
 - Casos en espera: 6 Javeriana por `mail loop`, 6 por canal manual o confirmacion adicional.

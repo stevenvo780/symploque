@@ -77,15 +77,15 @@ No debe enviar correos, WhatsApp, DMs, publicar en redes, crear registros extern
 Ejecutar esta rutina al iniciar cada sesion operativa:
 
 1. Revisar el estado del repo con `git status --short --branch`. Si aparece divergencia como `main...origin/main [ahead 1, behind 1]`, dejarla visible antes de editar y evitar pisar trabajo remoto.
-2. Leer `docs/codex/NEXT_ACTIONS.md`, `05-datos-y-reportes/operacion-email/estado-operacion-2026-04-29.md`, `05-datos-y-reportes/operacion-email/revision-post-analisis-2026-04-30.md` y el plan de seguimiento vigente antes de actuar.
+2. Leer `docs/codex/NEXT_ACTIONS.md`, `05-datos-y-reportes/operacion-email/reportes/estado-operacion-2026-04-29.md`, `05-datos-y-reportes/operacion-email/reportes/revision-post-analisis-2026-04-30.md` y el plan de seguimiento vigente antes de actuar.
 3. Correr auditoria local cuando se vaya a tocar mensajeria o datos: `python3 scripts/auditar_operacion_email.py --fail-on-blockers`.
 4. Monitorear INBOX de `ventas@elenxos.com` cuando el operador lo pida o cuando existan credenciales disponibles en la sesion.
 5. Registrar respuestas humanas, rebotes, redirecciones y senales positivas antes de preparar cualquier nueva accion.
 6. Responder una senal positiva en menos de 2 horas con propuesta de demo, piloto o workspace inicial.
 7. Revisar los 12 rebotes activos y buscar correo alternativo oficial antes de descartarlos.
 8. Reintentar EAFIT/UPB por WhatsApp en dia habil si no responde asesor humano y ejecutar el telefono pendiente de `agora-legacy-033`, sin asumir que el repo puede llamar por telefono.
-9. Preparar/ejecutar el seguimiento corto para los 281 elegibles solo si no responden antes del 2026-05-04; usar `scripts/enviar_lote_seguimiento.py` despues de revisar INBOX/rebotes y aprobar el envio real.
-10. Revisar `lote-primer-contacto-wave-4-candidatos-2026-05-01.md` solo despues del seguimiento del 2026-05-04; no importar ni enviar `wave_4_candidate` sin aprobacion explicita.
+9. Preparar/ejecutar el seguimiento corto para los 281 elegibles solo si no responden antes del 2026-05-04; usar `scripts/monitorear_inbox_operacion.py`, `05-datos-y-reportes/operacion-email/runbooks/runbook-seguimiento-2026-05-04.md` y `scripts/enviar_lote_seguimiento.py` despues de revisar INBOX/rebotes y aprobar el envio real.
+10. Revisar `04-mensajeria-email/lotes/lote-primer-contacto-wave-4-candidatos-2026-05-01.md` solo despues del seguimiento del 2026-05-04; no importar ni enviar `wave_4_candidate` sin aprobacion explicita.
 11. No abrir una nueva tanda masiva hasta cerrar la revision post-envio de respuestas, rebotes y aprendizajes de `wave_1`, `wave_2` y `wave_3`.
 
 ## Rutina diaria de crecimiento
@@ -177,11 +177,14 @@ El sistema documental central queda asi:
   - `protocolo-de-interaccion.md`
   - `directorio-cuentas-y-estado.md`
 - `04-mensajeria-email/`
+  - `README.md`
   - `02-primer-contacto-estandar.md`
   - `03-primer-contacto-semilleros.md`
   - `04-primer-contacto-directores.md`
   - `05-seguimiento-corto.md`
-  - `lote-canal-alterno-2026-04-27.md`
+  - `lotes/`
+  - `previews/`
+  - `canal-alterno/`
 - `05-datos-y-reportes/`
   - `leads-agora-maestro.csv`
   - `leads-agora-top-50-hoy.csv`
@@ -190,10 +193,9 @@ El sistema documental central queda asi:
   - `README.md`
   - `contactos-maestro-operativo.csv`
   - `correos-enviados-importar.csv`
-  - `estado-operacion-2026-04-27.md`
-  - `plan-siguiente-etapa-2026-04-27.md`
-  - `revision-post-analisis-2026-04-27.md`
-  - `rebotes-detectados-2026-04-27.md`
+  - `reportes/`
+  - `runbooks/`
+  - `logs/`
 
 El CSV operativo base es `05-datos-y-reportes/leads-agora-maestro.csv`; la capa activa de outreach y ERP vive en `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`.
 
@@ -206,7 +208,9 @@ git status --short --branch
 python3 scripts/auditar_operacion_email.py --fail-on-blockers
 python3 scripts/preparar_lote_primer_contacto.py
 python3 scripts/preparar_wave4_desde_prospeccion.py
+python3 scripts/promover_wave4_candidatos.py
 python3 scripts/enviar_lote_primer_contacto.py --limit 3
+python3 scripts/monitorear_inbox_operacion.py --since 2026-05-01 --limit 100
 python3 scripts/enviar_lote_seguimiento.py --limit 5
 ```
 

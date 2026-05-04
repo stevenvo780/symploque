@@ -31,11 +31,11 @@
 ## Trabajo preparado hoy
 
 - Se creo protocolo transparente para navegar bots/asesores institucionales:
-  - `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`
+  - `04-mensajeria-email/canal-alterno/protocolo-whatsapp-bots-2026-04-30.md`
 - Se creo registro operativo para capturar resultados de canal alterno:
   - `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
 - Se enlazo el protocolo desde:
-  - `04-mensajeria-email/preview-canal-alterno-2026-04-28.md`
+  - `04-mensajeria-email/previews/preview-canal-alterno-2026-04-28.md`
 
 ## Guardrail de canal alterno
 

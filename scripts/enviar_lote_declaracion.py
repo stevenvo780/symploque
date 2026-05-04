@@ -14,7 +14,7 @@ from enviar_lote_primer_contacto import markdown_to_email_html, markdown_to_plai
 CSV_PATH = Path("05-datos-y-reportes/operacion-email/declaracion-pendientes.csv")
 TEMPLATE_PATH = Path("04-mensajeria-email/06-correo-declaracion.md")
 DEFAULT_SENDER = "ventas@elenxos.com"
-DEFAULT_REVIEW_PATH = Path("04-mensajeria-email/lote-declaracion-revision.md")
+DEFAULT_REVIEW_PATH = Path("04-mensajeria-email/lotes/lote-declaracion-revision.md")
 
 
 def build_body(contact_name: str, institution: str, role_or_unit: str) -> str:

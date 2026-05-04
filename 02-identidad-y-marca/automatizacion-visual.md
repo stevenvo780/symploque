@@ -30,7 +30,7 @@ La regla operativa es simple:
 
 Los ultimos commits dejaron operativo este stack:
 
-- kit exportable de logos, favicons y banners en `assets/brand/mto/kit_logos/`
+- kit exportable de logos, favicons y banners en `assets/brand/logos/kit_completo/`
 - variantes decorativas regenerables en `assets/brand/mto/variantes/`
 - registry renderizable de templates en `../elenxos_design_system/src/RenderPage.tsx`
 - templates concretos de arranque para redes en `lote1_estandar`, `lote1_flujo`, `reel_manifiesto` y `banner_minimal`
@@ -111,7 +111,7 @@ Si se usa un filtro puntual (`--narrativa`, `--lote`, `--tipo` o `--legacy`), la
 
 ## Salida esperada
 
-- logos y banners: `assets/brand/mto/kit_logos/`
+- logos y banners: `assets/brand/logos/kit_completo/`
 - variantes: `assets/brand/mto/variantes/`
 - campañas oficiales: `assets/entregables/campanas/`
 - selecciones puntuales filtradas: `assets/entregables/campanas/selecciones/`

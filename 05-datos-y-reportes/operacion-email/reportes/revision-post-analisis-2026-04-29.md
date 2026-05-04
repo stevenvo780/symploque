@@ -31,12 +31,12 @@
 
 ## Archivos preparados
 
-- `05-datos-y-reportes/operacion-email/estado-operacion-2026-04-29.md`
+- `05-datos-y-reportes/operacion-email/reportes/estado-operacion-2026-04-29.md`
 - `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-29.csv`
-- `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-29.md`
-- `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-29.md`
-- `05-datos-y-reportes/operacion-email/plan-seguimiento-281-2026-05-04.md`
-- `04-mensajeria-email/preview-seguimiento-281-2026-05-04.md`
+- `05-datos-y-reportes/operacion-email/reportes/revision-correos-alternativos-rebotes-2026-04-29.md`
+- `04-mensajeria-email/previews/preview-recuperacion-rebotes-2026-04-29.md`
+- `05-datos-y-reportes/operacion-email/runbooks/plan-seguimiento-281-2026-05-04.md`
+- `04-mensajeria-email/previews/preview-seguimiento-281-2026-05-04.md`
 
 ## Siguientes pasos reales
 

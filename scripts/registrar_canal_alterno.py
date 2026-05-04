@@ -99,6 +99,29 @@ def status_for(result: ManualResult) -> str:
     return "alternate_channel_contacted"
 
 
+def already_applied(row: dict[str, str], result: ManualResult) -> bool:
+    note = row.get("notes", "")
+    return (
+        row.get("last_contact_date", "") == result.attempted_at[:10]
+        and row.get("status", "") == status_for(result)
+        and f"Canal alterno {result.channel} ejecutado {result.attempted_at}" in note
+        and f"outcome={result.outcome}" in note
+    )
+
+
+def filter_unapplied_results(rows: list[dict[str, str]], results: dict[str, ManualResult]) -> tuple[dict[str, ManualResult], list[ManualResult]]:
+    operative_by_id = {row.get("contact_id", ""): row for row in rows}
+    pending: dict[str, ManualResult] = {}
+    skipped: list[ManualResult] = []
+    for contact_id, result in results.items():
+        row = operative_by_id.get(contact_id)
+        if row and already_applied(row, result):
+            skipped.append(result)
+            continue
+        pending[contact_id] = result
+    return pending, skipped
+
+
 def update_operative(rows: list[dict[str, str]], results: dict[str, ManualResult]) -> int:
     changed = 0
     for row in rows:
@@ -150,14 +173,19 @@ def main() -> int:
     parser.add_argument("--apply", action="store_true", help="Escribe cambios en los CSV maestros.")
     args = parser.parse_args()
 
-    results = {item.contact_id: item for item in load_results(Path(args.input))}
-    print(f"Resultados aplicables: {len(results)}")
-    for item in results.values():
-        print(f"- {item.contact_id} {item.outcome} {item.channel} {item.new_contact or '-'}")
-
     op_headers, op_rows = read_csv(OPERATIVE_MASTER)
     legacy_headers, legacy_rows = read_csv(LEGACY_MASTER)
     top_headers, top_rows = read_csv(TOP50_MASTER)
+
+    raw_results = {item.contact_id: item for item in load_results(Path(args.input))}
+    results, skipped = filter_unapplied_results(op_rows, raw_results)
+    print(f"Resultados aplicables: {len(results)}")
+    for item in results.values():
+        print(f"- {item.contact_id} {item.outcome} {item.channel} {item.new_contact or '-'}")
+    if skipped:
+        print(f"Resultados ya aplicados: {len(skipped)}")
+        for item in skipped:
+            print(f"- {item.contact_id} {item.outcome} {item.channel}")
 
     op_changed = update_operative(op_rows, results)
     legacy_changed = update_legacy(legacy_rows, results)

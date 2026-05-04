@@ -8,7 +8,7 @@ Expandir la base desde 100 hasta 300 contactos publicos, manteniendo acceso rapi
 
 ## Entregables de esta iteracion
 
-- Base operativa actual: [leads-agora-maestro.csv](../03-datos/leads-agora-maestro.csv)
+- Base operativa actual: [leads-agora-maestro.csv](./leads-agora-maestro.csv)
 - Reporte central: [central-operativo-agora.md](../00-central/central-operativo-agora.md)
 
 ## Por que no aparecio UNAL Bogota en la primera base de 100
@@ -110,7 +110,7 @@ La siguiente iteracion no deberia ser solo "mas volumen". Deberia ser:
 
 Para pasar de expansion a ejecucion se genero un lote separado con los `priority_rank` `1-50`:
 
-- [leads-agora-top-50-hoy.csv](../03-datos/leads-agora-top-50-hoy.csv)
+- [leads-agora-top-50-hoy.csv](./leads-agora-top-50-hoy.csv)
 - [top-50-listos-para-atacar-hoy.md](./top-50-listos-para-atacar-hoy.md)
 
 Lectura rapida del corte:

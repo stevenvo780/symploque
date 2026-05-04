@@ -28,7 +28,7 @@ Campana: `primer_contacto_wave_3`
 - Rebotes confirmados tras monitoreo IMAP: 2
 - Pendientes de respuesta de `wave_3`: 178
 - Archivo lote: `05-datos-y-reportes/operacion-email/primer-contacto-wave-3.csv`
-- Revision historica: `04-mensajeria-email/lote-primer-contacto-wave-3-revision.md`
+- Revision historica: `04-mensajeria-email/lotes/lote-primer-contacto-wave-3-revision.md`
 - Log: `05-datos-y-reportes/operacion-email/logs/primer-contacto-20260427-155159.csv`
 
 ## Distribucion de plantillas

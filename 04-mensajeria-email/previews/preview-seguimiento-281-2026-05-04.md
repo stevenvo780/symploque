@@ -3,7 +3,7 @@
 > Estado: preparado para revision. No enviar antes del 2026-05-04 y no ejecutar sin nueva revision de respuestas/rebotes.
 
 - Base: `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`
-- Plan: `05-datos-y-reportes/operacion-email/plan-seguimiento-281-2026-05-04.md`
+- Plan: `05-datos-y-reportes/operacion-email/runbooks/plan-seguimiento-281-2026-05-04.md`
 - Plantilla base: `04-mensajeria-email/05-seguimiento-corto.md`
 - Pendientes actuales: 281
 - Excluir siempre: rebotados, contactos por canal alterno, respuestas humanas, redirecciones ya registradas, y los 3 correos de `recuperacion_rebote_2026_04_30` hasta el 2026-05-07.

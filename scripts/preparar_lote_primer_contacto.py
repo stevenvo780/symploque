@@ -20,7 +20,7 @@ import re
 REPO_DIR = Path(__file__).resolve().parents[1]
 MASTER_PATH = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "contactos-maestro-operativo.csv"
 DEFAULT_CSV_OUT = REPO_DIR / "05-datos-y-reportes" / "operacion-email" / "primer-contacto-wave-1.csv"
-DEFAULT_REVIEW_OUT = REPO_DIR / "04-mensajeria-email" / "lote-primer-contacto-wave-1-revision.md"
+DEFAULT_REVIEW_OUT = REPO_DIR / "04-mensajeria-email" / "lotes" / "lote-primer-contacto-wave-1-revision.md"
 READY_ERP_STATUSES = {"ready_for_import", "synced", "synced_existing"}
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 
@@ -241,6 +241,7 @@ def write_review(path: Path, source_rows: list[dict[str, str]], lote_rows: list[
             ]
         )
 
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines), encoding="utf-8")
 
 

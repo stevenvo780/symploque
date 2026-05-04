@@ -43,12 +43,12 @@ El monitoreo IMAP del 2026-04-29 consolido 15 rebotes asociados a envios registr
 ## Archivos operativos actualizados
 
 - `05-datos-y-reportes/operacion-email/rebotes-detectados-2026-04-27.csv`
-- `05-datos-y-reportes/operacion-email/rebotes-detectados-2026-04-27.md`
+- `05-datos-y-reportes/operacion-email/reportes/rebotes-detectados-2026-04-27.md`
 - `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-29.csv`
-- `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-29.md`
-- `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-29.md`
-- `05-datos-y-reportes/operacion-email/plan-seguimiento-281-2026-05-04.md`
-- `04-mensajeria-email/preview-seguimiento-281-2026-05-04.md`
+- `05-datos-y-reportes/operacion-email/reportes/revision-correos-alternativos-rebotes-2026-04-29.md`
+- `04-mensajeria-email/previews/preview-recuperacion-rebotes-2026-04-29.md`
+- `05-datos-y-reportes/operacion-email/runbooks/plan-seguimiento-281-2026-05-04.md`
+- `04-mensajeria-email/previews/preview-seguimiento-281-2026-05-04.md`
 
 ## Siguientes acciones reales
 
@@ -62,7 +62,7 @@ El monitoreo IMAP del 2026-04-29 consolido 15 rebotes asociados a envios registr
 
 - INBOX readonly desde el 2026-04-30: 0 respuestas humanas, 0 rebotes nuevos.
 - Canal alterno preparado con protocolo transparente para bots/asesores:
-  - `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`
+  - `04-mensajeria-email/canal-alterno/protocolo-whatsapp-bots-2026-04-30.md`
   - `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
 - Recuperacion de rebotes ejecutada:
   - Campana: `recuperacion_rebote_2026_04_30`
@@ -79,7 +79,7 @@ El monitoreo IMAP del 2026-04-29 consolido 15 rebotes asociados a envios registr
   - Rebotes nuevos: 0.
   - Mensajes no rebote / respuestas humanas: 0.
 - Operacion WhatsApp/canal alterno iniciada para ejecucion manual:
-  - `04-mensajeria-email/operacion-whatsapp-2026-05-01.md`
+  - `04-mensajeria-email/canal-alterno/operacion-whatsapp-2026-05-01.md`
   - Registro: `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
 - Registro manual aplicado:
   - 3 WhatsApp oficiales enviados y respondidos por bot.

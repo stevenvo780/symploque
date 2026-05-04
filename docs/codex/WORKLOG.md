@@ -244,8 +244,8 @@
 - Goal: Resolve the local branch divergence and prepare alternate-channel previews.
 - Actions:
   - Fetched `origin/main` and merged the remote asset/logos commit into local `main` with the existing email-operations commit.
-  - Created `04-mensajeria-email/preview-canal-alterno-2026-04-28.md` with 3 WhatsApp prefilled links, 1 phone-call script, send guardrails, and post-contact logging guidance.
-  - Linked the preview from `04-mensajeria-email/lote-canal-alterno-2026-04-27.md`.
+  - Created `04-mensajeria-email/previews/preview-canal-alterno-2026-04-28.md` with 3 WhatsApp prefilled links, 1 phone-call script, send guardrails, and post-contact logging guidance.
+  - Linked the preview from `04-mensajeria-email/canal-alterno/lote-canal-alterno-2026-04-27.md`.
   - Updated `docs/codex/NEXT_ACTIONS.md` to mark the alternate-channel preview as ready while keeping manual execution open.
 - Verification:
   - Branch is no longer behind `origin/main`; local `main` is ahead with the merge and documentation changes.
@@ -257,8 +257,8 @@
 - Actions:
   - Reviewed the 8 confirmed bounces against public sources and separated corrected-email candidates from infrastructure/domain failures.
   - Created `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-28.csv`.
-  - Created `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-28.md`.
-  - Created `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-28.md`.
+  - Created `05-datos-y-reportes/operacion-email/reportes/revision-correos-alternativos-rebotes-2026-04-28.md`.
+  - Created `04-mensajeria-email/previews/preview-recuperacion-rebotes-2026-04-28.md`.
   - Linked the recovery review from `rebotes-detectados-2026-04-27.md` and updated `NEXT_ACTIONS.md`.
 - Verification:
   - Recovery split: 2 corrected-email candidates, 4 Javeriana mail-loop holds, 2 manual-channel holds.
@@ -269,8 +269,8 @@
 - Goal: Prepare the 2026-05-04 follow-up stage without executing it early.
 - Actions:
   - Counted 288 pending replies across `wave_1`, `wave_2`, and `wave_3`.
-  - Created `04-mensajeria-email/preview-seguimiento-288-2026-05-04.md` with segmented follow-up variants and exclusion rules.
-  - Created `05-datos-y-reportes/operacion-email/plan-seguimiento-288-2026-05-04.md` with eligibility criteria and execution order.
+  - Created `04-mensajeria-email/previews/preview-seguimiento-288-2026-05-04.md` with segmented follow-up variants and exclusion rules.
+  - Created `05-datos-y-reportes/operacion-email/runbooks/plan-seguimiento-288-2026-05-04.md` with eligibility criteria and execution order.
   - Updated `docs/codex/NEXT_ACTIONS.md` so the follow-up is prepared but still blocked on 2026-05-04 inbox/bounce review and explicit approval.
 - Verification:
   - Confirmed current eligible count is 288: `wave_1=45`, `wave_2=65`, `wave_3=178`.
@@ -296,7 +296,7 @@
 - Actions:
   - Checked repo state and reviewed `NEXT_ACTIONS.md` plus latest operation state.
   - Monitored INBOX readonly from 2026-04-30: 0 new bounces, 0 human replies.
-  - Created `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md` with transparent routing scripts for institutional bots/assistants.
+  - Created `04-mensajeria-email/canal-alterno/protocolo-whatsapp-bots-2026-04-30.md` with transparent routing scripts for institutional bots/assistants.
   - Created `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv` for manual result capture.
   - Added `scripts/registrar_canal_alterno.py` to apply confirmed manual-channel outcomes to operational CSVs after dry-run review.
   - Linked the WhatsApp/bot protocol from the alternate-channel preview.
@@ -329,8 +329,8 @@
   - Ran `scripts/sincronizar_rebotes_imap.py --since 01-May-2026 --dry-run`: 0 new bounces.
   - Checked INBOX readonly for non-bounce/human replies since 2026-05-01: 0 detected.
   - Ran `scripts/registrar_canal_alterno.py` in dry-run: 0 applicable manual results.
-  - Created `04-mensajeria-email/operacion-whatsapp-2026-05-01.md` with the manual WhatsApp/phone queue, links, scripts, bot guardrails, and registration flow.
-  - Created `05-datos-y-reportes/operacion-email/revision-post-analisis-2026-05-01.md` and updated the operation state/NEXT_ACTIONS.
+  - Created `04-mensajeria-email/canal-alterno/operacion-whatsapp-2026-05-01.md` with the manual WhatsApp/phone queue, links, scripts, bot guardrails, and registration flow.
+  - Created `05-datos-y-reportes/operacion-email/reportes/revision-post-analisis-2026-05-01.md` and updated the operation state/NEXT_ACTIONS.
 - Verification:
   - Local audit remains clean.
   - No WhatsApp messages, phone calls, outreach emails, ERP writes, or social publications were executed from the repo.
@@ -359,12 +359,12 @@
   - Monitored INBOX/rebounces again from 2026-05-01: 0 human replies and 0 new bounces.
   - Created `scripts/preparar_lote_seguimiento.py`.
   - Generated `05-datos-y-reportes/operacion-email/seguimiento-2026-05-04.csv` with 281 eligible follow-up contacts.
-  - Generated `04-mensajeria-email/lote-seguimiento-2026-05-04-revision.md` with distribution and 10 previews.
+  - Generated `04-mensajeria-email/lotes/lote-seguimiento-2026-05-04-revision.md` with distribution and 10 previews.
   - Prospected 15 new public leads from official university pages and prepared:
     - `05-datos-y-reportes/prospeccion-publica-2026-05-01.csv`
     - `05-datos-y-reportes/top-15-prospeccion-2026-05-01.md`
-    - `04-mensajeria-email/preview-prospeccion-wave-4-2026-05-01.md`
-  - Prepared `04-mensajeria-email/reintento-whatsapp-dia-habil-2026-05-04.md` for the next business-day advisor retry.
+    - `04-mensajeria-email/previews/preview-prospeccion-wave-4-2026-05-01.md`
+  - Prepared `04-mensajeria-email/canal-alterno/reintento-whatsapp-dia-habil-2026-05-04.md` for the next business-day advisor retry.
 - Verification:
   - `scripts/auditar_operacion_email.py --fail-on-blockers` passes with `blockers=0 warnings=0`.
   - New follow-up CSV parses with 281 rows: wave_1=45, wave_2=62, wave_3=174.
@@ -378,7 +378,7 @@
   - Added `scripts/preparar_wave4_desde_prospeccion.py`.
   - Generated `05-datos-y-reportes/operacion-email/wave-4-candidatos-2026-05-01.csv` with 15 operational candidates.
   - Generated `05-datos-y-reportes/operacion-email/erp-leads-wave-4-candidatos-2026-05-01.csv` for manual ERPNext import review.
-  - Generated `05-datos-y-reportes/operacion-email/primer-contacto-wave-4-candidatos-2026-05-01.csv` and `04-mensajeria-email/lote-primer-contacto-wave-4-candidatos-2026-05-01.md` with personalized draft emails.
+  - Generated `05-datos-y-reportes/operacion-email/primer-contacto-wave-4-candidatos-2026-05-01.csv` and `04-mensajeria-email/lotes/lote-primer-contacto-wave-4-candidatos-2026-05-01.md` with personalized draft emails.
   - Updated `NEXT_ACTIONS.md`, `PROJECT_CONTEXT.md`, and the operation README with the new review package.
 - Verification:
   - Wave 4 outputs parse with 15 rows and 15 unique emails.
@@ -398,4 +398,24 @@
   - `python3 scripts/enviar_lote_seguimiento.py` previews 281 eligible contacts and sends nothing.
   - `python3 scripts/enviar_lote_seguimiento.py --send --limit 1` blocks correctly on 2026-05-01 because `target-date` is 2026-05-04.
   - Follow-up CSV parses with 281 rows, 281 `draft_review`, 0 blank bodies.
+  - No email, ERP write, phone call, DM, WhatsApp send, or social publication was executed.
+
+## 2026-05-01 6
+
+- Goal: Implement the remaining guarded commercial operations without external sends.
+- Actions:
+  - Added `scripts/monitorear_inbox_operacion.py` for readonly INBOX reports.
+  - Made `scripts/registrar_canal_alterno.py` idempotent so already-applied WhatsApp outcomes are skipped.
+  - Extended follow-up preparation/sending scripts to support a separate recovery campaign and generated the 3-contact recovery follow-up for 2026-05-07.
+  - Added `04-mensajeria-email/canal-alterno/guion-llamada-javeriana-catedra-unesco-2026-05-04.md`.
+  - Added `scripts/promover_wave4_candidatos.py` and `body_text` support for wave 4 personalized copy.
+  - Added runbooks for 2026-05-04 follow-up, 2026-05-07 recovery follow-up, and wave 4 post-follow-up promotion.
+  - Corrected social asset paths from `assets/brand/mto/kit_logos` to `assets/brand/logos/kit_completo`.
+  - Added `scripts/publicar_redes.py --preflight`.
+- Verification:
+  - `scripts/registrar_canal_alterno.py` now reports 0 applicable results and 3 already applied.
+  - `scripts/monitorear_inbox_operacion.py --since 2026-05-01 --limit 50` reviewed 0 messages and wrote a readonly report.
+  - `scripts/publicar_redes.py --preflight` blocks publication because API tokens/LinkedIn URL/X handle/Instagram image URL are unresolved.
+  - Recovery follow-up preview selects 3 contacts and sends nothing.
+  - Wave 4 send preview blocks because candidates are not promoted/imported into the operational master.
   - No email, ERP write, phone call, DM, WhatsApp send, or social publication was executed.

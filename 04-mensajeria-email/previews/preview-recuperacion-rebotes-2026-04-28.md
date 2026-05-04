@@ -2,7 +2,7 @@
 
 > Estado: listo para revision manual. No se enviaron correos desde el repo.
 
-- Revision fuente: `05-datos-y-reportes/operacion-email/revision-correos-alternativos-rebotes-2026-04-28.md`
+- Revision fuente: `05-datos-y-reportes/operacion-email/reportes/revision-correos-alternativos-rebotes-2026-04-28.md`
 - Tabla operativa: `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-28.csv`
 - Envio recomendado ahora: solo 2 contactos con correo corregido.
 - Casos en espera: 4 Javeriana por `mail loop`, 2 por canal manual.

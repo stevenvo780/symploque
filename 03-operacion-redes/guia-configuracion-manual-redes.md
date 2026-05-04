@@ -13,7 +13,7 @@ Abre este archivo al lado del navegador y ejecuta plataforma por plataforma.
 
 ### Foto de perfil
 ```
-Archivo: assets/brand/mto/kit_logos/logo_kodama_512.png
+Archivo: assets/brand/logos/kit_completo/logo_kodama_512.png
 Tamaño: 512×512px
 ```
 
@@ -80,13 +80,13 @@ La tesis es simple: escribe con libertad, verifica con rigor.
 
 ### Logo de empresa
 ```
-Archivo: assets/brand/mto/kit_logos/logo_white_512.png
+Archivo: assets/brand/logos/kit_completo/logo_white_512.png
 Tamaño: 512×512px
 ```
 
 ### Banner / portada
 ```
-Archivo: assets/brand/mto/kit_logos/banner_main.png
+Archivo: assets/brand/logos/kit_completo/banner_main.png
 Tamaño: 1200×400px
 
 Alternativa mejor (tamaño nativo LinkedIn 1500×500):
@@ -175,7 +175,7 @@ Probar en orden de preferencia:
 
 ### Foto de perfil
 ```
-Archivo: assets/brand/mto/kit_logos/logo_kodama_512.png
+Archivo: assets/brand/logos/kit_completo/logo_kodama_512.png
 Tamaño: 512×512px
 ```
 
@@ -271,7 +271,7 @@ Ese debería ser el criterio para todo contenido futuro de Agora.
 
 ### Foto de perfil
 ```
-Archivo: assets/brand/mto/kit_logos/logo_kodama_1024.png
+Archivo: assets/brand/logos/kit_completo/logo_kodama_1024.png
 Tamaño: 1024×1024px
 ```
 

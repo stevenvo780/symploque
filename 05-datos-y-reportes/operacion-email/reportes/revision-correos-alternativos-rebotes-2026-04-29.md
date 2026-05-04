@@ -4,7 +4,7 @@
 
 - Fuente de rebotes: `05-datos-y-reportes/operacion-email/rebotes-detectados-2026-04-27.csv`
 - Tabla operativa: `05-datos-y-reportes/operacion-email/rebotes-recuperacion-2026-04-29.csv`
-- Preview de mensajes: `04-mensajeria-email/preview-recuperacion-rebotes-2026-04-29.md`
+- Preview de mensajes: `04-mensajeria-email/previews/preview-recuperacion-rebotes-2026-04-29.md`
 - Total revisado: 15 rebotes
 
 ## Resumen ejecutivo

@@ -42,7 +42,7 @@ MESSAGE_FILES = {
     "template_directores": REPO_DIR / "04-mensajeria-email" / "04-primer-contacto-directores.md",
     "template_seguimiento": REPO_DIR / "04-mensajeria-email" / "05-seguimiento-corto.md",
     "template_declaracion": REPO_DIR / "04-mensajeria-email" / "06-correo-declaracion.md",
-    "review_wave_1": REPO_DIR / "04-mensajeria-email" / "lote-primer-contacto-wave-1-revision.md",
+    "review_wave_1": REPO_DIR / "04-mensajeria-email" / "lotes" / "lote-primer-contacto-wave-1-revision.md",
 }
 
 UDEA_RE = re.compile(r"\b(UdeA|Universidad de Antioquia)\b", re.IGNORECASE)
@@ -321,7 +321,7 @@ def add_message_content_checks(report: AuditReport) -> None:
     else:
         report.checks.append(Check("mensajeria", "Plantillas sin CTA duplicado de Agora"))
 
-    review_paths = sorted((REPO_DIR / "04-mensajeria-email").glob("lote-primer-contacto-wave-*-revision.md"))
+    review_paths = sorted((REPO_DIR / "04-mensajeria-email" / "lotes").glob("lote-primer-contacto-wave-*-revision.md"))
     reviewed_ok = 0
     for review_path in review_paths:
         review = review_path.read_text(encoding="utf-8")

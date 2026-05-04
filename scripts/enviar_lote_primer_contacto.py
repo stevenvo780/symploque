@@ -324,6 +324,9 @@ def validate_sendable(
 
 
 def body_for_lote_row(row: dict[str, str], master_by_id: dict[str, dict[str, str]]) -> str:
+    custom_body = normalize(row.get("body_text", ""))
+    if custom_body:
+        return custom_body.rstrip() + "\n"
     source = master_by_id[row["contact_id"]]
     template = template_for(source)
     _, body_template = read_template(template["path"])  # type: ignore[arg-type]

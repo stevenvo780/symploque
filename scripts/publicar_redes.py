@@ -55,7 +55,7 @@ except ImportError:
 # --- Constantes del repo ---
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ASSETS_DIR = REPO_ROOT / "assets"
-BRAND_LOGOS = ASSETS_DIR / "brand" / "mto" / "kit_logos"
+BRAND_LOGOS = ASSETS_DIR / "brand" / "logos" / "kit_completo"
 CAMPANAS = ASSETS_DIR / "entregables" / "campanas"
 
 # --- Catálogo de posts ---
@@ -390,6 +390,84 @@ def listar_posts():
         print()
 
 
+def configured(name):
+    return bool(os.getenv(name))
+
+
+def platform_token_errors(plataforma):
+    if plataforma == "linkedin":
+        errors = []
+        if not configured("LINKEDIN_ACCESS_TOKEN"):
+            errors.append("falta LINKEDIN_ACCESS_TOKEN")
+        if not configured("LINKEDIN_ORG_ID"):
+            errors.append("falta LINKEDIN_ORG_ID")
+        errors.append("confirmar que la pagina LinkedIn de empresa existe y que /company/elenxos no retorna 404")
+        return errors
+    if plataforma == "x":
+        required = ["TWITTER_API_KEY", "TWITTER_API_SECRET", "TWITTER_ACCESS_TOKEN", "TWITTER_ACCESS_TOKEN_SECRET"]
+        errors = [f"falta {name}" for name in required if not configured(name)]
+        errors.append("documentar handle definitivo de X/Twitter antes de publicar")
+        return errors
+    if plataforma == "instagram":
+        errors = []
+        if not configured("INSTAGRAM_ACCESS_TOKEN"):
+            errors.append("falta INSTAGRAM_ACCESS_TOKEN")
+        if not configured("INSTAGRAM_BUSINESS_ACCOUNT_ID"):
+            errors.append("falta INSTAGRAM_BUSINESS_ACCOUNT_ID")
+        errors.append("Instagram Graph API requiere imagen en URL publica o publicacion manual desde app")
+        return errors
+    return [f"plataforma desconocida: {plataforma}"]
+
+
+def asset_errors(post):
+    errors = []
+    image = post.get("imagen")
+    if image and not os.path.exists(image):
+        errors.append(f"imagen no existe: {image}")
+    if not BRAND_LOGOS.exists():
+        errors.append(f"kit de logos no existe: {BRAND_LOGOS}")
+    return errors
+
+
+def preflight(post_id=None, plataformas=None):
+    """Valida assets y credenciales sin publicar."""
+    post_ids = [post_id] if post_id else sorted(POSTS)
+    selected_platforms = plataformas or ["linkedin", "x", "instagram"]
+    blockers = []
+    print("\nPREFLIGHT redes Elenxos / Agora\n")
+    for current_post_id in post_ids:
+        post = POSTS[current_post_id]
+        print(f"Post {current_post_id}: {post['nombre']}")
+        post_asset_errors = asset_errors(post)
+        if post_asset_errors:
+            for error in post_asset_errors:
+                print(f"  BLOQUEO asset: {error}")
+                blockers.append(error)
+        elif post.get("imagen"):
+            print(f"  Asset OK: {os.path.basename(post['imagen'])}")
+        else:
+            print("  Aviso asset: post sin imagen configurada")
+        for plataforma in selected_platforms:
+            if plataforma not in post:
+                message = f"post {current_post_id} no tiene copy para {plataforma}"
+                print(f"  BLOQUEO {plataforma}: {message}")
+                blockers.append(message)
+                continue
+            errors = platform_token_errors(plataforma)
+            if errors:
+                for error in errors:
+                    print(f"  BLOQUEO {plataforma}: {error}")
+                    blockers.append(error)
+            else:
+                print(f"  {plataforma}: credenciales presentes")
+        print()
+    if blockers:
+        print(f"Resultado: BLOQUEADO ({len(blockers)} asuntos). No publicar hasta resolverlos.")
+    else:
+        print("Resultado: OK para publicar con los parametros seleccionados.")
+    return blockers
+
+
 # --- Main ---
 
 def main():
@@ -398,21 +476,27 @@ def main():
     parser.add_argument("--todas", action="store_true", help="Publicar en todas las plataformas")
     parser.add_argument("--post", type=int, help="Número de post a publicar (1, 2, 3)")
     parser.add_argument("--listar", action="store_true", help="Listar posts disponibles")
+    parser.add_argument("--preflight", action="store_true", help="Validar assets y tokens sin publicar")
     parser.add_argument("--dry-run", action="store_true", help="Mostrar qué se publicaría sin publicar")
 
     args = parser.parse_args()
 
     if args.listar:
         listar_posts()
-        return
+        return 0
+
+    if args.preflight:
+        plataformas = args.plataforma and [args.plataforma] or ["linkedin", "x", "instagram"]
+        preflight(args.post, plataformas)
+        return 0
 
     if not args.post:
         print("❌ Falta --post <número>. Usa --listar para ver opciones.")
-        return
+        return 2
 
     if args.post not in POSTS:
         print(f"❌ Post {args.post} no existe. Usa --listar para ver opciones.")
-        return
+        return 2
 
     post = POSTS[args.post]
     imagen = post["imagen"]
@@ -429,7 +513,7 @@ def main():
                 print(f"--- {p.upper()} ---")
                 print(post[p]["texto"])
                 print()
-        return
+        return 0
 
     plataformas = []
     if args.todas:
@@ -438,7 +522,12 @@ def main():
         plataformas = [args.plataforma]
     else:
         print("❌ Especifica --plataforma o --todas")
-        return
+        return 2
+
+    blockers = preflight(args.post, plataformas)
+    if blockers:
+        print("Publicacion bloqueada por preflight.")
+        return 3
 
     for p in plataformas:
         if p not in post:
@@ -452,7 +541,8 @@ def main():
             publicar_x(post[p], imagen)
         elif p == "instagram":
             publicar_instagram(post[p], imagen)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

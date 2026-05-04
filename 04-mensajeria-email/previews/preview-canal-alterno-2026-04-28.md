@@ -3,8 +3,8 @@
 > Estado: listo para envio manual. No se ejecuto contacto desde el repo.
 
 - CSV fuente: `05-datos-y-reportes/operacion-email/canales-alternos-pendientes-2026-04-27.csv`
-- Lote base: `04-mensajeria-email/lote-canal-alterno-2026-04-27.md`
-- Protocolo para bots/asesores: `04-mensajeria-email/protocolo-whatsapp-bots-2026-04-30.md`
+- Lote base: `04-mensajeria-email/canal-alterno/lote-canal-alterno-2026-04-27.md`
+- Protocolo para bots/asesores: `04-mensajeria-email/canal-alterno/protocolo-whatsapp-bots-2026-04-30.md`
 - Registro operativo: `05-datos-y-reportes/operacion-email/registro-canal-alterno-2026-04-30.csv`
 - Total: 4 prospectos sin email valido
 - Canales: 3 WhatsApp oficiales, 1 telefono directo
