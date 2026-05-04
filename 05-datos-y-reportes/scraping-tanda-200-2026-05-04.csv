@@ -1,0 +1,201 @@
+rank,score_icp,institucion,ciudad,segmento,nombre,rol_o_unidad,email,plantilla_id,canal_recomendado,fuente_url
+1,5,Caro y Cuervo,Bogota,institucional,Decanatura FSAB,buzon decanatura,decanatura@caroycuervo.gov.co,plantilla-coordinacion-letras,email,https://maestrias.caroycuervo.gov.co/contacto/
+2,5,Caro y Cuervo,Bogota,institucional,Equipo Alianzas,relaciones interinstitucionales,equipoalianzas@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://maestrias.caroycuervo.gov.co/contacto/
+3,5,Caro y Cuervo,Bogota,institucional,Facultad Seminario Andres Bello,buzon facultad,facultadsab@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://maestrias.caroycuervo.gov.co/contacto/
+4,5,Caro y Cuervo,Bogota,institucional,Centro de Investigacion ICC,investigacion,investigacion@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://www.caroycuervo.gov.co/instituto/directorio-institucional/
+5,5,Caro y Cuervo,Bogota,posgrados-letras,Norma Donato Rodriguez,Decana Facultad Seminario Andres Bello,norma.donato@caroycuervo.gov.co,plantilla-coordinacion-letras,email,https://www.caroycuervo.gov.co/formacion/facultad-seminario-andres-bello/contactos/
+6,5,Caro y Cuervo,Bogota,institucional,Subdireccion Academica,subdireccion academica ICC,subdireccion.academica@caroycuervo.gov.co,plantilla-coordinacion-letras,email,https://www.caroycuervo.gov.co/instituto/directorio-institucional/
+7,5,Rosario,Bogota,revista-editorial,Publicaciones Seriadas,Editorial Universidad del Rosario | Vicerrectoría Carrera 7 N° 12B – 41 Oficina,claudiapa.mendez@urosario.edu.co,plantilla-coordinacion-letras,email,6b7b38122fb7.html
+8,5,UMNG,Bogota,revista-editorial,,editorial mediante los correos revista.bioetica@unimilitar.edu.co o,asistenteeditorial.revistas1@unimilitar.edu.co,plantilla-editor-revista,email,95f1cf63fa1e.html
+9,5,UMNG,Bogota,revista-editorial,Editorial Neogranadina,Editorial Neogranadina mediante el correo,editorial.neogranadina@unimilitar.edu.co,plantilla-editor-revista,email,95f1cf63fa1e.html
+10,5,UMNG,Bogota,revista-editorial,,editorial mediante los correos,revista.bioetica@unimilitar.edu.co,plantilla-editor-revista,email,95f1cf63fa1e.html
+11,5,UNAB,Bucaramanga,lenguas-idiomas,Estudios Sociohumanísticos,Departamento de Lenguas,ateneasoporte4@unab.edu.co,plantilla-coordinacion-letras,email,9d085765dd9d.html
+12,5,UNAL,Bogota,literatura,Ciencias Humanas,"Departamento de Literatura. Bogotá, Colombia. Carrera 30 No. 45-03. Edifico 224,",revliter_fchbog@unal.edu.co,plantilla-coordinacion-letras,email,5b6071ee7928.html
+13,5,UPN,Bogota,educacion,Universidad Pedagógica Nacional Teléfono,Editorial Universidad Pedagógica Nacional Teléfono: (57-1) 5941894 Ext. 367 -427,editorialupn@pedagogica.edu.co,plantilla-editor-revista,email,19f659c4e0ba.html
+14,5,UPN,Bogota,educacion,Universidad Pedagógica Nacional Teléfono,editorialupn@pedagogica.edu.co,revistascientificas@pedagogica.edu.co,plantilla-editor-revista,email,19f659c4e0ba.html
+15,5,UTP,Pereira,revista-editorial,Contacto Lla,,procesoeditorial@utp.edu.co,plantilla-editor-revista,email,329a2cbce4bf.html
+16,5,Uniminuto,Bogota,lenguas-idiomas,Alex Sonza Consejero,Director Centro de Idiomas Rochereau cristy.paez@uniminuto.edu Alex Sonza Consej,alex.sonza@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+17,5,Uniminuto,Bogota,lenguas-idiomas,Lenguas Extranjeras,Coordinadora Académica Licenciatura en Lenguas Extranjeras con énfasis en Inglés,andrea.bernal@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+18,5,Uniminuto,Bogota,lenguas-idiomas,Idiomas Rochereau,Director Centro de Idiomas Rochereau,cristy.paez@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+19,5,Uniminuto,Bogota,lenguas-idiomas,Lengua Castellana,Director Programa Licenciatura en Humanidades y Lengua Castellana,jonathan.caicedo@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+20,5,Uniminuto,Bogota,lenguas-idiomas,Jorge Enrique Ramírez Calvo Director,Coordinadora Académica Licenciatura en Lenguas Extranjeras con énfasis en Inglés,jorge.ramirez@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+21,5,Uniminuto,Bogota,revista-editorial,Idioma English Español Portugu,bibliotecarios as Idioma English Español Português Últimas publicaciones DORA CO,revistasacademicas@uniminuto.edu,plantilla-editor-revista,email,d6e6d43f9e34.html
+22,5,Uninorte,Barranquilla,lenguas-idiomas,Lenguas Extranjeras Tel,Directora de Departamento de Lenguas Extranjeras Tel: 3509509 Ext: 4408,ithevening@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+23,5,Uninorte,Barranquilla,general-letras,Kelly Sanmiguel Otero Asistente Tel,Coordinadora Programa de Español para Extranjeros Tel: 3509509 Ext: 4943 wrondon,ksanmiguel@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+24,5,Uninorte,Barranquilla,lenguas-idiomas,Cultura Tel,Coordinadora Pregrado de Lenguas Modernas y Cultura Tel: 3509509 Ext: 3765,marianb@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+25,5,Uninorte,Barranquilla,general-letras,Extranjeros Tel,Coordinadora Programa de Español para Extranjeros Tel: 3509509 Ext: 4943,wrondon@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+26,5,Univalle,Cali,pregrado-literatura,Escuela Estudios Literarios Univalle,buzon escuela,escuela.estudiosliterarios@correounivalle.edu.co,plantilla-coordinacion-letras,email,https://estudiosliterarios.univalle.edu.co/
+27,5,Univalle,Buga,pregrado-literatura,Lic Literatura Sede Buga,coordinacion sede,licenciatura.literatura.buga@correounivalle.edu.co,plantilla-buzon-institucional,email,bing
+28,5,Univalle,Cali,pregrado-literatura,Programa Lic en Literatura Univalle,coordinacion programa,programa.literatura@correounivalle.edu.co,plantilla-coordinacion-letras,email,https://estudiosliterarios.univalle.edu.co/
+29,4,Caro y Cuervo,Bogota,institucional,Biblioteca ICC,biblioteca Jose Manuel Rivas,biblioteca@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://www.caroycuervo.gov.co/instituto/directorio-institucional/
+30,4,Caro y Cuervo,Bogota,institucional,Direccion General ICC,direccion general,direcciongeneral@caroycuervo.gov.co,plantilla-coordinacion-letras,email,https://www.caroycuervo.gov.co/instituto/directorio-institucional/
+31,4,Caro y Cuervo,Bogota,institucional,Editorial ICC,editorial,editorial@caroycuervo.gov.co,plantilla-editor-revista,email,https://www.caroycuervo.gov.co/instituto/directorio-institucional/
+32,4,Caro y Cuervo,Bogota,plataforma,Nelson Pinzon Albornoz,Administrador plataforma academica,nelson.pinzon@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://www.caroycuervo.gov.co/formacion/facultad-seminario-andres-bello/contactos/
+33,4,Caro y Cuervo,Bogota,posgrados-letras,Nury Silva Labarca,Profesional especializado FSAB,nury.silva@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://www.caroycuervo.gov.co/formacion/facultad-seminario-andres-bello/contactos/
+34,4,Caro y Cuervo,Bogota,institucional,Oficina Graduados,egresados ICC,oficinagraduados@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://maestrias.caroycuervo.gov.co/contacto/
+35,4,UMNG,Bogota,revista-editorial,Sede Campus,,revistaing@unimilitar.edu.co,plantilla-editor-revista,email,95f1cf63fa1e.html
+36,4,UPN,Bogota,lenguas-idiomas,Lenguas Únicamente,Centro de Lenguas Únicamente notificaciones judiciales:,oju@pedagogica.edu.co,plantilla-buzon-institucional,email,19f659c4e0ba.html
+37,4,Uniminuto,Bogota,educacion,Educación Infantil,Coordinadora Programa Licenciatura en Educación Infantil,adriana.tabares@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+38,4,Uniminuto,Bogota,educacion,Educación Física,Coordinadora Programa Licenciatura en Educación Infantil adriana.tabares@uniminu,carlos.mendezs@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+39,4,Uniminuto,Bogota,general-letras,Educación Artística,Decanatura yudy.ramirez@uniminuto.edu Carolina Parra Estrada Secretaría Académic,edgar.grimaldos@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+40,4,Uniminuto,Bogota,educacion,Educación Infantil,Directora Programa Licenciatura en Educación Infantil,maria.ochoa@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+41,4,Uniminuto,Bogota,educacion,Educación Licenciatura,Directora de Posgrados Facultad de Educación Licenciatura en Informática,maryuri.agudelo@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+42,4,Uniminuto,Bogota,educacion,Educación Física,Coordinador Académico Licenciatura en Educación Física,mauro.garcia@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+43,4,Uniminuto,Bogota,lenguas-idiomas,Mireya Espejo Consejera,Centro de Idiomas Rochereau cristy.paez@uniminuto.edu Alex Sonza Consejero de ac,mespejo@uniminuto.edu,plantilla-buzon-institucional,email,bcece6c4fe2b.html
+44,4,Uninorte,Barranquilla,centro-escritura,Luz Adriana Solano Muñoz Secretaria,Secretaria Tel: 3509509 Ext:3993,escritura@uninorte.edu.co,plantilla-centro-escritura,email,bbdac34d22a1.html
+45,4,Uninorte,Barranquilla,lenguas-idiomas,Santa Marta Tel,,iidiomassm@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+46,3,Caro y Cuervo,Bogota,bienestar,Andrea Velasquez Mesa,Bienestar universitario,andrea.velasquezm@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://www.caroycuervo.gov.co/formacion/facultad-seminario-andres-bello/contactos/
+47,3,Caro y Cuervo,Bogota,institucional,Bienestar Universitario,bienestar,bienestaruniversitario@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://maestrias.caroycuervo.gov.co/contacto/
+48,3,Caro y Cuervo,Bogota,posgrados-letras,Maria Murillo Garzon,Auxiliar admin FSAB,maria.murillo@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://www.caroycuervo.gov.co/formacion/facultad-seminario-andres-bello/contactos/
+49,3,Caro y Cuervo,Bogota,institucional,Planeacion ICC,planeacion,planeacion@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://www.caroycuervo.gov.co/instituto/directorio-institucional/
+50,3,Caro y Cuervo,Bogota,posgrados-letras,Tatiana Lievano Sanchez,Auxiliar admin FSAB,tatiana.lievano@caroycuervo.gov.co,plantilla-buzon-institucional,email,https://www.caroycuervo.gov.co/formacion/facultad-seminario-andres-bello/contactos/
+51,3,Externado,Bogota,general-letras,Diana Patricia Pulido Profesora,Director de la Escuela de Finanzas y Negocios Internacionales Jorge Leonardo Peñ,bloomberg@uexternado.edu.co,plantilla-coordinacion-letras,email,051d3e15cee4.html
+52,3,Externado,Bogota,educacion,,egresados.fae@uexternado.edu.co Educación continuada:,educacion.continua@uexternado.edu.co,plantilla-buzon-institucional,email,86add5288d6e.html
+53,3,Externado,Bogota,general-letras,Castañeda Profesor,Director de la Escuela de Finanzas y Negocios Internacionales Jorge Leonardo Peñ,jorge.pena@uexternado.edu.co,plantilla-coordinacion-letras,email,051d3e15cee4.html
+54,3,Otro,,general-letras,Sede Sogamoso Carrera,,direccionsedesogamoso@uniboyaca.edu.co,plantilla-coordinacion-letras,email,6fec8d546d1e.html
+55,3,UNAB,Bucaramanga,general-letras,Ciencias Básicas,"Departamento de Ciencias Básicas, UNAB Creative",ateneasoporte1@unab.edu.co,plantilla-coordinacion-letras,email,9d085765dd9d.html
+56,3,UNAB,Bucaramanga,general-letras,,,direccionadmyreg@unab.edu.co,plantilla-coordinacion-letras,email,9d085765dd9d.html
+57,3,UNAB,Bucaramanga,general-letras,Gestión Humana,"profesores de pregrado y posgrado, la cual es certificada por Gestión Humana par",direcciondocencia@unab.edu.co,plantilla-coordinacion-letras,email,9d085765dd9d.html
+58,3,UNAB,Bucaramanga,general-letras,,programadelfin.org.mx o escribirnos a,investigandoando@unab.edu.co,plantilla-coordinacion-letras,email,9d085765dd9d.html
+59,3,UNAB,Bucaramanga,general-letras,,programadelfin.org.mx o escribirnos a investigandoando@unab.edu.co o,movilidad@unab.edu.co,plantilla-coordinacion-letras,email,9d085765dd9d.html
+60,3,UNAB,Bucaramanga,general-letras,,"programa de Derecho. Cualquier consulta más detallada, se recomienda contactar a",practicas@unab.edu.co,plantilla-coordinacion-letras,email,9d085765dd9d.html
+61,3,UNAB,Bucaramanga,general-letras,Gestión Humana,jefe inmediato de lo ocurrido y reportar oportunamente a la Profesional de SST d,syso@unab.edu.co,plantilla-coordinacion-letras,email,9d085765dd9d.html
+62,3,Uniminuto,Bogota,general-letras,Velandia Rodríguez Decano,Decano,camilo.velandia.r@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+63,3,Uniminuto,Bogota,general-letras,Carolina Parra Estrada Secretaría Académica,Decanatura yudy.ramirez@uniminuto.edu Carolina Parra Estrada Secretaría Académic,caparra@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+64,3,Uniminuto,Bogota,general-letras,Alta Docencia,Directora de Escuela de Alta Docencia,clrincon@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+65,3,Uniminuto,Bogota,comunicacion,Procesos Lectores,Coordinadora Departamento de Comunicación y Procesos Lectores CEPLEC,mbaez@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+66,3,Uniminuto,Bogota,general-letras,Yudy Andrea Ramírez Sánchez Asistente,Decanatura,yudy.ramirez@uniminuto.edu,plantilla-coordinacion-letras,email,bcece6c4fe2b.html
+67,3,Uninorte,Barranquilla,general-letras,Álvaro Romano Rojas Asistente Tel,Director Tel: 3509509 Ext: 3033 jdguerra@uninorte.edu.co Álvaro Romano Rojas Asi,ajromano@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+68,3,Uninorte,Barranquilla,general-letras,Lourdes Rey Paba Directora Tel,Directora Tel: 3509509 Ext: 4736,arey@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+69,3,Uninorte,Barranquilla,general-letras,Claudia Bogallo Ballesteros Asistente Tel,Coordinador de Alemán Tel: 3509509 Ext: 4541 pagomez@uninorte.edu.co Claudia Bog,cbogallo@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+70,3,Uninorte,Barranquilla,general-letras,Inglés Especializado Tel,Coordinador de Inglés Especializado Tel: 3509509 Ext: 4980,ckeogh@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+71,3,Uninorte,Barranquilla,general-letras,Inglés Tel,Coordinadora Maestría en la Enseñanza del Inglés Tel: 3509509 Ext: 4135,dutami@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+72,3,Uninorte,Barranquilla,general-letras,Jesús Arroyave,Directora de Departamento yescobar@uninorte.edu.co Jesús Arroyave,jarroyav@uninorte.edu.co,plantilla-coordinacion-letras,email,2e9b778134a6.html
+73,3,Uninorte,Barranquilla,general-letras,Jesús Guerra Lyons Director Tel,Director Tel: 3509509 Ext: 3033,jdguerra@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+74,3,Uninorte,Barranquilla,general-letras,Inglés General Tel,Coordinador de Inglés General Tel: 3509509 Ext: 3793,jevillanueva@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+75,3,Uninorte,Barranquilla,general-letras,Extensión Tel,Coordinadora Programa de Extensión Tel: 3509509 Ext: 4562,ksanchez@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+76,3,Uninorte,Barranquilla,general-letras,Kathleen Corrales Coordinadora Académica Tel,Coordinadora Académica Tel: 3509509 Ext: 4787,kwade@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+77,3,Uninorte,Barranquilla,general-letras,Johamna Muñoz,Directora de Departamento yescobar@uninorte.edu.co Jesús Arroyave jarroyav@unino,lalinde@uninorte.edu.co,plantilla-coordinacion-letras,email,2e9b778134a6.html
+78,3,Uninorte,Barranquilla,general-letras,Francés Tel,Coordinadora de Francés Tel: 3509509 Ext: 4139,lepmahechabustos@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+79,3,Uninorte,Barranquilla,general-letras,Portugués Tel,Coordinador de Portugués Tel: 3509509 Ext: 4133,lkleaim@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+80,3,Uninorte,Barranquilla,general-letras,María Cecilia Reyes,Directora de Departamento yescobar@uninorte.edu.co Jesús Arroyave jarroyav@unino,mcreyes@uninorte.edu.co,plantilla-coordinacion-letras,email,2e9b778134a6.html
+81,3,Uninorte,Barranquilla,general-letras,Alemán Tel,Coordinador de Alemán Tel: 3509509 Ext: 4541,pagomez@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+82,3,Uninorte,Barranquilla,general-letras,Sergio Álvarez Uribe Director Tel,Director Tel: 3509509 Ext: 3183,sergioa@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+83,3,Uninorte,Barranquilla,general-letras,Sergio Llano,Directora de Departamento yescobar@uninorte.edu.co Jesús Arroyave jarroyav@unino,sllano@uninorte.edu.co,plantilla-coordinacion-letras,email,2e9b778134a6.html
+84,3,Uninorte,Barranquilla,general-letras,Dirección Tel,Coordinadora Académica Tel: 3509509 Ext: 4787 kwade@uninorte.edu.co Sandra Núñez,smnunez@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+85,3,Uninorte,Barranquilla,general-letras,Yanuacelly Guariguata Birriel Tutora Especializada,Director Tel: 3509509 Ext: 3183 sergioa@uninorte.edu.co Yanuacelly Guariguata Bi,syguariguata@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+86,3,Uninorte,Barranquilla,general-letras,Jennie Peña Directora,Directora de Departamento,yescobar@uninorte.edu.co,plantilla-coordinacion-letras,email,2e9b778134a6.html
+87,3,Uninorte,Barranquilla,general-letras,Yeny Sanjuan Vega Secretaria Tel,Director Tel: 3509509 Ext: 3033 jdguerra@uninorte.edu.co Álvaro Romano Rojas Asi,ysanjuan@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+88,3,Uninorte,Barranquilla,general-letras,Zenón Vellojín Otero Coordinador Académico,Coordinador Académico Tel: 3509509 Ext: 4096,zvellojin@uninorte.edu.co,plantilla-coordinacion-letras,email,bbdac34d22a1.html
+89,3,Univalle,Cali,institucional,Comunicaciones Humanidades Univalle,comunicaciones facultad,comunicaciones.humanidades@correounivalle.edu.co,plantilla-buzon-institucional,email,https://humanidades.univalle.edu.co/
+90,2,EAFIT,Medellin,general-letras,Bogotá Carrera,,eafit.bogota@eafit.edu.co,plantilla-buzon-institucional,email,1aed73f40b0c.html
+91,2,EAFIT,Medellin,general-letras,Megacentro Pinares Línea,,eafit.pereira@eafit.edu.co,plantilla-buzon-institucional,email,1aed73f40b0c.html
+92,2,EAFIT,Medellin,general-letras,Rionegro Línea,,llanogrande@eafit.edu.co,plantilla-buzon-institucional,email,1aed73f40b0c.html
+93,2,Externado,Bogota,general-letras,Armando Chaves Profesor,Profesor,armando.chaves@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+94,2,Externado,Bogota,general-letras,Camilo Simón Romero Moreno Profesor,Profesor,camilo.romero@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+95,2,Externado,Bogota,general-letras,Carlos Andrés Zapata Quimbayo Profesor,Profesor asistente,carlosa.zapata@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+96,2,Externado,Bogota,general-letras,César Escobar Escobar Profesor,Profesor,cesar.escobar@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+97,2,Externado,Bogota,general-letras,César Augusto Gómez Soto Profesor,Profesor,cesar.gomez@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+98,2,Externado,Bogota,general-letras,David Cohen Rosales Profesor,Profesor,david.cohen@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+99,2,Externado,Bogota,general-letras,David Manuel Gómez Bolivar Profesor,Profesor,david.gomez@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+100,2,Externado,Bogota,general-letras,David Arturo Medina Suárez Profesor,Profesor,david.medina@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+101,2,Externado,Bogota,general-letras,Diego Ismael León Nieto Profesor,Profesor,diego.leon@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+102,2,Externado,Bogota,general-letras,Eduardo Emiro Cermeno Romero Profesor,Profesor,eduardo.cermeno@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+103,2,Externado,Bogota,general-letras,Secretaría Académica,,figri.pasantias@uexternado.edu.co,plantilla-buzon-institucional,email,051d3e15cee4.html
+104,2,Externado,Bogota,general-letras,Secretaría Académica,,figri.posgrados@uexternado.edu.co,plantilla-buzon-institucional,email,051d3e15cee4.html
+105,2,Externado,Bogota,general-letras,Secretaría Académica,,figri.promocion@uexternado.edu.co,plantilla-buzon-institucional,email,051d3e15cee4.html
+106,2,Externado,Bogota,general-letras,Secretaría Académica,,figri@uexternado.edu.co,plantilla-buzon-institucional,email,051d3e15cee4.html
+107,2,Externado,Bogota,general-letras,Becerra Profesora,Profesora,isabel.alvarez@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+108,2,Externado,Bogota,general-letras,Jhon Freddy Moreno Trujillo Profesor,Profesor,jhon.moreno@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+109,2,Externado,Bogota,general-letras,Jorge Arturo Cruz Nino Profesor,Profesor,jorge.cruz@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+110,2,Externado,Bogota,general-letras,José Alberto Gómez Ordonez Profesor,Profesor,jose.gomez@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+111,2,Externado,Bogota,general-letras,Juan Carlos Correa Gonzalez Profesor,Profesor,juan.correag@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+112,2,Externado,Bogota,general-letras,Juan Pablo Mejía Calle Profesor,Profesor,juan.mejiac@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+113,2,Externado,Bogota,general-letras,Juan Manuel Torres Rodríguez Profesor,Profesor,juan.torres@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+114,2,Externado,Bogota,general-letras,Leonardo Sampayo Naza Profesor,Profesor,leonardo.sampayo@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+115,2,Externado,Bogota,general-letras,Ciodaro Profesor,Profesor,manuel.ossa@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+116,2,Externado,Bogota,general-letras,Marcela Constanza Balaguera Restrepo Profesora,Profesora,marcela.balaguera@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+117,2,Externado,Bogota,general-letras,Mauricio Avellaneda Hortua Profesor,Profesor,mauricio.avellaneda@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+118,2,Externado,Bogota,general-letras,Néstor Germán Hidalgo Garces Profesor,Profesor,nestor.hidalgo@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+119,2,Externado,Bogota,general-letras,Óscar Andrés Jaramillo Profesor,Profesor,oscar.jaramillo@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+120,2,Externado,Bogota,general-letras,Empresas Dirección,,posgrados.fae@uexternado.edu.co,plantilla-buzon-institucional,email,86add5288d6e.html
+121,2,Externado,Bogota,general-letras,Empresas Dirección,,pregrado.fae@uexternado.edu.co,plantilla-buzon-institucional,email,86add5288d6e.html
+122,2,Externado,Bogota,general-letras,Felipe Ortega Ramírez Profesor,Profesor yerald.ortega@uexternado.edu.co PLC:,visualbasic@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+123,2,Externado,Bogota,general-letras,José Yecid Fuentes Garcia Profesor,Profesor,yecid.fuentes@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+124,2,Externado,Bogota,general-letras,Felipe Ortega Ramírez Profesor,Profesor,yerald.ortega@uexternado.edu.co,plantilla-docente-investigador,email,051d3e15cee4.html
+125,2,Otro,,general-letras,,,atencionalcliente@tdea.edu.co,plantilla-buzon-institucional,email,33a7a1571838.html
+126,2,Otro,,general-letras,Este No,,atencionudeb@uniboyaca.edu.co,plantilla-buzon-institucional,email,6fec8d546d1e.html
+127,2,Otro,,general-letras,Código Postal,,contacto@correo.unicordoba.edu.co,plantilla-buzon-institucional,email,53e7d5651355.html
+128,2,Otro,,general-letras,,,contacto@unimeta.edu.co,plantilla-buzon-institucional,email,c466b6490051.html
+129,2,Otro,,general-letras,Institucionales Transparencia,,habeasdata@uniboyaca.edu.co,plantilla-buzon-institucional,email,6fec8d546d1e.html
+130,2,Otro,,general-letras,Contáctanos Dirección,,informacion@usbbog.edu.co,plantilla-buzon-institucional,email,569c90a9626a.html
+131,2,Otro,,general-letras,Responder Hola Valeria,secretariaregistroycontrol@unisinu.edu.co y o,ivonnebechara@unisinu.edu.co,plantilla-buzon-institucional,email,cb8d20cd3806.html
+132,2,Otro,,general-letras,Responder Hola Valeria,,secretariaregistroycontrol@unisinu.edu.co,plantilla-buzon-institucional,email,cb8d20cd3806.html
+133,2,Otro,,general-letras,Contáctanos Dirección,,solicitudes.legales@usbbog.edu.co,plantilla-buzon-institucional,email,569c90a9626a.html
+134,2,UNAB,Bucaramanga,general-letras,Gestión Humana,"profesores de pregrado y posgrado, la cual es certificada por Gestión Humana par",capacitacion@unab.edu.co,plantilla-docente-investigador,email,9d085765dd9d.html
+135,2,UNAB,Bucaramanga,general-letras,,,certificados@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+136,2,UNAB,Bucaramanga,general-letras,,,comitegenero@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+137,2,UNAB,Bucaramanga,general-letras,,Centro de contacto: 018000-931170 | Correo institucional:,contactenos@unab.edu.co,plantilla-buzon-institucional,email,08c5890d9aab.html
+138,2,UNAB,Bucaramanga,general-letras,,,creative@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+139,2,UNAB,Bucaramanga,general-letras,,,denunciasvbg@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+140,2,UNAB,Bucaramanga,general-letras,,profesores y administrativos interesados en temas de asesoría para una idea de n,emprendimiento@unab.edu.co,plantilla-docente-investigador,email,9d085765dd9d.html
+141,2,UNAB,Bucaramanga,general-letras,,"bibliotecas-unab y solicitar el taller o actividad cultural de tu preferencia, e",formacionbiblioteca@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+142,2,UNAB,Bucaramanga,general-letras,,,gestionhum@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+143,2,UNAB,Bucaramanga,general-letras,La Dirección,,investigaciones@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+144,2,UNAB,Bucaramanga,general-letras,Red Mutis,,lcastano2@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+145,2,UNAB,Bucaramanga,general-letras,Bienestar Universitario,Bienestar Universitario al correo,lvillafrade2@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+146,2,UNAB,Bucaramanga,general-letras,,,otri@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+147,2,UNAB,Bucaramanga,general-letras,,,permaneser@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+148,2,UNAB,Bucaramanga,general-letras,La Dirección,investigador debe solicitar al correo de,productos@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+149,2,UNAB,Bucaramanga,general-letras,,profesor tiene la posibilidad anualmente de postularse para el ascenso si cumple,reclasificaciondocente@unab.edu.co,plantilla-docente-investigador,email,9d085765dd9d.html
+150,2,UNAB,Bucaramanga,general-letras,,,rmatinp@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+151,2,UNAB,Bucaramanga,general-letras,,biblioteca@unab.edu.co ;,virtualbiblioteca@unab.edu.co,plantilla-buzon-institucional,email,9d085765dd9d.html
+152,2,UNAL,Bogota,general-letras,Hemeroteca Nacional Universitaria Bogotá,,digital@unal.edu.co,plantilla-buzon-institucional,email,165620fe18d1.html
+153,2,UPN,Bogota,educacion,,programas académicos: Admisiones y Registro,sub_admisiones@pedagogica.edu.co,plantilla-coordinacion-letras,email,19f659c4e0ba.html
+154,2,USB Cali,Cali,general-letras,Ciencias Políticas Ingeniería Contacto Carrera,Escuela del Deporte Derecho y Ciencias Políticas Ingeniería Contacto Carrera 122,informacion@usbcali.edu.co,plantilla-coordinacion-letras,email,5af5c9f5739f.html
+155,2,Ucaldas,Manizales,general-letras,Usuario Línea,,atencionalciudadano@ucaldas.edu.co,plantilla-buzon-institucional,email,7fbf9c6bc4c8.html
+156,2,Unbosque,Bogota,general-letras,Instalaciones Bogotá Av,,atencionalusuario@unbosque.edu.co,plantilla-buzon-institucional,email,5c52a8653589.html
+157,2,Unicauca,Popayan,general-letras,,,anticorrupcion@unicauca.edu.co,plantilla-buzon-institucional,email,4da96f75efd5.html
+158,2,Unicauca,Popayan,general-letras,Colombia Teléfono,,biotecnofaca@unicauca.edu.co,plantilla-buzon-institucional,email,1d28c9effe57.html
+159,2,Unicauca,Popayan,general-letras,Colombia Teléfono,,novedadesmuseo@unicauca.edu.co,plantilla-buzon-institucional,email,1d28c9effe57.html
+160,2,Unicauca,Popayan,general-letras,,,procesos@unicauca.edu.co,plantilla-buzon-institucional,email,4da96f75efd5.html
+161,2,Unicauca,Popayan,general-letras,Colombia Teléfono,,rfsalud@unicauca.edu.co,plantilla-buzon-institucional,email,1d28c9effe57.html
+162,2,Uninorte,Barranquilla,general-letras,Secretaria Tel,Secretaria Tel: 3509509 Ext: 4275,aguirreca@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+163,2,Uninorte,Barranquilla,general-letras,Andrea Cancino,,cancinoa@uninorte.edu.co,plantilla-buzon-institucional,email,2e9b778134a6.html
+164,2,Uninorte,Barranquilla,general-letras,Carlos Cortés,,carloscortes@uninorte.edu.co,plantilla-buzon-institucional,email,2e9b778134a6.html
+165,2,Uninorte,Barranquilla,general-letras,Carolina Ortega Guzmán Secretaria Tel,Secretaria Tel: 3509509 Ext: 4715,carolinaao@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+166,2,Uninorte,Barranquilla,general-letras,Mariluz Pineda Contreras Secretaria Tel,Secretaria Tel: 3509509 Ext: 3138,cmariluz@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+167,2,Uninorte,Barranquilla,general-letras,Extensión Tel,Secretaria Tel: 3509509 Ext: 3306 wpvillafane@uninorte.edu.co Clara Torrijos Ord,ctorrijos@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+168,2,Uninorte,Barranquilla,general-letras,Carolina Villamizar,,cvillamizar@uninorte.edu.co,plantilla-buzon-institucional,email,2e9b778134a6.html
+169,2,Uninorte,Barranquilla,general-letras,Instituciones Educativas Tel,,emalo@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+170,2,Uninorte,Barranquilla,general-letras,Usuarios Tel,Secretario de Dirección Tel: 3509509 Ext: 4736 lviloriaj@uninorte.edu.co Juan Ca,jcalvarez@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+171,2,Uninorte,Barranquilla,general-letras,Julio Martínez Pedroza Auxiliar Laboratorios,Auxiliar Laboratorios Tel: 3509509 Ext: 4937,jcpedroza@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+172,2,Uninorte,Barranquilla,general-letras,Jair Vega,,jvega@uninorte.edu.co,plantilla-buzon-institucional,email,2e9b778134a6.html
+173,2,Uninorte,Barranquilla,general-letras,Liceth García Mercado Asistente Tel,,licethg@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+174,2,Uninorte,Barranquilla,general-letras,Dirección Tel,Secretario de Dirección Tel: 3509509 Ext: 4736,lviloriaj@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+175,2,Uninorte,Barranquilla,general-letras,Instituciones Educativas Tel,Secretario Convenios Instituciones Educativas Tel: 3509509 Ext: 3026,myeimer@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+176,2,Uninorte,Barranquilla,general-letras,Wendy Villafañe Cuello Secretaria Tel,Secretaria Tel: 3509509 Ext: 3306,wpvillafane@uninorte.edu.co,plantilla-buzon-institucional,email,bbdac34d22a1.html
+177,2,Unisabana,Chia,general-letras,,,protecciondedatos@unisabana.edu.co,plantilla-buzon-institucional,email,0b98899fda95.html
+178,2,Unisabana,Chia,general-letras,La Sabana,,servicious@unisabana.edu.co,plantilla-buzon-institucional,email,0b98899fda95.html
+179,2,Unisabana,Chia,general-letras,,,u003eprotecciondedatos@unisabana.edu.co,plantilla-buzon-institucional,email,0b98899fda95.html
+180,2,Unisalle,Bogota,general-letras,,,ncorrespondencia@lasalle.edu.co,plantilla-buzon-institucional,email,2d67378d8234.html
+181,1,Externado,Bogota,general-letras,,Egresados:,egresados.fae@uexternado.edu.co,plantilla-buzon-institucional,email,86add5288d6e.html
+182,1,Externado,Bogota,general-letras,Secretaría Académica,,mercadeo.figri@uexternado.edu.co,plantilla-buzon-institucional,email,051d3e15cee4.html
+183,1,Externado,Bogota,general-letras,Contáctenos Buzón,Directorio de docentes y funcionarios Notificaciones judiciales:,notificacionesjudiciales@uexternado.edu.co,plantilla-coordinacion-letras,email,051d3e15cee4.html
+184,1,Otro,,general-letras,Tiktok Linkedin Sede Principal Carrera,,admisiones@unincca.edu.co,plantilla-buzon-institucional,email,235c63186c19.html
+185,1,Otro,,general-letras,,,admisiones@unisinu.edu.co,plantilla-buzon-institucional,email,cb8d20cd3806.html
+186,1,Otro,,general-letras,,,juridica@tdea.edu.co,plantilla-buzon-institucional,email,33a7a1571838.html
+187,1,Otro,,general-letras,Datos Personales Línea Anticorrupción,,notificacion.archivo@tdea.edu.co,plantilla-buzon-institucional,email,33a7a1571838.html
+188,1,Otro,,general-letras,Institucionales Transparencia,,notificaciones.judiciales@uniboyaca.edu.co,plantilla-buzon-institucional,email,6fec8d546d1e.html
+189,1,Otro,,general-letras,Datos Personales Línea Anticorrupción,,notificacionesjudiciales@tdea.edu.co,plantilla-buzon-institucional,email,33a7a1571838.html
+190,1,Otro,,general-letras,Juan Manuel Méndez Bechara,,notificacionesjudiciales@unisinu.edu.co,plantilla-buzon-institucional,email,cb8d20cd3806.html
+191,1,Otro,,general-letras,Educación No,,oficinajuridica@unincca.edu.co,plantilla-buzon-institucional,email,235c63186c19.html
+192,1,Rosario,Bogota,general-letras,Personería Jurídica,,juridica@urosario.edu.co,plantilla-buzon-institucional,email,27a6e06f5038.html
+193,1,UNAB,Bucaramanga,general-letras,,Centro de contacto: 018000-931170 | Correo institucional: contactenos@unab.edu.c,juridica@unab.edu.co,plantilla-buzon-institucional,email,08c5890d9aab.html
+194,1,UTP,Pereira,general-letras,,,ventanillaunica@utp.edu.co,plantilla-buzon-institucional,email,329a2cbce4bf.html
+195,1,Ucaldas,Manizales,general-letras,Usuario Línea,,gestion.juridica@ucaldas.edu.co,plantilla-buzon-institucional,email,7fbf9c6bc4c8.html
+196,1,Unbosque,Bogota,general-letras,Edificio Fundadores,,gestionadmisiones@unbosque.edu.co,plantilla-buzon-institucional,email,5c52a8653589.html
+197,1,Uniatlantico,Barranquilla,comunicacion,Correo Admisiones,,comunicacionesadmisiones@mail.uniatlantico.edu.co,plantilla-buzon-institucional,email,7bf2300bad44.html
+198,1,Uniatlantico,Barranquilla,general-letras,Sabanalarga Notificaciones Judiciales,,notificaciones@mail.uniatlantico.edu.co,plantilla-buzon-institucional,email,7bf2300bad44.html
+199,1,Unicaribe,Cartagena,comunicacion,Contacto Tel,Comunicaciones . Contacto Tel +57 605 4209638,ventanillaunica@unicaribe.edu.co,plantilla-buzon-institucional,email,a9fc59d855b9.html
+200,1,Unicauca,Popayan,general-letras,Colombia Horario,,quejasreclamos@unicauca.edu.co,plantilla-buzon-institucional,email,4da96f75efd5.html
