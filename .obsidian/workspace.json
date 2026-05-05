@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "eac5bdface142195",
+    "type": "split",
+    "children": [
+      {
+        "id": "51ff2880429e8c95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09efd8e158c794eb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "06-redes-sociales/sistema-publicaciones-semanales.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sistema-publicaciones-semanales"
+            }
+          }
+        ]
+      },
+      {
+        "id": "db200d5f02d8e000",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6dada5d49dd13516",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05-datos-y-reportes/reporte-proceso-expansion-contactos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "reporte-proceso-expansion-contactos"
+            }
+          },
+          {
+            "id": "6228d30c87e34765",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Registro de cambios 1.12.7"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f0c3a2488a3b27cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b146a8968f16331",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1578ee87cba8d740",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "db138054e057f81d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c64e43128322acad",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "688d6b09425d2c3a",
+    "type": "split",
+    "children": [
+      {
+        "id": "77da262974dc2d37",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7e9e3aa172d1a4ec",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "05-datos-y-reportes/reporte-proceso-expansion-contactos.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for reporte-proceso-expansion-contactos"
+            }
+          },
+          {
+            "id": "172231f93bd930ec",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "05-datos-y-reportes/reporte-proceso-expansion-contactos.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from reporte-proceso-expansion-contactos"
+            }
+          },
+          {
+            "id": "c6b50b438276f1a0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d87336f860ac3b41",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "2563663bbb9fd088",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "05-datos-y-reportes/reporte-proceso-expansion-contactos.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of reporte-proceso-expansion-contactos"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "6228d30c87e34765",
+  "lastOpenFiles": [
+    "06-redes-sociales/sistema-publicaciones-semanales.md",
+    "05-datos-y-reportes/reporte-proceso-expansion-contactos.md",
+    "06-redes-sociales/README.md"
+  ]
+}
