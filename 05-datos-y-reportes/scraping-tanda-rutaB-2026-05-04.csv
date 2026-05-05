@@ -88,8 +88,8 @@ rank,score_canal,canal_recomendado,organizacion,segmento,ciudad,nombre,celular,w
 87,5,whatsapp,BibloRed,biblioteca-publica,Bogota,BibloRed Linea Ciudadana,,wa.me/573183517388,(601) 580-3050,,contactenos@biblored.gov.co,plantilla-bibliotecario,BibloRed - Linea ciudadana,https://www.biblored.gov.co/contactenos
 88,5,whatsapp,Bogota,otro-cultural,,,,wa.me/573160231524,,,,plantilla-buzon-institucional,Página no encontrada | Bogota.gov.co,https://www.bogota.gov.co/contacto
 89,5,whatsapp,Cajamag,otro-cultural,,,,wa.me/+573168322618,,,,plantilla-buzon-institucional,Page Not Found - Cajamag,https://www.cajamag.com.co/contactenos
-90,5,whatsapp,Colegio privado,colegio-privado,varias,,,api.whatsapp.com/send?phone=573102176677,,,,plantilla-coordinador-academico-colegio,Página 404,https://www.colsubsidio.com/educacion/colegios/contacto
-91,5,whatsapp,Colegio privado,colegio-privado,varias,,,api.whatsapp.com/send?phone=+573176688325,,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
+90,5,whatsapp,Colegio privado,colegio-privado,varias,,,api.whatsapp.com/send?phone=+573176688325,,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
+91,5,whatsapp,Colsubsidio,caja-compensacion,Bogota,,,api.whatsapp.com/send?phone=573102176677,,,,plantilla-coordinador-cultura,Página 404,https://www.colsubsidio.com/cultura/programacion-cultural
 92,5,whatsapp,Colsubsidio,caja-compensacion,Bogota,,,api.whatsapp.com/send?phone=573124043993,,,,plantilla-coordinador-cultura,Dónde estamos Colsubsidio,https://www.colsubsidio.com/sedes
 93,5,whatsapp,Comfamiliar,otro-cultural,,,,wa.me/573172449933,,,,plantilla-buzon-institucional,Página no encontrada - Comfamiliar,https://comfamiliar.com/cultura/contacto
 94,5,whatsapp,Gimnasio,colegio-privado,Bogota,,,api.whatsapp.com/send?phone=573173780954,,,,plantilla-coordinador-academico-colegio,Ups! Este contenido no está disponible &bull; Gimnasio Campestre,https://www.gimnasiocampestre.edu.co/contacto/
@@ -102,102 +102,111 @@ rank,score_canal,canal_recomendado,organizacion,segmento,ciudad,nombre,celular,w
 101,3,llamada-fijo-extension,Bolivar,otro-cultural,,Bolívar Horario,,,(605) 6549216,1202,,plantilla-buzon-institucional,Page not found | Gobernación de Bolívar,https://www.bolivar.gov.co/cultura/contacto
 102,3,llamada-fijo-extension,Cajamag,otro-cultural,,Cajamag Km,,,+57 605 4237129,3001,,plantilla-buzon-institucional,Contacto - Cajamag,https://www.cajamag.com.co/contacto
 103,3,llamada-fijo-extension,Cajamag,otro-cultural,,Las Palmeras,,,+57 605 4100306,3049,,plantilla-buzon-institucional,Contacto - Cajamag,https://www.cajamag.com.co/contacto
-104,3,llamada-fijo,Caro y Cuervo,academia-letras,Bogota,Decanatura FSAB,,,(601) 342-2121,,decanatura@caroycuervo.gov.co,plantilla-buzon-institucional,ICC - Sede Casa Cuervo Urisarri,https://maestrias.caroycuervo.gov.co/contacto/
-105,3,llamada-fijo,Caro y Cuervo,academia-letras,Bogota,Equipo Alianzas,,,(601) 342-2121,,equipoalianzas@caroycuervo.gov.co,plantilla-buzon-institucional,ICC - Equipo Alianzas,https://maestrias.caroycuervo.gov.co/contacto/
-106,3,llamada-fijo,Casa de Poesia Silva,tallerista-poesia,Bogota,Casa Silva (informacion talleres),,,(601) 286-5710,,info@casadepoesiasilva.com,plantilla-tallerista-poesia,Casa Silva,https://www.casadepoesiasilva.com/contacto
-107,3,llamada-fijo-extension,Comfanorte,otro-cultural,,Santander,,,+57 6075823455,455,,plantilla-buzon-institucional,Caja de Compensación Familiar de Norte de Santander - Comfanorte,https://www.comfanorte.com.co/educacion
-108,3,llamada-fijo-extension,Gimnasio,colegio-privado,Bogota,Jornada Continua Teléfono Conmutador,,,+57 601 540 1888,129,,plantilla-coordinador-academico-colegio,Contacto Piscina &#8211; Gimnasio Moderno,https://www.gimnasiomoderno.edu.co/contacto/
-109,3,llamada-fijo-extension,Univalle Escuela Estudios Literarios,centro-escritura-uni,Cali,Programa Lic Literatura,,,(602) 321-2100,2487,programa.literatura@correounivalle.edu.co,plantilla-centro-escritura,EEL - Programa Lic Literatura,https://estudiosliterarios.univalle.edu.co/
-110,2,llamada-fijo,Biblioteca,biblioteca-publica,varias,,,,6037767,,,plantilla-bibliotecario,Inicio - Sistema de Bibliotecas Publicas de Medellín,https://bibliotecasmedellin.gov.co/
-111,2,llamada-fijo,BibloRed,biblioteca-publica,Bogota,Contacto Teléfono,,,+57 (601) 580 3050,,contactenos@biblored.gov.co,plantilla-bibliotecario,Red Distrital de Bibliotecas Públicas | BibloRed,https://www.bibloRed.gov.co/talleres
-112,2,llamada-fijo,Bogota,otro-cultural,,Bogotá Cra,,,+57 (601) 381-3000,,,plantilla-buzon-institucional,Página no encontrada | Bogota.gov.co,https://www.bogota.gov.co/contacto
-113,2,llamada-fijo,Bogota,otro-cultural,,English Visit Bogotá International,,,3813000,,,plantilla-buzon-institucional,Página no encontrada | Bogota.gov.co,https://www.bogota.gov.co/contacto
-114,2,llamada-fijo,Cafam,caja-compensacion,Bogota,,,,+576013077011,,,plantilla-coordinador-cultura,,https://www.cafam.com.co/cultura/sedes/avenida-suba
-115,2,llamada-fijo,Cajacopi,caja-compensacion,Atlantico,Call Center,,,(605)3714545,,soporte.tic@cajacopi.com,plantilla-coordinador-cultura,Cajacopi | Caja de Compensaci&#243;n Familiar - Atl&#225;ntico,https://www.cajacopi.com/
-116,2,llamada-fijo,Cajamag,otro-cultural,,Call Center,,,+57 (605) 436 5058,,,plantilla-buzon-institucional,Page Not Found - Cajamag,https://www.cajamag.com.co/contactenos
-117,2,llamada-fijo,Cali,otro-cultural,,Líneas Locales,,,+57 (602) 8856173,,,plantilla-buzon-institucional,cultura,https://www.cali.gov.co/cultura
-118,2,llamada-fijo,Cali,otro-cultural,,Líneas Locales,,,+57 (602) 8856174,,,plantilla-buzon-institucional,cultura,https://www.cali.gov.co/cultura
-119,2,llamada-fijo,Cali,otro-cultural,,Líneas Locales,,,+57 (602) 8856178,,contactenos@cali.gov.co,plantilla-buzon-institucional,cultura,https://www.cali.gov.co/cultura
-120,2,llamada-fijo,Casadellibro,otro-cultural,,,,,6078895410,,,plantilla-buzon-institucional,Comprar libros | Casa del Libro Colombia,https://www.casadellibro.com.co/
-121,2,llamada-fijo,Casadellibro,otro-cultural,,,,,6073932189,,,plantilla-buzon-institucional,Comprar libros | Casa del Libro Colombia,https://www.casadellibro.com.co/
-122,2,llamada-fijo,Casadellibro,otro-cultural,,,,,6070770975,,,plantilla-buzon-institucional,Comprar libros | Casa del Libro Colombia,https://www.casadellibro.com.co/
-123,2,llamada-fijo,Casadellibro,otro-cultural,,,,,6073925044,,,plantilla-buzon-institucional,Comprar libros | Casa del Libro Colombia,https://www.casadellibro.com.co/
-124,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,6053819221,,,plantilla-coordinador-academico-colegio,"Colegios En Barranquilla, Colegios En Colombia",https://www.encolombia.com/educacion/colegios
-125,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,6017457900,,,plantilla-coordinador-academico-colegio,Página 404,https://www.colsubsidio.com/educacion/colegios/contacto
-126,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,6017420100,,,plantilla-coordinador-academico-colegio,Página 404,https://www.colsubsidio.com/educacion/colegios/contacto
-127,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,8389277,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
-128,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,0130576,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
-129,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,7459978,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
-130,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,9951044,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
-131,2,llamada-fijo,Colegio privado,colegio-privado,varias,Colegio Biling,,,601 340 3340,,admisionesbogota@fmsnor.org,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
-132,2,llamada-fijo,Colegio privado,colegio-privado,varias,Galeria Contactenos,,,608 7405842,,contact@colegioluisamigo.edu.co,plantilla-coordinador-academico-colegio,Página no encontrada &#8211; Colegio Luis Amigo,https://www.colegioluisamigo.edu.co/contacto
-133,2,llamada-fijo,Colombiaaprende,otro-cultural,,,,,(601) 432 1215,,soytransparente@mineducacion.gov.co,plantilla-buzon-institucional,Página no encontrada | Colombia Aprende,https://www.colombiaaprende.edu.co/contacto
-134,2,llamada-fijo,Colsubsidio,caja-compensacion,Bogota,,,,601 744 7717,,chequeosmedicospreventivosmazuren@colsubsidio.com,plantilla-coordinador-cultura,Dónde estamos Colsubsidio,https://www.colsubsidio.com/sedes
-135,2,llamada-fijo,Colsubsidio,caja-compensacion,Bogota,,,,6029262973,,,plantilla-coordinador-cultura,Dónde estamos Colsubsidio,https://www.colsubsidio.com/sedes
-136,2,llamada-fijo,Comfacor,otro-cultural,,Myriad Pro,,,4572959,,,plantilla-buzon-institucional,Cultura y Bibliotecas - Comfacor,https://comfacor.com.co/cultura
-137,2,llamada-fijo,Comfamiliarcamacol,otro-cultural,,Estar Linea,,,+57 604 230 2000,,,plantilla-buzon-institucional,Comfamiliar Camacol - error 404,https://www.comfamiliarcamacol.com/contacto
-138,2,llamada-fijo,Comfenalco Antioquia,caja-compensacion,Medellin,Llámanos Líneas,,,6044447110,,,plantilla-coordinador-cultura,Personas,https://comfenalcoantioquia.com/personas/contactenos
-139,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,,,,3128899,,,plantilla-coordinador-cultura,Página no encontrada - Comfenalco Valle Delagente,https://www.comfenalcovalle.com.co/cultura/teatro
-140,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,,,,4055064,,,plantilla-coordinador-cultura,Página no encontrada - Comfenalco Valle Delagente,https://www.comfenalcovalle.com.co/cultura/teatro
-141,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,,,,2259778,,,plantilla-coordinador-cultura,Página no encontrada - Comfenalco Valle Delagente,https://www.comfenalcovalle.com.co/cultura/teatro
-142,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,Familiar Comfenalco Valle Delagente,,,(602) 8862727,,,plantilla-coordinador-cultura,Página no encontrada - Comfenalco Valle Delagente,https://www.comfenalcovalle.com.co/cultura/teatro
-143,2,llamada-fijo,Compensar,caja-compensacion,Bogota,Compensación Familiar,,,601 3077001,,,plantilla-coordinador-cultura,Compensar | Caja de Compensación Familiar y EPS,https://www.compensar.com/cultura/sedes
-144,2,llamada-fijo,Confa,otro-cultural,,Marcel Avenida Alberto Mendoza,,,(606) 8933380,,,plantilla-buzon-institucional,Contacto &#8211; Confa,https://www.confa.co/contacto
-145,2,llamada-fijo,Cundinamarca,otro-cultural,,Colombia Código Postal,,,+57(601) 7490000,,,plantilla-buzon-institucional,Gobernación de Cundinamarca,https://www.cundinamarca.gov.co/cultura/contacto
-146,2,llamada-fijo,Cundinamarca,otro-cultural,,Código Postal,,,+57(601) 7491221,,,plantilla-buzon-institucional,Gobernación de Cundinamarca,https://www.cundinamarca.gov.co/cultura/contacto
-147,2,llamada-fijo,Eltiempo,otro-cultural,,,,,3552420,,,plantilla-buzon-institucional,Noticias de Cultura de Colombia y el Mundo - Noticias - ELTIEMPO.COM - ELTIEMPO.,https://www.eltiempo.com/cultura
-148,2,llamada-fijo,Escuelademaestros,otro-cultural,,,,,9337638,,,plantilla-buzon-institucional,Cabezuelo Foods,https://www.escuelademaestros.com/
-149,2,llamada-fijo,Facebook,otro-cultural,,,,,2000000,,,plantilla-buzon-institucional,DesafiosLiterarios.com | Madrid,https://www.facebook.com/tallerderelatos/
-150,2,llamada-fijo,Fce,otro-cultural,,,,,0582501,,,plantilla-buzon-institucional,Contacto - FCE Colombia,https://www.fce.com.co/contacto
-151,2,llamada-fijo,Fce,otro-cultural,,,,,+576012832200,,libreria.maria@fce.com.co,plantilla-buzon-institucional,Contacto - FCE Colombia,https://www.fce.com.co/contacto
-152,2,llamada-fijo,Fce,otro-cultural,,,,,7403355,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
-153,2,llamada-fijo,Fce,otro-cultural,,,,,0708017,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
-154,2,llamada-fijo,Fce,otro-cultural,,,,,3816263,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
-155,2,llamada-fijo,Fce,otro-cultural,,,,,2980654,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
-156,2,llamada-fijo,Fce,otro-cultural,,,,,7074394,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
-157,2,llamada-fijo,Fce,otro-cultural,,,,,8759237,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
-158,2,llamada-fijo,Fundacion,fundacion-cultural,varias,Bis No,,,(601) 5231795,,fundacionrenacer@fundacionrenacer.org,plantilla-fundacion,Contacto &#8211; Fundación Renacer contra la violencia sexual,https://www.fundacionrenacer.org/contacto
-159,2,llamada-fijo,Fundacion,fundacion-cultural,varias,Bis No,,,(605) 6699430,,fundacionrenacer@fundacionrenacer.org,plantilla-fundacion,Contacto &#8211; Fundación Renacer contra la violencia sexual,https://www.fundacionrenacer.org/contacto
-160,2,llamada-fijo,Fundacion,fundacion-cultural,varias,Bis No,,,(605) 6447709,,fundacionrenacer@fundacionrenacer.org,plantilla-fundacion,Contacto &#8211; Fundación Renacer contra la violencia sexual,https://www.fundacionrenacer.org/contacto
-161,2,llamada-fijo,Fundalectura,otro-cultural,,,,,601 7435799,,contactenos@fundalectura.org.co,plantilla-buzon-institucional,Page not found &#8211; Fundalectura,https://www.fundalectura.org/coordinacion-talleres
-162,2,llamada-fijo,Gimnasio,colegio-privado,Bogota,Via Armenia,,,606 7359706,,notificaciones@gi.edu.co,plantilla-coordinador-academico-colegio,Contacto - GI School,https://gimnasioingles.edu.co/contacto
-163,2,llamada-fijo,Icbf,otro-cultural,,,,,+57 601 4377630,,,plantilla-buzon-institucional,Buscador | Portal ICBF - Instituto Colombiano de Bienestar Familiar ICBF,https://www.icbf.gov.co/contactenos
-164,2,llamada-fijo,Icesi,otro-cultural,,Colombia Teléfono,,,+57 (602) 555 2334,,ventanillaunicaicesi@icesi.edu.co,plantilla-buzon-institucional,Page not found - Universidad Icesi,https://www.icesi.edu.co/contactenos
-165,2,llamada-fijo,Idartes,cultura-distrital,Bogota,Código Postal,,,+57 601 379 5750,,contactenos@idartes.gov.co,plantilla-coordinador-cultura,Página no encontrada | Idartes,https://idartes.gov.co/lider-literatura
-166,2,llamada-fijo,Libreria,libreria-club-lectura,varias,,,,6063775878,,,plantilla-libreria-club,,https://librerianacional.com/
-167,2,llamada-fijo,Libreria,libreria-club-lectura,varias,,,,6056855921,,,plantilla-libreria-club,,https://librerianacional.com/
-168,2,llamada-fijo,Libreria,libreria-club-lectura,varias,,,,6025425304,,,plantilla-libreria-club,,https://librerianacional.com/
-169,2,llamada-fijo,Libreria,libreria-club-lectura,varias,,,,(602) 884 1114,,,plantilla-libreria-club,,https://librerianacional.com/
-170,2,llamada-fijo,Libreria,libreria-club-lectura,varias,Contacto Teléfonos,,,601 744 1231,,presidencia@camlibro.com.co,plantilla-libreria-club,Página no encontrada - Cámara Colombiana del Libro,https://camlibro.com.co/asociados-librerias
-171,2,llamada-fijo,Pereira,otro-cultural,,Tube Twitter Instagram Contacto,,,3248767,,secretariacultura@pereira.gov.co,plantilla-buzon-institucional,Cultura,https://www.pereira.gov.co/cultura
-172,2,llamada-fijo,Relata,red-talleres-relata,Colombia,Penny Stocks,,,6025826232,,,plantilla-relata-tallerista,Relata es: | Red Relata Nodo Oriente,https://redrelatanodooriente.blogspot.com/p/relata-es.html
-173,2,llamada-fijo,Santamarta,otro-cultural,,,,,605 4351719,,,plantilla-buzon-institucional,Página no encontrada | Alcaldía Distrital de Santa Marta,https://www.santamarta.gov.co/cultura
-174,2,llamada-fijo,Santamarta,otro-cultural,,,,,605 420 9600,,,plantilla-buzon-institucional,Página no encontrada | Alcaldía Distrital de Santa Marta,https://www.santamarta.gov.co/cultura
-175,2,llamada-fijo,Teatro Libre,cultura-distrital,Bogota,,,,7351928,,,plantilla-coordinador-cultura,Teatro Libre [ 50 Años ] &#8211; El Teatro Libre desde su fundación en 1973 ha p,https://teatrolibre.com/
-176,2,llamada-fijo,Teatro Libre,cultura-distrital,Bogota,Chapinero,,,+57601) 8105451,,,plantilla-coordinador-cultura,Teatro Libre [ 50 Años ] &#8211; El Teatro Libre desde su fundación en 1973 ha p,https://teatrolibre.com/
-177,2,llamada-fijo,Teatro Libre,cultura-distrital,Bogota,La Candelaria,,,+57601) 4764934,,,plantilla-coordinador-cultura,Teatro Libre [ 50 Años ] &#8211; El Teatro Libre desde su fundación en 1973 ha p,https://teatrolibre.com/
-178,2,llamada-fijo,Teatro Libre,cultura-distrital,Bogota,Sede Chapinero,,,+57601) 6369866,,,plantilla-coordinador-cultura,CONTACTO &#8211; Teatro Libre [ 50 Años ],https://teatrolibre.com/contacto
-179,2,llamada-fijo,Teatro Mayor,cultura-distrital,Bogota,,,,6017944888,,servicioalcliente@teatromayor.org,plantilla-coordinador-cultura,Teatro Mayor Julio Mario Santo Domingo,https://teatromayor.org/
-180,1,email,Amayuelas,otro-cultural,,,,,,,info@amayuelas.com,plantilla-buzon-institucional,Amayuelas   &#8211;  Contacto,https://amayuelas.com/contacto
-181,1,email,Asociaciondeescritores,otro-cultural,,,,,,,contactoaescritores@gmail.com,plantilla-buzon-institucional,404 No encontrado | Asociacion de Escritores,https://www.asociaciondeescritores.com/contacto
-182,1,email,Banrep Cultural,cultura-nacional,Bogota,,,,,,contactus@shieldsquare.com,plantilla-bibliotecario,Radware Bot Manager Captcha,https://www.banrepcultural.org/medellin/agenda
-183,1,email,Biblioteca,biblioteca-publica,varias,,,,,,contactus@shieldsquare.com,plantilla-bibliotecario,Radware Bot Manager Captcha,https://www.banrepcultural.org/bucaramanga/biblioteca
-184,1,email,Biblioteca,biblioteca-publica,varias,,,,,,bibliotecaepm@epm.com.co,plantilla-bibliotecario,Biblioteca EPM,https://www.bibliotecaepm.com/talleristas
-185,1,email,Biblioteca,biblioteca-publica,varias,,,,,,atencionalcliente@comfacor.com.co,plantilla-bibliotecario,Page not found - Comfacor,https://comfacor.com.co/biblioteca
-186,1,email,Biblioteca,biblioteca-publica,varias,,,,,,comfasucre.juridica@comfasucre.com.co,plantilla-bibliotecario,Comfasucre  Página no encontrada - Comfasucre,https://www.comfasucre.com.co/biblioteca
-187,1,email,Casa de Poesia Silva,tallerista-poesia,Bogota,,,,,,casadepoesiasilva@casadepoesiasilva.com,plantilla-tallerista-poesia,404 No Encontrado,https://www.casadepoesiasilva.com/talleristas
-188,1,email,Cerlalc,otro-cultural,,,,,,,cerlalc@cerlalc.org,plantilla-buzon-institucional,Contacto - Cerlalc,https://cerlalc.org/contacto
-189,1,email,Comfacauca,otro-cultural,,,,,,,habeasdata@comfacauca.com,plantilla-buzon-institucional,Page Not Found &raquo; Comfacauca,https://www.comfacauca.com/contacto
-190,1,email,Comfama,caja-compensacion,Medellin,,,,,,seguridadti@comfama.com.co,plantilla-coordinador-cultura,Radware Bot Manager Captcha,https://www.comfama.com/contacto
-191,1,email,Comfasucre,otro-cultural,,,,,,,comfasucre.juridica@comfasucre.com.co,plantilla-buzon-institucional,Comfasucre  Página no encontrada - Comfasucre,https://www.comfasucre.com.co/contactenos
-192,1,email,Comfasucre,otro-cultural,,,,,,,afiliaciones.empresas@comfasucre.com.co,plantilla-buzon-institucional,Comfasucre  Comunícate Con Nosotros,https://www.comfasucre.com.co/contacto
-193,1,email,Eltiempo,otro-cultural,,,,,,,nombre@dominio.com,plantilla-buzon-institucional,,https://www.eltiempo.com/contacto
-194,1,email,Escuelademaestros,otro-cultural,,,,,,,info@cabezuelofoods.com,plantilla-buzon-institucional,Contacto &#8211; Cabezuelo Foods,https://www.escuelademaestros.com/contacto
-195,1,email,Fundacion,fundacion-cultural,varias,,,,,,argentina@fundacionsantillana.com,plantilla-fundacion,Contacto - Fundación Santillana,https://fundacionsantillana.com/contacto
-196,1,email,Fundacion,fundacion-cultural,varias,,,,,,info@frasesbuenas.net,plantilla-fundacion,Frases para Envidiosas - FrasesBuenas,https://www.fundacionnatura.org/talleristas
-197,1,email,Gimnasio,colegio-privado,Bogota,,,,,,contactenos@gimnasiovermont.edu.co,plantilla-coordinador-academico-colegio,Página no encontrada - Gimnasio Vermont,https://www.gimnasiovermont.edu.co/contacto/
-198,1,email,Gimnasio,colegio-privado,Bogota,,,,,,colegio@gimnasiofemenino.edu.co,plantilla-coordinador-academico-colegio,Gimnasio Femenino Landing - Gimnasio Femenino,https://www.gimnasiofemenino.edu.co/
-199,1,email,Hay Festival,festival-literario,Cartagena,,,,,,carmen@hayfestival.org,plantilla-festival,Contact – Hay Festival Cartagena,https://hayfestival.com/cartagena/contact
-200,1,email,Parque Explora,cultura-distrital,Medellin,,,,,,servicioalcliente@parqueexplora.org,plantilla-coordinador-cultura,Conoce todo sobre nosotros | Parque Explora,https://parqueexplora.org/
-201,1,email,Relata,red-talleres-relata,Colombia,,,,,,privacypolicyupdates@automattic.com,plantilla-relata-tallerista,WordPress.com,https://relatacolombiapacifico.wordpress.com/
-202,1,email,Villavicencio,otro-cultural,,,,,,,juridicanotificaciones@villavicencio.gov.co,plantilla-buzon-institucional,‘Cultura kids’ llega por primera vez al sector rural de Villavicencio - Alcaldia,https://www.villavicencio.gov.co/cultura
+104,3,llamada-fijo,Caro y Cuervo,academia-letras,Bogota,Centro de Investigacion ICC,,,(601) 342-2121,,investigacion@caroycuervo.gov.co,plantilla-buzon-institucional,ICC - Centro de Investigacion,https://www.caroycuervo.gov.co/instituto/directorio-institucional/
+105,3,llamada-fijo,Caro y Cuervo,academia-letras,Bogota,Decanatura FSAB,,,(601) 342-2121,,decanatura@caroycuervo.gov.co,plantilla-buzon-institucional,ICC - Decanatura FSAB,https://maestrias.caroycuervo.gov.co/contacto/
+106,3,llamada-fijo,Caro y Cuervo,academia-letras,Bogota,Equipo Alianzas,,,(601) 342-2121,,equipoalianzas@caroycuervo.gov.co,plantilla-buzon-institucional,ICC - Equipo Alianzas,https://maestrias.caroycuervo.gov.co/contacto/
+107,3,llamada-fijo,Caro y Cuervo,academia-letras,Bogota,Norma Donato Rodriguez,,,(601) 342-2121,,norma.donato@caroycuervo.gov.co,plantilla-buzon-institucional,ICC - Norma Donato Rodriguez,https://www.caroycuervo.gov.co/formacion/facultad-seminario-andres-bello/contactos/
+108,3,llamada-fijo,Caro y Cuervo,academia-letras,Bogota,Subdireccion Academica,,,(601) 342-2121,,subdireccion.academica@caroycuervo.gov.co,plantilla-buzon-institucional,ICC - Subdireccion Academica,https://www.caroycuervo.gov.co/instituto/directorio-institucional/
+109,3,llamada-fijo,Casa de Poesia Silva,tallerista-poesia,Bogota,Casa Silva (informacion talleres),,,(601) 286-5710,,info@casadepoesiasilva.com,plantilla-tallerista-poesia,Casa Silva - informacion talleres,https://www.casadepoesiasilva.com/contacto
+110,3,llamada-fijo-extension,Comfanorte,otro-cultural,,Santander,,,+57 6075823455,455,,plantilla-buzon-institucional,Caja de Compensación Familiar de Norte de Santander - Comfanorte,https://www.comfanorte.com.co/educacion
+111,3,llamada-fijo-extension,Gimnasio,colegio-privado,Bogota,Jornada Continua Teléfono Conmutador,,,+57 601 540 1888,129,,plantilla-coordinador-academico-colegio,Contacto Piscina &#8211; Gimnasio Moderno,https://www.gimnasiomoderno.edu.co/contacto/
+112,3,llamada-fijo-extension,Univalle Esc Ciencias del Lenguaje,centro-escritura-uni,Cali,Direccion ECL,,,(602) 321-2100,3325,direccion.ecl@correounivalle.edu.co,plantilla-centro-escritura,ECL - Direccion,https://lenguaje.univalle.edu.co/
+113,3,llamada-fijo-extension,Univalle Escuela Estudios Literarios,centro-escritura-uni,Cali,Escuela Estudios Literarios,,,(602) 321-2100,2487,escuela.estudiosliterarios@correounivalle.edu.co,plantilla-centro-escritura,EEL - Escuela Estudios Literarios,https://estudiosliterarios.univalle.edu.co/
+114,3,llamada-fijo-extension,Univalle Escuela Estudios Literarios,centro-escritura-uni,Cali,Programa Lic Literatura,,,(602) 321-2100,2487,programa.literatura@correounivalle.edu.co,plantilla-centro-escritura,EEL - Programa Lic Literatura,https://estudiosliterarios.univalle.edu.co/
+115,3,llamada-fijo,Univalle Sede Buga,centro-escritura-uni,Buga,Lic Literatura Sede Buga,,,(602) 228-3850,,licenciatura.literatura.buga@correounivalle.edu.co,plantilla-centro-escritura,Univalle Buga - Lic Literatura,bing
+116,2,llamada-fijo,Biblioteca,biblioteca-publica,varias,,,,6037767,,,plantilla-bibliotecario,Inicio - Sistema de Bibliotecas Publicas de Medellín,https://bibliotecasmedellin.gov.co/
+117,2,llamada-fijo,Biblioteca,biblioteca-publica,varias,Compensación Familiar,,,601 3077001,,,plantilla-bibliotecario,Compensar | Caja de Compensación Familiar y EPS,https://www.compensar.com/cultura/biblioteca-sur
+118,2,llamada-fijo,BibloRed,biblioteca-publica,Bogota,Contacto Teléfono,,,+57 (601) 580 3050,,contactenos@biblored.gov.co,plantilla-bibliotecario,Red Distrital de Bibliotecas Públicas | BibloRed,https://www.bibloRed.gov.co/talleres
+119,2,llamada-fijo,Bogota,otro-cultural,,Bogotá Cra,,,+57 (601) 381-3000,,,plantilla-buzon-institucional,Página no encontrada | Bogota.gov.co,https://www.bogota.gov.co/contacto
+120,2,llamada-fijo,Bogota,otro-cultural,,English Visit Bogotá International,,,3813000,,,plantilla-buzon-institucional,Página no encontrada | Bogota.gov.co,https://www.bogota.gov.co/contacto
+121,2,llamada-fijo,Cafam,caja-compensacion,Bogota,,,,+576013077011,,,plantilla-coordinador-cultura,,https://www.cafam.com.co/cultura/sedes/avenida-suba
+122,2,llamada-fijo,Cajacopi,caja-compensacion,Atlantico,Call Center,,,(605)3714545,,soporte.tic@cajacopi.com,plantilla-coordinador-cultura,Cajacopi | Caja de Compensaci&#243;n Familiar - Atl&#225;ntico,https://www.cajacopi.com/
+123,2,llamada-fijo,Cajamag,otro-cultural,,Call Center,,,+57 (605) 436 5058,,,plantilla-buzon-institucional,Page Not Found - Cajamag,https://www.cajamag.com.co/contactenos
+124,2,llamada-fijo,Cali,otro-cultural,,Líneas Locales,,,+57 (602) 8856173,,,plantilla-buzon-institucional,cultura,https://www.cali.gov.co/cultura
+125,2,llamada-fijo,Cali,otro-cultural,,Líneas Locales,,,+57 (602) 8856174,,,plantilla-buzon-institucional,cultura,https://www.cali.gov.co/cultura
+126,2,llamada-fijo,Cali,otro-cultural,,Líneas Locales,,,+57 (602) 8856178,,contactenos@cali.gov.co,plantilla-buzon-institucional,cultura,https://www.cali.gov.co/cultura
+127,2,llamada-fijo,Casadellibro,otro-cultural,,,,,6078895410,,,plantilla-buzon-institucional,Comprar libros | Casa del Libro Colombia,https://www.casadellibro.com.co/
+128,2,llamada-fijo,Casadellibro,otro-cultural,,,,,6073932189,,,plantilla-buzon-institucional,Comprar libros | Casa del Libro Colombia,https://www.casadellibro.com.co/
+129,2,llamada-fijo,Casadellibro,otro-cultural,,,,,6070770975,,,plantilla-buzon-institucional,Comprar libros | Casa del Libro Colombia,https://www.casadellibro.com.co/
+130,2,llamada-fijo,Casadellibro,otro-cultural,,,,,6073925044,,,plantilla-buzon-institucional,Comprar libros | Casa del Libro Colombia,https://www.casadellibro.com.co/
+131,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,6053819221,,,plantilla-coordinador-academico-colegio,"Colegios En Barranquilla, Colegios En Colombia",https://www.encolombia.com/educacion/colegios
+132,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,8389277,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
+133,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,0130576,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
+134,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,7459978,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
+135,2,llamada-fijo,Colegio privado,colegio-privado,varias,,,,9951044,,,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
+136,2,llamada-fijo,Colegio privado,colegio-privado,varias,Colegio Biling,,,601 340 3340,,admisionesbogota@fmsnor.org,plantilla-coordinador-academico-colegio,Contacto - Colegio Bilingüe Champagnat,https://www.colegiochampagnat.edu.co/contacto
+137,2,llamada-fijo,Colegio privado,colegio-privado,varias,Galeria Contactenos,,,608 7405842,,contact@colegioluisamigo.edu.co,plantilla-coordinador-academico-colegio,Página no encontrada &#8211; Colegio Luis Amigo,https://www.colegioluisamigo.edu.co/contacto
+138,2,llamada-fijo,Colombiaaprende,otro-cultural,,,,,(601) 432 1215,,soytransparente@mineducacion.gov.co,plantilla-buzon-institucional,Página no encontrada | Colombia Aprende,https://www.colombiaaprende.edu.co/contacto
+139,2,llamada-fijo,Colsubsidio,caja-compensacion,Bogota,,,,6017457900,,,plantilla-coordinador-cultura,Página 404,https://www.colsubsidio.com/cultura/programacion-cultural
+140,2,llamada-fijo,Colsubsidio,caja-compensacion,Bogota,,,,6017420100,,,plantilla-coordinador-cultura,Página 404,https://www.colsubsidio.com/cultura/programacion-cultural
+141,2,llamada-fijo,Colsubsidio,caja-compensacion,Bogota,,,,601 744 7717,,chequeosmedicospreventivosmazuren@colsubsidio.com,plantilla-coordinador-cultura,Dónde estamos Colsubsidio,https://www.colsubsidio.com/sedes
+142,2,llamada-fijo,Colsubsidio,caja-compensacion,Bogota,,,,6029262973,,,plantilla-coordinador-cultura,Dónde estamos Colsubsidio,https://www.colsubsidio.com/sedes
+143,2,llamada-fijo,Comfacor,otro-cultural,,Myriad Pro,,,4572959,,,plantilla-buzon-institucional,Cultura y Bibliotecas - Comfacor,https://comfacor.com.co/cultura
+144,2,llamada-fijo,Comfamiliarcamacol,otro-cultural,,Estar Linea,,,+57 604 230 2000,,,plantilla-buzon-institucional,Comfamiliar Camacol - error 404,https://www.comfamiliarcamacol.com/contacto
+145,2,llamada-fijo,Comfenalco Antioquia,caja-compensacion,Medellin,Llámanos Líneas,,,6044447110,,,plantilla-coordinador-cultura,Personas,https://comfenalcoantioquia.com/personas/contactenos
+146,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,,,,3128899,,,plantilla-coordinador-cultura,Página no encontrada - Comfenalco Valle Delagente,https://www.comfenalcovalle.com.co/cultura/teatro
+147,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,,,,4055064,,,plantilla-coordinador-cultura,Página no encontrada - Comfenalco Valle Delagente,https://www.comfenalcovalle.com.co/cultura/teatro
+148,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,,,,2259778,,,plantilla-coordinador-cultura,Página no encontrada - Comfenalco Valle Delagente,https://www.comfenalcovalle.com.co/cultura/teatro
+149,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,Comfenalco Valle Cultura,,,(602) 886-2727,,cultura@comfenalcovalle.com.co,plantilla-coordinador-cultura,Comfenalco Valle - Conmutador,https://www.comfenalcovalle.com.co/cultura
+150,2,llamada-fijo,Comfenalco Valle,caja-compensacion,Cali,Familiar Comfenalco Valle Delagente,,,(602) 8862727,,,plantilla-coordinador-cultura,Página no encontrada - Comfenalco Valle Delagente,https://www.comfenalcovalle.com.co/cultura/teatro
+151,2,llamada-fijo,Confa,otro-cultural,,Marcel Avenida Alberto Mendoza,,,(606) 8933380,,,plantilla-buzon-institucional,Contacto &#8211; Confa,https://www.confa.co/contacto
+152,2,llamada-fijo,Cundinamarca,otro-cultural,,Colombia Código Postal,,,+57(601) 7490000,,,plantilla-buzon-institucional,Gobernación de Cundinamarca,https://www.cundinamarca.gov.co/cultura/contacto
+153,2,llamada-fijo,Cundinamarca,otro-cultural,,Código Postal,,,+57(601) 7491221,,,plantilla-buzon-institucional,Gobernación de Cundinamarca,https://www.cundinamarca.gov.co/cultura/contacto
+154,2,llamada-fijo,Eltiempo,otro-cultural,,,,,3552420,,,plantilla-buzon-institucional,Noticias de Cultura de Colombia y el Mundo - Noticias - ELTIEMPO.COM - ELTIEMPO.,https://www.eltiempo.com/cultura
+155,2,llamada-fijo,Escuelademaestros,otro-cultural,,,,,9337638,,,plantilla-buzon-institucional,Cabezuelo Foods,https://www.escuelademaestros.com/
+156,2,llamada-fijo,Facebook,otro-cultural,,,,,2000000,,,plantilla-buzon-institucional,DesafiosLiterarios.com | Madrid,https://www.facebook.com/tallerderelatos/
+157,2,llamada-fijo,Fce,otro-cultural,,,,,0582501,,,plantilla-buzon-institucional,Contacto - FCE Colombia,https://www.fce.com.co/contacto
+158,2,llamada-fijo,Fce,otro-cultural,,,,,+576012832200,,libreria.maria@fce.com.co,plantilla-buzon-institucional,Contacto - FCE Colombia,https://www.fce.com.co/contacto
+159,2,llamada-fijo,Fce,otro-cultural,,,,,7403355,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
+160,2,llamada-fijo,Fce,otro-cultural,,,,,0708017,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
+161,2,llamada-fijo,Fce,otro-cultural,,,,,3816263,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
+162,2,llamada-fijo,Fce,otro-cultural,,,,,2980654,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
+163,2,llamada-fijo,Fce,otro-cultural,,,,,7074394,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
+164,2,llamada-fijo,Fce,otro-cultural,,,,,8759237,,,plantilla-buzon-institucional,Comprar libros nunca fue tan fácil - Fondo de Cultura,https://www.fce.com.co/
+165,2,llamada-fijo,Fundacion,fundacion-cultural,varias,Bis No,,,(601) 5231795,,fundacionrenacer@fundacionrenacer.org,plantilla-fundacion,Contacto &#8211; Fundación Renacer contra la violencia sexual,https://www.fundacionrenacer.org/contacto
+166,2,llamada-fijo,Fundacion,fundacion-cultural,varias,Bis No,,,(605) 6699430,,fundacionrenacer@fundacionrenacer.org,plantilla-fundacion,Contacto &#8211; Fundación Renacer contra la violencia sexual,https://www.fundacionrenacer.org/contacto
+167,2,llamada-fijo,Fundacion,fundacion-cultural,varias,Bis No,,,(605) 6447709,,fundacionrenacer@fundacionrenacer.org,plantilla-fundacion,Contacto &#8211; Fundación Renacer contra la violencia sexual,https://www.fundacionrenacer.org/contacto
+168,2,llamada-fijo,Fundalectura,otro-cultural,,,,,601 7435799,,contactenos@fundalectura.org.co,plantilla-buzon-institucional,Page not found &#8211; Fundalectura,https://fundalectura.org/director
+169,2,llamada-fijo,Gimnasio,colegio-privado,Bogota,Via Armenia,,,606 7359706,,notificaciones@gi.edu.co,plantilla-coordinador-academico-colegio,Contacto - GI School,https://gimnasioingles.edu.co/contacto
+170,2,llamada-fijo,Icbf,otro-cultural,,,,,+57 601 4377630,,,plantilla-buzon-institucional,Buscador | Portal ICBF - Instituto Colombiano de Bienestar Familiar ICBF,https://www.icbf.gov.co/contactenos
+171,2,llamada-fijo,Icesi,otro-cultural,,Colombia Teléfono,,,+57 (602) 555 2334,,ventanillaunicaicesi@icesi.edu.co,plantilla-buzon-institucional,Page not found - Universidad Icesi,https://www.icesi.edu.co/contactenos
+172,2,llamada-fijo,Idartes,cultura-distrital,Bogota,Código Postal,,,+57 601 379 5750,,contactenos@idartes.gov.co,plantilla-coordinador-cultura,Página no encontrada | Idartes,https://idartes.gov.co/lider-literatura
+173,2,llamada-fijo,Idartes,cultura-distrital,Bogota,Idartes Sede Principal,,,+57 601 379 5750,,servicioalciudadano@idartes.gov.co,plantilla-coordinador-cultura,Idartes - Sede principal,https://idartes.gov.co/es/contactenos
+174,2,llamada-fijo,Libreria,libreria-club-lectura,varias,,,,6063775878,,,plantilla-libreria-club,,https://librerianacional.com/
+175,2,llamada-fijo,Libreria,libreria-club-lectura,varias,,,,6056855921,,,plantilla-libreria-club,,https://librerianacional.com/
+176,2,llamada-fijo,Libreria,libreria-club-lectura,varias,,,,6025425304,,,plantilla-libreria-club,,https://librerianacional.com/
+177,2,llamada-fijo,Libreria,libreria-club-lectura,varias,,,,(602) 884 1114,,,plantilla-libreria-club,,https://librerianacional.com/
+178,2,llamada-fijo,Libreria,libreria-club-lectura,varias,Contacto Teléfonos,,,601 744 1231,,presidencia@camlibro.com.co,plantilla-libreria-club,Página no encontrada - Cámara Colombiana del Libro,https://camlibro.com.co/asociados-librerias
+179,2,llamada-fijo,Pereira,otro-cultural,,Tube Twitter Instagram Contacto,,,3248767,,secretariacultura@pereira.gov.co,plantilla-buzon-institucional,Cultura,https://www.pereira.gov.co/cultura
+180,2,llamada-fijo,Relata,red-talleres-relata,Colombia,Penny Stocks,,,6025826232,,,plantilla-relata-tallerista,Relata es: | Red Relata Nodo Oriente,https://redrelatanodooriente.blogspot.com/p/relata-es.html
+181,2,llamada-fijo,Santamarta,otro-cultural,,,,,605 4351719,,,plantilla-buzon-institucional,Página no encontrada | Alcaldía Distrital de Santa Marta,https://www.santamarta.gov.co/cultura
+182,2,llamada-fijo,Santamarta,otro-cultural,,,,,605 420 9600,,,plantilla-buzon-institucional,Página no encontrada | Alcaldía Distrital de Santa Marta,https://www.santamarta.gov.co/cultura
+183,2,llamada-fijo,Teatro Libre,cultura-distrital,Bogota,,,,7351928,,,plantilla-coordinador-cultura,Teatro Libre [ 50 Años ] &#8211; El Teatro Libre desde su fundación en 1973 ha p,https://teatrolibre.com/
+184,2,llamada-fijo,Teatro Libre,cultura-distrital,Bogota,Chapinero,,,+57601) 8105451,,,plantilla-coordinador-cultura,Teatro Libre [ 50 Años ] &#8211; El Teatro Libre desde su fundación en 1973 ha p,https://teatrolibre.com/
+185,2,llamada-fijo,Teatro Libre,cultura-distrital,Bogota,La Candelaria,,,+57601) 4764934,,,plantilla-coordinador-cultura,Teatro Libre [ 50 Años ] &#8211; El Teatro Libre desde su fundación en 1973 ha p,https://teatrolibre.com/
+186,2,llamada-fijo,Teatro Libre,cultura-distrital,Bogota,Sede Chapinero,,,+57601) 6369866,,,plantilla-coordinador-cultura,CONTACTO &#8211; Teatro Libre [ 50 Años ],https://teatrolibre.com/contacto
+187,2,llamada-fijo,Teatro Mayor,cultura-distrital,Bogota,,,,6017944888,,servicioalcliente@teatromayor.org,plantilla-coordinador-cultura,Teatro Mayor Julio Mario Santo Domingo,https://teatromayor.org/
+188,1,email,Amayuelas,otro-cultural,,,,,,,info@amayuelas.com,plantilla-buzon-institucional,Amayuelas   &#8211;  Contacto,https://amayuelas.com/contacto
+189,1,email,Asociaciondeescritores,otro-cultural,,,,,,,contactoaescritores@gmail.com,plantilla-buzon-institucional,404 No encontrado | Asociacion de Escritores,https://www.asociaciondeescritores.com/contacto
+190,1,email,Banrep Cultural,cultura-nacional,Bogota,,,,,,contactus@shieldsquare.com,plantilla-bibliotecario,Radware Bot Manager Captcha,https://www.banrepcultural.org/medellin/agenda
+191,1,email,Biblioteca,biblioteca-publica,varias,,,,,,contactus@shieldsquare.com,plantilla-bibliotecario,Radware Bot Manager Captcha,https://www.banrepcultural.org/bucaramanga/biblioteca
+192,1,email,Biblioteca,biblioteca-publica,varias,,,,,,bibliotecaepm@epm.com.co,plantilla-bibliotecario,Biblioteca EPM,https://www.bibliotecaepm.com/talleristas
+193,1,email,Biblioteca,biblioteca-publica,varias,,,,,,atencionalcliente@comfacor.com.co,plantilla-bibliotecario,Page not found - Comfacor,https://comfacor.com.co/biblioteca
+194,1,email,Biblioteca,biblioteca-publica,varias,,,,,,seccion.archivo@comfasucre.com.co,plantilla-bibliotecario,Comfasucre  Página no encontrada - Comfasucre,https://www.comfasucre.com.co/biblioteca
+195,1,email,Casa de Poesia Silva,tallerista-poesia,Bogota,,,,,,casadepoesiasilva@casadepoesiasilva.com,plantilla-tallerista-poesia,404 No Encontrado,https://www.casadepoesiasilva.com/talleristas
+196,1,email,Cerlalc,otro-cultural,,,,,,,cerlalc@cerlalc.org,plantilla-buzon-institucional,Contacto - Cerlalc,https://cerlalc.org/contacto
+197,1,email,Comfacauca,otro-cultural,,,,,,,habeasdata@comfacauca.com,plantilla-buzon-institucional,Page Not Found &raquo; Comfacauca,https://www.comfacauca.com/contacto
+198,1,email,Comfama,caja-compensacion,Medellin,,,,,,seguridadti@comfama.com.co,plantilla-coordinador-cultura,Radware Bot Manager Captcha,https://www.comfama.com/contacto
+199,1,email,Comfasucre,otro-cultural,,,,,,,seccion.archivo@comfasucre.com.co,plantilla-buzon-institucional,Comfasucre  Página no encontrada - Comfasucre,https://www.comfasucre.com.co/contactenos
+200,1,email,Comfasucre,otro-cultural,,,,,,,eps.escision@comfasucre.com.co,plantilla-buzon-institucional,Comfasucre  Comunícate Con Nosotros,https://www.comfasucre.com.co/contacto
+201,1,email,Eltiempo,otro-cultural,,,,,,,nombre@dominio.com,plantilla-buzon-institucional,,https://www.eltiempo.com/contacto
+202,1,email,Escuelademaestros,otro-cultural,,,,,,,info@newyorkconsulting.com,plantilla-buzon-institucional,Contacto &#8211; Cabezuelo Foods,https://www.escuelademaestros.com/contacto
+203,1,email,Escuelademaestros,otro-cultural,,,,,,,info@cabezuelofoods.com,plantilla-buzon-institucional,Página no encontrada &#8211; Cabezuelo Foods,https://www.escuelademaestros.com/equipo
+204,1,email,Fundacion,fundacion-cultural,varias,,,,,,argentina@fundacionsantillana.com,plantilla-fundacion,Contacto - Fundación Santillana,https://fundacionsantillana.com/contacto
+205,1,email,Fundacion,fundacion-cultural,varias,,,,,,info@frasesbuenas.net,plantilla-fundacion,Frases para Envidiosas - FrasesBuenas,https://www.fundacionnatura.org/talleristas
+206,1,email,Gimnasio,colegio-privado,Bogota,,,,,,contactenos@gimnasiovermont.edu.co,plantilla-coordinador-academico-colegio,Página no encontrada - Gimnasio Vermont,https://www.gimnasiovermont.edu.co/contacto/
+207,1,email,Gimnasio,colegio-privado,Bogota,,,,,,colegio@gimnasiofemenino.edu.co,plantilla-coordinador-academico-colegio,Gimnasio Femenino Landing - Gimnasio Femenino,https://www.gimnasiofemenino.edu.co/
+208,1,email,Hay Festival,festival-literario,Cartagena,,,,,,admin@hayfestival.org,plantilla-festival,Contact – Hay Festival Cartagena,https://hayfestival.com/cartagena/contact
+209,1,email,Parque Explora,cultura-distrital,Medellin,,,,,,servicioalcliente@parqueexplora.org,plantilla-coordinador-cultura,Conoce todo sobre nosotros | Parque Explora,https://parqueexplora.org/
+210,1,email,Relata,red-talleres-relata,Colombia,,,,,,privacypolicyupdates@automattic.com,plantilla-relata-tallerista,WordPress.com,https://relatacolombiapacifico.wordpress.com/
+211,1,email,Villavicencio,otro-cultural,,,,,,,educacion@villavicencio.gov.co,plantilla-buzon-institucional,‘Cultura kids’ llega por primera vez al sector rural de Villavicencio - Alcaldia,https://www.villavicencio.gov.co/cultura
