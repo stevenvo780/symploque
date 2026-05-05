@@ -1,0 +1,42 @@
+[
+  {
+    "templateId": "n1_l1_post_archivos",
+    "outputName": "ig_fb_01_dolor_archivos"
+  },
+  {
+    "templateId": "n1_l2_post_fragmentos",
+    "outputName": "ig_fb_02_fragmentos_sin_conexion"
+  },
+  {
+    "templateId": "n2_l3_post_flujo",
+    "outputName": "ig_fb_03_flujo_agora"
+  },
+  {
+    "templateId": "n3_l5_post_semillero",
+    "outputName": "ig_fb_04_semillero_en_agora"
+  },
+  {
+    "templateId": "lote1_estandar",
+    "outputName": "ig_fb_05_manifiesto_rigor"
+  },
+  {
+    "templateId": "n2_l3_post_verificacion",
+    "outputName": "ig_fb_06_verificacion_academica"
+  },
+  {
+    "templateId": "n1_l1_reel_dolor",
+    "outputName": "story_01_dolor_investigacion"
+  },
+  {
+    "templateId": "n2_l3_story_feature",
+    "outputName": "story_02_demo_agora"
+  },
+  {
+    "templateId": "n3_l5_story_unete",
+    "outputName": "story_03_unete_piloto"
+  },
+  {
+    "templateId": "n2_l3_banner_cta",
+    "outputName": "fb_cover_01_agenda_demo"
+  }
+]

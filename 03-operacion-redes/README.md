@@ -8,6 +8,8 @@ Este directorio concentra la ejecucion de contenido y la operacion diaria de red
   Marco general de plataformas, tension de marca y funcion comercial.
 - [lote-1-publicaciones-por-plataforma.md](./lote-1-publicaciones-por-plataforma.md)
   Copy y asset sugerido por plataforma.
+- [paquete-instagram-facebook-2026-05-04.md](./paquete-instagram-facebook-2026-05-04.md)
+  Piezas PNG, captions y checklist listos para montar en Instagram y Facebook.
 - [calendario-semana-1-redes.md](./calendario-semana-1-redes.md)
   Secuencia minima de ejecucion semanal.
 - [protocolo-de-interaccion.md](./protocolo-de-interaccion.md)
@@ -41,11 +43,12 @@ La operacion no debe separarse del sistema de marca. Antes de lanzar piezas, rev
 
 ## Regla de uso
 
-1. Si vas a publicar esta semana: abre `lote-1-publicaciones-por-plataforma.md` + `calendario-semana-1-redes.md`.
-2. Si vas a responder o mover leads: abre `protocolo-de-interaccion.md`.
-3. Si vas a crear o configurar cuentas: abre `guia-configuracion-manual-redes.md`.
-4. Si necesitas conectar IDs narrativos con templates renderizables: abre `mapping-ids-templates.md`.
-5. Si quieres publicar vía script: `python3 scripts/publicar_redes.py --preflight` y luego `--dry-run`.
+1. Si vas a publicar hoy en Instagram/Facebook: abre `paquete-instagram-facebook-2026-05-04.md`.
+2. Si vas a publicar el lote general de la semana: abre `lote-1-publicaciones-por-plataforma.md` + `calendario-semana-1-redes.md`.
+3. Si vas a responder o mover leads: abre `protocolo-de-interaccion.md`.
+4. Si vas a crear o configurar cuentas: abre `guia-configuracion-manual-redes.md`.
+5. Si necesitas conectar IDs narrativos con templates renderizables: abre `mapping-ids-templates.md`.
+6. Si quieres publicar vía script: `python3 scripts/publicar_redes.py --preflight` y luego `--dry-run`.
 
 ## Relación con `06-redes-sociales/`
 
