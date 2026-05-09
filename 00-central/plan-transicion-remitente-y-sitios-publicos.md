@@ -13,7 +13,7 @@ Pasar de una base local de prospectos a una operacion ordenada desde ERP/CRM y c
 - no habia correos previos confirmados antes de `wave_1`
 - `wave_1`, `wave_2`, `wave_3` y recuperacion registran 299 envios aceptados por SMTP, 15 rebotes historicos y 12 rebotes activos por recuperar
 - no hay cola activa de `declaracion`
-- la automatizacion de envio corporativo esta documentada en `email.md`
+- la automatizacion de envio corporativo esta documentada en `04-mensajeria-email/email.md`
 - ya existen sitios publicos vivos para `Elenxos` y `Agora`
 
 ## Estado publico verificado

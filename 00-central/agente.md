@@ -171,7 +171,13 @@ El sistema documental central queda asi:
   - `automatizaciones-agente-captacion.md`
   - `ideas-expansion-base-datos.md`
   - `playbook-busqueda-autonoma-clientes.md`
+- `02-identidad-y-marca/`
+  - `README.md`
+  - `guia-estilo-y-marca-redes.md`
+  - `media-kit-estructura.md`
+  - `automatizacion-visual.md`
 - `03-operacion-redes/`
+  - `README.md`
   - `estrategia-redes-sociales.md`
   - `lote-1-publicaciones-por-plataforma.md`
   - `calendario-semana-1-redes.md`
@@ -183,10 +189,13 @@ El sistema documental central queda asi:
   - `03-primer-contacto-semilleros.md`
   - `04-primer-contacto-directores.md`
   - `05-seguimiento-corto.md`
+  - `06-correo-declaracion.md`
+  - `email.md`
   - `lotes/`
   - `previews/`
   - `canal-alterno/`
 - `05-datos-y-reportes/`
+  - `canales-publicos-contacto.md`
   - `leads-agora-maestro.csv`
   - `leads-agora-top-50-hoy.csv`
   - `reporte-proceso-expansion-contactos.md`
@@ -197,6 +206,9 @@ El sistema documental central queda asi:
   - `reportes/`
   - `runbooks/`
   - `logs/`
+- `06-redes-sociales/`
+  - `README.md`
+  - `sistema-publicaciones-semanales.md`
 
 El CSV operativo base es `05-datos-y-reportes/leads-agora-maestro.csv`; la capa activa de outreach y ERP vive en `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`.
 

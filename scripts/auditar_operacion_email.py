@@ -25,6 +25,7 @@ from preparar_lote_primer_contacto import read_template, render_body
 
 REPO_DIR = Path(__file__).resolve().parents[1]
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+OFFICIAL_SENDER = "ventas@elenxos.com"
 
 FILES = {
     "legacy_master": REPO_DIR / "05-datos-y-reportes" / "leads-agora-maestro.csv",
@@ -67,8 +68,26 @@ REQUIRED_HEADERS = {
         "erp_sync_notes",
     },
     "enviados": {"source_id", "email", "sent_at", "last_sender_email", "declaration_required", "declaration_status"},
-    "declaracion": {"contact_id", "email", "last_contact_date", "ready_to_send", "send_status"},
-    "disculpa": {"email", "contact_name", "subject", "body_variant", "duplicate_count"},
+    "declaracion": {
+        "contact_id",
+        "email",
+        "last_contact_date",
+        "official_sender_email",
+        "landing_url_target",
+        "ready_to_send",
+        "send_status",
+    },
+    "disculpa": {
+        "incident_id",
+        "email",
+        "contact_name",
+        "subject",
+        "body_variant",
+        "duplicate_count",
+        "send_status",
+        "last_sender_email",
+        "official_sender_email",
+    },
 }
 
 VALID_ERP_SYNC_STATUSES = {"pending", "ready_for_import", "synced", "synced_existing", "failed"}
@@ -274,6 +293,32 @@ def add_erp_sync_issues(report: AuditReport) -> None:
             report.issues.append(Issue("warning", "master_operativo", f"Linea {index} lista para ERP con erp_doctype={doctype or 'vacio'}"))
 
 
+def add_sender_policy_issues(report: AuditReport) -> None:
+    for dataset_name in ("declaracion", "disculpa"):
+        data = report.files[dataset_name]
+        if not data.path.exists():
+            continue
+
+        for index, row in enumerate(data.rows, start=2):
+            official_sender = normalize_email(row.get("official_sender_email", ""))
+            if not official_sender:
+                report.issues.append(Issue("blocker", dataset_name, f"official_sender_email vacio en linea {index}"))
+                continue
+            if official_sender != OFFICIAL_SENDER:
+                report.issues.append(
+                    Issue(
+                        "blocker",
+                        dataset_name,
+                        f"official_sender_email fuera de politica en linea {index}: {official_sender}",
+                    )
+                )
+
+    for index, row in enumerate(report.files["declaracion"].rows, start=2):
+        ready = normalize(row.get("ready_to_send", "")).lower()
+        if ready == "yes" and not normalize(row.get("landing_url_target", "")):
+            report.issues.append(Issue("blocker", "declaracion", f"landing_url_target vacio en linea {index}"))
+
+
 def add_message_content_checks(report: AuditReport) -> None:
     template_names = ["template_estandar", "template_semilleros", "template_directores"]
     missing_udea: list[str] = []
@@ -375,6 +420,7 @@ def audit() -> AuditReport:
     add_structure_issues(report)
     add_email_quality_issues(report)
     add_cross_dataset_issues(report)
+    add_sender_policy_issues(report)
     add_erp_sync_issues(report)
     add_message_content_checks(report)
     return report

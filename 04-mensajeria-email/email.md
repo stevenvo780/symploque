@@ -21,9 +21,9 @@ export MAIL_FROM_PASSWORD="REEMPLAZAR_EN_LOCAL"
 
 ## Cuentas habilitadas
 
-- `ventas@elenxos.com`
-- `media@elenxos.com`
-- `admin@elenxos.com`
+- `ventas@elenxos.com` - remitente principal para outreach y declaracion
+- `media@elenxos.com` - soporte para redes, verificaciones y activos de marca
+- `admin@elenxos.com` - contingencia operativa y pruebas controladas
 
 El remitente oficial de la operacion de correos comerciales es `ventas@elenxos.com`.
 
@@ -87,7 +87,7 @@ Content-Type: application/json
 ## Checklist previo a cualquier envio
 
 - `MAIL_API_KEY` cargada desde `.env` o secret manager
-- `MAIL_FROM_EMAIL` definido para la campana
+- `MAIL_FROM_EMAIL` definido para la campana; por defecto `ventas@elenxos.com`
 - `MAIL_FROM_PASSWORD` cargada fuera del repo
 - asunto y cuerpo revisados
 - sitios y CTA validados

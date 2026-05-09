@@ -30,6 +30,44 @@ def run_command(command: list[str]) -> tuple[int, str, str]:
     return completed.returncode, completed.stdout.strip(), completed.stderr.strip()
 
 
+def parse_nslookup_records(record_type: str, stdout: str) -> list[str]:
+    lines = [
+        line.strip()
+        for line in stdout.splitlines()
+        if line.strip() and not line.startswith("Server:") and not line.startswith("Address:")
+    ]
+    lines = [line for line in lines if line != "Non-authoritative answer:"]
+
+    if record_type == "TXT":
+        records: list[str] = []
+        current: list[str] | None = None
+
+        for line in lines:
+            if "text =" in line:
+                if current:
+                    records.append("".join(current))
+                current = [line.split("text =", 1)[1].strip().strip('"')]
+                continue
+
+            if current is not None and line.startswith('"'):
+                current.append(line.strip().strip('"'))
+                continue
+
+            if current:
+                records.append("".join(current))
+                current = None
+
+        if current:
+            records.append("".join(current))
+
+        return [record for record in records if record]
+
+    if record_type == "MX":
+        return [line.split("mail exchanger =", 1)[1].strip() for line in lines if "mail exchanger =" in line]
+
+    return lines
+
+
 def query_dns(name: str, record_type: str) -> list[str]:
     if shutil.which("dig"):
         code, stdout, stderr = run_command(["dig", "+short", name, record_type])
@@ -41,7 +79,7 @@ def query_dns(name: str, record_type: str) -> list[str]:
         code, stdout, stderr = run_command(["nslookup", f"-type={record_type}", name])
         if code != 0:
             raise RuntimeError(stderr or f"nslookup fallo para {name} {record_type}")
-        return [line.strip() for line in stdout.splitlines() if line.strip() and not line.startswith("Server:")]
+        return parse_nslookup_records(record_type, stdout)
 
     raise RuntimeError("No se encontro dig ni nslookup en el sistema")
 
@@ -69,10 +107,8 @@ def check_dmarc(domain: str) -> Check:
 
 def check_dkim(domain: str, selectors: list[str]) -> Check:
     found: list[str] = []
-    checked: list[str] = []
     for selector in selectors:
         host = f"{selector}._domainkey.{domain}"
-        checked.append(host)
         try:
             records = flatten_txt(query_dns(host, "TXT"))
         except RuntimeError:

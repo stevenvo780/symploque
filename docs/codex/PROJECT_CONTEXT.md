@@ -11,15 +11,20 @@
 - Main entrypoints:
   - `00-central/estado-actual-y-transicion.md`
   - `00-central/central-operativo-agora.md`
+  - `00-central/plan-transicion-remitente-y-sitios-publicos.md`
   - `05-datos-y-reportes/operacion-email/README.md`
   - `05-datos-y-reportes/operacion-email/contactos-maestro-operativo.csv`
   - `04-mensajeria-email/README.md`
+  - `04-mensajeria-email/email.md`
+  - `docs/codex/NEXT_ACTIONS.md`
 - Key modules:
   - `00-central/`: estado actual, transicion y mapa operativo
   - `01-estrategia-comercial/`: estrategia y playbooks comerciales
+  - `02-identidad-y-marca/`: sistema visual, media kit y criterio editorial
   - `04-mensajeria-email/`: plantillas, lotes revisables y documentacion de Mail API
   - `05-datos-y-reportes/`: base historica, maestro operativo, ERP y reportes
-  - `03-operacion-redes/` y `06-redes-sociales/`: narrativa, calendario y operaciones de redes
+  - `03-operacion-redes/`: ejecucion semanal, cuentas y publicacion
+  - `06-redes-sociales/`: narrativa larga e historial conceptual
   - `scripts/`: automatizaciones de bootstrap, auditoria, ERPNext y envio controlado
 - Data stores and external services:
   - `leads-agora-maestro.csv`: 300 prospectos; 287 contactados, 12 rebotados y 1 pendiente por canal alterno
@@ -30,6 +35,8 @@
   - Mail API: `https://mailapi.proxy.humanizar-dev.cloud`
   - sitio corporativo: `https://www.elenxos.com/`
   - producto Agora: `https://agora.elenxos.com/`
+  - docs publicas: `https://agora.elenxos.com/docs`
+  - manifest publico: `https://agora.elenxos.com/manifest.json`
 
 ## Local Commands
 
@@ -45,6 +52,8 @@
   - `python3 scripts/enviar_lote_seguimiento.py --limit 5`
 - Monitoreo readonly:
   - `python3 scripts/monitorear_inbox_operacion.py --since 2026-05-01 --limit 100`
+- Verificacion DNS:
+  - `python3 scripts/verificar_dns_email.py --domain elenxos.com --fail-on-missing`
 - Preflight redes:
   - `python3 scripts/publicar_redes.py --preflight`
 - Envio real:
