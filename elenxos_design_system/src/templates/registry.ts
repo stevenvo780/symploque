@@ -191,19 +191,43 @@ const N3_L5: TemplateInfo[] = [
   post('n3_l5_hybrid_agora',       'campaign/n3_ecosistema'),
 ];
 
+// ══════════════════════════════════════════════════════════════
+//  INTRO CAMPAIGN — "¿Qué es Elenxos?"
+// ══════════════════════════════════════════════════════════════
+
+const INTRO_CAMPAIGN: TemplateInfo[] = [
+  // Fase 1: Origen
+  post('intro_post_etimologia',    'intro/origen'),
+  post('intro_post_fundadores',    'intro/origen'),
+  reel('intro_story_pregunta',     'intro/origen'),
+  // Fase 2: Identidad
+  post('intro_post_mision',        'intro/identidad'),
+  post('intro_post_dualidad',      'intro/identidad'),
+  reel('intro_story_encuesta',     'intro/identidad'),
+  // Fase 3: Visión
+  post('intro_post_principios',    'intro/vision'),
+  post('intro_post_agora_nace',    'intro/vision'),
+  // Fase 4: Invitación
+  post('intro_post_promesa',       'intro/invitacion'),
+  reel('intro_story_cta',          'intro/invitacion'),
+];
+
 // ── Agrupaciones exportadas ──────────────────────────────────
 
 export const CAMPAIGN_LOTES = { N1_L1, N1_L2, N2_L3, N2_L4, N3_L5 };
+
+export { INTRO_CAMPAIGN };
 
 export const ALL_CAMPAIGN: TemplateInfo[] = [
   ...N1_L1, ...N1_L2, ...N2_L3, ...N2_L4, ...N3_L5,
 ];
 
-/** Todos los templates del design system (90+) */
+/** Todos los templates del design system (100+) */
 export const TEMPLATE_DATA: TemplateInfo[] = [
   ...STANDALONE,
   ...HYBRID,
   ...ALL_CAMPAIGN,
+  ...INTRO_CAMPAIGN,
 ];
 
 // ── Metadatos de campaña (para filtrar por narrativa/lote/tipo) ──

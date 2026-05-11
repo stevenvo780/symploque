@@ -419,3 +419,16 @@
   - Recovery follow-up preview selects 3 contacts and sends nothing.
   - Wave 4 send preview blocks because candidates are not promoted/imported into the operational master.
   - No email, ERP write, phone call, DM, WhatsApp send, or social publication was executed.
+
+## 2026-05-09
+
+- Goal: Align narrative docs with the real CSV state and execute the next safe wave 4 step.
+- Actions:
+  - Updated `scraping-tanda-rutaB-2026-05-04-estrategia.md` to match the current CSV: 211 accumulated contacts, 99 direct WhatsApp paths, 88 call paths, and 24 email fallbacks.
+  - Updated `runbook-wave-4-post-seguimiento.md` with the real blocked state: 281 follow-up rows still in `draft_review`, 15 wave 4 candidates, 15 draft first-contact rows, and 21 Anillo 1 research leads still separate.
+  - Attempted readonly INBOX monitoring for the post-follow-up check; the session lacked `MAIL_FROM_EMAIL`, so no fresh IMAP fetch was possible.
+  - Executed `python3 scripts/promover_wave4_candidatos.py` as dry-run.
+- Verification:
+  - `seguimiento-2026-05-04.csv` still has 281 rows in `send_status=draft_review`.
+  - Latest saved readonly report remains `monitoreo-inbox-2026-05-04.md` with 0 new messages, 0 bounces, and 0 human replies.
+  - Dry-run promotion completed without writing changes.

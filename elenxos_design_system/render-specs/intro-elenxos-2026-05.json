@@ -1,0 +1,42 @@
+[
+  {
+    "templateId": "intro_post_etimologia",
+    "outputName": "intro_01_etimologia"
+  },
+  {
+    "templateId": "intro_post_fundadores",
+    "outputName": "intro_02_fundadores"
+  },
+  {
+    "templateId": "intro_story_pregunta",
+    "outputName": "intro_story_01_etimologia"
+  },
+  {
+    "templateId": "intro_post_mision",
+    "outputName": "intro_03_mision"
+  },
+  {
+    "templateId": "intro_post_dualidad",
+    "outputName": "intro_04_dualidad"
+  },
+  {
+    "templateId": "intro_story_encuesta",
+    "outputName": "intro_story_02_encuesta"
+  },
+  {
+    "templateId": "intro_post_principios",
+    "outputName": "intro_05_principios"
+  },
+  {
+    "templateId": "intro_post_agora_nace",
+    "outputName": "intro_06_agora_nace"
+  },
+  {
+    "templateId": "intro_post_promesa",
+    "outputName": "intro_07_promesa"
+  },
+  {
+    "templateId": "intro_story_cta",
+    "outputName": "intro_story_03_cta"
+  }
+]

@@ -62,6 +62,12 @@ import {
   N3_L5_Banner_Ecosistema, N3_L5_Banner_CTA,
   N3_L5_Hybrid_Comunidad, N3_L5_Hybrid_Red, N3_L5_Hybrid_Agora,
 } from './templates/CampaignTemplates';
+import {
+  Intro_Post_Etimologia, Intro_Post_Fundadores, Intro_Story_Pregunta,
+  Intro_Post_Mision, Intro_Post_Dualidad, Intro_Story_Encuesta,
+  Intro_Post_Principios, Intro_Post_AgoraNace,
+  Intro_Post_Promesa, Intro_Story_CTA,
+} from './templates/ElenxosIntroTemplates';
 
 // ── Mapa id → componente React ───────────────────────────────
 const COMPONENT_MAP: Record<string, React.FC> = {
@@ -167,6 +173,17 @@ const COMPONENT_MAP: Record<string, React.FC> = {
   n3_l5_hybrid_comunidad:   N3_L5_Hybrid_Comunidad,
   n3_l5_hybrid_red:         N3_L5_Hybrid_Red,
   n3_l5_hybrid_agora:       N3_L5_Hybrid_Agora,
+  // Intro Campaign — "¿Qué es Elenxos?"
+  intro_post_etimologia:    Intro_Post_Etimologia,
+  intro_post_fundadores:    Intro_Post_Fundadores,
+  intro_story_pregunta:     Intro_Story_Pregunta,
+  intro_post_mision:        Intro_Post_Mision,
+  intro_post_dualidad:      Intro_Post_Dualidad,
+  intro_story_encuesta:     Intro_Story_Encuesta,
+  intro_post_principios:    Intro_Post_Principios,
+  intro_post_agora_nace:    Intro_Post_AgoraNace,
+  intro_post_promesa:       Intro_Post_Promesa,
+  intro_story_cta:          Intro_Story_CTA,
 };
 
 // ── Tipos y registry construido ──────────────────────────────
